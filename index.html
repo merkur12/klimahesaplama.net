@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="9K8G_yRlAHmALFfT1kGttyb_orZcjcZYlgU9OQ-OW5k" />
+<meta name="google-site-verification" content="9K8G_yRlAHmALFfT1kGttyb_orZcjcZYlgU9OQ-OW5k" />
     <title>Klima Hesaplama - Klima, Kombi ve Isı Pompası Kapasite Hesabı ve Mühendislik Blog</title>
-    <!-- Favicon (Sekme Logosu) -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+<!-- Favicon (Sekme Logosu) -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -36,7 +36,7 @@
             .print-grid-3 { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 2px !important; }
             .print-grid-5 { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 2px !important; }
             .print-grid-pencere { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 2px !important; width: 100% !important; }
-            .print-grid-duvar { display: grid !important; grid-template-columns: repeat(8, minmax(0, 1fr)) !important; gap: 2px !important; width: 100% !important; }
+            .print-grid-duvar { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 2px !important; width: 100% !important; }
 
             #ts825Form { display: flex; flex-direction: column; gap: 2px !important; }
             #ts825Form > div { padding: 2px !important; margin-bottom: 1px !important; border-radius: 2px !important; }
@@ -82,7 +82,7 @@
         </p>
     </div> 
 
-    <!-- SEKME / MOD SEÇİM ALANI -->
+<!-- SEKME / MOD SEÇİM ALANI -->
     <div class="no-print max-w-7xl mx-auto w-full pt-6 px-4">
         <div class="bg-slate-200/60 p-1.5 rounded-2xl flex flex-wrap gap-2 max-w-3xl mx-auto border border-slate-200">
             <button id="btnTabPratik" onclick="sekmeDegistir('pratik')" class="flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 cursor-pointer">
@@ -138,12 +138,12 @@
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2">En Geniş Dış Duvar Yönü</label>
                             <select id="pratikYon" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500 font-bold">
-                                <option value="Kuzey">Kuzey (Serin Cephe)</option>
+                                <option value="Kuzey">Kuzey (Gölge)</option>
                                 <option value="Kuzeydogu">Kuzeydoğu</option>
                                 <option value="Dogu">Doğu (Sabah Güneşi)</option>
                                 <option value="Guneydogu">Güneydoğu</option>
                                 <option value="Guney">Güney (Standart Sıcak)</option>
-                                <option value="Guneybati">Güneybatı (Yoğun Güneş & Sıcaklık)</option>
+                                <option value="Guneybati">Güneybatı (Yoğun Sıcak)</option>
                                 <option value="Bati">Batı (Aşırı Güneş / Akşam Sıcağı)</option>
                                 <option value="Kuzeybati">Kuzeybatı</option>
                             </select>
@@ -160,7 +160,7 @@
                                 <option value="Dogu">Doğu (Orta Radyasyon)</option>
                                 <option value="Guneydogu">Güneydoğu</option>
                                 <option value="Guney">Güney (Yüksek Radyasyon)</option>
-                                <option value="Guneybati">Güneybatı (Yüksek Radyasyon)</option>
+                                <option value="Guneybati">Güneybatı</option>
                                 <option value="Bati" selected>Batı (Kritik Solar Yük)</option>
                                 <option value="Kuzeybati">Kuzeybatı</option>
                             </select>
@@ -369,20 +369,9 @@
                                 </h4>
                                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
                                     <div class="col-span-12 grid grid-cols-1 sm:grid-cols-5 gap-2.5 print-grid-pencere">
-                                        <!-- P1 -->
                                         <div id="divP1" class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1.5">
                                             <span class="text-[10px] font-black text-slate-700 block">Pencere 1</span>
-                                            <select id="p1_yon" onchange="pencereYonDegisti('p1')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                                <option value="Yok" selected>Yok</option>
-                                                <option value="Kuzey">Kuzey</option>
-                                                <option value="Kuzeydogu">Kuzeydoğu</option>
-                                                <option value="Dogu">Doğu</option>
-                                                <option value="Guneydogu">Güneydoğu</option>
-                                                <option value="Guney">Güney</option>
-                                                <option value="Guneybati">Güneybatı</option>
-                                                <option value="Bati">Batı</option>
-                                                <option value="Kuzeybati">Kuzeybatı</option>
-                                            </select>
+                                            <select id="p1_yon" onchange="pencereYonDegisti('p1')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
                                                 <input type="text" id="p1_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
@@ -393,20 +382,9 @@
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p1_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
-                                        <!-- P2 -->
                                         <div id="divP2" class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1.5">
                                             <span class="text-[10px] font-black text-slate-700 block">Pencere 2</span>
-                                            <select id="p2_yon" onchange="pencereYonDegisti('p2')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                                <option value="Yok" selected>Yok</option>
-                                                <option value="Kuzey">Kuzey</option>
-                                                <option value="Kuzeydogu">Kuzeydoğu</option>
-                                                <option value="Dogu">Doğu</option>
-                                                <option value="Guneydogu">Güneydoğu</option>
-                                                <option value="Guney">Güney</option>
-                                                <option value="Guneybati">Güneybatı</option>
-                                                <option value="Bati">Batı</option>
-                                                <option value="Kuzeybati">Kuzeybatı</option>
-                                            </select>
+                                            <select id="p2_yon" onchange="pencereYonDegisti('p2')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
                                                 <input type="text" id="p2_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
@@ -417,20 +395,9 @@
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p2_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
-                                        <!-- P3 -->
                                         <div id="divP3" class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1.5">
                                             <span class="text-[10px] font-black text-slate-700 block">Pencere 3</span>
-                                            <select id="p3_yon" onchange="pencereYonDegisti('p3')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                                <option value="Yok" selected>Yok</option>
-                                                <option value="Kuzey">Kuzey</option>
-                                                <option value="Kuzeydogu">Kuzeydoğu</option>
-                                                <option value="Dogu">Doğu</option>
-                                                <option value="Guneydogu">Güneydoğu</option>
-                                                <option value="Guney">Güney</option>
-                                                <option value="Guneybati">Güneybatı</option>
-                                                <option value="Bati">Batı</option>
-                                                <option value="Kuzeybati">Kuzeybatı</option>
-                                            </select>
+                                            <select id="p3_yon" onchange="pencereYonDegisti('p3')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
                                                 <input type="text" id="p3_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
@@ -441,20 +408,9 @@
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p3_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
-                                        <!-- P4 -->
                                         <div id="divP4" class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1.5">
                                             <span class="text-[10px] font-black text-slate-700 block">Sürgülü Kapı</span>
-                                            <select id="p4_yon" onchange="pencereYonDegisti('p4')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                                <option value="Yok" selected>Yok</option>
-                                                <option value="Kuzey">Kuzey</option>
-                                                <option value="Kuzeydogu">Kuzeydoğu</option>
-                                                <option value="Dogu">Doğu</option>
-                                                <option value="Guneydogu">Güneydoğu</option>
-                                                <option value="Guney">Güney</option>
-                                                <option value="Guneybati">Güneybatı</option>
-                                                <option value="Bati">Batı</option>
-                                                <option value="Kuzeybati">Kuzeybatı</option>
-                                            </select>
+                                            <select id="p4_yon" onchange="pencereYonDegisti('p4')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
                                                 <input type="text" id="p4_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
@@ -465,20 +421,9 @@
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p4_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
-                                        <!-- DK -->
                                         <div id="divDK" class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1.5">
                                             <span class="text-[10px] font-black text-slate-700 block">Dış Kapı / Balkon Kapısı</span>
-                                            <select id="dk_yon" onchange="pencereYonDegisti('dk')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                                <option value="Yok" selected>Yok</option>
-                                                <option value="Kuzey">Kuzey</option>
-                                                <option value="Kuzeydogu">Kuzeydoğu</option>
-                                                <option value="Dogu">Doğu</option>
-                                                <option value="Guneydogu">Güneydoğu</option>
-                                                <option value="Guney">Güney</option>
-                                                <option value="Guneybati">Güneybatı</option>
-                                                <option value="Bati">Batı</option>
-                                                <option value="Kuzeybati">Kuzeybatı</option>
-                                            </select>
+                                            <select id="dk_yon" onchange="pencereYonDegisti('dk')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
                                                 <input type="text" id="dk_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
@@ -497,126 +442,47 @@
                                 <h4 class="font-bold text-xs text-blue-600 uppercase flex items-center gap-1.5 border-b pb-2">
                                     <i class="fa-solid fa-wall"></i> Dış ve İç Duvar Ölçüleri Sihirbazı
                                 </h4>
-                                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 print-grid-duvar">
-                                    <div class="bg-emerald-50/70 p-3 rounded-lg border border-emerald-200 space-y-2 col-span-2 sm:col-span-1">
+                                <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 print-grid-duvar">
+                                    <div class="bg-emerald-50/70 p-3 rounded-lg border border-emerald-200 space-y-2">
                                         <span class="text-[10px] font-black text-emerald-900 block"><i class="fa-solid fa-door-closed mr-1"></i> İç / Komşu Duvar</span>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
                                         <input type="text" id="id_en" value="0" oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-white text-center">
                                         <div class="text-[10px] font-bold text-emerald-800">Alan: <span id="id_net_alan">0.00</span> m²</div>
                                     </div>
-
-                                    <!-- Kuzey -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Kuzey Dış Duvarı</span>
-                                        <select id="dd_Kuzey_durum" onchange="disDuvarDurumDegisti('Kuzey')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
+                                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
+                                        <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 1</span>
+                                        <select id="dd_1_yon" onchange="disDuvarYonDegisti('1')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Kuzey_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Kuzey_net">0.00</span> m²</div>
+                                        <input type="text" id="dd_1_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_1_net">0.00</span> m²</div>
                                     </div>
-
-                                    <!-- Kuzeydoğu -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Kuzeydoğu Dış Duvarı</span>
-                                        <select id="dd_Kuzeydogu_durum" onchange="disDuvarDurumDegisti('Kuzeydogu')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
+                                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
+                                        <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 2</span>
+                                        <select id="dd_2_yon" onchange="disDuvarYonDegisti('2')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Kuzeydogu_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Kuzeydogu_net">0.00</span> m²</div>
+                                        <input type="text" id="dd_2_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_2_net">0.00</span> m²</div>
                                     </div>
-
-                                    <!-- Doğu -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Doğu Dış Duvarı</span>
-                                        <select id="dd_Dogu_durum" onchange="disDuvarDurumDegisti('Dogu')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
+                                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
+                                        <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 3</span>
+                                        <select id="dd_3_yon" onchange="disDuvarYonDegisti('3')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Dogu_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Dogu_net">0.00</span> m²</div>
+                                        <input type="text" id="dd_3_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_3_net">0.00</span> m²</div>
                                     </div>
-
-                                    <!-- Güneydoğu -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Güneydoğu Dış Duvarı</span>
-                                        <select id="dd_Guneydogu_durum" onchange="disDuvarDurumDegisti('Guneydogu')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
+                                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
+                                        <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 4</span>
+                                        <select id="dd_4_yon" onchange="disDuvarYonDegisti('4')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Guneydogu_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Guneydogu_net">0.00</span> m²</div>
-                                    </div>
-
-                                    <!-- Güney -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Güney Dış Duvarı</span>
-                                        <select id="dd_Guney_durum" onchange="disDuvarDurumDegisti('Guney')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
-                                        <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Guney_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Guney_net">0.00</span> m²</div>
-                                    </div>
-
-                                    <!-- Güneybatı -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Güneybatı Dış Duvarı</span>
-                                        <select id="dd_Guneybati_durum" onchange="disDuvarDurumDegisti('Guneybati')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
-                                        <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Guneybati_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Guneybati_net">0.00</span> m²</div>
-                                    </div>
-
-                                    <!-- Batı -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Batı Dış Duvarı</span>
-                                        <select id="dd_Bati_durum" onchange="disDuvarDurumDegisti('Bati')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
-                                        <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Bati_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Bati_net">0.00</span> m²</div>
-                                    </div>
-
-                                    <!-- Kuzeybatı -->
-                                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-2">
-                                        <span class="text-[10px] font-black text-blue-900 block">Kuzeybatı Dış Duvarı</span>
-                                        <select id="dd_Kuzeybati_durum" onchange="disDuvarDurumDegisti('Kuzeybati')" class="w-full border rounded p-1 text-[11px] font-bold bg-white">
-                                            <option value="Yok" selected>Yok</option>
-                                            <option value="Tamami">Tamamı Dış Duvar</option>
-                                            <option value="Kısmen">Kısmen Dış Duvar</option>
-                                        </select>
-                                        <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_Kuzeybati_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
-                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_Kuzeybati_net">0.00</span> m²</div>
+                                        <input type="text" id="dd_4_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_4_net">0.00</span> m²</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="hidden">
-                            <input type="number" id="toplam_Kuzey" value="0"><input type="number" id="toplam_Kuzeydogu" value="0"><input type="number" id="toplam_Dogu" value="0"><input type="number" id="toplam_Guneydogu" value="0"><input type="number" id="toplam_Guney" value="0"><input type="number" id="toplam_Guneybati" value="0"><input type="number" id="toplam_Bati" value="0"><input type="number" id="toplam_Kuzeybati" value="0">
-                            <input type="number" id="en_Kuzey" value="0"><input type="number" id="en_Kuzeydogu" value="0"><input type="number" id="en_Dogu" value="0"><input type="number" id="en_Guneydogu" value="0"><input type="number" id="en_Guney" value="0"><input type="number" id="en_Guneybati" value="0"><input type="number" id="en_Bati" value="0"><input type="number" id="en_Kuzeybati" value="0">
                             <input type="number" id="en_Ic" value="0">
-                            <input type="number" id="pencere_Kuzey" value="0"><input type="number" id="pencere_Kuzeydogu" value="0"><input type="number" id="pencere_Dogu" value="0"><input type="number" id="pencere_Guneydogu" value="0"><input type="number" id="pencere_Guney" value="0"><input type="number" id="pencere_Guneybati" value="0"><input type="number" id="pencere_Bati" value="0"><input type="number" id="pencere_Kuzeybati" value="0">
                             <select id="ekCihazSecimi"><option value="yok">Yok</option></select>
                         </div>
 
@@ -1329,6 +1195,29 @@
     <script>
         let mevcutMod = 'klima';
 
+        const trYonOptions = `
+            <option value="Yok" selected>Yok / Cephe Yok</option>
+            <option value="Kuzey">Kuzey</option>
+            <option value="Kuzeydogu">Kuzeydoğu</option>
+            <option value="Dogu">Doğu</option>
+            <option value="Guneydogu">Güneydoğu</option>
+            <option value="Guney">Güney</option>
+            <option value="Guneybati">Güneybatı</option>
+            <option value="Bati">Batı</option>
+            <option value="Kuzeybati">Kuzeybatı</option>
+        `;
+
+        function initYonSelects() {
+            ['p1', 'p2', 'p3', 'p4', 'dk'].forEach(id => {
+                let el = document.getElementById(id + '_yon');
+                if (el) el.innerHTML = trYonOptions;
+            });
+            ['1', '2', '3', '4'].forEach(id => {
+                let el = document.getElementById(`dd_${id}_yon`);
+                if (el) el.innerHTML = trYonOptions;
+            });
+        }
+
         function modalAc(id) { document.getElementById(id).classList.remove('hidden'); }
         function modalKapat(id) { document.getElementById(id).classList.add('hidden'); }
 
@@ -1454,7 +1343,7 @@
                         <li><strong>Pencere:</strong> Pencere cam kombinasyon seçimini yapın.</li>
                         <li><strong>Kişi Sayısı:</strong> Kişi sayısını girin.</li>
                         <li><strong>Pencere & Sürgülü Kapı Sihirbazı:</strong> Ölçüleri ve yönleri girin.</li>
-                        <li><strong>İç ve Dış Duvarlar:</strong> İç duvar ve dış duvar ölçülerini ve yönlerini (ara yönler dahil) girin.</li>
+                        <li><strong>İç ve Dış Duvarlar:</strong> İç duvar ve dış duvar ölçülerini ve yönlerini girin.</li>
                         <li><strong>Analizi Başlat:</strong> "Detaylı TS 825 Analizi Başlat" butonuna tıklayın.</li>
                     </ol>
                     <div class="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-950 text-xs leading-relaxed space-y-1">
@@ -1508,15 +1397,6 @@
             document.getElementById("insanSayisi").value = "0";
             document.getElementById("katYuksekligi").value = "2.8";
             document.getElementById("mahalAlani").value = "0,00";
-            
-            const hepsiYonler = ['Kuzey', 'Kuzeydogu', 'Dogu', 'Guneydogu', 'Guney', 'Guneybati', 'Bati', 'Kuzeybati'];
-            hepsiYonler.forEach(j => {
-                if (document.getElementById(`toplam_${j}`)) document.getElementById(`toplam_${j}`).value = "0.0";
-                if (document.getElementById(`en_${j}`)) document.getElementById(`en_${j}`).value = "0.0";
-                if (document.getElementById(`pencere_${j}`)) document.getElementById(`pencere_${j}`).value = "0.0";
-            });
-
-            document.getElementById("en_Ic").value = "0.0";
             document.getElementById("id_en").value = "0";
             if(document.getElementById("ekCihaz1")) document.getElementById("ekCihaz1").value = "yok";
             if(document.getElementById("ekCihaz2")) document.getElementById("ekCihaz2").value = "yok";
@@ -1527,11 +1407,9 @@
                 document.getElementById(id + '_yon').value = "Yok";
                 pencereYonDegisti(id);
             });
-            hepsiYonler.forEach(cephe => {
-                if (document.getElementById(`dd_${cephe}_durum`)) {
-                    document.getElementById(`dd_${cephe}_durum`).value = "Yok";
-                    disDuvarDurumDegisti(cephe);
-                }
+            ['1', '2', '3', '4'].forEach(id => {
+                document.getElementById(`dd_${id}_yon`).value = "Yok";
+                disDuvarYonDegisti(id);
             });
             mahalDegisti();
             guncelleSihirbazVeMotor();
@@ -1578,16 +1456,11 @@
             let baseWattM2 = bolge === 1 ? 110 : (bolge === 3 ? 80 : (bolge === 4 ? 70 : 90));
             let yalitimCarpanPratik = yalitimP === "cok_iyi" ? 0.85 : (yalitimP === "zayif" ? 1.25 : 1.00);
 
-            // Gelişmiş Ara Yön Katsayıları
             function yonSolarKatsayi(y) {
-                if (y === "Bati") return 1.25;
-                if (y === "Guneybati") return 1.28;
-                if (y === "Guney") return 1.15;
-                if (y === "Guneydogu") return 1.12;
-                if (y === "Dogu") return 1.08;
-                if (y === "Kuzeydogu") return 1.04;
-                if (y === "Kuzeybati") return 1.10;
-                return 1.00; // Kuzey
+                if (y === "Bati" || y === "Guneybati") return 1.25;
+                if (y === "Guney" || y === "Guneydogu") return 1.15;
+                if (y === "Dogu" || y === "Kuzeydogu") return 1.08;
+                return 1.00;
             }
 
             let duvarSolarCarpan = yonSolarKatsayi(duvarYon);
@@ -1951,11 +1824,11 @@
             guncelleSihirbazVeMotor();
         }
 
-        function disDuvarDurumDegisti(cephe) {
-            let durum = document.getElementById(`dd_${cephe}_durum`).value;
-            let enInput = document.getElementById(`dd_${cephe}_en`);
+        function disDuvarYonDegisti(id) {
+            let yon = document.getElementById(`dd_${id}_yon`).value;
+            let enInput = document.getElementById(`dd_${id}_en`);
             
-            if (durum === "Yok") {
+            if (yon === "Yok") {
                 enInput.value = "0";
                 enInput.disabled = true;
                 enInput.className = "w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center";
@@ -1968,30 +1841,9 @@
 
         function guncelleSihirbazVeMotor() {
             const katY = parseFloat(document.getElementById('katYuksekligi').value) || 2.8;
-            const hepsiYonler = ['Kuzey', 'Kuzeydogu', 'Dogu', 'Guneydogu', 'Guney', 'Guneybati', 'Bati', 'Kuzeybati'];
-            let disUzunluklar = {};
 
-            hepsiYonler.forEach(cephe => {
-                let elem = document.getElementById(`dd_${cephe}_durum`);
-                let durum = elem ? elem.value : "Yok";
-                let enInput = document.getElementById(`dd_${cephe}_en`);
-                
-                if (durum === "Yok") {
-                    if (enInput) enInput.value = "0";
-                    disUzunluklar[cephe] = 0;
-                } else {
-                    disUzunluklar[cephe] = parseTrFloat(enInput ? enInput.value : 0);
-                }
-
-                const enInputEl = document.getElementById(`en_${cephe}`);
-                if (enInputEl) enInputEl.value = disUzunluklar[cephe];
-                
-                const toplamInputEl = document.getElementById(`toplam_${cephe}`);
-                if (toplamInputEl) toplamInputEl.value = disUzunluklar[cephe];
-            });
-
-            let pAlanlari = {};
-            hepsiYonler.forEach(y => pAlanlari[y] = 0);
+            // 1. Pencereleri Yönlerine Göre Grupla
+            let pAlanlari = { Kuzey: 0, Kuzeydogu: 0, Dogu: 0, Guneydogu: 0, Guney: 0, Guneybati: 0, Bati: 0, Kuzeybati: 0 };
 
             ['p1', 'p2', 'p3', 'p4', 'dk'].forEach(id => {
                 let yon = document.getElementById(id + '_yon').value;
@@ -2000,28 +1852,25 @@
                 let alan = en * boy;
                 document.getElementById(id + '_alan_lbl').innerText = alan.toFixed(2) + " m²";
                 if (yon !== "Yok") {
-                    if (!pAlanlari[yon]) pAlanlari[yon] = 0;
-                    pAlanlari[yon] += alan;
+                    pAlanlari[yon] = (pAlanlari[yon] || 0) + alan;
                 }
             });
 
-            hepsiYonler.forEach(y => {
-                let el = document.getElementById(`pencere_${y}`);
-                if (el) el.value = pAlanlari[y].toFixed(2);
-            });
-
-            hepsiYonler.forEach(cephe => {
-                let en = disUzunluklar[cephe] || 0;
+            // 2. Dış Duvar Brüt Alanından Yöndeş Pencereyi Düş ve Net Duvarı Bul
+            ['1', '2', '3', '4'].forEach(id => {
+                let yon = document.getElementById(`dd_${id}_yon`).value;
+                let en = parseTrFloat(document.getElementById(`dd_${id}_en`).value);
                 let netAlan = 0;
-                if (en > 0) {
+                
+                if (yon !== "Yok" && en > 0) {
                     let brutAlan = en * katY;
-                    let oYoneAitPencere = pAlanlari[cephe] || 0;
+                    let oYoneAitPencere = pAlanlari[yon] || 0;
                     netAlan = Math.max(0, brutAlan - oYoneAitPencere);
                 }
-                let netEl = document.getElementById(`dd_${cephe}_net`);
-                if (netEl) netEl.innerText = netAlan.toFixed(2);
+                document.getElementById(`dd_${id}_net`).innerText = netAlan.toFixed(2);
             });
 
+            // 3. İç Duvar Hesabı
             let icEn = parseTrFloat(document.getElementById('id_en').value);
             let icAlan = icEn * katY;
             document.getElementById('id_net_alan').innerText = icAlan.toFixed(2);
@@ -2076,30 +1925,33 @@
             else if (camTipi === "Ahşap - Çift Cam") uCam = 2.90;
             else if (camTipi === "Alüminyum - Çift Cam") uCam = 3.40;
 
-            const hepsiYonler = ['Kuzey', 'Kuzeydogu', 'Dogu', 'Guneydogu', 'Guney', 'Guneybati', 'Bati', 'Kuzeybati'];
-            let enDuvar = {};
-            let pCam = {};
-
-            hepsiYonler.forEach(y => {
-                let enEl = document.getElementById(`en_${y}`);
-                let pEl = document.getElementById(`pencere_${y}`);
-                enDuvar[y] = enEl ? parseTrFloat(enEl.value) : 0;
-                pCam[y] = pEl ? parseTrFloat(pEl.value) : 0;
-            });
-
             const enIc = parseTrFloat(document.getElementById("en_Ic").value);
 
-            let netDuvar = {};
-            let toplamNetDisDuvar = 0;
-            let toplamCamAlani = 0;
-
-            hepsiYonler.forEach(y => {
-                netDuvar[y] = Math.max(0, (enDuvar[y] * yukseklik) - pCam[y]);
-                toplamNetDisDuvar += netDuvar[y];
-                toplamCamAlani += pCam[y];
+            let pAlanlari = { Kuzey: 0, Kuzeydogu: 0, Dogu: 0, Guneydogu: 0, Guney: 0, Guneybati: 0, Bati: 0, Kuzeybati: 0 };
+            ['p1', 'p2', 'p3', 'p4', 'dk'].forEach(id => {
+                let yon = document.getElementById(id + '_yon').value;
+                let en = parseTrFloat(document.getElementById(id + '_en').value);
+                let boy = parseTrFloat(document.getElementById(id + '_boy').value);
+                if (yon !== "Yok") pAlanlari[yon] = (pAlanlari[yon] || 0) + (en * boy);
             });
 
+            let dNetAlanlari = { Kuzey: 0, Kuzeydogu: 0, Dogu: 0, Guneydogu: 0, Guney: 0, Guneybati: 0, Bati: 0, Kuzeybati: 0 };
+            ['1', '2', '3', '4'].forEach(id => {
+                let yon = document.getElementById(`dd_${id}_yon`).value;
+                let en = parseTrFloat(document.getElementById(`dd_${id}_en`).value);
+                if (yon !== "Yok" && en > 0) {
+                    let brut = en * yukseklik;
+                    let pencere = pAlanlari[yon] || 0;
+                    dNetAlanlari[yon] = (dNetAlanlari[yon] || 0) + Math.max(0, brut - pencere);
+                }
+            });
+
+            let toplamNetDisDuvar = 0;
+            Object.keys(dNetAlanlari).forEach(k => toplamNetDisDuvar += dNetAlanlari[k]);
             const netDuvarIc = enIc * yukseklik;
+
+            let toplamCamAlani = 0;
+            Object.keys(pAlanlari).forEach(k => toplamCamAlani += pAlanlari[k]);
 
             let qDuvarIle = toplamNetDisDuvar * uDuvar * deltaT;
             let qKomsuIle = netDuvarIc * uKomsu * (deltaT * 0.4);
@@ -2110,24 +1962,12 @@
             else if (katKonum === "En Üst Kat - Eğimli") qTavanDoseme = alan * 0.60 * deltaT;
             else if (katKonum === "Zemin Kat") qTavanDoseme = alan * 0.40 * 4;
 
-            // Solar Radyasyon Değerleri (W/m²)
-            const rad = {
-                Kuzey: 100,
-                Kuzeydogu: 210,
-                Dogu: 300,
-                Guneydogu: 315,
-                Guney: 320,
-                Guneybati: 350,
-                Bati: 380,
-                Kuzeybati: 240
-            };
-
+            const radMatrisi = { Kuzey: 100, Kuzeydogu: 210, Dogu: 300, Guneydogu: 315, Guney: 320, Guneybati: 350, Bati: 380, Kuzeybati: 240 };
             const gFaktoru = 0.65;
             let qSolarCam = 0;
-            hepsiYonler.forEach(y => {
-                qSolarCam += (pCam[y] * rad[y]);
+            Object.keys(pAlanlari).forEach(k => {
+                qSolarCam += (pAlanlari[k] * (radMatrisi[k] || 250) * gFaktoru);
             });
-            qSolarCam *= gFaktoru;
 
             let qInsan = insan * 95;
             let qAydinlatmaCihaz = alan * 12;
@@ -2179,6 +2019,7 @@
         }
 
         window.onload = function() {
+            initYonSelects();
             sifirlaKlima();
             sekmeDegistir('klima');
             renderManuel('klima');
