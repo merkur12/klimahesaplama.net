@@ -103,13 +103,13 @@
     <div class="no-print max-w-7xl mx-auto w-full pt-6 px-4">
         <div class="bg-slate-200/60 p-1.5 rounded-2xl flex flex-wrap gap-2 max-w-3xl mx-auto border border-slate-200">
             <button id="btnTabPratik" onclick="sekmeDegistir('pratik')" class="flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 cursor-pointer">
-                <i class="fa-solid fa-bolt text-amber-500"></i> Pratik Soğutma Yükü Hesabı
+                <i class="fa-solid fa-bolt text-amber-500"></i> Pratik Soğutma Yükü Hesap Motoru
             </button>
             <button id="btnTabKlima" onclick="sekmeDegistir('klima')" class="flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 bg-white text-blue-600 shadow-sm cursor-pointer">
-                <i class="fa-solid fa-sun text-blue-500"></i> Detaylı TS 825 Hesap Motoru
+                <i class="fa-solid fa-sun text-blue-500"></i> Detaylı Soğutma Yükü Hesap Motoru
             </button>
             <button id="btnTabIsitma" onclick="sekmeDegistir('isitma')" class="flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 cursor-pointer">
-                <i class="fa-solid fa-fire text-orange-500"></i> Kombi & Isı Pompası Hesabı
+                <i class="fa-solid fa-fire text-orange-500"></i> Kombi & Isı Pompası Hesap Motoru
             </button>
         </div>
     </div>
@@ -227,19 +227,19 @@
                 </form>
             </div>
 
-            <!-- 1. MOTOR: DETAYLI TS 825 KLİMA SOĞUTMA YÜKÜ -->
+            <!-- 1. MOTOR: DETAYLI SOĞUTMA YÜKÜ HESAP MOTORU -->
             <div id="motorKlima" class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 md:p-8 space-y-6">
                 
                 <div id="pdfRaporKapsayici" class="space-y-4">
                     
                     <div class="print-baslik text-center pb-1 border-b-2 border-blue-600 mb-2">
-                        <h1 class="text-xs font-black text-blue-900 uppercase tracking-wide">Detaylı TS825 Soğutma Yükü Analizi ve Klima Seçimi Raporu</h1>
+                        <h1 class="text-xs font-black text-blue-900 uppercase tracking-wide">Detaylı Soğutma Yükü Analizi ve Klima Seçimi Raporu</h1>
                         <p class="text-[8px] text-slate-600 font-bold mt-0.5">klimahesaplama.net Mühendislik Raporlama Servisi</p>
                     </div>
 
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b pb-3 border-slate-100">
                         <h2 class="text-xl font-bold text-slate-700 flex items-center gap-2">
-                            <i class="fa-solid fa-snowflake text-blue-600"></i> Detaylı TS 825 Mahal ve Cephe Parametreleri
+                            <i class="fa-solid fa-snowflake text-blue-600"></i> Detaylı Mahal ve Cephe Parametreleri
                         </h2>
                         <button type="button" onclick="pdfDosyasiIndir()" class="no-print bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs py-2.5 px-4 rounded-xl shadow-sm transition flex items-center gap-2 cursor-pointer shrink-0">
                             <i class="fa-solid fa-file-pdf"></i> PDF Raporu Çıkar / Kaydet
@@ -312,7 +312,7 @@
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Bina Yalıtım Sınıfı</label>
                                 <select id="yalitim" onchange="guncelleSihirbazVeMotor()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 font-bold">
                                     <option value="cok_iyi">Çok İyi (Yeni Mantolamalı / Yüksek Yalıtım)</option>
-                                    <option value="standart" selected>Standart Yalıtımlı (TS 825 Standardı)</option>
+                                    <option value="standart" selected>Standart Yalıtımlı Bina</option>
                                     <option value="zayif">Yalıtımsız / Eski Tuğla Bina</option>
                                 </select>
                             </div>
@@ -348,7 +348,7 @@
                         <div id="printParametreSatiri" class="print-grid-5 grid grid-cols-1 md:grid-cols-5 gap-4">
                             <div id="divMahalAlaniKutusu" class="flex flex-col justify-end">
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Mahal Alanı (m²)</label>
-                                <input type="text" id="mahalAlani" value="0,00" oninput="guncelleSihirbazVeMotor()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 font-bold text-center">
+                                <input type="number" step="0.1" id="mahalAlani" value="0.0" oninput="guncelleSihirbazVeMotor()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 font-bold text-center">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Kat ve Çatı Konumu</label>
@@ -391,11 +391,11 @@
                                             <select id="p1_yon" onchange="pencereYonDegisti('p1')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
-                                                <input type="text" id="p1_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p1_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Yük.</span>
-                                                <input type="text" id="p1_boy" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p1_boy" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p1_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
@@ -404,11 +404,11 @@
                                             <select id="p2_yon" onchange="pencereYonDegisti('p2')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
-                                                <input type="text" id="p2_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p2_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Yük.</span>
-                                                <input type="text" id="p2_boy" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p2_boy" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p2_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
@@ -417,11 +417,11 @@
                                             <select id="p3_yon" onchange="pencereYonDegisti('p3')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
-                                                <input type="text" id="p3_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p3_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Yük.</span>
-                                                <input type="text" id="p3_boy" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p3_boy" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p3_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
@@ -430,11 +430,11 @@
                                             <select id="p4_yon" onchange="pencereYonDegisti('p4')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
-                                                <input type="text" id="p4_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p4_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Yük.</span>
-                                                <input type="text" id="p4_boy" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="p4_boy" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="p4_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
@@ -443,11 +443,11 @@
                                             <select id="dk_yon" onchange="pencereYonDegisti('dk')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Gen.</span>
-                                                <input type="text" id="dk_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="dk_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span class="text-[9px] font-bold text-slate-600 w-8 shrink-0">Yük.</span>
-                                                <input type="text" id="dk_boy" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                                <input type="number" step="0.1" id="dk_boy" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                             </div>
                                             <div class="text-[10px] font-bold text-slate-700 pt-0.5">Alan: <span id="dk_alan_lbl" class="text-slate-800">0.00 m²</span></div>
                                         </div>
@@ -463,35 +463,35 @@
                                     <div class="bg-emerald-50/70 p-3 rounded-lg border border-emerald-200 space-y-2">
                                         <span class="text-[10px] font-black text-emerald-900 block"><i class="fa-solid fa-door-closed mr-1"></i> İç / Komşu Duvar</span>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="id_en" value="0" oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-white text-center">
+                                        <input type="number" step="0.1" id="id_en" value="0.0" oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-white text-center">
                                         <div class="text-[10px] font-bold text-emerald-800">Alan: <span id="id_net_alan">0.00</span> m²</div>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                                         <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 1</span>
                                         <select id="dd_1_yon" onchange="disDuvarYonDegisti('1')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_1_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <input type="number" step="0.1" id="dd_1_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                         <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_1_net">0.00</span> m²</div>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                                         <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 2</span>
                                         <select id="dd_2_yon" onchange="disDuvarYonDegisti('2')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_2_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <input type="number" step="0.1" id="dd_2_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                         <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_2_net">0.00</span> m²</div>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                                         <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 3</span>
                                         <select id="dd_3_yon" onchange="disDuvarYonDegisti('3')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_3_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <input type="number" step="0.1" id="dd_3_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                         <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_3_net">0.00</span> m²</div>
                                     </div>
                                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                                         <span class="text-[10px] font-black text-blue-900 block">Dış Duvar 4</span>
                                         <select id="dd_4_yon" onchange="disDuvarYonDegisti('4')" class="w-full border rounded p-1 text-[11px] font-bold bg-white"></select>
                                         <label class="block text-[9px] font-bold text-slate-600">Genişlik (m)</label>
-                                        <input type="text" id="dd_4_en" value="0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
+                                        <input type="number" step="0.1" id="dd_4_en" value="0.0" disabled oninput="guncelleSihirbazVeMotor()" class="w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center">
                                         <div class="text-[10px] font-bold text-blue-800">Net: <span id="dd_4_net">0.00</span> m²</div>
                                     </div>
                                 </div>
@@ -499,13 +499,13 @@
                         </div>
 
                         <div class="hidden">
-                            <input type="number" id="en_Ic" value="0">
+                            <input type="number" id="en_Ic" value="0.0">
                             <select id="ekCihazSecimi"><option value="yok">Yok</option></select>
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-3 pt-2 no-print">
                             <button type="button" onclick="hesaplaTS825()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-md transition cursor-pointer text-center flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calculator"></i> Detaylı TS 825 Soğutma Yükü Analizini Başlat
+                                <i class="fa-solid fa-calculator"></i> Detaylı Soğutma Yükü Analizini Başlat
                             </button>
                             <button type="button" onclick="sifirlaKlima()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-3.5 px-5 rounded-xl transition cursor-pointer text-center flex items-center justify-center gap-1.5 shrink-0">
                                 <i class="fa-solid fa-rotate-right text-xs"></i> Parametreleri Sıfırla
@@ -514,7 +514,7 @@
 
                         <div id="printSonucKutusu" class="space-y-1 mt-3 p-3 border-2 border-blue-600 rounded-xl bg-blue-50/80">
                             <div class="flex justify-between items-center border-b border-blue-200 pb-1">
-                                <span class="text-xs font-black uppercase text-blue-900"><i class="fa-solid fa-square-poll-vertical mr-1"></i> TS 825 Hesap Raporu Sonuç Bölümü</span>
+                                <span class="text-xs font-black uppercase text-blue-900"><i class="fa-solid fa-square-poll-vertical mr-1"></i> Hesap Raporu Sonuç Bölümü</span>
                                 <span id="printMahalBilgi" class="text-xs font-bold text-blue-800">Mahal: M-101 - Yönetici Odası</span>
                             </div>
                             <div class="grid grid-cols-2 gap-2 pt-1">
@@ -663,7 +663,7 @@
             <!-- DİNAMİK KULLANIM MANUELİ REHBERİ -->
             <div id="boxManuelRehber" class="bg-slate-100/80 rounded-xl p-5 border border-slate-200/80 text-xs md:text-sm text-slate-700 space-y-3 no-print">
                 <h3 id="lblManuelBaslik" class="font-bold text-sm md:text-base text-slate-800 flex items-center gap-2 border-b border-slate-200 pb-2">
-                    <i class="fa-solid fa-book-open text-blue-600"></i> Detaylı TS 825 Hesap Motoru Nasıl Kullanılır?
+                    <i class="fa-solid fa-book-open text-blue-600"></i> Detaylı Soğutma Yükü Hesap Motoru Nasıl Kullanılır?
                 </h3>
                 <div id="lblManuelIcerik" class="space-y-2 leading-relaxed"></div>
             </div>
@@ -980,12 +980,12 @@
                 <!-- Blog 1 -->
                 <div id="blogCard1" onclick="blogToggle(1)" class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 flex flex-col justify-between cursor-pointer hover:border-blue-400 hover:shadow-md transition">
                     <div class="space-y-2">
-                        <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">TS 825 Standardı</span>
+                        <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Yalıtım Standartları</span>
                         <h4 class="font-extrabold text-slate-800 text-sm md:text-base leading-snug">Binalarda Isı Yalıtım Kuralları ve Enerji Verimliliği</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">TS 825 standardına göre ısı yalıtım hesaplarının binadaki enerji tüketimine ve kombi kapasite seçimlerine doğrudan etkisi nedir?</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Isı yalıtım hesaplarının binadaki enerji tüketimine ve kombi kapasite seçimlerine doğrudan etkisi nedir?</p>
                         
                         <div id="blogContent1" class="hidden pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-3 leading-relaxed">
-                            <p><strong>Detaylı Mühendislik Analizi:</strong> TS 825 standardı, Türkiye genelinde binaların enerji performansını standartlaştırmak ve yakıt tüketimini minimuma indirmek amacıyla geliştirilmiştir. Dış duvar, çatı ve taban ısı iletim katsayıları ($U$ değerleri) bu standartla denetlenir.</p>
+                            <p><strong>Detaylı Mühendislik Analizi:</strong> Standartlar, Türkiye genelinde binaların enerji performansını standartlaştırmak ve yakıt tüketimini minimuma indirmek amacıyla geliştirilmiştir. Dış duvar, çatı ve taban ısı iletim katsayıları ($U$ değerleri) bu kurallarla denetlenir.</p>
                             <p><strong>Uygulama İpuçları:</strong> Yalıtımı zayıf binalarda ısı köprüleri yoğuşmaya ve küflenmeye yol açar. Doğru mantolama ve yalıtımlı doğrama kombinasyonu ile ısı kayıpları %40'a varan oranlarda azaltılabilir.</p>
                             <span class="text-blue-600 font-bold block pt-1">Küçült / Kapat</span>
                         </div>
@@ -1049,7 +1049,7 @@
                         <p class="text-xs text-slate-600 leading-relaxed">kW kapasitesi, geniş modülasyon oranları ve paslanmaz çelik ana eşanjör avantajları.</p>
                         
                         <div id="blogContent5" class="hidden pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-3 leading-relaxed">
-                            <p><strong>Detaylı Mühendislik Analizi:</strong> Yoğuşmalı kombiler, atık baca gazı içerisindeki su buharını yoğuşturarak gizli ısıyı geri kazanır ve %105'e varan verim sağlar. Seçim yaparken cihazın modülasyon aralığı (örneğin 1:7 veya 1:10) en kritik teknik parametredir.</p>
+                            <p><strong>Detaylı Mühendislik Analizi:</strong> Yoğuşmalı kombiler, atık baca gazı içerisindeki su buharını yoğuşturarak gizli ısıyı kazanır ve %105'e varan verim sağlar. Seçim yaparken cihazın modülasyon aralığı (örneğin 1:7 veya 1:10) en kritik teknik parametredir.</p>
                             <p><strong>Uygulama İpuçları:</strong> Geniş modülasyon oranına sahip cihazlar, ara mevsimlerde dur-kalk yapmadan çok düşük güçlerde çalışarak hem yakıt tasarrufu sağlar hem de kombi eşanjörünün ömrünü uzatır.</p>
                             <span class="text-orange-600 font-bold block pt-1">Küçült / Kapat</span>
                         </div>
@@ -1132,7 +1132,7 @@
                     <strong>Amazon Gelir Ortaklığı Bildirimi:</strong> klimahesaplama.net, Amazon Türkiye Gelir Ortaklığı Programı üyesidir. Sitemizde yer alan Amazon.com.tr bağlantıları aracılığıyla gerçekleştirilen nitelikli satın alımlardan komisyon geliri elde edilebilir.
                 </p>
                 <p class="border-t border-slate-200/80 pt-2 text-slate-500">
-                    <strong>Sorumluluk Reddi Beyanı:</strong> Bu web sitesinde sunulan klima, kombi ve ısı pompası kapasite hesaplama araçları, basitleştirilmiş mühendislik formüllerine (TS 825 / CTE) dayalı <u>tahmini</u> sonuçlar vermektedir. Elde edilen veriler resmi bir mekanik uygulama projesi yerine geçmez; yetkili bir makine mühendisi veya uzman tesisatçı onayı olmadan cihaz alımı ve montaj kararı verilmemelidir.
+                    <strong>Sorumluluk Reddi Beyanı:</strong> Bu web sitesinde sunulan klima, kombi ve ısı pompası kapasite hesaplama araçları, basitleştirilmiş mühendislik formüllerine dayalı <u>tahmini</u> sonuçlar vermektedir. Elde edilen veriler resmi bir mekanik uygulama projesi yerine geçmez; yetkili bir makine mühendisi veya uzman tesisatçı onayı olmadan cihaz alımı ve montaj kararı verilmemelidir.
                 </p>
             </div>
         </div>
@@ -1146,7 +1146,7 @@
         </div>
 
         <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100 max-w-xl mx-auto">
-            © 2026 klimahesaplama.net | TS 825 Standartlarında Mühendislik İklimlendirme Hesap Motoru. Tüm hakları saklıdır.
+            © 2026 klimahesaplama.net | Mühendislik İklimlendirme Hesap Motoru. Tüm hakları saklıdır.
         </p>
     </footer>
 
@@ -1158,7 +1158,7 @@
                 <button onclick="modalKapat('modalHakkimizda')" class="text-slate-400 hover:text-slate-600 font-bold cursor-pointer text-xl">&times;</button>
             </div>
             <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
-                <p><strong>klimahesaplama.net</strong>, mekanik tesisat mühendisliği hesaplama prensiplerini ve TS 825 standartlarını son kullanıcılar, mimarlar ve iklimlendirme uzmanları için erişilebilir kılmayı hedefleyen bağımsız bir dijital mühendislik portalıdır.</p>
+                <p><strong>klimahesaplama.net</strong>, mekanik tesisat mühendisliği hesaplama prensiplerini son kullanıcılar, mimarlar ve iklimlendirme uzmanları için erişilebilir kılmayı hedefleyen bağımsız bir dijital mühendislik portalıdır.</p>
                 <p>Sitemiz üzerinden mekanik ısı kaybı, soğutma yükü analizi, klima BTU seçimi ve ısı pompası kapasite değerlendirmeleri hızlı ve pratik bir şekilde yapılabilmektedir.</p>
                 <hr class="border-slate-100 my-2">
                 <h4 class="font-bold text-slate-800">İletişim Bilgileri:</h4>
@@ -1200,10 +1200,10 @@
             </div>
             <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
                 <h4 class="font-bold text-slate-800">Yasal Uyarı ve Karakteri:</h4>
-                <p>klimahesaplama.net üzerindeki tüm yazılımlar, hesap makineleri ve rehber içerikler tamamen yönlendirme ve tahmin bilgilendirmesi amacı taşır. Hesaplamalar TS 825 standartları ve teorik ısı transfer modellerine dayanır.</p>
+                <p>klimahesaplama.net üzerindeki tüm yazılımlar, hesap makineleri ve rehber içerikler tamamen yönlendirme ve tahmin bilgilendirmesi amacı taşır. Hesaplamalar standart ısı transfer modellerine dayanır.</p>
                 
                 <h4 class="font-bold text-slate-800">Sorumluluk Sınırı:</h4>
-                <p>Bu platformda elde edilen kapasite verilerine dayanılarak yapılan cihaz satın alımları, montaj Hataları veya hatalı uygulama kararlarından klimahesaplama.net sorumlu tutulamaz. Uygulama öncesinde yetkili makine mühendisliği bürolarından teknik onay alınması tavsiye edilir.</p>
+                <p>Bu platformda elde edilen kapasite verilerine dayanılarak yapılan cihaz satın alımları, montaj hataları veya hatalı uygulama kararlarından klimahesaplama.net sorumlu tutulamaz. Uygulama öncesinde yetkili makine mühendisliği bürolarından teknik onay alınması tavsiye edilir.</p>
             </div>
         </div>
     </div>
@@ -1309,7 +1309,7 @@
                 document.getElementById('lblBirimAnaliz').innerText = "Watt";
                 document.getElementById('lblAltKapasiteBaslik').innerText = "Dinamik Güç İhtiyacı";
                 document.getElementById('lblAltBirim').innerText = "BTU/h";
-                document.getElementById('lblOnerilenSegment').innerText = "Klima Önerisi:";
+                document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
                 document.getElementById('lblWatt').innerText = "0";
                 document.getElementById('lblBTU').innerText = "0";
                 document.getElementById('lblOnerilenSegment').innerText = "Hesaplama butonuna tıklayın.";
@@ -1349,10 +1349,10 @@
             const manuelIcerik = document.getElementById("lblManuelIcerik");
 
             if (mod === 'klima') {
-                manuelBaslik.innerHTML = `<i class="fa-solid fa-book-open text-blue-600"></i> Detaylı TS 825 Hesap Motoru Nasıl Kullanılır?`;
+                manuelBaslik.innerHTML = `<i class="fa-solid fa-book-open text-blue-600"></i> Detaylı Soğutma Yükü Hesap Motoru Nasıl Kullanılır?`;
                 manuelIcerik.innerHTML = `
                     <ol class="list-decimal list-inside space-y-1.5 text-xs md:text-sm font-medium">
-                        <li><strong>Şehir ve Yaz Pik Sıcaklığı:</strong> Şehir seçildiğinde TS 825 pik dış hava sıcaklığı otomatik yüklenir.</li>
+                        <li><strong>Şehir / İklim Bölgesi:</strong> Şehir seçildiğinde pik dış hava sıcaklığı otomatik yüklenir.</li>
                         <li><strong>Yalıtım Durumu:</strong> Yapının yalıtım durumunu seçin.</li>
                         <li><strong>Mahal Fonksiyonu & Kat Konumu:</strong> İklimlendirilecek alanın türünü ve kat konumunu belirleyin.</li>
                         <li><strong>Mahal Alanı:</strong> Mahal alanını girin.</li>
@@ -1361,7 +1361,7 @@
                         <li><strong>Kişi Sayısı:</strong> Kişi sayısını girin.</li>
                         <li><strong>Pencere & Sürgülü Kapı Sihirbazı:</strong> Ölçüleri ve yönleri girin.</li>
                         <li><strong>İç ve Dış Duvarlar:</strong> İç duvar ve dış duvar ölçülerini ve yönlerini girin.</li>
-                        <li><strong>Analizi Başlat:</strong> "Detaylı TS 825 Analizi Başlat" butonuna tıklayın.</li>
+                        <li><strong>Analizi Başlat:</strong> "Detaylı Soğutma Yükü Analizi Başlat" butonuna tıklayın.</li>
                     </ol>
                     <div class="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-950 text-xs leading-relaxed space-y-1">
                         <strong>İpucu:</strong> Duvar ölçülerini AutoCAD veya benzeri dwg dosyası üzerinden alırken "distance" ve ilk tıklama sonrası "m" komutlarını kullanarak girintili / komşu duvarların tek seferde ölçüsünü alabilirsiniz.<br>
@@ -1413,14 +1413,14 @@
             document.getElementById("camTipi").value = "PVC - Çift Cam";
             document.getElementById("insanSayisi").value = "0";
             document.getElementById("katYuksekligi").value = "2.8";
-            document.getElementById("mahalAlani").value = "0,00";
-            document.getElementById("id_en").value = "0";
+            document.getElementById("mahalAlani").value = "0.0";
+            document.getElementById("id_en").value = "0.0";
             if(document.getElementById("ekCihaz1")) document.getElementById("ekCihaz1").value = "yok";
             if(document.getElementById("ekCihaz2")) document.getElementById("ekCihaz2").value = "yok";
             
             ['p1', 'p2', 'p3', 'p4', 'dk'].forEach(id => {
-                document.getElementById(id + '_en').value = "0";
-                document.getElementById(id + '_boy').value = "0";
+                document.getElementById(id + '_en').value = "0.0";
+                document.getElementById(id + '_boy').value = "0.0";
                 document.getElementById(id + '_yon').value = "Yok";
                 pencereYonDegisti(id);
             });
@@ -1474,10 +1474,11 @@
             let yalitimCarpanPratik = yalitimP === "cok_iyi" ? 0.85 : (yalitimP === "zayif" ? 1.25 : 1.00);
 
             function yonSolarKatsayi(y) {
-                if (y === "Bati" || y === "Guneybati") return 1.25;
-                if (y === "Guney" || y === "Guneydogu") return 1.15;
-                if (y === "Dogu" || y === "Kuzeydogu") return 1.08;
-                return 1.00;
+                let k = 1.00;
+                if (y === "Bati" || y === "Guneybati") k = 1.10;
+                else if (y === "Guney" || y === "Guneydogu") k = 1.07;
+                else if (y === "Dogu" || y === "Kuzeydogu") k = 1.03;
+                return k;
             }
 
             let duvarSolarCarpan = yonSolarKatsayi(duvarYon);
@@ -1495,7 +1496,8 @@
                 ekstraPencereYukW = tahminiCamAlaniFarkli * pencereSolarCarpan * 55;
             }
 
-            let katCarpan = katKonum === "Zemin Kat" ? 1.05 : (katKonum === "En Üst Kat" ? 1.20 : 1.0);
+            let duvarGecikmeFaktoru = 1.08;
+            let katCarpan = katKonum === "Zemin Kat" ? 1.05 : (katKonum === "En Üst Kat" ? (bolge === 1 || bolge === 2 ? 1.25 : 1.15) : 1.0);
             let insanGucWatt = kisiSayisi * 95;
             let ekGucWatt = 0;
             if (fonks === "Ofis" || fonks === "Dükkan") {
@@ -1505,9 +1507,11 @@
                 else ekGucWatt = 100;
             }
 
-            let temelYuk = alan * baseWattM2 * yalitimCarpanPratik * netDuvarEtkisi * katCarpan;
+            let temelYuk = alan * baseWattM2 * yalitimCarpanPratik * (netDuvarEtkisi * duvarGecikmeFaktoru) * katCarpan;
             let toplamWattNet = temelYuk + ekstraPencereYukW + insanGucWatt + ekGucWatt;
-            let toplamWatt = toplamWattNet * 1.12; 
+            
+            let nemEmniyetCarpan = (bolge === 1 || bolge === 2) ? 1.10 : 1.00;
+            let toplamWatt = toplamWattNet * 1.10 * nemEmniyetCarpan; 
             let toplamBTU = toplamWatt * 3.412;
 
             document.getElementById("lblWatt").innerText = Math.round(toplamWatt).toLocaleString('tr-TR');
@@ -1583,7 +1587,7 @@
                 `;
                 cepheSelect.value = "4";
                 cepheSelect.disabled = true;
-                cepheSelect.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold text-slate-500";
+                cepheSelect.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold text-slate-500";
             }
         }
 
@@ -1826,8 +1830,8 @@
             let enInput = document.getElementById(pId + '_en');
             let boyInput = document.getElementById(pId + '_boy');
             if (yon === "Yok") {
-                enInput.value = "0";
-                boyInput.value = "0";
+                enInput.value = "0.0";
+                boyInput.value = "0.0";
                 enInput.disabled = true;
                 boyInput.disabled = true;
                 enInput.className = "w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center";
@@ -1846,7 +1850,7 @@
             let enInput = document.getElementById(`dd_${id}_en`);
             
             if (yon === "Yok") {
-                enInput.value = "0";
+                enInput.value = "0.0";
                 enInput.disabled = true;
                 enInput.className = "w-full border rounded p-1 text-xs font-bold bg-slate-200 cursor-not-allowed text-center";
             } else {
@@ -1859,7 +1863,6 @@
         function guncelleSihirbazVeMotor() {
             const katY = parseFloat(document.getElementById('katYuksekligi').value) || 2.8;
 
-            // 1. Pencereleri Yönlerine Göre Grupla
             let pAlanlari = { Kuzey: 0, Kuzeydogu: 0, Dogu: 0, Guneydogu: 0, Guney: 0, Guneybati: 0, Bati: 0, Kuzeybati: 0 };
 
             ['p1', 'p2', 'p3', 'p4', 'dk'].forEach(id => {
@@ -1873,7 +1876,6 @@
                 }
             });
 
-            // 2. Dış Duvar Brüt Alanından Yöndeş Pencereyi Düş ve Net Duvarı Bul
             ['1', '2', '3', '4'].forEach(id => {
                 let yon = document.getElementById(`dd_${id}_yon`).value;
                 let en = parseTrFloat(document.getElementById(`dd_${id}_en`).value);
@@ -1887,7 +1889,6 @@
                 document.getElementById(`dd_${id}_net`).innerText = netAlan.toFixed(2);
             });
 
-            // 3. İç Duvar Hesabı
             let icEn = parseTrFloat(document.getElementById('id_en').value);
             let icAlan = icEn * katY;
             document.getElementById('id_net_alan').innerText = icAlan.toFixed(2);
@@ -1921,10 +1922,11 @@
             const hacim = alan * yukseklik;
 
             let tDisPik = 32;
-            if (["Adana", "Adıyaman", "Aydın", "Kahramanmaraş", "Manisa", "Osmaniye"].includes(sehir)) tDisPik = 38;
-            else if (["Antalya", "Hatay", "Mersin", "Gaziantep", "Kilis"].includes(sehir)) tDisPik = 37;
-            else if (["Muğla", "Denizli"].includes(sehir)) tDisPik = 36;
-            else if (["İzmir"].includes(sehir)) tDisPik = 35;
+            let isSicakBolge = false;
+            if (["Adana", "Adıyaman", "Aydın", "Kahramanmaraş", "Manisa", "Osmaniye"].includes(sehir)) { tDisPik = 38; isSicakBolge = true; }
+            else if (["Antalya", "Hatay", "Mersin", "Gaziantep", "Kilis"].includes(sehir)) { tDisPik = 37; isSicakBolge = true; }
+            else if (["Muğla", "Denizli"].includes(sehir)) { tDisPik = 36; isSicakBolge = true; }
+            else if (["İzmir"].includes(sehir)) { tDisPik = 35; isSicakBolge = true; }
             else if (["Bursa", "Amasya"].includes(sehir)) tDisPik = 34;
             else if (["Balıkesir", "Kocaeli", "Sakarya", "Ankara"].includes(sehir)) tDisPik = 33;
             else if (["Trabzon", "Rize", "Sinop", "Zonguldak"].includes(sehir)) tDisPik = 29;
@@ -1970,20 +1972,23 @@
             let toplamCamAlani = 0;
             Object.keys(pAlanlari).forEach(k => toplamCamAlani += pAlanlari[k]);
 
-            let qDuvarIle = toplamNetDisDuvar * uDuvar * deltaT;
+            let duvarGecikmeFaktoru = 1.08;
+
+            let qDuvarIle = toplamNetDisDuvar * uDuvar * deltaT * duvarGecikmeFaktoru;
             let qKomsuIle = netDuvarIc * uKomsu * (deltaT * 0.4);
             let qCamIle = toplamCamAlani * uCam * deltaT;
             
             let qTavanDoseme = 0;
-            if (katKonum === "En Üst Kat - Teras") qTavanDoseme = alan * 0.90 * (deltaT + 4);
+            if (katKonum === "En Üst Kat - Teras") qTavanDoseme = alan * (isSicakBolge ? 1.15 : 0.90) * (deltaT + 4);
             else if (katKonum === "En Üst Kat - Eğimli") qTavanDoseme = alan * 0.60 * deltaT;
             else if (katKonum === "Zemin Kat") qTavanDoseme = alan * 0.40 * 4;
 
-            const radMatrisi = { Kuzey: 100, Kuzeydogu: 210, Dogu: 300, Guneydogu: 315, Guney: 320, Guneybati: 350, Bati: 380, Kuzeybati: 240 };
-            const gFaktoru = 0.65;
+            const radMatrisiOrg = { Kuzey: 100, Kuzeydogu: 210, Dogu: 300, Guneydogu: 315, Guney: 320, Guneybati: 350, Bati: 380, Kuzeybati: 240 };
+            const gFaktoru = 0.80;
             let qSolarCam = 0;
             Object.keys(pAlanlari).forEach(k => {
-                qSolarCam += (pAlanlari[k] * (radMatrisi[k] || 250) * gFaktoru);
+                let radVal = (radMatrisiOrg[k] || 250) * 1.00;
+                qSolarCam += (pAlanlari[k] * radVal * gFaktoru);
             });
 
             let qInsan = insan * 95;
@@ -2013,7 +2018,14 @@
 
             const netToplamWatt = qDuvarIle + qKomsuIle + qCamIle + qTavanDoseme + qSolarCam + qInsan + qAydinlatmaCihaz + qBilgisayarDefault + qEkCihaz1 + qEkCihaz2 + qTazeHava;
             
-            const toplamWatt = netToplamWatt * 1.15; 
+            let nemEmniyetCarpan = isSicakBolge ? 1.10 : 1.00;
+
+            let detayEmniyetCarpan = 1.15;
+            if (isSicakBolge && alan >= 15.0) {
+                detayEmniyetCarpan = 1.20;
+            }
+
+            const toplamWatt = netToplamWatt * 1.15 * nemEmniyetCarpan * detayEmniyetCarpan; 
             const toplamBTU = Math.round(toplamWatt * 3.412);
 
             document.getElementById("lblWatt").innerText = Math.round(toplamWatt).toLocaleString('tr-TR');
@@ -2043,6 +2055,7 @@
             renderVarsayilanPazaryeri('klima');
             yapiTipiDegisti();
             isiticiCihazDegisti();
+            document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
         };
     </script>
 </body>
