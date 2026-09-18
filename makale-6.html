@@ -2,26 +2,37 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Küresel ve Türkiye Pazarında HVAC Sektörü | Klima Hesaplama Uzmanı</title>
-    <meta name="description" content="Klima, ısı pompası ve kombi sektörünün dünyadaki ve Türkiye'deki pazar payları, satış hacimleri ve gelecekteki teknolojik trendler.">
+    <title>Binalarda Isı Yalıtım Kuralları ve Enerji Verimliliği | Klima Hesaplama Uzmanı</title>
+    <meta name="description" content="Binalarda ısı yalıtım kuralları, TS 825 standardı, enerji verimliliği ve BEP yönetmeliği hakkında kapsamlı mühendislik rehberi.">
+    
+    <!-- Canonical Etiketi -->
+    <link rel="canonical" href="https://klimahesaplama.net/makale-1.html">
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6907551704910400" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
-    <nav class="bg-white border-b border-slate-100 py-4 px-6 shadow-xs sticky top-0 z-40">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2">
-                <i class="fa-solid fa-snowflake text-blue-600 text-2xl"></i>
-                <span class="text-xl font-black tracking-tight text-slate-900">klimahesaplama<span class="text-blue-600">.net</span></span>
-            </a>
-            <a href="index.html" class="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
-                <i class="fa-solid fa-arrow-left"></i> Hesaplama Araçlarına Dön
+ 
+<!-- NAVBAR -->
+<nav class="no-print bg-white border-b border-slate-100 py-4 px-6 shadow-xs sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-snowflake text-blue-600 text-2xl animate-pulse"></i>
+            <span class="text-2xl font-black tracking-tight text-slate-900">klimahesaplama<span class="text-blue-600">.net</span></span>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-blue-600 transition cursor-pointer">
+                <i class="fa-solid fa-arrow-left text-blue-500"></i> Hesaplama Araçlarına Dön
             </a>
         </div>
-    </nav>
+    </div>
+</nav>
     <main class="max-w-4xl mx-auto my-8 px-4 flex-grow w-full">
         <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 space-y-6">
             <div class="space-y-3 border-b pb-6 border-slate-100">
@@ -39,8 +50,90 @@
             </div>
         </article>
     </main>
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-12">
-        <p>© 2026 klimahesaplama.net | Tüm hakları saklıdır.</p>
-    </footer>
+   <!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500 space-y-4 no-print px-4 mt-auto">
+    <div class="max-w-4xl mx-auto space-y-3">
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[11px] text-slate-600 leading-relaxed text-left sm:text-center space-y-2">
+            <p>
+                <strong>Amazon Gelir Ortaklığı Bildirimi:</strong> klimahesaplama.net, Amazon Türkiye Gelir Ortaklığı Programı üyesidir. Sitemizde yer alan Amazon.com.tr bağlantıları aracılığıyla gerçekleştirilen nitelikli satın alımlardan komisyon geliri elde edilebilir.
+            </p>
+            <p class="border-t border-slate-200/80 pt-2 text-slate-500">
+                <strong>Sorumluluk Reddi Beyanı:</strong> Bu web sitesinde sunulan klima, kombi ve ısı pompası kapasite hesaplama araçları, basitleştirilmiş mühendislik formüllerine dayalı <u>tahmini</u> sonuçlar vermektedir.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center gap-4 font-bold text-slate-600 flex-wrap pt-2 text-xs">
+        <button onclick="modalAc('modalHakkimizda')" class="hover:text-blue-600 transition cursor-pointer bg-transparent border-none">Hakkımızda & İletişim</button>
+        <span>•</span>
+        <button onclick="modalAc('modalGizlilik')" class="hover:text-blue-600 transition cursor-pointer bg-transparent border-none">Gizlilik ve Çerez Politikası</button>
+        <span>•</span>
+        <button onclick="modalAc('modalKosullar')" class="hover:text-blue-600 transition cursor-pointer bg-transparent border-none">Kullanım Şartları & Sorumluluk Reddi</button>
+    </div>
+
+    <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100 max-w-xl mx-auto">
+        © 2026 klimahesaplama.net | Mühendislik İklimlendirme Hesap Motoru. Tüm hakları saklıdır.
+    </p>
+</footer>
+
+<!-- MODALLAR -->
+<div id="modalHakkimizda" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center border-b pb-3">
+            <h3 class="text-lg font-extrabold text-slate-800">Hakkımızda & İletişim</h3>
+            <button onclick="modalKapat('modalHakkimizda')" class="text-slate-400 hover:text-slate-600 font-bold cursor-pointer text-xl">&times;</button>
+        </div>
+        <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+            <p><strong>klimahesaplama.net</strong>, mekanik tesisat mühendisliği hesaplama prensiplerini son kullanıcılar, mimarlar ve iklimlendirme uzmanları için erişilebilir kılmayı hedefleyen bağımsız bir dijital mühendislik portalıdır.</p>
+            <p>Sitemiz üzerinden mekanik ısı kaybı, soğutma yükü analizi, klima BTU seçimi ve ısı pompası kapasite değerlendirmeleri hızlı ve pratik bir şekilde yapılabilmektedir.</p>
+            <hr class="border-slate-100 my-2">
+            <h4 class="font-bold text-slate-800">İletişim Bilgileri:</h4>
+            <p><i class="fa-solid fa-envelope text-blue-600 mr-1.5"></i> <strong>E-posta:</strong> merkur12@gmail.com</p>
+            <p><i class="fa-solid fa-globe text-blue-600 mr-1.5"></i> <strong>Web:</strong> https://klimahesaplama.net</p>
+            <p><i class="fa-solid fa-clock text-blue-600 mr-1.5"></i> <strong>Yanıt Süresi:</strong> İş günlerinde 24-48 saat içerisinde dönüş yapılmaktadır.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modalGizlilik" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center border-b pb-3">
+            <h3 class="text-lg font-extrabold text-slate-800">Gizlilik ve Çerez Politikası</h3>
+            <button onclick="modalKapat('modalGizlilik')" class="text-slate-400 hover:text-slate-600 font-bold cursor-pointer text-xl">&times;</button>
+        </div>
+        <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+            <p><strong>Gizlilik Beyanı:</strong> klimahesaplama.net olarak ziyaretçilerimizin kişisel verilerinin korunmasına büyük önem veriyoruz. Hesaplama araçlarımıza girdiğiniz oda ölçüleri, konum ve cephe verileri tamamen tarayıcınızda (istemci tarafında) işlenir; sunucularımıza kaydedilmez.</p>
+            
+            <h4 class="font-bold text-slate-800 pt-1">Çerezler ve Google AdSense Reklamları:</h4>
+            <p>Sitemizde kullanıcı deneyimini iyileştirmek, trafik analizi yapmak ve ilgi alanlarına göre özelleştirilmiş reklamlar sunmak amacıyla çerezler (cookies) kullanılmaktadır.</p>
+            <ul class="list-disc list-inside space-y-1 pl-1">
+                <li>Google dahil üçüncü taraf tedarikçiler, kullanıcıların web sitemize veya diğer web sitelerine yaptığı önceki ziyaretlere dayanarak reklam yayınlamak üzere çerezleri kullanır.</li>
+                <li>Ziyaretçiler, <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" class="text-blue-600 underline">Google Reklam Ayarları</a> sayfasını ziyaret ederek kişiselleştirilmiş reklamcılığı devre dışı bırakabilirler.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalKosullar" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center border-b pb-3">
+            <h3 class="text-lg font-extrabold text-slate-800">Kullanım Şartları & Sorumluluk Reddi</h3>
+            <button onclick="modalKapat('modalKosullar')" class="text-slate-400 hover:text-slate-600 font-bold cursor-pointer text-xl">&times;</button>
+        </div>
+        <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+            <h4 class="font-bold text-slate-800">Yasal Uyarı ve Karakteri:</h4>
+            <p>klimahesaplama.net üzerindeki tüm yazılımlar, hesap makineleri ve rehber içerikler tamamen yönlendirme ve tahmin bilgilendirmesi amacı taşır. Hesaplamalar standart ısı transfer modellerine dayanır.</p>
+            <h4 class="font-bold text-slate-800">Sorumluluk Sınırı:</h4>
+            <p>Bu platformda elde edilen kapasite verilerine dayanılarak yapılan cihaz satın alımları, montaj hataları veya hatalı uygulama kararlarından klimahesaplama.net sorumlu tutulamaz.</p>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL YÖNETİM SCRIPT -->
+<script>
+    function modalAc(id) { document.getElementById(id).classList.remove('hidden'); }
+    function modalKapat(id) { document.getElementById(id).classList.add('hidden'); }
+</script>
+
 </body>
 </html>
