@@ -2097,7 +2097,12 @@
             yapiTipiDegisti();
             isiticiCihazDegisti();
             document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
-        };
+       // Tarayıcının geri tuşuyla önbellekten (bfcache) yüklenmesini engeller, sayfayı taze kurar
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
     </script>
 </body>
 </html>
