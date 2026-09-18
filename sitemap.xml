@@ -9,78 +9,146 @@
     <priority>1.00</priority>
   </url>
 
-  <!-- 1. Makale: TS 825 Standardı -->
-  <url>
-    <loc>https://klimahesaplama.net/#blogCard1</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+  <!-- 1. Makale: Binalarda Isı Yalıtım Kuralları ve Enerji Verimliliği -->
+ <url>
+    <loc>https://klimahesaplama.net/makale-1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 2. Makale: Isı Pompası vs Kombi -->
+  <!-- 2. Makale: Binalarda Enerji Performansı Yönetmeliği Temel İlkeleri -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard2</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 3. Makale: Klima BTU Hesabı ve Solar Radyasyon -->
+  <!-- 3. Makale: TS 825 Isı Yalıtım Mevzuatı Temel İlkeleri -->
+ <url>
+    <loc>https://klimahesaplama.net/makale-3.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+  <!-- 4. Makale: Isı Transferi Nedir? Temel İlkeleri ve Çeşitleri -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard3</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-4.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 4. Makale: Klima Seçim Kriterleri -->
+  <!-- 5. Makale: Termodinamik Kanunları ve Enerji İlişkisi -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard4</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-5.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 5. Makale: Yoğuşmalı Kombi Seçim Kriterleri -->
+  <!-- 6. Makale: Küresel ve Türkiye Pazarında Klima, Isı Pompası ve Kombi Sektörü -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard5</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 6. Makale: Isı Pompası mı Elektrikli Kombi mi? -->
+  <!-- 7. Makale: Inverter Isı Pompası ile Yoğuşmalı Kombi Karşılaştırması -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard6</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-7.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 7. Makale: Klimayı Doğru Kullanmak ve Sağlık -->
+  <!-- 8. Makale: Solar Radyasyon ve Cephe Faktörünün Soğutma Yüküne Etkisi -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard7</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-8.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-  <!-- 8. Makale: Isı Kayıplarını Azaltma Yöntemleri -->
+  <!-- 9. Makale: Klima Seçimi Yapılırken Nelere Dikkat Edilmelidir? -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard8</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- 9. Makale: Split Klima Çalışma Prensibi -->
+    <loc>https://klimahesaplama.net/makale-9.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+ 
+  <!-- 10. Makale: Yoğuşmalı Kombi Seçim Kriterleri Nelerdir? -->
   <url>
-    <loc>https://klimahesaplama.net/#blogCard9</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+    <loc>https://klimahesaplama.net/makale-10.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
+  <!-- 11. Makale: Isı Pompası mı Elektrikli Kombi mi? -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-11.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+ <!-- 12. Makale: Klimayı Doğru Kullanmak ve Sağlık -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-12.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+ <!-- 13. Makale: Isı Kayıplarını Azaltmak İçin Pratik Yöntemler -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-13.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>  
+ 
+   <!-- 14. Makale: Split Klima Nasıl Çalışır? Çalışma Prensibi -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-14.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+  
+   <!-- 15. Makale: Evlerde Yalıtım Kalınlığı Nasıl Hesaplanır? -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-15.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+  
+  <!-- 16. Makale: Isı Pompası Verimliliğini Etkileyen Faktörler (COP ve EER) -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-16.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url> 
+  
+   <!-- 17. Makale: Pencerelerin Isı Kaybındaki Rolü ve Cam Seçimi -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-17.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+  
+ <!-- 18. Makale: Konutlarda Havalandırma ve İç Hava Kalitesi -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-18.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>  
+  
+  <!-- 19. Makale: Doğru Oda Termostatı Kullanımı ve Tasarruf Yöntemleri -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-19.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url> 
+  
+   <!-- 20. Makale: Mekanik Tesisat Projelerinde Mühendislik Hesaplarının Önemi -->
+  <url>
+    <loc>https://klimahesaplama.net/makale-20.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+   
   <!-- Kurumsal Sayfalar ve Yasal Metinler -->
   <url>
     <loc>https://klimahesaplama.net/#modalHakkimizda</loc>
