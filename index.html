@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
         
         @media print {
             @page { size: A4 landscape; margin: 2mm 3mm; }
@@ -2097,12 +2100,7 @@
             yapiTipiDegisti();
             isiticiCihazDegisti();
             document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
-       // Tarayıcının geri tuşuyla önbellekten (bfcache) yüklenmesini engeller, sayfayı taze kurar
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-});
+       });
     </script>
 </body>
 </html>
