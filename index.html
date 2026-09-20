@@ -580,14 +580,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2" id="lblCepheBaslik">Dış Havaya Açık Cephe Sayısı</label>
-                            <select id="cepheSayisi" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold">
-                                <option value="1">1 Cephe Açık (Aralık Sıra)</option>
-                                <option value="2" selected>2 Cephe Açık (Köşe)</option>
-                                <option value="3">3 Cephe Açık</option>
-                                <option value="4" id="optMustakilCephe">4 Cephe Açık (Müstakil / Villa)</option>
-                            </select>
-                        </div>
+    <label class="block text-xs font-bold uppercase text-slate-500 mb-2" id="lblCepheBaslik">Dış Havaya Açık Cephe Sayısı</label>
+    <select id="cepheSayisi" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold">
+        <option value="1" id="cepheOpt1">1 Cephe Açık (Aralık Sıra)</option>
+        <option value="2" id="cepheOpt2" selected>2 Cephe Açık (Köşe)</option>
+        <option value="3" id="cepheOpt3">3 Cephe Açık</option>
+        <option value="4" id="cepheOpt4">4 Cephe Açık (Müstakil / Villa)</option>
+    </select>
+</div>
                     </div>
 
                     <div id="boxKatAlanlari" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 bg-orange-50/50 p-4 rounded-xl border border-orange-100">
@@ -1577,69 +1577,74 @@
             renderPazaryerleri(baslik, 'klima');
         }
 
-        function yapiTipiDegisti() {
-            const yapiTipi = document.getElementById("yapiTipi").value;
-            const boxKatKonum = document.getElementById("boxKatKonumIsitma");
-            const tavanInput = document.getElementById("tavanIsitma");
-            const boxKatAlanlari = document.getElementById("boxKatAlanlari");
-            const netAlanInput = document.getElementById("netAlanIsitma");
-            const lblNetAlanBaslik = document.getElementById("lblNetAlanBaslik");
-            const cepheSelect = document.getElementById("cepheSayisi");
+function yapiTipiDegisti() {
+    const yapiTipi = document.getElementById("yapiTipi").value;
+    const boxKatKonum = document.getElementById("boxKatKonumIsitma");
+    const tavanInput = document.getElementById("tavanIsitma");
+    const boxKatAlanlari = document.getElementById("boxKatAlanlari");
+    const netAlanInput = document.getElementById("netAlanIsitma");
+    const lblNetAlanBaslik = document.getElementById("lblNetAlanBaslik");
+    const cepheSelect = document.getElementById("cepheSayisi");
+    
+    const opt1 = document.getElementById("cepheOpt1");
+    const opt4 = document.getElementById("cepheOpt4");
 
-            boxKatAlanlari.classList.add("hidden");
-            netAlanInput.readOnly = false;
-            netAlanInput.value = "0.0";
-            netAlanInput.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
-            lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
+    boxKatAlanlari.classList.add("hidden");
+    netAlanInput.readOnly = false;
+    netAlanInput.value = "0.0";
+    netAlanInput.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
+    lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
 
-            if (yapiTipi === "daire" || yapiTipi === "ofis") {
-                boxKatKonum.classList.remove("opacity-40", "pointer-events-none");
-                tavanInput.readOnly = yapiTipi === "daire";
-                tavanInput.className = yapiTipi === "daire" ? "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold" : "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
-                if(yapiTipi === "daire") tavanInput.value = "2.8";
+    // Varsayılan olarak tüm seçenekleri serbest bırak
+    cepheSelect.disabled = false;
+    opt1.disabled = false;
+    opt1.hidden = false;
+    opt4.disabled = false;
+    opt4.hidden = false;
+    cepheSelect.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
 
-                cepheSelect.innerHTML = `
-                    <option value="1">1 Cephe Açık (Aralık Sıra)</option>
-                    <option value="2" selected>2 Cephe Açık (Köşe)</option>
-                    <option value="3">3 Cephe Açık</option>
-                    <option value="4" disabled class="text-slate-400">4 Cephe Açık (Sadece Müstakil/Villa için)</option>
-                `;
-                cepheSelect.value = "2";
-                cepheSelect.disabled = false;
-                cepheSelect.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
-            } else if (yapiTipi === "dubleks") {
-                boxKatKonum.classList.remove("opacity-40", "pointer-events-none");
-                boxKatAlanlari.classList.remove("hidden");
-                netAlanInput.readOnly = true;
-                netAlanInput.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold";
-                lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
+    if (yapiTipi === "daire" || yapiTipi === "ofis") {
+        boxKatKonum.classList.remove("opacity-40", "pointer-events-none");
+        tavanInput.readOnly = yapiTipi === "daire";
+        tavanInput.className = yapiTipi === "daire" ? "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold" : "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
+        if(yapiTipi === "daire") tavanInput.value = "2.8";
 
-                cepheSelect.innerHTML = `
-                    <option value="1">1 Cephe Açık</option>
-                    <option value="2" selected>2 Cephe Açık (Köşe)</option>
-                    <option value="3">3 Cephe Açık</option>
-                    <option value="4" disabled class="text-slate-400">4 Cephe Açık (Dubleks için geçersiz)</option>
-                `;
-                cepheSelect.value = "2";
-                cepheSelect.disabled = false;
-                cepheSelect.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
-            } else if (yapiTipi === "mustakil" || yapiTipi === "villa") {
-                boxKatKonum.classList.add("opacity-40", "pointer-events-none");
-                if (yapiTipi === "villa") {
-                    boxKatAlanlari.classList.remove("hidden");
-                    netAlanInput.readOnly = true;
-                    netAlanInput.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold";
-                    lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
-                }
+        cepheSelect.value = "2";
+        // 1, 2, 3 aktif; 4. seçenek pasif/gizli
+        opt4.disabled = true;
+        opt4.hidden = true;
+        if (cepheSelect.value === "4") cepheSelect.value = "3";
+    } else if (yapiTipi === "dubleks") {
+        boxKatKonum.classList.remove("opacity-40", "pointer-events-none");
+        boxKatAlanlari.classList.remove("hidden");
+        netAlanInput.readOnly = true;
+        netAlanInput.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold";
+        lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
 
-                cepheSelect.innerHTML = `
-                    <option value="4" selected>4 Cephe Açık (Müstakil / Villa)</option>
-                `;
-                cepheSelect.value = "4";
-                cepheSelect.disabled = true;
-                cepheSelect.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold text-slate-500";
-            }
-        }
+        cepheSelect.value = "2";
+        // Dubleks için en fazla 3 cephe
+        opt4.disabled = true;
+        opt4.hidden = true;
+        if (cepheSelect.value === "4") cepheSelect.value = "3";
+    } else if (yapiTipi === "mustakil") {
+        boxKatKonum.classList.add("opacity-40", "pointer-events-none");
+        cepheSelect.value = "3"; // Varsayılan 3 cephe
+        // Müstakil evde 1 cephe pasif/gizli yapılır; 2, 3 ve 4 cephe açık kalır
+        opt1.disabled = true;
+        opt1.hidden = true;
+        if (cepheSelect.value === "1") cepheSelect.value = "3";
+    } else if (yapiTipi === "villa") {
+        boxKatKonum.classList.add("opacity-40", "pointer-events-none");
+        boxKatAlanlari.classList.remove("hidden");
+        netAlanInput.readOnly = true;
+        netAlanInput.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold";
+        lblNetAlanBaslik.innerText = "Mahal Alanı (m²)";
+
+        cepheSelect.value = "4";
+        cepheSelect.disabled = true; // Villa için sekme tamamen kilitlenir
+        cepheSelect.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold text-slate-500";
+    }
+}
 
         function villaKatAlaniGuncelle() {
             const zemin = parseFloat(document.getElementById("alanZeminKat").value) || 0;
