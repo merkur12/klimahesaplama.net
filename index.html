@@ -1998,16 +1998,15 @@ function yapiTipiDegisti() {
             if (document.getElementById("printKlimaOneri")) document.getElementById("printKlimaOneri").innerText = baslik;
         }
 
+      
         window.onload = function() {
             initYonSelects();
-            sifirlaKlima();
-            sekmeDegistir('klima');
-            renderManuel('klima');
-            renderVarsayilanPazaryeri('klima');
+            sifirlaPratik(); // Pratik motorun sıfırlama/hazırlık fonksiyonu
+            sekmeDegistir('pratik'); // Açılış modunu pratik yapıyoruz
             yapiTipiDegisti();
             isiticiCihazDegisti();
-            document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
         };
+
     </script>
 </body>
 </html>
