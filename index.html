@@ -1250,17 +1250,21 @@
                 btnPratik.className = "flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 bg-white text-blue-600 shadow-sm cursor-pointer";
                 motorPratik.classList.remove('hidden');
                 analizBaslik.innerHTML = `<i class="fa-solid fa-square-poll-vertical text-blue-500 mr-1.5"></i> Analiz Raporu`;
+                
+                // BURASI EKLENDİ: Pratik mod için etiketleri zorunlu olarak sabitliyoruz
                 document.getElementById('lblKapasiteBaslik').innerText = "Hesaplanan Soğutma Yükü";
                 document.getElementById('lblBirimAnaliz').innerText = "Watt";
                 document.getElementById('lblAltKapasiteBaslik').innerText = "Dinamik Güç İhtiyacı";
                 document.getElementById('lblAltBirim').innerText = "BTU/h";
                 document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
+                
                 document.getElementById('lblWatt').innerText = "0";
                 document.getElementById('lblBTU').innerText = "0";
                 document.getElementById('lblOnerilenSegment').innerText = "Hesaplama butonuna tıklayın.";
                 boxManuelRehber.classList.add("hidden");
                 renderVarsayilanPazaryeri('klima');
             } else if (mod === 'klima') {
+                // ... (geri kalan kodlar aynı kalabilir)
                 btnKlima.className = "flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 bg-white text-blue-600 shadow-sm cursor-pointer";
                 motorKlima.classList.remove('hidden');
                 analizBaslik.innerHTML = `<i class="fa-solid fa-square-poll-vertical text-blue-500 mr-1.5"></i> Analiz Raporu`;
