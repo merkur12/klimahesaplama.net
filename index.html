@@ -1308,6 +1308,9 @@
         }
 
         function guncelleOnerilenEtiketMetni(tur) {
+            // Eğer aktif mod ısıtma değilse (yani pratik veya klima modundaysak) bu fonksiyon etiketleri ezip geçmesin!
+            if (mevcutMod !== 'isitma') return; 
+
             const etiketEl = document.getElementById('lblOnerilenEtiket');
             if (tur === 'yogusmali') etiketEl.innerText = "Tam Yoğuşmalı Kombi Önerisi:";
             else if (tur === 'isipompasi') etiketEl.innerText = "Inverter Isı Pompası Önerisi:";
