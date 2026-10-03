@@ -54,11 +54,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
-            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+        @keyframes flowAnimation {
+            0% { stroke-dashoffset: 24; }
+            100% { stroke-dashoffset: 0; }
         }
-        .animate-glow { animation: pulseGlow 3s infinite ease-in-out; }
+        .flow-line {
+            stroke-dasharray: 8, 8;
+            animation: flowAnimation 1.5s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
@@ -105,58 +108,67 @@
                 <h2 class="text-xl font-extrabold text-slate-900 pt-4">3. Inverter Elektronik Komponentleri ve Çalışma Mantığı</h2>
                 <p>Inverter teknolojisinin temelini, şebekeden gelen sabit alternatif akımı (AC) kontrol eden gelişmiş güç elektroniği devreleri oluşturur. Bu elektronik mimari şu aşamalardan meydana gelir:</p>
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li><strong>Doğrtulucu ve Filtre Devresi:</strong> Şebekeden gelen 230V / 50Hz AC voltaj diyot köprüleri ile doğrultularak DC gerilime dönüştürülür ve kondansatörler aracılığıyla filtrelenir.</li>
+                    <li><strong>Doğrultucu ve Filtre Devresi:</strong> Şebekeden gelen 230V / 50Hz AC voltaj diyot köprüleri ile doğrultularak DC gerilime dönüştürülür ve kondansatörler aracılığıyla filtrelenir.</li>
                     <li><strong>Inverter Sürücü Devresi (IPM):</strong> Akıllı Güç Modülü, DC gerilimi mikroişlemciden gelen sinyaller doğrultusunda istenen frekans ve gerilimde yapay bir AC akıma dönüştürür.</li>
                     <li><strong>Frekans Modülasyonu:</strong> Kompresör motorunun devri, sürücü tarafından üretilen elektriğin frekansı değiştirilerek 10 Hz ile 120 Hz arasında dinamik olarak ayarlanır. Oda sıcaklığı istenen sete yaklaştığında frekans düşürülerek kompresör minimum devirde çalıştırılır.</li>
                 </ol>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Termodinamik Çevrimler: Renkli ve Animasyonlu Şematik Gösterim</h2>
-                <p>Aşağıdaki dairesel şema, soğutucu akışkanın kapalı devre içerisindeki evrelerini ve akış yönünü, modern bir arayüz ve yumuşak animasyon geçişleriyle temsil etmektedir:</p>
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Termodinamik Çevrimler ve Özgün Şematik Akış Diyagramı</h2>
+                <p>Aşağıdaki özgün şema, dış ünite ve iç ünite arasındaki soğutucu akışkan transferini, hat basınçlarını ve faz değişimlerini interaktif bir vektörel mimariyle göstermektedir:</p>
 
-                <!-- RENKLİ VE ANİMASYONLU ÇEMBER ŞEMASI -->
-                <div class="my-8 p-6 bg-slate-900 rounded-2xl shadow-xl text-white flex flex-col items-center justify-center space-y-6 border border-slate-700">
+                <!-- ÖZGÜN 3D ESİNLİ ANİMASYONLU ŞEMA KUTUSU -->
+                <div class="my-8 p-6 bg-slate-900 rounded-2xl shadow-xl text-white space-y-6 border border-slate-700">
                     <div class="text-center space-y-1">
-                        <span class="text-xs uppercase tracking-widest text-blue-400 font-extrabold">Termodinamik Akış Diyagramı</span>
-                        <h3 class="text-lg font-black text-slate-100">Buhar Sıkıştırmalı Çevrim Çemberi</h3>
+                        <span class="text-xs uppercase tracking-widest text-blue-400 font-extrabold">Mühendislik Akış Şeması</span>
+                        <h3 class="text-base font-black text-slate-100">Split Klima Soğutma / Isıtma Devre Mimarisi</h3>
                     </div>
 
-                    <!-- Çember Konteyner -->
-                    <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-dashed border-blue-500/40 flex items-center justify-center animate-spin" style="animation-duration: 35s;">
-                        
-                        <!-- Top (Kompresör) -->
-                        <div class="absolute -top-5 bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-blue-400 flex items-center gap-1.5 animate-pulse">
-                            <i class="fa-solid fa-gears"></i> 1. Kompresör (Yüksek P / T)
-                        </div>
+                    <!-- SVG Şematik Çizim -->
+                    <div class="w-full overflow-x-auto py-2">
+                        <svg viewBox="0 0 700 320" class="w-full h-auto min-w-[600px] font-sans">
+                            <!-- Arka Plan Kutuları -->
+                            <rect x="20" y="20" width="310" height="280" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                            <text x="40" y="45" fill="#94a3b8" font-size="12" font-weight="bold">DIŞ ÜNİTE (Condensing Unit)</text>
 
-                        <!-- Right (Kondenser) -->
-                        <div class="absolute -right-5 bg-amber-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-amber-400 flex items-center gap-1.5">
-                            <i class="fa-solid fa-fire"></i> 2. Kondenser (Isı Atımı)
-                        </div>
+                            <rect x="370" y="20" width="310" height="280" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                            <text x="390" y="45" fill="#94a3b8" font-size="12" font-weight="bold">İÇ ÜNİTE (Evaporator Unit)</text>
 
-                        <!-- Bottom (Genleşme Vanası) -->
-                        <div class="absolute -bottom-5 bg-purple-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-purple-400 flex items-center gap-1.5">
-                            <i class="fa-solid fa-compress"></i> 3. Genleşme Vanası (EEV)
-                        </div>
+                            <!-- Bağlantı Boruları (Animasyonlu Akış Hatları) -->
+                            <!-- Yüksek Basınç Sıvı Hattı (Kırmızı/Turuncu) -->
+                            <path d="M 220 180 L 220 240 L 480 240 L 480 200" fill="none" stroke="#f97316" stroke-width="4" class="flow-line"/>
+                            <!-- Düşük Basınç Gaz Hattı (Mavi) -->
+                            <path d="M 540 100 L 620 100 L 620 270 L 100 270 L 100 130 L 140 130" fill="none" stroke="#3b82f6" stroke-width="4" class="flow-line"/>
 
-                        <!-- Left (Evaporatör) -->
-                        <div class="absolute -left-5 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-emerald-400 flex items-center gap-1.5">
-                            <i class="fa-solid fa-snowflake"></i> 4. Evaporatör (Isı Çekimi)
-                        </div>
+                            <!-- Kompresör (1) -->
+                            <circle cx="100" cy="100" r="28" fill="#2563eb" stroke="#60a5fa" stroke-width="2"/>
+                            <text x="100" y="104" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">KOMP</text>
+                            <text x="100" y="145" fill="#cbd5e1" font-size="10" text-anchor="middle">1. Kompresör</text>
 
-                        <!-- Çember İçi Merkez Bilgi -->
-                        <div class="w-40 h-40 rounded-full bg-slate-800 border border-slate-700 flex flex-col items-center justify-center text-center p-4 shadow-inner">
-                            <i class="fa-solid fa-atom text-blue-400 text-2xl mb-1 animate-bounce"></i>
-                            <span class="text-xs font-black text-slate-200">R32 / R410A</span>
-                            <span class="text-[10px] text-slate-400">Kapalı Çevrim Akışı</span>
-                        </div>
+                            <!-- Kondenser Bataryası (2) -->
+                            <path d="M 200 70 L 240 70 M 200 85 L 240 85 M 200 100 L 240 100 M 200 115 L 240 115 M 200 130 L 240 130" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                            <rect x="190" y="55" width="60" height="90" rx="6" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                            <text x="220" y="160" fill="#cbd5e1" font-size="10" text-anchor="middle">2. Kondenser</text>
+
+                            <!-- Genleşme Vanası / EEV (3) -->
+                            <polygon points="460,170 500,170 480,200" fill="#a855f7" stroke="#d8b4fe" stroke-width="2"/>
+                            <text x="480" y="218" fill="#cbd5e1" font-size="10" text-anchor="middle">3. Genleşme Vanası</text>
+
+                            <!-- Evaporatör Bataryası (4) -->
+                            <path d="M 500 70 L 540 70 M 500 85 L 540 85 M 500 100 L 540 100 M 500 115 L 540 115 M 500 130 L 540 130" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+                            <rect x="490" y="55" width="60" height="90" rx="6" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <text x="520" y="160" fill="#cbd5e1" font-size="10" text-anchor="middle">4. Evaporatör</text>
+                        </svg>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 text-xs text-slate-300 w-full pt-2 border-t border-slate-800">
-                        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
-                            <strong class="text-blue-400 block mb-1">Soğutma Modu:</strong> İç ünite evaporatör görevi görür, ortamdaki ısıyı emerek dış üniteye (kondensere) taşır ve dışarı atar.
+                    <!-- Açıklama Lejantı -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                        <div class="flex items-center gap-2 bg-slate-800/80 p-2.5 rounded-lg border border-slate-700">
+                            <span class="w-3 h-3 rounded-full bg-orange-500 inline-block shrink-0"></span>
+                            <span><strong>Yüksek Basınç / Sıcak Akışkan:</strong> Kompresör çıkışı ve kondenser hattı.</span>
                         </div>
-                        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
-                            <strong class="text-amber-400 block mb-1">Isıtma Modu:</strong> 4 yollu vana yön değiştirir; dış ünite evaporatör, iç ünite kondenser olur ve mekana ısı yayar.
+                        <div class="flex items-center gap-2 bg-slate-800/80 p-2.5 rounded-lg border border-slate-700">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 inline-block shrink-0"></span>
+                            <span><strong>Düşük Basınç / Soğuk Akışkan:</strong> Evaporatör çıkışı ve kompresör emiş hattı.</span>
                         </div>
                     </div>
                 </div>
