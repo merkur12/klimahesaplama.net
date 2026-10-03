@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-name="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Doğru Klima Seçimi Nasıl Yapılır? BTU ve Kapasite Hesabı",
-      "description": "Klima kapasite hesabı, BTU nedir, oda hacmi ve iklim katsayılarına göre klima seçimi.",
+      "description": "Klima kapasite hesabı, BTU nedir, oda hacmi, iklim katsayıları ve inverter teknolojisine göre doğru klima seçimi rehberi.",
       "url": "https://klimahesaplama.net/makale-9.html",
       "publisher": {
         "@type": "Organization",
@@ -68,24 +68,56 @@
         <header class="border-b border-slate-100 pb-6 space-y-3">
             <span class="text-xs font-extrabold uppercase tracking-wider bg-blue-50 text-blue-700 py-1 px-3 rounded-full">Mühendislik Rehberi #9</span>
             <h1 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Doğru Klima Seçimi Nasıl Yapılır? BTU ve Kapasite Hesabı</h1>
-            <p class="text-sm text-slate-500 font-medium">Güncellenme Tarihi: 2026 | BTU Hesaplama Kriterleri ve Inverter Teknolojisi</p>
+            <p class="text-sm text-slate-500 font-medium">Güncellenme Tarihi: 2026 | BTU Hesaplama Kriterleri, Bölgesel Katsayılar ve Inverter Teknolojisi</p>
         </header>
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
             
-            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: İklimlendirmede Doğru Kapasite Seçiminin Önemi</h2>
             <p>
-                Konforlu bir iç ortam iklimlendirmesi için seçilecek klimanın kapasitesi hayati önem taşır. Kapasitesi düşük bir klima mekânı yeterince soğutamaz veya ısıtamaz; bu durum cihazın sürekli maksimum devirde çalışarak aşınmasına ve yüksek elektrik faturasına yol açar. Kapasitesi çok yüksek bir klima ise ortamı hızla soğutup aniden duracağı için (kısa devre / short-cycling) nem kontrolünü sağlayamaz ve konforsuzluk yaratır.
+                Yaşam ve çalışma alanlarında ideal termal konfor şartlarını (22°C - 24°C iç ortam sıcaklığı ve %40 - %60 bağıl nem) sağlamak, ancak mekânın ısı kazanç ve kayıp karakteristiğine tam uygun kapasitede bir klima seçimiyle mümkündür. Tüketiciler arasında yaygın olan "ne kadar büyük olursa o kadar iyi soğutur" yanılgısı, mekanik tesisat mühendisliğinde ciddi dezavantajlar doğurur. Kapasitesi gerekenden düşük bir klima, aşırı sıcak günlerde hedef sıcaklığa ulaşamayarak sürekli maksimum devirde çalışır; bu durum hem cihaz ömrünü kısaltır hem de elektrik faturasını kabartır. Buna karşın, hacme göre aşırı büyük seçilen bir klima (oversized), ortamı çok hızlı soğutarak istenen sete ulaştığı an aniden durur (kısa devre / short-cycling). Kompresörün sık durup kalkması, havadaki nemin yeterince yoğuşturulup atılamamasına (nemli ve bunaltıcı bir iç ortam hisse) ve mekanik aksamın erken arızalanmasına yol açar.
             </p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">2. BTU (British Thermal Unit) Nedir ve Nasıl Hesaplanır?</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">2. BTU (British Thermal Unit) Nedir ve Temel Formülasyon</h2>
             <p>
-                BTU, klimaların soğutma ve ısıtma kapasitesini belirlemede kullanılan uluslararası bir enerji birimidir. Pratik hesaplamalarda oda alanı (m²), bölge katsayısı (iklim kuşağı), kişi sayısı, aydınlatma yükü ve pencerelerin yönü dikkate alınır. Türkiye şartlarında standart bir oda için metrekare başına ortalama 400 - 500 BTU soğutma kapasitesi öngörülür.
+                BTU (British Thermal Unit), uluslararası alanda klimaların soğutma ve ısıtma kapasitesini ifade etmekte kullanılan temel enerji birimidir. Tanım olarak 1 libre (pound) suyun sıcaklığını 1 Fahrenheit derece artırmak için gereken ısı miktarıdır. Klima sektöründe ise bir saatte ortamdan çekilen ısı miktarını (BTU/h) belirtir. Pratik mühendislik hesaplamalarında oda alanından hareketle hızlı bir ön değerlendirme yapılırken, detaylı analizlerde şu parametreler hesaba katılır:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Oda Brüt Alanı (m²):</strong> Mekânın taban alanı.</li>
+                <li><strong>Bölgesel İklim Katsayısı:</strong> Türkiye'nin Akdeniz/Güneydoğu gibi sıcak kuşaklarında katsayı yüksek alınırken, Karadeniz veya Doğu Anadolu'nun ılıman/sergent yazlarında daha düşük katsayılar kullanılır.</li>
+                <li><strong>Kişi Sayısı ve İç Yükler:</strong> Odada sürekli bulunan insan sayısı (her insan ortalama 400-500 BTU ısı yayar) ile aydınlatma ve elektronik cihazların yaydığı ısılar.</li>
+                <li><strong>Pencere Yönelimi:</strong> Batı ve güney cepheli, güneş alan geniş cam yüzeyler kapasite ihtiyacını doğrudan artırır.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Pratik BTU Hesaplama Yöntemi ve Katsayılar</h2>
+            <p>
+                Türkiye şartlarında standart bir konut odası için en yaygın pratik yaklaşım, oda alanının metrekare cinsinden değeri ile bölgeye ait sabit katsayının çarpılmasıdır:
+            </p>
+            <p class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs md:text-sm">
+                Gerekli BTU = Oda Alanı (m²) \cdot 400 + (Kişi Sayısı \cdot 600) + Ek Yükler
+            </p>
+            <p>
+                Örneğin; 25 metrekarelik, güneş alan bir oturma odası için temel hesaplama $25 \times 400 = 10.000$ BTU verirken, kişi sayısı ve cephe faktörleri eklendiğinde bu değer 12.000 BTU (1 sınıfı üst cihaz) seviyesine güncellenmelidir.
             </p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Inverter Klimaların Enerji Verimliliğine Katkısı</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Inverter Teknolojisi ve Akıllı Kapasite Kontrolü</h2>
             <p>
-                Eski tip on-off klimalar istenen sıcaklığa ulaşıldığında tamamen kapanır ve yeniden çalışırken yüksek akım çekerdi. Inverter teknolojisine sahip modern klimalar ise kompresör devrini akıllıca ayarlayarak minimum enerjiyle sıcaklığı sabit tutar. Bu sayede %30 ila %50 arasında enerji tasarrufu sağlanır.
+                Eski nesil "On-Off" klimalar, oda istenen sıcaklığa geldiğinde kompresörünü tamamen durdurur, sıcaklık sapması olduğunda tekrar tam güçte çalışmaya başlardı. Bu süreç hem yüksek kalkış akımları nedeniyle elektrik tüketimini artırır hem de sıcaklık dalgalanmalarına neden olurdu. Inverter teknolojisine sahip modern klimalar ise kompresör devrini elektronik olarak sürekli (frekans modülasyonu ile) ayarlar. Oda sıcaklığı yakalandığında durmak yerine minimum devirde sessizce çalışmaya devam ederek sıcaklığı 0.5°C hassasiyetle sabit tutar. Bu sayede %30 ila %50 oranında enerji tasarrufu sağlanır.
+            </p>
+
+            <h2 class="text-xl font-bold text-slate-900 pt-4">5. Doğru Klima Seçiminde Dikkat Edilmesi Gereken Diğer Kriterler</h2>
+            <p>
+                Kapasite (BTU) belirlemenin yanı sıra cihaz seçiminde şu teknik detaylar da göz önünde bulundurulmalıdır:
+            </p>
+            <ul class="list-disc pl-6 space-y-25">
+                <li><strong>Enerji Sınıfı (SEER / SCOP):</strong> SEER (soğutma mevsimsel verimlilik) ve SCOP (ısıtma mevsimsel verimlilik) değerleri yüksek (A++ veya A+++) cihazlar, uzun vadede elektrik faturalarında büyük avantaj sağlar.</li>
+                <li><strong>Soğutucu Akışkan Türü:</strong> Çevre dostu ve yüksek termodinamik performansa sahip R32 gazlı klimalar tercih edilmelidir.</li>
+                <li><strong>Ses Seviyesi (dB):</strong> Yatak odaları ve çalışma alanları için iç ünitenin ses seviyesinin düşük (20-25 dB aralığında) olması konfor açısından elzemdir.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-slate-900 pt-4">6. Sonuç</h2>
+            <p>
+                Doğru klima seçimi; rastgele yapılan metrekare tahminleriyle değil, coğrafi konum, cephe, yalıtım kalitesi ve iç yüklerin harmanlandığı mühendislik hesaplamalarıyla yapılmalıdır. Doğru BTU ve inverter teknolojisi kombinasyonu, hem bütçenizi korur hem de ömür boyu kesintisiz konfor sunar.
             </p>
 
         </div>
@@ -102,6 +134,7 @@
         <div class="max-w-4xl mx-auto space-y-3">
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[11px] text-slate-600 leading-relaxed text-left sm:text-center space-y-2">
                 <p><strong>Amazon Gelir Ortaklığı Bildirimi:</strong> klimahesaplama.net, Amazon Türkiye Gelir Ortaklığı Programı üyesidir.</p>
+                <p class="border-t border-slate-200/80 pt-2 text-slate-500"><strong>Sorumluluk Reddi:</strong> Bu sitedeki rehberler ve hesap makineleri bilgilendirme amaçlıdır.</p>
             </div>
         </div>
         <div class="flex justify-center items-center gap-4 font-bold text-slate-600 flex-wrap pt-2 text-xs">
