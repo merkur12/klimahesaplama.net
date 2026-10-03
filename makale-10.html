@@ -73,47 +73,47 @@
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
             
-            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: İç Hava Kalitesi (IAQ) ve Havalandırmanın Temelleri</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: İç Hava Kalitesi (IAQ) ve Mekanik Havalandırmanın Temelleri</h2>
             <p>
-                Modern mekanik tesisat mühendisliğinde yapıların ısıtılması ve soğutulması kadar, iç ortam hava kalitesinin (Indoor Air Quality - IAQ) uluslararası standartlarda tutulması da hayati bir öneme sahiptir. İnsanların uzun süre kapalı alanlarda bulunması; karbondioksit ($CO_2$) birikimine, solunum yoluyla yayılan partiküllerin artmasına, nem seviyesinin yükselmesine ve uçucu organik bileşiklerin (VOC) yoğunlaşmasına neden olur. Etkili bir havalandırma sistemi, taze dış havanın mekana filtrelenerek verilmesini ve kirli havanın egzoz edilmesini sağlar. Bu süreçlerin matematiksel olarak projelendirilmesinde en temel kavramlardan biri Hava Değişim Oranı'dır (ACH - Air Changes per Hour).
+                Modern mekanik tesisat mühendisliğinde yapıların ısıtılması ve soğutulması kadar, iç ortam hava kalitesinin (Indoor Air Quality - IAQ) uluslararası standartlarda tutulması da insan sağlığı ve konforu açısından hayati bir öneme sahiptir[cite: 3]. İnsanların uzun süre kapalı alanlarda bulunması; solunum yoluyla salınan karbondioksit ($CO_2$) birikimine, nem seviyesinin yükselmesine, kokuların yoğunlaşmasına ve uçucu organik bileşiklerin (VOC) artmasına neden olur[cite: 3]. Etkili bir havalandırma sistemi, taze dış havanın uygun filtrasyon süreçlerinden geçirilerek mekana basılmasını ve içerideki kirli havanın egzoz edilmesini sağlar[cite: 3]. Bu süreçlerin matematiksel olarak projelendirilmesinde en temel kavramların başında Hava Değişim Oranı (ACH - Air Changes per Hour) gelir[cite: 3].
             </p>
 
             <h2 class="text-xl font-bold text-slate-900 pt-4">2. ACH (Air Changes per Hour) Nedir ve Nasıl Tanımlanır?</h2>
             <p>
-                ACH, kapalı bir hacmin içindeki havanın bir saat içerisinde tam olarak kaç kez taze dış hava ile değiştirildiğini ifade eden boyutsuz bir katsayıdır. Örneğin, ACH değeri 4 olan bir odanın havası, bir saat içerisinde tamamen 4 kez yenilenmektedir. Hava debisinin ($Q$) hesaplanmasında ve vantilatör/aspiratör kapasitelerinin belirlenmesinde hacim ve ACH değeri temel girdilerdir.
+                ACH, kapalı bir hacmin içindeki havanın bir saat içerisinde tam olarak kaç kez taze dış hava ile değiştirildiğini ifade eden boyutsuz bir katsayıdır[cite: 3]. Örneğin, ACH değeri 4 olan bir odanın havası, bir saat içerisinde tamamen 4 kez yenilenmektedir[cite: 3]. Hava debisinin ($Q$) hesaplanmasında ve vantilatör, aspiratör veya klima santral (AHU) fan kapasitelerinin belirlenmesinde hacim ve ACH değeri temel girdilerdir[cite: 3].
             </p>
             <p class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs md:text-sm">
-                Q = (V_{hacim} \cdot ACH) / 60
+                $Q = \frac{V_{\text{hacim}} \cdot ACH}{60}$
             </p>
             <p>
-                Formülde $Q$ gereken taze hava debisini ($m^3/dakika$), $V_{hacim}$ odanın brüt hacmini ($m^3$) ve ACH saatlik hava değişim katsayısını simgeler.
+                Formülde $Q$ gereken taze hava debisini ($m^3/\text{dakika}$), $V_{\text{hacim}}$ odanın brüt hacmini ($m^3$) ve ACH saatlik hava değişim katsayısını simgeler[cite: 3].
             </p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Mekan Türlerine Göre Standart ACH Değerleri</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Mekan Türlerine Göre Standart ACH ve Taze Hava Değerleri</h2>
             <p>
-                Farklı kullanım amaçlarına sahip mekanlarda zararlı gaz, koku ve nem yoğunlukları değiştiği için ASHRAE ve ulusal yönetmelikler farklı ACH sınırları öngörür:
+                Farklı kullanım amaçlarına sahip mekanlarda zararlı gaz, koku, nem ve insan yoğunluğu değişkenlik gösterdiği için ASHRAE ve ulusal yönetmelikler farklı ACH sınırları öngörür[cite: 3]:
             </p>
             <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Konut Oturma Odaları ve Yatak Odaları:</strong> Kişi başına düşen taze hava ihtiyacına göre değişmekle birlikte genel havalandırmada 0.5 - 1.0 ACH yeterli kabul edilir.</li>
-                <li><strong>Ofisler ve Toplantı Salonları:</strong> Yoğun insan kalabalığı ve $CO_2$ salınımı nedeniyle 4.0 - 6.0 ACH değerleri hedeflenir.</li>
-                <li><strong>Ticari Mutfaklar ve Restoranlar:</strong> Yemek kokularının, yağ buharlarının ve ısı yükünün atılması için 15 - 30 ACH arasında yüksek değişim oranları şarttır.</li>
-                <li><strong>Endüstriyel Tesisler ve Kimya Labları:</strong> Zararlı kimyasal buharların birikmesini önlemek amacıyla 10 - 20 ACH ve üzeri havalandırma debileri projelendirilir.</li>
+                <li><strong>Konut Oturma Odaları ve Yatak Odaları:</strong> Kişi başına düşen taze hava ihtiyacına göre değişmekle birlikte genel konut havalandırmasında 0.5 - 1.0 ACH yeterli kabul edilir[cite: 3].</li>
+                <li><strong>Ofisler ve Toplantı Salonları:</strong> Yoğun insan kalabalığı ve yüksek $CO_2$ salınımı nedeniyle 4.0 - 6.0 ACH değerleri hedeflenir[cite: 3].</li>
+                <li><strong>Ticari Mutfaklar ve Restoranlar:</strong> Yemek kokularının, yağ buharlarının ve mutfak ekipmanlarının yaydığı ısı yükünün atılması için 15 - 30 ACH arasında yüksek değişim oranları şarttır[cite: 3].</li>
+                <li><strong>Endüstriyel Tesisler ve Kimya Laboratuvarları:</strong> Zararlı kimyasal buharların birikmesini önlemek ve patlayıcı gaz riskini bertaraf etmek amacıyla 10 - 20 ACH ve üzeri havalandırma debileri projelendirilir[cite: 3].</li>
             </ul>
 
             <h2 class="text-xl font-bold text-slate-900 pt-4">4. Hava Hızı, Kanal Kesitleri ve Akışkan Dinamiği</h2>
             <p>
-                Hesaplanan hava debisi ($Q$) bulunduktan sonra, havanın mekan içinde ve kanallarda ilerleyeceği hız ($v$) ile kanal kesit alanı ($A$) süreklilik denklemi ile belirlenir:
+                Hesaplanan hava debisi ($Q$) bulunduktan sonra, havanın mekan içinde ve havalandırma kanallarında ilerleyeceği hız ($v$) ile kanal kesit alanı ($A$) süreklilik denklemi ile belirlenir[cite: 3]:
             </p>
             <p class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs md:text-sm">
-                Q = A \cdot v
+                $Q = A \cdot v$
             </p>
             <p>
-                Kanallardaki hava hızının konfor alanlarında gürültü yaratmayacak seviyelerde (genellikle 3 - 6 m/s aralığında) tutulması, akustik konfor ve fan güç tüketiminin optimize edilmesi açısından kritik bir mühendislik kuralıdır.
+                Kanallardaki hava hızının konfor alanlarında gürültü yaratmayacak seviyelerde (genellikle 3 - 6 m/s aralığında) tutulması, hem akustik konforun sağlanması hem de fan elektrik tüketiminin optimize edilmesi açısından kritik bir mühendislik kuralıdır[cite: 3].
             </p>
 
             <h2 class="text-xl font-bold text-slate-900 pt-4">5. Sonuç</h2>
             <p>
-                Doğru hesaplanmış bir havalandırma sistemi ve uygun ACH katsayısı, hem bina sakinlerinin sağlığını korur hem de mekanik tesisatın enerji verimliliğini üst düzeyde tutar.
+                Doğru hesaplanmış bir havalandırma sistemi ve uygun ACH katsayısı, bina sakinlerinin sağlığını korurken mekanik tesisatın enerji verimliliğini üst düzeyde tutar[cite: 3].
             </p>
 
         </div>
