@@ -1357,9 +1357,22 @@
             document.getElementById("pratikPencereYon").value = "Bati";
             document.getElementById("pratikYalitim").value = "standart";
             pratikFonksiyonDegisti();
+            
+            // Etiketleri ve başlangıç metnini kesin olarak klima/soğutma yapıyoruz
+            document.getElementById('lblKapasiteBaslik').innerText = "Hesaplanan Soğutma Yükü";
+            document.getElementById('lblBirimAnaliz').innerText = "Watt";
+            document.getElementById('lblAltKapasiteBaslik').innerText = "Dinamik Güç İhtiyacı";
+            document.getElementById('lblAltBirim').innerText = "BTU/h";
+            document.getElementById('lblOnerilenEtiket').innerText = "Klima Önerisi:";
+            
             document.getElementById("lblWatt").innerText = "0";
             document.getElementById("lblBTU").innerText = "0";
             document.getElementById("lblOnerilenSegment").innerText = "Hesaplama butonuna tıklayın.";
+            
+            // Isıtma/boyler raporunu gizliyoruz
+            const boylerRaporu = document.getElementById('boylerRaporu');
+            if(boylerRaporu) boylerRaporu.classList.add('hidden');
+            
             renderVarsayilanPazaryeri('klima');
         }
 
