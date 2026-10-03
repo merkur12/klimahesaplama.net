@@ -53,6 +53,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+        }
+        .animate-glow { animation: pulseGlow 3s infinite ease-in-out; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
  
@@ -82,43 +89,80 @@
             <div class="prose prose-slate max-w-none text-sm md:text-base leading-relaxed space-y-6 text-slate-700">
                 
                 <h2 class="text-xl font-extrabold text-slate-900 pt-4">1. Giriş: Buhar Sıkıştırmalı Soğutma Çevrimine Genel Bakış</h2>
-                <p>Modern konutlarda ve ticari yapılarda termal konfor şartlarını sağlamak amacıyla kullanılan split klimalar, temel olarak buhar sıkıştırmalı soğutma (vapor-compression refrigeration) prensibine göre çalışır[cite: 4]. Sistem; gürültülü ve yüksek ısı yayan kompresör ile kondenser ünitelerini dış ortama konumlandırırken, genleşme elemanını ve evaporatör fan ünitesini iç mekana yerleştirerek üstün bir akustik ve termal konfor sağlar[cite: 4]. Geleneksel "On-Off" tipi klimalar sabit devirli kompresörlerle çalışıp sürekli devreye girip çıkarken, modern **inverter teknolojisine sahip klimalar** kompresör devrini ve soğutucu akışkan debisini anlık ısı yüklerine göre modüle ederek devrim yaratmıştır.</p>
+                <p>Modern konutlarda ve ticari yapılarda termal konfor şartlarını sağlamak amacıyla kullanılan split klimalar, temel olarak buhar sıkıştırmalı soğutma (vapor-compression refrigeration) prensibine göre çalışır. Sistem; gürültülü ve yüksek ısı yayan kompresör ile kondenser ünitelerini dış ortama konumlandırırken, genleşme elemanını ve evaporatör fan ünitesini iç mekana yerleştirerek üstün bir akustik ve termal konfor sağlar. Geleneksel "On-Off" tipi klimalar sabit devirli kompresörlerle çalışıp sürekli devreye girip çıkarken, modern **inverter teknolojisine sahip klimalar** kompresör devrini ve soğutucu akışkan debisini anlık ısı yüklerine göre modüle ederek devrim yaratmıştır.</p>
 
                 <h2 class="text-xl font-extrabold text-slate-900 pt-4">2. Split Klimanın Temel Mekanik Komponentleri</h2>
-                <p>Split klima sistemi, kapalı hermetik bir devre içinde dolaşan soğutucu akışkanın (günümüzde sıklıkla R32 veya R410A) fiziksel hal değişimlerine (sıvı-gaz) dayalı mekanik bileşenlerden oluşur:</p>
+                <p>Split klima sistemi, kapalı hermetik bir devre içinde dolaşan soğutucu akışkanın fiziksel hal değişimlerine dayalı mekanik bileşenlerden oluşur:</p>
                 
                 <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Kompresör (Sıkıştırma Ünitesi):</strong> Soğutma devresinin kalbidir[cite: 4]. Düşük basınç ve sıcaklıktaki gaz halindeki soğutucu akışkanı emerek yüksek basınç ve sıcaklığa sıkıştırır. Inverter klimalarda BLDC (fırçasız doğru akım) motorlu rotary veya scroll kompresörler kullanılır.</li>
-                    <li><strong>Kondenser (Dış Ünite Eşanjörü):</strong> Kompresörden yüksek basınçla çıkan kızgın buhar halindeki akışkanın ısısını dış ortama (hava veya suya) vererek yoğuşturduğu (sıvı hale getirdiği) bakır borulu ve alüminyum lamelli ısı değiştiricidir[cite: 4].</li>
-                    <li><strong>Genleşme Vanası (Kısılma Elemanı - EEV):</strong> Kondenserden yüksek basınçla çıkan akışkanın basıncını ani olarak düşüren elemandır. Inverter sistemlerde hassas debi kontrolü için elektronik genleşme vanaları (Electronic Expansion Valve - EEV) tercih edilir[cite: 4].</li>
-                    <li><strong>Evaporatör (İç Ünite Eşanjörü):</strong> Genleşme vanasından düşük basınç ve sıcaklıkta geçen sıvı-gaz karışımı akışkanın iç ortam havasından ısı çekerek tamamen buharlaştığı ısı değiştiricidir[cite: 4].</li>
-                    <li><strong>4 Yollu Vana (Reversing Valve):</strong> Isı pompalı klimalarda soğutucu akışkanın akış yönünü tersine çevirerek cihazın hem soğutma hem de ısıtma modunda çalışmasını sağlayan elektro-mekanik valftir[cite: 4].</li>
+                    <li><strong>Kompresör (Sıkıştırma Ünitesi):</strong> Soğutma devresinin kalbidir. Düşük basınç ve sıcaklıktaki gaz halindeki soğutucu akışkanı emerek yüksek basınç ve sıcaklığa sıkıştırır. Inverter klimalarda BLDC motorlu rotary veya scroll kompresörler kullanılır.</li>
+                    <li><strong>Kondenser (Dış Ünite Eşanjörü):</strong> Kompresörden yüksek basınçla çıkan kızgın buhar halindeki akışkanın ısısını dış ortama vererek yoğuşturduğu (sıvı hale getirdiği) bakır borulu ve alüminyum lamelli ısı değiştiricidir.</li>
+                    <li><strong>Genleşme Vanası (Kısılma Elemanı - EEV):</strong> Kondenserden yüksek basınçla çıkan akışkanın basıncını ani olarak düşüren elemandır. Inverter sistemlerde hassas debi kontrolü için elektronik genleşme vanaları (EEV) tercih edilir.</li>
+                    <li><strong>Evaporatör (İç Ünite Eşanjörü):</strong> Genleşme vanasından düşük basınç ve sıcaklıkta geçen sıvı-gaz karışımı akışkanın iç ortam havasından ısı çekerek tamamen buharlaştığı ısı değiştiricidir.</li>
+                    <li><strong>4 Yollu Vana (Reversing Valve):</strong> Isı pompalı klimalarda soğutucu akışkanın akış yönünü tersine çevirerek cihazın hem soğutma hem de ısıtma modunda çalışmasını sağlayan elektro-mekanik valftir.</li>
                 </ul>
 
                 <h2 class="text-xl font-extrabold text-slate-900 pt-4">3. Inverter Elektronik Komponentleri ve Çalışma Mantığı</h2>
                 <p>Inverter teknolojisinin temelini, şebekeden gelen sabit alternatif akımı (AC) kontrol eden gelişmiş güç elektroniği devreleri oluşturur. Bu elektronik mimari şu aşamalardan meydana gelir:</p>
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li><strong>Doğrultucu (Rectifier) ve Filtre Devresi:</strong> Şebekeden gelen 230V / 50Hz AC voltaj diyot köprüleri ile doğrultularak DC (doğru akım) gerilime dönüştürülür ve kondansatörler aracılığıyla filtrelenir.</li>
-                    <li><strong>Inverter Sürücü Devresi (IPM - Intelligent Power Module):</strong> Akıllı Güç Modülü, DC gerilimi mikroişlemciden gelen sinyaller doğrultusunda istenen frekans ve gerilimde yapay bir AC akıma dönüştürür.</li>
-                    <li><strong>Frekans Modülasyonu:</strong> Kompresör motorunun devri, sürücü tarafından üretilen elektriğin frekansı ($Hz$) değiştirilerek 10 Hz ile 120 Hz arasında dinamik olarak ayarlanır. Oda sıcaklığı istenen sete yaklaştığında frekans düşürülerek kompresör minimum devirde çalıştırılır; böylece kalkış akımlarının yarattığı enerji kayıpları tamamen ortadan kaldırılır.</li>
+                    <li><strong>Doğrtulucu ve Filtre Devresi:</strong> Şebekeden gelen 230V / 50Hz AC voltaj diyot köprüleri ile doğrultularak DC gerilime dönüştürülür ve kondansatörler aracılığıyla filtrelenir.</li>
+                    <li><strong>Inverter Sürücü Devresi (IPM):</strong> Akıllı Güç Modülü, DC gerilimi mikroişlemciden gelen sinyaller doğrultusunda istenen frekans ve gerilimde yapay bir AC akıma dönüştürür.</li>
+                    <li><strong>Frekans Modülasyonu:</strong> Kompresör motorunun devri, sürücü tarafından üretilen elektriğin frekansı değiştirilerek 10 Hz ile 120 Hz arasında dinamik olarak ayarlanır. Oda sıcaklığı istenen sete yaklaştığında frekans düşürülerek kompresör minimum devirde çalıştırılır.</li>
                 </ol>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Termodinamik Çevrimler: Soğutma ve Isıtma Modu Şematik Analizi</h2>
-                <p>Kapalı çevrim içerisinde gerçekleşen süreçler termodinamiğin temel yasalarıyla yönetilir:</p>
-                
-                <h3 class="text-lg font-bold text-slate-800 pt-2">A. Soğutma Modu Çevrimi</h3>
-                <p>Evaporatörde iç ortam havasından ısı çekerek buharlaşan akışkan, kompresörde sıkıştırılır ve kondenserde dışarıya ısı atarak sıvılaşır. EEV üzerinden geçerek basıncı düşer ve döngü tekrarlanır.</p>
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Termodinamik Çevrimler: Renkli ve Animasyonlu Şematik Gösterim</h2>
+                <p>Aşağıdaki dairesel şema, soğutucu akışkanın kapalı devre içerisindeki evrelerini ve akış yönünü, modern bir arayüz ve yumuşak animasyon geçişleriyle temsil etmektedir:</p>
 
-                <h3 class="text-lg font-bold text-slate-800 pt-2">B. Isıtma Modu Çevrimi</h3>
-                <p>4 yollu vananın konum değiştirmesiyle akış yönü tersine döner; dış ünite evaporatör (dış havadan ısı çeken), iç ünite ise kondenser (iç ortama ısı veren) görevi üstlenir.</p>
+                <!-- RENKLİ VE ANİMASYONLU ÇEMBER ŞEMASI -->
+                <div class="my-8 p-6 bg-slate-900 rounded-2xl shadow-xl text-white flex flex-col items-center justify-center space-y-6 border border-slate-700">
+                    <div class="text-center space-y-1">
+                        <span class="text-xs uppercase tracking-widest text-blue-400 font-extrabold">Termodinamik Akış Diyagramı</span>
+                        <h3 class="text-lg font-black text-slate-100">Buhar Sıkıştırmalı Çevrim Çemberi</h3>
+                    </div>
 
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3 font-mono text-xs md:text-sm">
-                    <p class="font-bold text-blue-900">ŞEMATİK SOĞUTMA ÇEVRİMİ AKIŞI:</p>
-                    <p>[İç Ortam] --(Isı Çekimi / Buharlaşma)--&gt; [Evaporatör] --(Alçak Basınç Gaz)--&gt; [Kompresör] --(Yüksek Basınç Kızgın Buhar)--&gt; [Kondenser] --(Isı Atımı / Yoğuşma)--&gt; [Elektronik Genleşme Vanası - EEV] --(Basınç Düşümü)--&gt; [Evaporatör]</p>
+                    <!-- Çember Konteyner -->
+                    <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-dashed border-blue-500/40 flex items-center justify-center animate-spin" style="animation-duration: 35s;">
+                        
+                        <!-- Top (Kompresör) -->
+                        <div class="absolute -top-5 bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-blue-400 flex items-center gap-1.5 animate-pulse">
+                            <i class="fa-solid fa-gears"></i> 1. Kompresör (Yüksek P / T)
+                        </div>
+
+                        <!-- Right (Kondenser) -->
+                        <div class="absolute -right-5 bg-amber-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-amber-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-fire"></i> 2. Kondenser (Isı Atımı)
+                        </div>
+
+                        <!-- Bottom (Genleşme Vanası) -->
+                        <div class="absolute -bottom-5 bg-purple-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-purple-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-compress"></i> 3. Genleşme Vanası (EEV)
+                        </div>
+
+                        <!-- Left (Evaporatör) -->
+                        <div class="absolute -left-5 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-emerald-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-snowflake"></i> 4. Evaporatör (Isı Çekimi)
+                        </div>
+
+                        <!-- Çember İçi Merkez Bilgi -->
+                        <div class="w-40 h-40 rounded-full bg-slate-800 border border-slate-700 flex flex-col items-center justify-center text-center p-4 shadow-inner">
+                            <i class="fa-solid fa-atom text-blue-400 text-2xl mb-1 animate-bounce"></i>
+                            <span class="text-xs font-black text-slate-200">R32 / R410A</span>
+                            <span class="text-[10px] text-slate-400">Kapalı Çevrim Akışı</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 text-xs text-slate-300 w-full pt-2 border-t border-slate-800">
+                        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                            <strong class="text-blue-400 block mb-1">Soğutma Modu:</strong> İç ünite evaporatör görevi görür, ortamdaki ısıyı emerek dış üniteye (kondensere) taşır ve dışarı atar.
+                        </div>
+                        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                            <strong class="text-amber-400 block mb-1">Isıtma Modu:</strong> 4 yollu vana yön değiştirir; dış ünite evaporatör, iç ünite kondenser olur ve mekana ısı yayar.
+                        </div>
+                    </div>
                 </div>
 
                 <h2 class="text-xl font-extrabold text-slate-900 pt-4">5. Sonuç</h2>
-                <p>Inverter split klimalar; termodinamik prensipleri, akıllı güç elektroniği ve değişken devirli kompresör mimarisi ile geleneksel sistemlere kıyasla %30 ila %50 oranında üstün enerji verimliliği ve kararlı bir iç ortam konforu sunar[cite: 4].</p>
+                <p>Inverter split klimalar; termodinamik prensipleri, akıllı güç elektroniği ve değişken devirli kompresör mimarisi ile geleneksel sistemlere kıyasla %30 ila %50 oranında üstün enerji verimliliği ve kararlı bir iç ortam konforu sunar.</p>
             </div>
         </article>
     </main>
