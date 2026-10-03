@@ -68,7 +68,7 @@
         <header class="border-b border-slate-100 pb-6 space-y-3">
             <span class="text-xs font-extrabold uppercase tracking-wider bg-blue-50 text-blue-700 py-1 px-3 rounded-full">Mühendislik Rehberi #7</span>
             <h1 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Isı Pompası mı, Kombi mi? Kapsamlı Karşılaştırma ve Analiz</h1>
-            <p class="text-sm text-slate-500 font-medium">Güncellenme Tarihi: 2026 | Yatırım, Verimlilik ve Amortisman Analizi</p>
+            <p class="text-sm text-slate-500 font-medium">Güncellenme Tarihi: 2026 | Yatırım, Verimlilik ve Adana Şartlarında Vaka Analizi</p>
         </header>
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
@@ -91,9 +91,42 @@
                 COP = Q_{alinan\_isi} / W_{elektrik\_gucu}
             </p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Maliyet, Amortisman ve Karşılaştırmalı Analiz</h2>
+            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Vaka Analizi: Adana'da Tipik Bir Dubleks Villa İçin Sistem Karşılaştırması</h2>
             <p>
-                Isı pompalarının ilk yatırım maliyeti (cihaz, depo, yerden ısıtma entegrasyonu vb.), kombi sistemlerine kıyasla oldukça yüksektir. Ancak ılıman iklim bölgelerinde veya doğalgaz altyapısının bulunmadığı müstakil yapılarda, elektrik ve gazim birim fiyat oranlarına bağlı olarak uzun vadede ciddi tasarruf sunarlar. Ayrıca yaz aylarında tersinir (reverse) çalışarak soğutma yapabilme kabiliyetleri, ısı pompalarını kombilere karşı öne geçiren en büyük avantajdır.
+                Bu teorik ve pratik analizi somutlaştırmak amacıyla, Akdeniz iklim kuşağında yer alan **Adana** ilinde konumlanmış, brüt **220 m²** kullanım alanına sahip tipik bir **dubleks villa** senaryosunu ele alalım. Adana, TS 825 ve BEP yönetmeliğine göre 1. Bölge (çok sıcak sahil kuşağı) sınırları içerisinde yer alır. Kışları ılıman geçer (en soğuk ay ortalamaları 8°C - 10°C bandındadır); buna karşın yaz ayları son derece sıcak ve uzun süreli geçer. Villa tipindeki bu yapıda yerden ısıtma (veya düşük sıcaklık radyatörleri) ve kullanım sıcak su (KSS) ihtiyacı bulunmaktadır.
+            </p>
+
+            <h3 class="text-lg font-bold text-slate-800 pt-2">A. İlk Kurulum ve Yatırım Maliyeti Analizi</h3>
+            <p>
+                Adana'daki dubleks villa için iki farklı mekanik tesisat senaryosunun ilk yatırım maliyetleri (2026 piyasa baz değerleriyle) şu şekildedir:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Senaryo 1 (Tam Yoğuşmalı Kombi + Boyler + Tesisat):</strong> Yüksek kapasiteli (örn. 30-35 kW) yoğuşmalı kombi, kullanım sıcak suyu için çift serpantinli boyler, bakır borulama, oda termostatları ve panel radyatör/yerden ısıtmakollektör entegrasyonu dahil ortalama ilk yatırım maliyeti <strong>daha ekonomik</strong> bir bütçeyle tamamlanır.</li>
+                <li><strong>Senaryo 2 (Hava Kaynaklı Isı Pompası + Boyler + Tesisat):</strong> Dubleks villanın ısıtma, soğutma ve sıcak su ihtiyacını karşılayacak 12-16 kW kapasiteli inverter monoblok/split ısı pompası, 300 litre boyler, tampon tankı (buffer tank), sirkülasyon pompaları ve otomasyon paneli dahil ilk yatırım maliyeti, kombi sistemine kıyasla <strong>yaklaşık 2.5 ila 3 kat daha yüksek</strong> bir başlangıç bütçesi gerektirir.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold text-slate-800 pt-2">B. Güncel Birim Fiyatlar (2026)</h3>
+            <p>
+                Analizin doğru yapılabilmesi için 2026 yılı güncel mesken enerji tarifeleri baz alınmıştır:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Doğalgaz Birim Fiyatı:</strong> BOTAŞ konut tarifeleri ve şehir dağıtım bedelleri, ÖTV ve KDV dahil ortalama <strong>11,50 TL / Sm³</strong> civarındadır (yaklaşık 1 kWh eşdeğer doğalgaz maliyeti ~1,15 TL).</li>
+                <li><strong>Elektrik Birim Fiyatı:</strong> EPDK mesken kademeli tarife ve dağıtım bedelleri dahil yüksek kademe (veya tek zamanlı ortalama mesken tarifesi) baz alındığında ortalama <strong>3,92 TL / kWh</strong> seviyesindedir.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold text-slate-800 pt-2">C. Adana İklim Verileri ile 1 Yıllık Tahmini İşletme Maliyeti</h3>
+            <p>
+                Adana'nın ılıman kış koşulları, ısı pompalarının verimliliğini (COP) yukarı çeken en büyük avantajdır. Sezon boyunca dış hava sıcaklığı nadiren sıfırın altına düştüğü için hava kaynaklı ısı pompası ortalama **COP = 3.8** verimlilikle çalışır.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Villa Isıtma ve Sıcak Su Yükü:</strong> 220 m²'lik iyi yalıtılmış bir dubleks villanın yıllık ortalama ısıtma ve sıcak su enerji ihtiyacının yaklaşık <strong>22.000 kWh</strong> olduğu varsayılmalıdır.</li>
+                <li><strong>Kombi İşletme Maliyeti:</strong> Tam yoğuşmalı kombi ortalama %95 verimle çalışır. Gereken gaz miktarı $22.000 / 0.95 \approx 23.157\text{ kWh}$ ($2.170\text{ Sm³}$). Güncel gaz fiyatı ($11,50\text{ TL/Sm³}$) ile yıllık kombi yakıt masrafı yaklaşık **24.950 TL**'dir.</li>
+                <li><strong>Isı Pompası İşletme Maliyeti:</strong> Ortalama COP = 3.8 verimle çalışan ısı pompasının tüketeceği elektrik enerjisi $22.000 / 3.8 \approx 5.789\text{ kWh}$'dir. Güncel elektrik birim fiyatı ($3,92\text{ TL/kWh}$) ile yıllık ısı pompası elektrik masrafı yaklaşık **22.690 TL**'dir.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold text-slate-800 pt-2">D. Değerlendirme ve Sonuç</h3>
+            <p>
+                Adana gibi kışların ılıman geçtiği bölgelerde, ısı pompasının yüksek COP değeri sayesinde yıllık işletme maliyeti doğalgaz kombisi ile başa baş hatta hafifçe daha ekonomik seyretmektedir. Ancak ısı pompasının ilk yatırım maliyetinin çok yüksek olması, aradaki maliyet farkının (amortisman süresinin) uzun yıllara yayılmasına neden olur. Buna karşın, ısı pompasının yaz aylarında Adana'nın kavurucu sıcaklarında **ekonomik soğutma** (fancoil veya yerden serinletme ile) yapabilme yeteneği, villalar için sistemin cazibesini artıran en belirleyici mühendislik kriteridir.
             </p>
 
         </div>
@@ -110,6 +143,7 @@
         <div class="max-w-4xl mx-auto space-y-3">
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[11px] text-slate-600 leading-relaxed text-left sm:text-center space-y-2">
                 <p><strong>Amazon Gelir Ortaklığı Bildirimi:</strong> klimahesaplama.net, Amazon Türkiye Gelir Ortaklığı Programı üyesidir.</p>
+                <p class="border-t border-slate-200/80 pt-2 text-slate-500"><strong>Sorumluluk Reddi:</strong> Bu sitedeki rehberler ve hesap makineleri bilgilendirme amaçlıdır.</p>
             </div>
         </div>
         <div class="flex justify-center items-center gap-4 font-bold text-slate-600 flex-wrap pt-2 text-xs">
