@@ -6,8 +6,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isı Pompası Verimliliğini Etkileyen Faktörler (COP ve EER) | Klima Hesaplama Uzmanı</title>
-    <meta name="description" content="Isı Pompası Verimliliğini Etkileyen Faktörler hakkında kapsamlı mühendislik rehberi.">
+    <title>Isı Pompaları: Çalışma Prensipleri, Çeşitleri ve Verimlilik Katsayıları | Klima Hesaplama Uzmanı</title>
+    <meta name="description" content="Isı pompalarının akademik düzeyde çalışma prensibi, çeşitleri (hava, su, toprak kaynaklı), monoblok/split tipler, COP, EER, SCOP, SEER katsayıları ve sistem analizleri.">
     
     <!-- Canonical Etiketi -->
     <link rel="canonical" href="https://klimahesaplama.net/makale-16.html">
@@ -16,8 +16,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Isı Pompası Verimliliğini Etkileyen Faktörler (COP ve EER)",
-  "description": "Isı Pompası Verimliliğini Etkileyen Faktörler hakkında kapsamlı mühendislik rehberi.",
+  "headline": "Isı Pompaları: Çalışma Prensipleri, Çeşitleri ve Verimlilik Katsayıları",
+  "description": "Isı pompası çeşitleri, çalışma prensibi, COP, EER, SCOP, SEER terimleri ve monoblok/split sistem analizleri.",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://klimahesaplama.net/makale-16.html"
@@ -70,23 +70,62 @@
         </div>
     </div>
 </nav>
+
     <main class="max-w-4xl mx-auto my-8 px-4 flex-grow w-full">
-        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 space-y-6">
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 space-y-8">
             <div class="space-y-3 border-b pb-6 border-slate-100">
-                <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-3 py-1 rounded-full inline-block">Mühendislik Makalesi & Isı Pompası Verimi</span>
-                <h1 class="text-2xl md:text-4xl font-black text-slate-900 leading-tight">Isı Pompası Verimliliğini Etkileyen Faktörler (COP ve EER)</h1>
-                <p class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i> Güncellenme Tarihi: 2026 | Teknik İçerik Grubu</p>
+                <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-3 py-1 rounded-full inline-block">Mühendislik Makalesi & Isı Pompası Sistemleri</span>
+                <h1 class="text-2xl md:text-4xl font-black text-slate-900 leading-tight">Isı Pompaları, Çalışma Prensipleri ve Çeşitleri</h1>
+                <p class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i> Güncellenme Tarihi: 2026 | Termodinamik ve Mekanik Tesisat Grubu</p>
             </div>
+            
             <div class="prose prose-slate max-w-none text-sm md:text-base leading-relaxed space-y-6 text-slate-700">
-                <p>Isı pompalarının enerji performansını değerlendirmek ve işletme maliyetlerini öngörmek için iki temel katsayı kullanılır: Isıtma modunda <strong>COP</strong> ve soğutma modunda <strong>EER</strong>. Bu katsayılar cihazın harcadığı elektriğe karşılık ürettiği termal enerjinin oranını gösterir.</p>
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">Dış Hava Sıcaklığının COP Üzerindeki Etkisi</h2>
-                <p>Hava kaynaklı ısı pompalarında verimlilik dış hava sıcaklığına bağlıdır. Dış sıcaklık sıfırın altına düştüğünde kompresör daha fazla çalışır ve COP değeri düşer. Bu nedenle çok soğuk iklimlerde kapasite seçimi emniyetli yapılmalıdır.</p>
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">Yerden Isıtma Entegrasyonu</h2>
-                <p>Düşük sıcaklıkta çalışan yerden ısıtma sistemleri ısı pompası verimini maksimum seviyelere çıkarır.</p>
-                <p class="font-bold text-slate-900 bg-blue-50 p-4 rounded-xl border border-blue-200">Düşük sıcaklık rejimine uygun iç tesisat tercih edilmesi işletme maliyetlerini minimuma indirir.</p>
+                
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">1. Giriş ve Isı Pompası Teknolojisinin Temelleri</h2>
+                <p>Isı pompaları, doğada mevcut olan düşük sıcaklıktaki termal enerjiyi (hava, su veya toprak kaynaklı) mekanik bir buhar sıkıştırmalı soğutma çevrimi yardımıyla daha yüksek sıcaklıklara taşıyan ve binaların ısıtılması, soğutulması ile kullanım sıcak suyu temininde kullanılan son derece yüksek verimli sistemlerdir. Isı pompaları ısı üretmez; aksine mevcut ısıyı bir ortamdan diğerine transfer ederler. Bu benzersiz özellikleri sayesinde geleneksel fosil yakıtlı veya doğrudan dirençli elektrikli ısıtma sistemlerine kıyasla çok daha düşük enerji tüketimi sunarlar.</p>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">2. Isı Pompası Çeşitleri ve Çalışma Prensipleri</h2>
+                <p>Isı kaynaklarına göre sınıflandırılan üç temel ısı pompası sistemi bulunmaktadır:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Hava Kaynaklı Isı Pompaları:</strong> Dış ortam havasındaki termal enerjiyi absorbe ederek iç mekana aktaran en yaygın ve ekonomik kurulum maliyetine sahip sistemlerdir[cite: 5].</li>
+                    <li><strong>Su Kaynaklı Isı Pompaları:</strong> Yer altı suları, göller veya nehirler gibi su kaynaklarından enerji çeken, suyun sıcaklık rejimi kararlı olduğu için yüksek verim sunan sistemlerdir.</li>
+                    <li><strong>Toprak Kaynaklı (Geotermal) Isı Pompaları:</strong> Toprağın 1-2 metre derinliğindeki sabit sıcaklıktan ($10^\circ\text{C} - 15^\circ\text{C}$) yararlanan yatay veya dikey sondajlı kapalı/açık devre sistemlerdir. İlk yatırım maliyeti yüksek olmasına rağmen yıl boyunca en yüksek verimi sağlarlar.</li>
+                </ul>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">3. Verimlilik Göstergeleri: COP, EER, SCOP ve SEER Terimleri</h2>
+                <p>Isı pompalarının ve inverter klimaların performansını değerlendirmek için uluslararası standartlar (EN 14511 ve EN 14825) tarafından tanımlanan dört temel katsayı kullanılır:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>COP (Coefficient of Performance):</strong> Isıtma modunda, cihazın harcadığı 1 kW elektrik enerjisi karşılığında ürettiği termal ısı enerjisi miktarını gösterir anlık verim katsayısıdır.</li>
+                    <li><strong>EER (Energy Efficiency Ratio):</strong> Soğutma modunda anlık performans göstergesidir; çekilen elektrik gücüne karşılık çekilen ısı miktarını ifade eder.</li>
+                    <li><strong>SCOP (Seasonal Coefficient of Performance):</strong> Isıtma sezonu boyunca değişen dış hava koşulları ve kısmi yükler baz alınarak hesaplanan sezonsal ortalama verimlilik katsayısıdır.</li>
+                    <li><strong>SEER (Seasonal Energy Efficiency Ratio):</strong> Soğutma sezonu boyunca tüm iklim verileri ve kısmi yükler hesaba katılarak belirlenen sezonsal enerji verimlilik oranıdır.</li>
+                </ul>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Günümüz Isı Pompası Tipleri: Monoblok ve Split Sistemler</h2>
+                <p>Hava kaynaklı ısı pompaları hidrolik yerleşimlerine göre iki ana gruba ayrılır:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Monoblok Sistemler:</strong> Soğutucu akışkan devresinin tamamı dış ünitenin içerisindedir. Dış ünite ile iç mekan arasında su hatları (gidiş-dönüş) dolaşır. Montajı kolaydır ancak dışarıdaki su hatlarının donma riskine karşı glikollü (antifrizli) su ile çalıştırılması gerekir.</li>
+                    <li><strong>Split Sistemler:</strong> Soğutma devresi dış ünite (kompresör ve kondenser/evaporatör) ile iç ünite (hidroboks) arasında bölünmüştür. Üniteler arasında bakır borularla soğutucu akışkan (gaz) dolaşır; donma riski bulunmaz.</li>
+                </ul>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">5. Şematik Gösterimler ve Sistem Entegrasyonları</h2>
+                
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3 font-mono text-xs md:text-sm">
+                    <p class="font-bold text-blue-900">BİNAYA KURULU HALDE HAVA, SU VE TOPRAK KAYNAKLI SİSTEMLERİN ÇALIŞMA ŞEMASI:</p>
+                    <p>1. **Hava Kaynaklı Sistem:** [Dış Hava] --(Fan Eşanjör)--&gt; [Isı Pompası Dış Ünite] --(Bakır Boru / Su Hattı)--&gt; [Hidroboks / Buffer Tank] --(Yerden Isıtma / Radyatör)</p>
+                    <p>2. **Su Kaynaklı Sistem:** [Yer Altı / Kuyu Suyu] --(Plakalı Eşanjör)--&gt; [Isı Pompası Ünitesi] --(Isıtma / Soğutma Tesisatı)</p>
+                    <p>3. **Toprak Kaynaklı Sistem:** [Toprak Altı Sondaj Boruları (Glikollü Su)] --(Sirkülasyon Pompası)--&gt; [Jeotermal Isı Pompası] --&gt; [İç Tesisat]</p>
+                </div>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">6. Mevzuatlar ve Standartlar</h2>
+                <p>Isı pompası tasarımı, imalatı ve test prosedürleri; Avrupa Birliği ERP (Energy-Related Products) direktifleri, EN 14511 (Performans Testleri), EN 14825 (Sezonsal Hesaplama) ve ISO standartlarına göre belirlenmektedir. Bu standartlar, tüketicilere sunulan enerji etiketlerinin şeffaf ve güvenilir olmasını garanti eder.</p>
+
+                <h2 class="text-xl font-extrabold text-slate-900 pt-4">7. Sonuç</h2>
+                <p>Isı pompaları; gelişmiş invertör kompresörleri, hassas elektronik genleşme vanaları ve yüksek sezonsal verimlilik katsayıları ile geleceğin en çevreci ve ekonomik iklimlendirme teknolojisidir.</p>
             </div>
         </article>
     </main>
+
     <!-- FOOTER -->
 <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500 space-y-4 no-print px-4 mt-auto">
     <div class="max-w-4xl mx-auto space-y-3">
