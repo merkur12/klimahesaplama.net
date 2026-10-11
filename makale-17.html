@@ -80,38 +80,157 @@
             </div>
             
             <div class="prose prose-slate max-w-none text-sm md:text-base leading-relaxed space-y-6 text-slate-700">
-                
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">1. Giriş: Binaların Termal Zayıf Noktaları</h2>
-                <p>Binaların dış kabuğu incelendiğinde, en zayıf ısı yalıtım noktalarının duvarlar değil, pencereler ve cam yüzeyler olduğu görülür[cite: 10]. Modern mimari trendleri, estetik görünüm ve gün ışığından maksimum düzeyde yararlanma isteği nedeniyle cephelerde cam yüzey oranlarını hızla artırmaktadır. Ancak bu durum, binanın termal dengesi açısından ciddi mühendislik zorluklarını beraberinde getirir.</p>
-                <p>Camlar duvarlara kıyasla çok daha yüksek ısı iletkenlik katsayılarına sahiptir[cite: 10]. İyi yalıtılmış bir dış duvarın ısı transfer katsayısı (U değeri) oldukça düşük seviyelerde tutulabilirken, standart tek camlı pencerelerde bu değer çok yüksek seviyelerde seyreder ve bu durum büyük ısı kayıplarına yol açar. Bu nedenle modern mimaride pencere ve cam kombinasyonu seçimi stratejik bir karardır[cite: 10].</p>
+<nav aria-label="Makale içindekiler" class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3"><h2 class="font-bold text-blue-950">İçindekiler</h2><ol style="list-style:none;margin:0;padding:0" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0"><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">1.</span><a class="text-blue-700 hover:underline" href="#bina-kabugu">Pencerenin bina kabuğundaki görevi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">2.</span><a class="text-blue-700 hover:underline" href="#isi-transferi">İletim, taşınım, ışınım ve hava kaçağı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">3.</span><a class="text-blue-700 hover:underline" href="#u-tanimlari">Ug, Uf ve Uw ayrımı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">4.</span><a class="text-blue-700 hover:underline" href="#u-ornegi">Bütün pencere için sayısal örnek</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">5.</span><a class="text-blue-700 hover:underline" href="#cam-katmanlari">Tek, çift ve üçlü cam düzenleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">6.</span><a class="text-blue-700 hover:underline" href="#low-e">Low‑E kaplama ve güneş kontrolünü ayırmak</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">7.</span><a class="text-blue-700 hover:underline" href="#gaz-boslugu">Argon, kripton ve boşluk genişliği</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">8.</span><a class="text-blue-700 hover:underline" href="#cerceveler">PVC, ahşap ve alüminyum çerçeveler</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">9.</span><a class="text-blue-700 hover:underline" href="#kenar-montaj">Ara çıta ve duvar bağlantısı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">10.</span><a class="text-blue-700 hover:underline" href="#g-ve-shgc">g değeri ve güneş kazancı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">11.</span><a class="text-blue-700 hover:underline" href="#gunisigi">Gün ışığı, kamaşma ve optik performans</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">12.</span><a class="text-blue-700 hover:underline" href="#iklim-yon">İklim ve cephe yönüne göre değerlendirme</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">13.</span><a class="text-blue-700 hover:underline" href="#yogusma">Yoğuşma ve iç yüzey sıcaklığı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">14.</span><a class="text-blue-700 hover:underline" href="#hava-sizdirmazligi">Hava sızdırmazlığı ve havalandırmayı ayırmak</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">15.</span><a class="text-blue-700 hover:underline" href="#enerji-ornegi">Pencere değişiminden beklenen kazancı hesaplamak</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">16.</span><a class="text-blue-700 hover:underline" href="#belge-secim">Teknik belge ve teklif karşılaştırması</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">17.</span><a class="text-blue-700 hover:underline" href="#sonuc-kontrol">Uygulama sonrası kontrol ve karar sırası</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">18.</span><a class="text-blue-700 hover:underline" href="#belirsizlik">Belirsizlik ve hassasiyetin raporlanması</a></li></ol></nav>
+<p>Pencere, binanın dış kabuğunda ışık, görüş ve gerektiğinde hava değişimi sağlayan bir yapı elemanıdır. Aynı zamanda iletim yoluyla ısı kaybına, güneş kaynaklı ısı kazancına ve açıklıklardan hava sızıntısına katkıda bulunabilir. Bu etkiler birbirinden ayrılmadan yapılan seçim, bir mevsimde yararlı olan çözümün başka mevsimde olumsuz sonuç vermesine yol açabilir.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">2. Isı Transfer Mekanizmaları ve Pencereler</h2>
-                <p>Pencereler üzerinden gerçekleşen ısı geçişi üç temel mekanizma ile incelenir: İlettim (kondüksiyon), taşınım (konveksiyon) ve ışıma (radyasyon). Cam tabakalarının kalınlığı, aralarındaki boşluğun mesafesi ve dolgu gazının cinsi kondüksiyon ve konveksiyonu doğrudan etkilerken; camın yüzey özellikleri radyasyon transferini belirler.</p>
-                <p>Kış mevsiminde içerideki ısı dışarıya kaçma eğilimindeyken, yaz mevsiminde ise dışarıdaki güneş enerjisi içeriye akın eder. Pencereler, bu iki yönlü ısı akışının kontrol altında tutulmasında anahtar rol oynamaktadır. Isı köprülerinin engellenmesi ve çerçeve-cam birleşim detaylarının doğru çözülmesi, binanın enerji performansını doğrudan etkileyen faktörler arasındadır.</p>
+<p>Doğru değerlendirme yalnızca camın kaç katmanlı olduğuna dayanmaz. Camın U değeri, çerçevenin performansı, kenar bağlantıları, güneş geçirgenliği ve montaj bütünlüğü birlikte incelenir. Bu makaledeki sayısal değerler açıklayıcı örneklerdir; belirli ürünün beyanı veya güncel TS 825 sınırı olarak verilmemiştir. Projeye ait sınır değerleri ve ürün belgeleri ayrıca doğrulanmalıdır.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">3. Cam Teknolojilerinin Evrimi: Tek Camdan Üçlü Cam Ünitelerine</h2>
-                <p>Geçmişte yaygın olarak kullanılan tek camlı sistemler günümüzde enerji verimliliği yönetmelikleri ve standartları gereği neredeyse tamamen terk edilmiştir. Çift camlı üniteler (Isıcam standartları), iki cam arasına hapsedilmiş kuru hava veya asal gaz tabakası sayesinde ısı iletimini yavaşlatır[cite: 10].</p>
-                <p>Günümüzde ise özellikle soğik iklim bölgelerinde üçlü cam üniteleri (triple glazing) standart hale gelmektedir. Üç cam ve iki ayrı gaz boşluğundan oluşan bu sistemler, U değerini minimum seviyelere indirerek iç mekan yüzey sıcaklıklarını artırır ve böylece cam kenarlarında yoğuşma (terleme) riskini ortadan kaldırır.</p>
+<h2 id="bina-kabugu" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">1. Pencerenin bina kabuğundaki görevi</h2>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Low-E (Düşük Emisivite) Kaplama Teknolojisi</h2>
-                <p>Cam teknolojisindeki en büyük devrimlerden biri düşük yayılma oranına sahip Low-E kaplamaların geliştirilmesidir. Çift camlı üniteler iki cam arasına hapsedilmiş argon gazı tabakası sayesinde ısı iletimini yavaşlatırken[cite: 10], Low-E kaplamalı camlar ise mikroskobik metal oksit katmanlarıyla donatılarak içerideki ısıyı içeri, dışarıdaki güneş ışınlarını dışarı yansıtarak yalıtımı mükemmelleştirir[cite: 10].</p>
-                <p>Bu kaplamalar çıplak gözle fark edilmeyecek kadar ince olup, kısa dalga boylu güneş ışınlarının içeri girmesine izin verirken, iç mekandaki eşyalardan ve ısıtma sistemlerinden yayılan uzun dalga boylu kızılötesi (ısı) ışınlarını kaynağına geri yansıtır. Böylece kışın ısı kaybı, yazın ise güneş kazancı minimuma indirilir.</p>
+<p>İyi yalıtılmış bir dış duvara göre bazı pencere düzenleri daha yüksek ısı geçiş katsayısına sahip olabilir. Ancak bütün pencerelerin bütün duvarlardan daha kötü olduğunu söylemek evrensel bir kural değildir. Eski yalıtımsız duvarla yüksek performanslı pencerenin karşılaştırması farklı sonuç verebilir. Isı kaybındaki pay, hem U değerine hem alana bağlıdır.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">5. Ara Boşluk Gazları: Argon ve Kripton</h2>
-                <p>Camlar arasındaki boşluğun hava ile doldurulması yalıtım sağlar; ancak havanın içindeki gazların termal direnci sınırlıdır. Bu boşluğun kuru argon veya kripton gibi asal gazlarla doldurulması ısı transferini dramatik ölçüde düşürür.</p>
-                <p>Argon gazı, havaya kıyasla daha yüksek bir yoğunluğa sahip olduğu için camlar arasındaki moleküler hareketleri ve dolayısıyla konvektif ısı transferini engeller. Kripton ise daha yüksek maliyetli olmakla birlikte dar boşluklarda bile üstün yalıtım performansı sunan bir diğer asal gaz türüdür.</p>
+<p>Mimaride büyüyen cam alanı, gün ışığı ve dış görüş açısından yarar sağlayabilir. Buna karşılık güneş kazancı, kamaşma ve soğuk yüzey hissi gibi sonuçlar da tasarıma dahil edilmelidir. Pencerenin görevi yalnızca kışın ısıyı içeride tutmak değildir. Gün ışığı, havalandırma, güvenlik ve enerji gereksinimleri birlikte dengelenir. <sup><a class="text-blue-700 underline" href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">6. Çerçeve Profillerinin Rolü ve Isı Köprüleri</h2>
-                <p>Yalnızca cam seçimi yapmak enerji verimliliği için yeterli değildir; pencere çerçevelerinin (profil sistemlerinin) termal özellikleri de en az cam kadar kritik bir öneme sahiptir. PVC, alüminyum ve ahşap profiller farklı iletkenlik özelliklerine sahiptir.</p>
-                <p>Alüminyum profiller mukavemet açısından mükemmel olsa da yüksek ısı iletkenliğine sahiptir. Bu nedenle modern alüminyum profillerde ısı bariyerli (poliamid köprülü) sistemler kullanılarak ısı köprüleri kırılır. PVC ve ahşap profiller ise doğal yapıları gereği daha düşük ısı iletkenlik katsayısına sahiptir.</p>
+<p>Bu nedenle bir cephedeki toplam cam alanı ile o cephenin yönü ayrı bilgiler olarak kaydedilir. Net cam alanı, toplam pencere alanı ve duvardaki açıklık alanı aynı büyüklük olmayabilir. Hesapta kullanılan alan tanımı, katsayının temsil ettiği alanla uyumlu olmalıdır. Alanların karıştırılması özellikle büyük doğramalarda belirgin hesap hatası yaratır.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">7. Güneş Kontrolü ve Solar Faktör (g değeri)</h2>
-                <p>Soğutma yüklerinin yüksek olduğu bölgelerde pencerelerin ısı kaybını engellemesi kadar güneş ısısını içeri sokmaması da hayati önem taşır. Solar faktör (g değeri), camın güneş enerjisinin ne kadarını içeri geçirdiğini gösterir.</p>
-                <p>Güneş kontrol kaplamalı camlar (Solar Low-E), bina içindeki aşırı ısınmayı önleyerek klima ve soğutma sistemlerinin enerji tüketimini ciddi oranlarda düşürür. Bu sayede hem kışın ısıtma hem de yazın soğutma masraflarından tasarruf sağlanır.</p>
+<h2 id="isi-transferi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">2. İletim, taşınım, ışınım ve hava kaçağı</h2>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">8. Sonuç ve Özet</h2>
-                <p class="font-bold text-slate-900 bg-blue-50 p-4 rounded-xl border border-blue-200">Doğru cam ve pencere kombinasyonu seçimi binanın toplam enerji kayıplarını ciddi oranlarda azaltır[cite: 10]. Mimari projelerde iklim koşulları, cephe yönü, U değeri ve kaplama teknolojileri bir bütün olarak ele alınmalıdır.</p>
-            </div>
+<p>Cam ve çerçeve boyunca ısı iletimi gerçekleşir. İç ve dış yüzeylerde hava ile taşınım, cam tabakaları arasında ise gazın iletim ve taşınım etkileri bulunur. Yüzeyler arasındaki uzun dalga ışınım da ısı geçişine katkı yapar. Pencerenin U değeri bu tanımlı ısı geçiş süreçlerini bütün yapı için temsil eder.</p>
+
+<p>Kapalı pencerenin çevresindeki conta veya montaj boşluğundan gelen hava sızıntısı ayrı süreçtir. Sızıntı, basınç farkı ve açıklık özelliklerinden etkilenir. Düşük U değerli cam kullanılması, kötü montaj boşluğundan gelen havayı kendiliğinden durdurmaz. Aynı şekilde sızdırmaz conta, camın iletim performansını otomatik olarak iyileştirmez.</p>
+
+<p>Güneşten gelen kısa dalga enerji de U üzerinden hesaplanan iç-dış sıcaklık farkı yükünden ayrılır. Kışın güneş kazancı ısıtma ihtiyacını azaltabilir; yazın soğutma ihtiyacını artırabilir. Bu nedenle yalnızca U × A × ΔT hesabı, pencerenin bütün yıllık enerji etkisini anlatmaz. Cam seçimi hem iletim hem güneş kazancı hem kullanım koşulları üzerinden yapılır.</p>
+
+<h2 id="u-tanimlari" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">3. Ug, Uf ve Uw ayrımı</h2>
+
+<p>Ug cam bölümünün, Uf çerçeve bölümünün, Uw ise bütün pencerenin ısı geçiş katsayısını tanımlar. Cam merkezinde verilen düşük Ug değerini pencerenin tamamı için kullanmak, çerçeve ve kenar etkilerini dışarıda bırakabilir. Özellikle küçük camlı veya geniş profilli doğramalarda bu ayrım önemlidir.</p>
+
+<p>Basitleştirilmiş bileşen hesabında Uw = (A_g × Ug + A_f × Uf + l_g × ψ_g)/(A_g + A_f) yazılabilir. A_g ve A_f cam ile çerçeve alanlarını, l_g cam kenar uzunluğunu, ψ_g kenar birleşiminin doğrusal katkısını temsil eder. Tanımlar ve katsayılar uygun hesap yöntemiyle uyumlu olmalıdır. Pencere ısıl geçirgenliğinin hesaplanması EN ISO 10077 ailesinin konularındandır. <sup><a class="text-blue-700 underline" href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></p>
+
+<p>Pencerenin duvara montajındaki ısı köprüsü bu cam kenarı katkısıyla aynı şey değildir. Duvar bağlantısının etkisi proje düzeyinde ayrıca ele alınabilir. Ürün belgesindeki Uw değeri, hangi boyut ve konfigürasyon için verildiğiyle birlikte okunmalıdır. Başka ölçüdeki bütün pencerelere değişmeden aktarılması her durumda uygun olmayabilir.</p>
+
+<h2 id="u-ornegi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">4. Bütün pencere için sayısal örnek</h2>
+
+<p>Açıklama amacıyla toplam pencere alanını 2,00 m² kabul edelim. Bunun 1,50 m²'si cam, 0,50 m²'si çerçeve olsun. Ug = 1,10 ve Uf = 1,60 W/(m²·K), cam kenar uzunluğu 5,00 m ve ψ_g = 0,040 W/(m·K) seçilsin. Bunlar herhangi bir üreticinin doğrulanmış değerleri değildir.</p>
+
+<p>Cam katkısı 1,50 × 1,10 = 1,65 W/K, çerçeve katkısı 0,50 × 1,60 = 0,80 W/K ve kenar katkısı 5,00 × 0,040 = 0,20 W/K olur. Toplam 2,65 W/K, alana bölündüğünde Uw = 1,325 W/(m²·K) çıkar. Sonuç camın Ug değerinden daha yüksektir.</p>
+
+<p>İç-dış sıcaklık farkı 25 K olduğunda bu pencerenin iletim kaybı yaklaşık 1,325 × 2,00 × 25 = 66,25 W'tır. Yalnızca cam merkezini bütün alana uygulamak 55 W verir ve örnekte kaybı düşük tahmin eder. Bu karşılaştırma alan ve katsayı eşleşmesinin önemini gösterir; hava sızıntısı ve güneş kazancı bu hesapta yer almamaktadır.</p>
+
+<h2 id="cam-katmanlari" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">5. Tek, çift ve üçlü cam düzenleri</h2>
+
+<p>Tek camda yalnızca cam tabakası ve yüzey süreçleri bulunur. Çift cam, iki tabaka arasında kapalı gaz boşluğu oluşturarak ilave ısıl direnç sağlar. Üçlü cam ise iki ayrı gaz boşluğu ve üç cam tabakası kullanır. Ancak katman sayısı tek başına toplam performansı kesin belirlemez.</p>
+
+<p>Cam boşluğu, gaz dolumu, kaplama ve kenar düzeni birlikte etkilidir. Nitelikli çift cam ile uygun olmayan üçlü cam arasında ürün düzeyinde karşılaştırma yapılmalıdır. Daha fazla cam, ağırlığı da artırır; kanat ölçüsü, donanım ve profil uygunluğu kontrol edilir. Mevcut çerçeveye her kalınlık ve ağırlıkta cam takılması mümkün değildir.</p>
+
+<p>Üçlü cam iç yüzey sıcaklığını yükselterek belirli koşullarda yoğuşma riskini azaltabilir. Bununla birlikte yoğuşmayı her koşulda tamamen ortadan kaldırdığı söylenemez. Yüksek iç nem, montaj köprüsü veya zayıf kenar detayı etkili olabilir. Seçim, yalnızca cam sayısı değil, belgelenmiş Uw ve kullanım koşulları üzerinden değerlendirilmelidir.</p>
+
+<h2 id="low-e" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">6. Low‑E kaplama ve güneş kontrolünü ayırmak</h2>
+
+<p>Low‑E kaplamanın temel özelliği düşük yayma katsayısıdır. Cam yüzeyleri arasındaki uzun dalga ışınımla ısı geçişini azaltmaya yardımcı olabilir. Buna karşılık güneş enerjisini ne kadar geçirdiği kaplamanın optik özelliklerine bağlıdır. Bütün Low‑E ürünlerin aynı güneş kontrolünü sağladığı sonucu çıkarılamaz.</p>
+
+<p>Bazı ürünler daha fazla güneş kazancını korurken düşük U sağlayabilir; bazıları daha düşük güneş kazancı hedefler. Bu nedenle ürün seçerken yalnızca Low‑E ifadesi değil, g veya SHGC değeri ve görünür ışık geçirgenliği de okunmalıdır. Güneş kontrolü ile ısıl yalıtım ilişkili olmakla birlikte aynı ölçüt değildir. <sup><a class="text-blue-700 underline" href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup></p>
+
+<p>Kaplamanın cam ünitesindeki yeri ve uygulanma biçimi ürüne bağlıdır. Üreticinin tanımladığı yön ve montaj koşulu korunmalıdır. Camın dış görünüşü kaplamanın bütün teknik özelliklerini göstermez. İki cam benzer renkte görünse bile U ve güneş değerleri farklı olabilir. Satın alma belgesinde cam katmanları, boşluk, gaz ve kaplama tanımı açık olmalıdır.</p>
+
+<h2 id="gaz-boslugu" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">7. Argon, kripton ve boşluk genişliği</h2>
+
+<p>Camlar arasındaki gaz, kapalı boşlukta ısı geçişini etkiler. Argon ve kripton gibi gazlar uygun düzenlerde havaya göre daha düşük ısıl iletim sağlayabilir. Bu etkiyi yalnızca yoğunluk farkı veya moleküllerin hareket etmemesi biçiminde açıklamak doğru değildir. Gazın ısıl özellikleri ve boşluk içindeki taşınım birlikte belirleyicidir.</p>
+
+<p>Boşluğu sürekli büyütmek sürekli iyileşme sağlamaz. Belirli koşullardan sonra doğal taşınımın etkisi artabilir. Uygun boşluk genişliği gaz türüne, cam düzenine ve değerlendirme koşullarına bağlıdır. Bu nedenle bütün ürünler için değişmez tek bir ideal boşluk ölçüsü verilmemelidir.</p>
+
+<p>Gaz dolum oranı ve ünitenin sızdırmazlığı uzun dönem performans için önemlidir. Hasarlı kenar sızdırmazlığı gaz kaybına ve boşlukta nem sorununa yol açabilir. Cam arası buğulanma, oda tarafındaki yüzey yoğuşmasından farklıdır. Mevcut ünitenin durumuna göre onarım veya değişim gereksinimi değerlendirilir; yalnızca oda havalandırması cam arası sızdırmazlık sorununu çözmez.</p>
+
+<h2 id="cerceveler" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">8. PVC, ahşap ve alüminyum çerçeveler</h2>
+
+<p>PVC, ahşap ve alüminyum doğramalar farklı malzeme ve kesit özellikleri taşır. PVC profillerin boşlukları, güçlendirmeleri ve birleşimleri; ahşapta kesit ve koruyucu işlemler; alüminyumda ise ısı bariyeri ve profil geometrisi performansı etkiler. Malzeme adı tek başına kesin Uf değeri vermez.</p>
+
+<p>Alüminyum yüksek ısı iletkenliğine sahip olduğundan uygun ısıl kesinti detayları önemlidir. Isı bariyerli bir profil, bariyersiz ürünle aynı kabul edilmemelidir. Buna karşılık PVC veya ahşap ürünün yalnızca malzemesi nedeniyle kusursuz performans sağladığı da söylenemez. Conta, bağlantı, kanat ayarı ve üretim kalitesi birlikte değerlendirilir.</p>
+
+<p>Profil seçiminde mekanik dayanım ve rüzgar yükü de önemlidir. Büyük açıklıkta yeterli taşıma kapasitesi sağlanmadan sadece düşük Uf hedeflenmesi uygun değildir. Bakım, su tahliyesi, donanım ve boyutsal davranış da hizmet ömrünü etkiler. Teknik karşılaştırmada gerçek ürün belgeleri ve bütün pencere performansı esas alınmalıdır.</p>
+
+<h2 id="kenar-montaj" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">9. Ara çıta ve duvar bağlantısı</h2>
+
+<p>Cam tabakalarını ayıran ara çıta, kenar bölgesinin ısıl davranışını etkiler. Daha düşük iletkenlikli kenar çözümleri yerel yüzey sıcaklığına katkı sağlayabilir. Ancak sıcak kenar adı bütün ürünler için aynı ψ değeri anlamına gelmez. Cam, çerçeve ve ara çıta kombinasyonu uygun değerlendirmeyle birlikte ele alınır.</p>
+
+<p>Pencerenin duvardaki konumu ve yalıtımın çerçeve çevresinde devam etmesi montaj köprüsünü etkiler. Açıklık çevresinde boşluk, kopuk yalıtım veya uygun olmayan dolgu, iyi ürünün bina üzerindeki sonucunu kötüleştirebilir. Sabitleme ve sızdırmazlık işlevleri birbirinden ayrılarak çözülmelidir. Dolgu malzemesi her durumda mekanik sabitlemenin yerine geçmez.</p>
+
+<p>Su tahliye açıklıkları ve dış birleşimler de korunmalıdır. Enerji performansı için yapılan bir müdahale yağmur suyunun uzaklaştırılmasını engellememelidir. Montaj detayındaki bütünlük, <a href="makale-15.html" class="text-blue-700 underline">yalıtım sürekliliği ve ısı köprüsü değerlendirmesinin</a> pencere özelindeki karşılığıdır. Kontrol yalnızca cam etiketine bakmakla tamamlanmaz.</p>
+
+<h2 id="g-ve-shgc" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">10. g değeri ve güneş kazancı</h2>
+
+<p>Güneş kazancı katsayısı, gelen güneş enerjisinin iç ortama kazanç olarak ulaşan kısmını temsil eder. Bu, yalnızca doğrudan geçen ışınımı değil, camda soğurulup içeriye aktarılan uygun katkıyı da içerebilir. g ve SHGC benzer amaçlı göstergelerdir; farklı test ve tanım koşulları dikkate alınmalıdır.</p>
+
+<p>Açıklayıcı örnekte cam alanı 8 m², ilgili düzleme gelen güneş ışınımı 500 W/m² ve katsayı 0,60 kabul edilirse yaklaşık kazanç 8 × 500 × 0,60 = 2.400 W olur. Aynı alan ve ışınımda katsayı 0,35 seçilirse 1.400 W çıkar. Örnekteki fark 1.000 W'tır; bu değer belirli şehir veya saate ait ölçüm değildir.</p>
+
+<p>Gerçek kazanç geliş açısı, yön, dış engeller ve kontrol elemanlarından etkilenir. Cam rengini tek başına kesin güneş katsayısı olarak kullanmak ayrıntılı ürün hesabı değildir. Düşük katsayı yazın yararlı olabilirken kış güneş katkısını da azaltabilir. Seçim, yıllık ihtiyaçlar ve kullanım saatleri üzerinden değerlendirilmelidir.</p>
+
+<h2 id="gunisigi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">11. Gün ışığı, kamaşma ve optik performans</h2>
+
+<p>Görünür ışık geçirgenliği, camdan geçen görünür ışığın oranını anlatır. Güneş kazancı katsayısıyla aynı büyüklük değildir. İki ürün benzer g değerine sahipken farklı gün ışığı geçirebilir. Bu ayrım, iç mekanda aydınlatma ihtiyacı ve görüş kalitesi açısından önemlidir.</p>
+
+<p>Daha büyük cam alanı her noktada daha iyi gün ışığı dağılımı sağlamaz. Oda derinliği, pencerenin yüksekliği ve iç yüzeylerin yansıtıcılığı etkilidir. Doğrudan güneş çalışma yüzeyinde kamaşma oluşturabilir. Gün ışığı avantajı değerlendirilirken görsel konfor ve aydınlatma kontrolü birlikte düşünülür.</p>
+
+<p>Camın çok koyu seçilmesi yapay aydınlatma kullanımını artırabilir. Yapay aydınlatma da iç ısı yüküne katkıda bulunur. Bu nedenle soğutma yükünü azaltma hedefi yalnızca güneş katsayısını düşürmekten ibaret değildir. Bütün bina enerjisi ve kullanım koşulları birlikte karşılaştırılmalıdır. Aynı camın konut salonu ile gün boyu kullanılan ofisteki uygunluğu farklı olabilir.</p>
+
+<h2 id="iklim-yon" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">12. İklim ve cephe yönüne göre değerlendirme</h2>
+
+<p>Isıtma ağırlıklı ve soğutma ağırlıklı iklimlerde camın güneş katkısının değeri farklılaşır. Ayrıca aynı binanın doğu, batı ve güney cepheleri farklı zamanlarda güneş alır. Batı yönündeki akşamüstü kazancı kullanım saatleriyle çakışabilir. Cephe yönü, yalnızca pencere sayısının yanında bir etiket değildir.</p>
+
+<p>Adana gibi sıcak yaz koşullarının önemli olduğu bir yerde güneş kazancı ve nem yükü birlikte incelenebilir. Soğuk kış koşullarının belirgin olduğu yerde ise düşük Uw ve iç yüzey sıcaklığı daha baskın hale gelebilir. Bu ifade güncel şehir sınır değeri veya ürün önerisi yerine geçmez; gerçek meteorolojik ve proje koşulları ayrıca alınmalıdır.</p>
+
+<p>DOE'nin pencere satın alma rehberi de U ile güneş kazancının iklime göre birlikte değerlendirilmesini vurgular. <sup><a class="text-blue-700 underline" href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup> Yabancı iklim bölgesi tabloları Türkiye'ye aynen aktarılmamalıdır. <a href="makale-8.html" class="text-blue-700 underline">Soğutma yükü değerlendirmesi</a> ve <a href="makale-10.html" class="text-blue-700 underline">ısı kaybı hesabı</a>, ürün seçiminin iki farklı mevsim tarafını açıklar.</p>
+
+<h2 id="yogusma" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">13. Yoğuşma ve iç yüzey sıcaklığı</h2>
+
+<p>İç havanın nemi ve yüzey sıcaklığı birlikte yoğuşmayı belirler. Yüzey çiy noktası sıcaklığının altındaysa su yoğuşabilir. Daha iyi ısıl performans iç yüzeyi daha sıcak tutarak belirli koşullarda riski azaltabilir. Ancak yüksek nem veya zayıf montaj detayı varsa risk tamamen ortadan kalkmayabilir.</p>
+
+<p>Cam merkezinde, ara çıta yakınında ve çerçeve üzerinde yüzey sıcaklıkları farklı olabilir. Bu yüzden yoğuşmanın yeri teşhis için bilgi sağlar. Camın iç yüzeyindeki su, iki cam arasındaki buğu ve dış yüzeydeki çiy aynı sorun değildir. Çözüm, sürecin nerede gerçekleştiğine göre belirlenmelidir.</p>
+
+<p>Nem kaynağı, havalandırma ve yapı ayrıntıları birlikte değerlendirilir. Yalnızca yeni cam almak, evdeki yüksek nem üretimini ortadan kaldırmaz. <a href="makale-12.html" class="text-blue-700 underline">Bağıl nem ve konfor</a> ile <a href="makale-18.html" class="text-blue-700 underline">kontrollü havalandırma</a> bu değerlendirmeyi tamamlar. Belirtiyi silmek yerine nem kaynağı ve soğuk yüzey nedeni araştırılmalıdır.</p>
+
+<h2 id="hava-sizdirmazligi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">14. Hava sızdırmazlığı ve havalandırmayı ayırmak</h2>
+
+<p>Pencere kapalıyken istenmeyen hava kaçağının azaltılması enerji ve konfor açısından yararlı olabilir. Ancak bu, binaya temiz dış hava sağlanması gereğini ortadan kaldırmaz. Rastlantısal sızıntı ile tasarlanmış havalandırma aynı süreç değildir. Rüzgarla değişen kaçak debisi, gerekli hava miktarını güvenilir biçimde garanti etmez.</p>
+
+<p>Doğrama değişikliği sonrasında daha önce sızıntıyla giren hava azalabilir. Böyle bir durumda kontrollü havalandırma düzeni gözden geçirilmelidir. Bu durum yalıtımın zararlı olduğu anlamına gelmez; iki farklı işlevin birlikte tasarlanması gerektiğini gösterir. Kişi sayısı ve nem üretimi de değişim değerlendirmesine dahil edilir.</p>
+
+<p>Contaların durumu, kanat ayarı ve montaj birleşimleri kaçakları etkiler. Buna karşılık pencerenin her açıklığını kapatmak, tasarlanmış havalandırma menfezini veya su tahliye yolunu engelleyebilir. Müdahale öncesinde açıklığın işlevi belirlenmelidir. <a href="makale-13.html" class="text-blue-700 underline">Isı kaybını azaltma önlemleri</a> kaynakları ayrı değerlendirerek daha tutarlı iyileştirme yapılmasını destekler.</p>
+
+<h2 id="enerji-ornegi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">15. Pencere değişiminden beklenen kazancı hesaplamak</h2>
+
+<p>Toplam pencere alanı 12 m² olsun. Başlangıç Uw = 3,00, yeni Uw = 1,40 W/(m²·K) ve tasarım sıcaklık farkı 25 K kabul edilsin. İletim kaybı başlangıçta 900 W, yeni durumda 420 W olur. Azalma 480 W'tır. Bu örnek yalnızca aynı alanın iletim performansındaki değişimi gösterir.</p>
+
+<p>Pencere iletim kaybındaki azalma yaklaşık yüzde 53 olsa da toplam bina kaybı aynı oranda azalmaz. Duvar, çatı, döşeme ve havalandırma katkıları devam eder. Güneş özellikleri değiştiyse ısıtma ve soğutma etkileri de ayrıca hesaplanır. Sızıntı azalması aynı hesapta tekrar tekrar sayılmamalıdır.</p>
+
+<p>Yıllık tasarruf için dış koşulların zaman dağılımı, bina kullanımı ve cihaz verimi gerekir. Tek bir tasarım günündeki 480 W değerini bütün yılın saatleriyle çarpmak gerçek tüketim tahmini değildir. Ekonomik değerlendirmede güncel fiyatlar, montaj maliyeti ve kullanım ömrü dikkate alınır. Kesin geri ödeme süresi ürün adından çıkarılamaz.</p>
+
+<h2 id="belge-secim" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">16. Teknik belge ve teklif karşılaştırması</h2>
+
+<p>Teklifte cam katmanları, kalınlıklar, boşluklar, gaz dolumu ve kaplama açıkça tanımlanmalıdır. Cam için Ug ile bütün pencere için Uw ayrımı korunur. Güneş ve ışık değerleri, değerlendirme yöntemiyle birlikte istenir. NFRC gibi derecelendirme sistemleri de ürünlerin farklı performans göstergelerinin ayrı okunmasına yardımcı olur. <sup><a class="text-blue-700 underline" href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup></p>
+
+<p>Belgede verilen değerlerin gerçek boyut ve kanat düzenine uygulanabilirliği kontrol edilir. Montaj ayrıntısı, bağlantı ve sızdırmazlık kapsamı da teklifin parçası olmalıdır. Aynı camı kullanan iki doğrama teklifi, profil ve uygulama farkı nedeniyle aynı sonucu vermeyebilir. Yalnızca toplam fiyat karşılaştırması bu farkları gizleyebilir.</p>
+
+<p>Seçim sırasında bakım, donanım ve cam ağırlığı gibi hizmet koşulları da değerlendirilir. Birim dönüşümleri ve test koşulları raporda korunur. ABD biriminde verilen U değerini W/(m²·K) gibi kullanmak ciddi hata yaratır. Bütün belgeler ortak birim ve aynı kapsamda karşılaştırıldığında karar daha açık ve denetlenebilir olur.</p>
+
+<h2 id="sonuc-kontrol" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">17. Uygulama sonrası kontrol ve karar sırası</h2>
+
+<p>İlk olarak pencerenin alanı, yönü ve kullanım amacı belirlenir. Sonra ısı kaybı, güneş kazancı ve gün ışığı ihtiyacı değerlendirilir. Uygun ürün belgeleriyle adaylar karşılaştırılır; montaj ve bakım koşulları kontrol edilir. Böylece cam teknolojisinin adı yerine binanın gerçek gereksinimi kararın merkezinde kalır.</p>
+
+<p>Uygulama sonrası kanat işleyişi, contalar, birleşimler ve su tahliyesi gözden geçirilir. İç yüzeydeki yoğuşma veya rahatsız edici hava hareketi varsa tek bir nedene bağlanmadan incelenir. Gerekli durumlarda sıcaklık ve nem ölçümleri kullanılır. Termal görüntüleme yardımcı olabilir; tek görüntüden kesin Uw veya yıllık tasarruf çıkarılmaz.</p>
+
+<p>İyi pencere seçimi, düşük U ile uygun güneş ve ışık performansını doğru montajla birleştirir. Her iklim ve cephe için aynı ürünün en iyi olması beklenmez. <a href="index.html" class="text-blue-700 underline">Hesaplama araçları</a> başlangıç değerlendirmesi sağlayabilir. Nihai sonuç gerçek ölçüler, ürün beyanı ve kullanım koşullarıyla doğrulanmalıdır.</p>
+
+<h2 id="belirsizlik" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">18. Belirsizlik ve hassasiyetin raporlanması</h2>
+
+<p>Mevcut doğramanın bütün özellikleri bilinmiyorsa tek bir kesin U değeri yazmak yerine farklı senaryolar değerlendirmek yararlı olabilir. Aynı alan ve sıcaklık farkında U değişiminin etkisi doğrudan hesaplanabilir. Örneğin 12 m² alan ve 25 K fark için U değerindeki 0,10 W/(m²·K) değişim, iletim yükünü 30 W değiştirir. Bu küçük örnek hangi girdinin sonucu ne kadar etkilediğini gösterir.</p>
+
+<p>Güneş kazancında belirsizlik farklı olabilir. Alan 8 m² ve ışınım 500 W/m² iken güneş katsayısındaki 0,10 değişim, basit hesapta 400 W fark oluşturur. Bu iki örneği karşılaştırmak, sıcak cephede yalnızca U değerini iyileştirmenin bütün yükü açıklamayacağını gösterir. Her terimin alanı ve katsayısı ayrı tutulmalıdır.</p>
+
+<p>Raporda kullanılan değerler ölçülmüş, belgelenmiş veya varsayılmış olarak belirtilir. Ürün belgesi geldiğinde varsayım değiştirilir ve sonuç yeniden hesaplanır. Başlangıçta yüksek belirsizlik bulunan bir hesabı çok sayıda ondalıkla sunmak gerçekte daha hassas yapmaz. Sonucun yuvarlanması, verinin doğruluğu ve kararın amacıyla uyumlu olmalıdır. Böylece kullanıcı, pencere değişiminin olası etkisini kesin garanti ile ön tahmin arasında ayrım yaparak değerlendirebilir.</p>
+
+<section id="kaynakca" class="bg-slate-50 border border-slate-200 rounded-xl p-5 mt-8"><h2 class="text-lg font-bold text-slate-900">Kaynaklar ve yöntem</h2><p class="text-sm mt-2">Sayısal değerler ve hesap örnekleri özgün açıklayıcı kabullerdir; resmi sınır değer veya ürün performans beyanı değildir. Yabancı enerji, fiyat ve iklim tabloları Türkiye'ye aktarılmamıştır. Kaynak kontrol tarihi: 11 Ekim 2026.</p><ol class="list-decimal pl-5 mt-4 space-y-3 text-sm"><li id="kaynak-1" class="scroll-mt-24"> U.S. Department of Energy, <a href="https://bsesc.energy.gov/training-modules/fenestration" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Fenestration</a>. Pencerenin ısıl ve optik işlevleri.</li><li id="kaynak-2" class="scroll-mt-24"> DIN Media, <a href="https://www.dinmedia.de/en/standard/din-en-iso-10077-1/325821586" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">DIN EN ISO 10077-1</a>. Pencere ısıl geçirgenliğinin hesaplanmasına ilişkin resmi katalog kapsamı; standardın tabloları çoğaltılmamıştır.</li><li id="kaynak-3" class="scroll-mt-24"> NFRC Consumer Guide to Windows, <a href="https://efficientwindows.org/types_parts/" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Types and Parts</a>. Cam, kaplama, gaz ve çerçeve bileşenlerinin ayrı değerlendirilmesi.</li><li id="kaynak-4" class="scroll-mt-24"> U.S. Department of Energy, FEMP, <a href="https://www.energy.gov/cmei/femp/purchasing-energy-efficient-residential-windows-doors-and-skylights" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Purchasing Energy-Efficient Residential Windows, Doors, and Skylights</a>. U ve güneş katsayısının iklimle birlikte okunması.</li><li id="kaynak-5" class="scroll-mt-24"> National Fenestration Rating Council, <a href="https://nfrc.org/" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">NFRC product performance ratings</a>. Ürün göstergeleri ve karşılaştırma sistemi.</li></ol></section>
+        </div>
         </article>
     </main>
 
