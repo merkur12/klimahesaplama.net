@@ -80,51 +80,149 @@
             </div>
             
             <div class="prose prose-slate max-w-none text-sm md:text-base leading-relaxed space-y-6 text-slate-700">
-                
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">1. Giriş ve TS 825 Standardının Amacı</h2>
-                <p>Binalarda enerji verimliliğinin artırılması ve yakıt tüketim kaynaklı karbon salınımlarının azaltılması, modern inşaat mühendisliğinin en temel zorunlulukları arasındadır. Türkiye’de bu alandaki yasal çerçeveyi belirleyen temel standart **TS 825 (Binalarda Isı Yalıtım Kuralları)** standardıdır. TS 825; binaların ısıtılması için gerekli yıllık ısı enerji ihtiyacının üst sınırını belirler ve yapı elemanlarının (dış duvarlar, çatı, döşeme, pencereler) izin verilen maksimum ısı geçirgenlik katsayılarını (U değerlerini) düzenler. Binalara dış cephe mantolaması yapılırken rastgele kalınlıkta köpük veya yalıtım levhası seçmek büyük bir mühendislik hatasıdır. Yalıtım kalınlığı ve malzeme seçimi; binanın bulunduğu iklim bölgesine, kullanılan malzemenin ısıl iletkenlik katsayısına (λ - lambda) ve TS 825 hesap kurallarına göre hassas bir şekilde belirlenmelidir.</p>
+<nav aria-label="Makale içindekiler" class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3"><h2 class="font-bold text-blue-950">İçindekiler</h2><ol style="list-style:none;margin:0;padding:0" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0"><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">1.</span><a class="text-blue-700 hover:underline" href="#guncel-cerceve">TS 825 ve güncel iklim çerçevesi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">2.</span><a class="text-blue-700 hover:underline" href="#iletkenlik">Isı iletkenliği, direnç ve geçirgenlik</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">3.</span><a class="text-blue-700 hover:underline" href="#katman-hesabi">Katmanlı duvarın ısıl direncini hesaplamak</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">4.</span><a class="text-blue-700 hover:underline" href="#kalinlik">Hedef U değerinden yalıtım kalınlığına geçmek</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">5.</span><a class="text-blue-700 hover:underline" href="#malzeme-karsilastirma">Aynı direnç için malzemeleri karşılaştırmak</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">6.</span><a class="text-blue-700 hover:underline" href="#eps-xps">EPS ve XPS ürünlerinin kullanım koşulları</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">7.</span><a class="text-blue-700 hover:underline" href="#mineral-yunler">Taş yünü ve cam yünü ürünleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">8.</span><a class="text-blue-700 hover:underline" href="#pur-pir">PUR, PIR ve diğer çözümlerde belge okuma</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">9.</span><a class="text-blue-700 hover:underline" href="#isi-kopruleri">Isı köprüleri ve süreklilik</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">10.</span><a class="text-blue-700 hover:underline" href="#nem-ve-yogusma">Nem, hava sızıntısı ve yoğuşma</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">11.</span><a class="text-blue-700 hover:underline" href="#yangin">Yangın güvenliği ve cephe sistemi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">12.</span><a class="text-blue-700 hover:underline" href="#cati-doseme">Çatı ve döşemede kullanım yerine göre seçim</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">13.</span><a class="text-blue-700 hover:underline" href="#yaz-performansi">Yaz koşulları ve güneş etkisi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">14.</span><a class="text-blue-700 hover:underline" href="#kayip-ornegi">Duvar iyileştirmesinin ısı kaybına etkisi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">15.</span><a class="text-blue-700 hover:underline" href="#ekonomi">Ekonomik kalınlık ve yaşam döngüsü</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">16.</span><a class="text-blue-700 hover:underline" href="#uygulama-kontrol">Uygulama kalitesi ve teslim kontrolü</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">17.</span><a class="text-blue-700 hover:underline" href="#karar-yontemi">Tutarlı bir yalıtım kararı oluşturmak</a></li></ol></nav>
+<p>Yalıtım malzemesini seçmek, yalnızca en düşük ısı iletkenlik değerini veya en büyük levha kalınlığını bulmak değildir. Malzemenin binada nerede kullanılacağı, suyla ilişkisi, mekanik yükleri, yangın davranışı ve uygulama bütünlüğü birlikte değerlendirilmelidir. Aynı malzeme dış duvarda uygun bir çözüm oluştururken, zemine temas eden döşemede veya farklı bir çatı düzeninde ek koşullar gerektirebilir.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">2. Türkiye İklim Bölgeleri ve TS 825 Esasları</h2>
-                <p>Türkiye, coğrafi konumu ve derece-gün (degree-days) iklim karakteristiğine göre 4 ayrı iklim bölgesine ayrılmıştır:</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>1. Bölge (Çok Sıcak / Sahil Kuşağı):</strong> Antalya, Adana, İzmir, Mersin gibi kışları ılıman geçen bölgeler.</li>
-                    <li><strong>2. Bölge (Ilıman Kuşak):</strong> İstanbul, Aydın, Bursa, Samsun gibi orta ılıman hatlar.</li>
-                    <li><strong>3. Bölge (Soğuk Kuşak):</strong> Ankara, Konya, Eskişehir, Bolu gibi karasal iklimin hakim olduğu iç kesimler.</li>
-                    <li><strong>4. Bölge (Çok Soğuk / Sert Karasal Kuşak):</strong> Erzurum, Kars, Ağrı, Van gibi kış şartlarının çok ağır geçtiği yüksek rakımlı doğu illeri.</li>
-                </ul>
-                <p>TS 825 standardına göre, her iklim bölgesinde dış duvarlar için öngörülen asgari ısı iletkenlik dirençleri ve izin verilen maksimum U değerleri farklılık gösterir. Bölge soğudukça (1. bölgeden 4. bölgeye geçildikçe) gereken yalıtım kalınlığı artırılır.</p>
+<p>Bu makale, malzeme özelliklerinden başlayarak katmanlı yapı elemanının U değerine ve gerekli kalınlığın hesaplanmasına ilerler. Sayısal örnekler özgün ve açıklayıcıdır; herhangi bir şehrin güncel mevzuat sınırını veya onaylı enerji projesini temsil etmez. Türkiye'de proje uygunluğu, güncel TS 825 çerçevesi ve ilgili diğer düzenlemeler üzerinden ayrıca doğrulanmalıdır. Enerji hesabı kadar nem, yangın ve uygulama ayrıntıları da tasarımın parçasıdır.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">3. Isı Yalıtım Malzemeleri Nelerdir ve Uygulama Esasları</h2>
-                <p>Piyasada yaygın olarak kullanılan yalıtım malzemeleri ve temel özellikleri şunlardır:</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Genleştirilmiş Polistiren (EPS):</strong> Ekonomik olması, hafifliği ve kolay uygulanabilirliği nedeniyle dış cephe mantolama (ETICS) sistemlerinde en çok tercih edilen malzemedir.</li>
-                    <li><strong>Ekstrüde Polistiren (XPS):</strong> Hücresel yapısı kapalı olduğu için suya karşı yüksek direnç gösterir; bu nedenle temel yalıtımlarında ve su basman seviyelerinde kullanılır.</li>
-                    <li><strong>Taşyünü (Rockwool):</strong> Bazalt taşının yüksek sıcaklıkta eriltilmesiyle elde edilen lifli bir malzemedir. Üstün ses yalıtımı sağlamasının yanı sıra yüksek yangın direnciyle öne çıkar.</li>
-                </ul>
-                <p>Yalıtım levhaları dış cepheye uygun polimer bazlı yapıştırıcılar ve mekanik dübellerle sabitlenir; ardından sıvat filesi ve dekoratif dış cephe kaplaması ile koruma altına alınır.</p>
+<h2 id="guncel-cerceve" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">1. TS 825 ve güncel iklim çerçevesi</h2>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">4. Yangın Sınıfları ve Güvenlik Kriterleri</h2>
-                <p>Bina yüksekliklerine ve kullanım amaçlarına göre yalıtım malzemelerinin yangın tepki sınıfları (EN 13501-1 standardına göre) hayati önem taşır. Özellikle yüksek katlı binalarda (28.5 metreden yüksek yapılar) TS 825 ve Binaların Yangından Korunması Hakkında Yönetmelik gereği yanmaz veya zor yanıcı **A1 veya A2 sınıfı (örneğin Taşyünü)** malzemelerin kullanımı zorunludur. Alçak katlı konutlarda ise genellikle B veya E sınıfı EPS/XPS levhalar güvenle kullanılabilmektedir.</p>
+<p>Türkiye'de ısı yalıtımı değerlendirmesi için kullanılan TS 825 çerçevesi güncellenmiştir. Bakanlığın duyurusuna göre ilgili tebliğ 1 Nisan 2025 tarihinde yürürlüğe girmiş, önceki dört iklim bölgesi yerine altı iklim bölgesi yaklaşımı getirilmiştir. Güncellenen kapsamda soğutma ihtiyacının değerlendirilmesi de önem kazanmıştır. Bu nedenle eski dört bölgeli tablolar güncel projeye doğrudan aktarılmamalıdır. <sup><a class="text-blue-700 underline" href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">5. İklim Bölgelerine Göre Asgari Yalıtım Kalınlıkları</h2>
-                <p>Malzemenin ısı iletkenlik katsayısına (λ ≈ 0.035 W/mK) bağlı olarak TS 825 standartlarına uygun tavsiye edilen asgari yalıtım kalınlıkları:</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>1. Bölge (Örn. Adana/Antalya):</strong> 4 cm – 5 cm</li>
-                    <li><strong>2. Bölge (Örn. İstanbul/İzmir):</strong> 5 cm – 7 cm</li>
-                    <li><strong>3. Bölge (Örn. Ankara/Konya):</strong> 7 cm – 10 cm</li>
-                    <li><strong>4. Bölge (Örn. Erzurum/Kars):</strong> 12 cm – 15 cm ve üzeri</li>
-                </ul>
+<p>İklim bölgesi, yapı elemanlarının değerlendirilmesinde kullanılan girdilerden biridir; tek başına her duvar için aynı santimetreyi belirlemez. Duvarın mevcut katmanları, hedef performansı ve yalıtım malzemesinin tasarım ısı iletkenliği hesaba katılır. Şehrin güncel bölge sınıfı ile sınır değerleri, standardın yürürlükteki metni ve resmi hesap araçları üzerinden kontrol edilmelidir.</p>
 
-                <h2 class="text-xl font-extrabold text-slate-900 pt-4">6. Vaka Analizi: Ankara'da Yalıtımlı ve Yalıtımsız Bina Karşılaştırması</h2>
-                <p>Mühendislik analizini somutlaştırmak için, karasal iklimin sert geçtiği **3. Bölge**'de yer alan **Ankara** ilinde konumlanmış, 150 m² taban alanına sahip standart bir konut binasının yıllık ısıtma enerjisi giderlerini inceleyelim.</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Yalıtımsız Bina Senaryosu:</strong> Dış duvarlarında yalıtım bulunmayan (tuğla/briket kaba sıva) standart bir binada, ısı köprüleri ve yüksek ısı kayıpları nedeniyle yıllık doğalgaz tüketimi oldukça yüksektir. Ankara'nın sert kış şartlarında bu binanın yıllık ısıtma enerjisi faturası kabartıcı boyutlara ulaşır.</li>
-                    <li><strong>TS 825 Uyumlu Yalıtımlı Bina Senaryosu:</strong> Dış cephesinde TS 825 standartlarına uygun (örneğin 8 cm EPS veya Taşyünü) mantolama yapılmış aynı özellikteki binada, ısı kayıpları minimuma indirilir.</li>
-                    <li><strong>Ekonomik Katkı ve Amortisman:</strong> Yapılan termal analizler ve saha verileri, mantolama uygulamasının binaların yıllık ısıtma enerjisi giderlerini **%40 ila %50 oranında** doğrudan azalttığını göstermektedir. İlk yatırım maliyeti, yakıt faturalarında sağlanan devasa tasarruf sayesinde ortalama 3 ila 5 yıl gibi kısa bir sürede kendini tamamen amorti eder.</li>
-                </ul>
+<p>Bakanlığın kullanıma sunduğu ısı yalıtım uygulaması da güncel hesap altyapısının bir parçasıdır. <sup><a class="text-blue-700 underline" href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup> Bir internet makalesindeki örnek U değeri, resmi tablonun yerine geçmez. Bu yazıda kullanılan hedefler yalnızca yöntem gösterir. <a href="index.html" class="text-blue-700 underline">Pratik kapasite hesapları</a> ise ayrıntılı bina enerji uygunluğu hesabından farklı amaç taşır.</p>
 
-                <p class="font-bold text-slate-900 bg-blue-50 p-4 rounded-xl border border-blue-200">Yalıtım kalınlığı ve malzeme seçimi, binanın ömrü boyunca hem çevreye salınan karbonu azaltır hem de aile bütçesini güvence altına alır.</p>
-            </div>
+<h2 id="iletkenlik" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">2. Isı iletkenliği, direnç ve geçirgenlik</h2>
+
+<p>Isı iletkenliği λ, malzemenin ısıyı iletme özelliğini anlatır ve W/(m·K) birimiyle ifade edilir. Homojen bir katmanın kalınlığı d metre olduğunda ısıl direnci R = d/λ olur. Direncin birimi m²·K/W'tır. Kalınlık artışı aynı malzeme için direnci yükseltir; daha düşük λ ise aynı kalınlıkta daha yüksek direnç sağlar.</p>
+
+<p>Bir yapı elemanının U değeri, bütün katmanların ve yüzey dirençlerinin birlikte değerlendirilmesiyle elde edilir. U'nun birimi W/(m²·K)'tır. Basit tek boyutlu modelde U = 1/R_toplam yazılır. Dolayısıyla λ malzemeye, U ise tanımlanmış yapı elemanına ait büyüklüktür. Bunları birbirinin yerine kullanmak veya levhanın λ değerini doğrudan duvar U değeri saymak yanlış olur.</p>
+
+<p>Ürünün beyan edilen ısı iletkenliği ile tasarımda kullanılacak değer arasında kullanım koşullarına bağlı ayrımlar bulunabilir. Nem, sıcaklık, yaşlanma ve ürünün ilgili değerlendirme yöntemi önem taşır. Yalnızca yoğunluk değerinden kesin bir λ çıkarmak da güvenilir değildir. Teknik veri sayfası, performans beyanı ve uygun hesap yöntemi birlikte incelenmelidir.</p>
+
+<h2 id="katman-hesabi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">3. Katmanlı duvarın ısıl direncini hesaplamak</h2>
+
+<p>Örnek duvarda iç sıva 0,02 m ve λ = 0,70 W/(m·K), duvar gövdesi 0,19 m ve λ = 0,45 W/(m·K), dış sıva 0,02 m ve λ = 0,70 W/(m·K) kabul edilsin. Açıklayıcı yüzey dirençleri R_si = 0,13 ve R_se = 0,04 m²·K/W olsun. Bunlar örnek kabullerdir; her yön ve yapı elemanı için değişmez değerler olarak kullanılmamalıdır.</p>
+
+<p>Yalıtımsız toplam direnç 0,13 + 0,02/0,70 + 0,19/0,45 + 0,02/0,70 + 0,04 ≈ 0,6494 m²·K/W olur. Buna karşılık U ≈ 1/0,6494 = 1,540 W/(m²·K) çıkar. Sonuçta sıvalar ve duvar gövdesinin katkıları ayrı ayrı görülebilir. Duvarın yalnızca tuğla kalınlığına bakılması bütün yapıyı temsil etmez.</p>
+
+<p>Bu basit hesapta yüzeyler homojen ve ısı akışı tek boyutlu kabul edilir. Betonarme kolonlar, kirişler, bağlantılar ve ankrajlar ayrıca değerlendirilmelidir. Gerçek bir dış cephede yalnızca dolgu duvarının U değerini kullanmak, betonarme bölgelerdeki farklı ısı geçişini gizleyebilir. Alanlar, katmanlar ve ısı köprüleri aynı hesap sınırı içinde açıkça tanımlanmalıdır.</p>
+
+<h2 id="kalinlik" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">4. Hedef U değerinden yalıtım kalınlığına geçmek</h2>
+
+<p>Aynı örnekte yalnızca hesap yöntemini göstermek için hedef U = 0,35 W/(m²·K) seçelim. Bu değer belirli bir şehrin TS 825 sınırı olarak verilmemektedir. Toplam hedef direnç 1/0,35 ≈ 2,8571 m²·K/W olur. Yalıtımın sağlaması gereken ek direnç yaklaşık 2,8571 − 0,6494 = 2,2078 m²·K/W'tır.</p>
+
+<p>λ = 0,035 W/(m·K) kabul edilen yalıtım için d = λ × R_ek = 0,035 × 2,2078 ≈ 0,0773 m, yani 7,73 cm çıkar. Örnekte 8 cm seçildiğinde toplam direnç yaklaşık 2,9351 m²·K/W, U değeri yaklaşık 0,341 W/(m²·K) olur. Matematiksel minimum ile kullanılabilir ürün kalınlığının ayrılması gerekir.</p>
+
+<p>Seçilen kalınlık daha sonra bağlantı düzeltmeleri, mevcut yüzeyler ve uygulama ayrıntılarıyla kontrol edilir. Sonucu yuvarlarken hedef performansın kötüleşmemesi gözetilir. Malzemenin gerçek tasarım λ değeri katalogdaki varsayımdan farklıysa hesap yeniden yapılır. Mevcut duvarın katmanları bilinmiyorsa kesin santimetre önerisi yerine belirsizlik aralığı ve saha doğrulaması sunmak daha tutarlıdır.</p>
+
+<h2 id="malzeme-karsilastirma" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">5. Aynı direnç için malzemeleri karşılaştırmak</h2>
+
+<p>Malzemelerin performansı aynı kalınlıkta veya aynı toplam dirençte karşılaştırılabilir. Ancak bu iki karşılaştırma farklı sorulara yanıt verir. Cephede kullanılabilecek kalınlık sınırlıysa daha düşük λ avantaj sağlayabilir. Kalınlık için yeterli alan varsa yangın, su, mekanik dayanım ve maliyet gibi diğer özellikler seçimde daha belirleyici olabilir.</p>
+
+<div class="overflow-x-auto"><table class="w-full text-sm border-collapse"><caption class="text-left font-semibold mb-2">Örnek duvar için aynı ek direnci sağlayan teorik kalınlıklar</caption><thead><tr><th class="border p-2 text-left">Varsayılan λ, W/(m·K)</th><th class="border p-2 text-left">Gerekli kalınlık</th><th class="border p-2 text-left">Hesabın anlamı</th></tr></thead><tbody><tr><td class="border p-2">0,030</td><td class="border p-2">6,62 cm</td><td class="border p-2">R_ek ≈ 2,2078 m²·K/W</td></tr><tr><td class="border p-2">0,035</td><td class="border p-2">7,73 cm</td><td class="border p-2">Aynı ek direnç</td></tr><tr><td class="border p-2">0,040</td><td class="border p-2">8,83 cm</td><td class="border p-2">Aynı ek direnç</td></tr></tbody></table></div>
+
+<p>Tablodaki değerler belirli ürün sınıflarına atanmış sabit performanslar değildir. Ürünler arasında λ, basma davranışı ve nem özellikleri değişir. İnce levhanın yalnızca kalınlık avantajı üzerinden daha iyi sayılması da eksik olur. Yüzey düzeltmesi, sabitleme, işçilik ve sistem uyumluluğu toplam uygulama sonucunu etkiler.</p>
+
+<h2 id="eps-xps" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">6. EPS ve XPS ürünlerinin kullanım koşulları</h2>
+
+<p>EPS ve XPS, farklı üretim yöntemleriyle elde edilen polistiren esaslı ürün aileleridir. Ürünlerin ısı iletkenliği, suyla ilişkisi ve mekanik özellikleri kendi sınıf ve beyanlarına göre incelenir. Bir aile adından bütün ürünler için aynı basma dayanımını, aynı su emme değerini veya aynı yangın davranışını çıkarmak doğru değildir.</p>
+
+<p>Dış duvar uygulamasında levhanın yalnızca ısı iletkenliği değil, kullanılacak sıva ve yapıştırıcı sistemiyle uygunluğu da önemlidir. Zemine yakın veya su etkisine açık yerlerde su emme ve uzun süreli mekanik davranış daha belirgin hale gelebilir. Ürün seçimi, kullanım yerinin gerçek nem ve yük koşullarına göre yapılmalıdır.</p>
+
+<p>XPS için su etkisine karşı uygunluk tartışılması, onu her koşulda su yalıtımının yerine koymaz. Isı yalıtımı ile su yalıtımı farklı işlevler taşır. Aynı şekilde EPS'nin cephede kullanılabilmesi, herhangi bir polimer levhanın herhangi bir bina yüksekliğinde sınırsız kullanılabileceği anlamına gelmez. Yangın ve cephe sistemi koşulları ayrıca doğrulanmalıdır.</p>
+
+<h2 id="mineral-yunler" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">7. Taş yünü ve cam yünü ürünleri</h2>
+
+<p>Mineral yün ürünleri lifli yapıları nedeniyle ısı ve ses performansı açısından farklı uygulamalarda kullanılabilir. Ancak taş yünü ile cam yünü, yalnızca isimlerinden hareketle her kullanımda birbirinin doğrudan yerine geçmez. Levha, şilte veya farklı yüzey kaplamalı ürünlerin mekanik özellikleri ve kullanım amaçları değişebilir.</p>
+
+<p>Dış cephede gerekli çekme ve sabitleme özellikleri, çatıda basma yükü veya çatı arasında yerleşim biçimi ayrı sorulardır. Ürün kalınlığının korunması ve boşluk bırakılmaması önemlidir. Tasarlanmamış aşırı sıkıştırma, kalınlığı ve dolayısıyla ısıl direnci değiştirebilir. Montaj sırasında yüzey uyumu, köşe sürekliliği ve koruma katmanları gözden geçirilmelidir.</p>
+
+<p>Yangın değerlendirmesinde de kaplama, bağlayıcı ve bütün sistemin beyanı dikkate alınır. Bir malzeme ailesi için yapılan genel tanıtım, ürünün belgelenmiş sınıfının yerine geçmez. Nemli ortamda kullanılacak ürünün uygunluğu ayrıca kontrol edilir. Malzemenin su buharını geçirebilmesi, yağmur veya sızıntı suyuna karşı otomatik koruma sağlamaz.</p>
+
+<h2 id="pur-pir" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">8. PUR, PIR ve diğer çözümlerde belge okuma</h2>
+
+<p>Poliüretan ve poliizosiyanürat esaslı levhalar, farklı kaplama ve üretim özellikleriyle sunulabilir. Isı iletkenliği, yaşlanma etkisi, yüzey kaplaması ve birleşim biçimi ürünün teknik değerlendirmesini etkiler. Düşük λ değerinin tek başına bütün uygulamalar için üstünlük oluşturduğunu söylemek yeterli değildir.</p>
+
+<p>Kaplamalı levhalarda su buharı davranışı ve ek yerleri özellikle önemlidir. Levhanın düz yüzeydeki performansı ile kesilmiş kenar, vida geçişi ve birleşim bölgesindeki davranışı farklı olabilir. Panel veya levha sisteminin yangın değerlendirmesi de bütün bileşenlerle okunmalıdır. Polimer esaslı bir ürünü sadece ısıl değeri üzerinden seçmek güvenlik ve uygulama koşullarını eksik bırakır.</p>
+
+<p>Ahşap lifli, selüloz esaslı veya başka yalıtım çözümlerinde de aynı yöntem uygulanır. Üretim kaynağı, ürünün bütün teknik koşulları otomatik sağladığını göstermez. Beyan edilen özellikler, kullanım amacı, uygun montaj ve uzun dönem davranış birlikte incelenir. Çevresel değerlendirmede ürün miktarı ve kullanım ömrü de karşılaştırmanın parçasıdır.</p>
+
+<h2 id="isi-kopruleri" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">9. Isı köprüleri ve süreklilik</h2>
+
+<p>Isı köprüsü, ısı akışının çevresindeki homojen bölgelere göre farklılaştığı bağlantı veya geometri bölgesidir. Kolon-kiriş birleşimleri, balkon çıkmaları, pencere kenarları ve çatı-duvar bağlantıları önemli örneklerdir. Düz duvardaki yüksek yalıtım kalınlığı, kesintili bir detayın etkisini tamamen ortadan kaldırmayabilir.</p>
+
+<p>Uygun tanımlı hesapta iletim ısı kaybı katsayısı, Σ(U × A) + Σ(ψ × L) + Σχ biçiminde kurulabilir. Burada ψ doğrusal ısı köprüsü katsayısını, L bağlantı uzunluğunu ve χ noktasal katkıyı temsil eder. Katsayıların alan ölçüm yöntemiyle uyumlu olması gerekir. Aynı etki hem U düzeltmesine hem ayrı köprü terimine yazılırsa çift sayım oluşabilir.</p>
+
+<p>Yalıtımın açıklık çevresinde devam ettirilmesi, bağlantı geometrisinin çözülmesi ve montaj boşluklarının kontrolü bu nedenle önemlidir. Isı köprüsü yalnızca enerji tüketimi konusu değildir; iç yüzey sıcaklığı ve yerel yoğuşma riskiyle de ilişkilidir. <a href="makale-13.html" class="text-blue-700 underline">Isı kaybını azaltma yöntemleri</a>, ayrıntı çözümünün neden genel kabuk hesabını tamamladığını gösterir.</p>
+
+<h2 id="nem-ve-yogusma" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">10. Nem, hava sızıntısı ve yoğuşma</h2>
+
+<p>Isı yalıtımı duvarın sıcaklık dağılımını değiştirir. Bunun iç yüzey ve katmanlar arası nem davranışı üzerindeki etkisi değerlendirilmelidir. Dıştan ve içten yalıtım aynı mevcut duvarda farklı sıcaklık profilleri oluşturabilir. Özellikle içten yalıtımda birleşimler, hava sızdırmazlığı ve mevcut yüzeylerin durumu ayrıca incelenir.</p>
+
+<p>Su buharının malzeme içinden difüzyonu ile nemli havanın açıklıklardan taşınması farklı süreçlerdir. Bir ürünün buhar geçirgen olması, duvar içindeki hava kaçaklarını zararsız hale getirmez. Hava sızdırmazlığı ile kontrollü havalandırma birlikte düşünülmelidir. Isı ve nem performansına ilişkin araştırmalar da duvar sisteminin bütün katmanlarının önemini ortaya koymaktadır. <sup><a class="text-blue-700 underline" href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup></p>
+
+<p>Buhar kontrol katmanının yeri, iklim, iç nem yükü ve yapı kesitine göre değerlendirilir. Her duvara aynı tarafa aynı membranı koymak doğru bir genel kural değildir. Gerektiğinde dinamik ısı-nem analizi ve uzman değerlendirmesi kullanılır. <a href="makale-12.html" class="text-blue-700 underline">Bağıl nem ve konfor bilgisi</a> iç ortam koşullarının belirlenmesine yardımcı olur; yapı fiziği hesabını tek başına tamamlamaz.</p>
+
+<h2 id="yangin" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">11. Yangın güvenliği ve cephe sistemi</h2>
+
+<p>TS 825 kapsamında uygun bir ısı yalıtım hesabı yapılması, bütün yangın güvenliği koşullarının sağlandığını göstermez. Yangın koşulları ilgili güncel düzenlemeler ve ürün-sistem belgeleri üzerinden ayrıca değerlendirilir. Türkiye'de Binaların Yangından Korunması Hakkında Yönetmelik bu incelemenin temel mevzuat kaynaklarından biridir. <sup><a class="text-blue-700 underline" href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup></p>
+
+<p>Yangına tepki sınıfı ile yangın dayanımı farklı kavramlardır. Tepki sınıfı, ürünün yangına katkısıyla ilişkilidir; uygun sınıflandırmalarda duman ve damlama alt göstergeleri de bulunabilir. Yangın dayanımı ise belirli yapı elemanının süreye bağlı performansını anlatır. Bir levhanın sınıfını bütün cephenin belirli dakika dayanımı olarak yorumlamak yanlıştır.</p>
+
+<p>Cephede levha, yapıştırıcı, dübel, donatı filesi, sıva, kaplama ve bağlantı ayrıntıları birlikte sistem oluşturur. Kullanım yeri, bina özellikleri ve cephe düzeni mevzuat değerlendirmesini etkileyebilir. Bu nedenle yalnızca malzeme adından evrensel bir izin veya yasak çıkarılmamalıdır. Güncel koşullar ve ilgili belgeler proje sorumlularınca doğrulanmalıdır; eski bir yükseklik kuralı bağlamından koparılarak bütün uygulamalara aktarılmamalıdır.</p>
+
+<h2 id="cati-doseme" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">12. Çatı ve döşemede kullanım yerine göre seçim</h2>
+
+<p>Teras çatıda su yalıtımı, eğim, drenaj ve mekanik yükler yalıtımla birlikte çözülür. Yalıtımın su yalıtımına göre konumu kullanılan çatı sistemine bağlıdır. Yürünen bir çatıda basma yükü ve uzun süreli şekil değiştirme, çatı arasındaki yüksüz şilte uygulamasından farklı gereksinimler oluşturur.</p>
+
+<p>Eğimli çatıda ısı yalıtımının tavan düzleminde mi yoksa çatı eğimi boyunca mı devam edeceği belirlenmelidir. Isıtılmayan çatı arası ile kullanılan, ısıtılan çatı katı aynı hesap sınırına sahip değildir. Saçak ve duvar birleşimindeki süreklilik, hava kaçakları ve uygun havalandırma düzeni birlikte planlanır. Tek bir çatı U değeri bütün çatı tiplerini açıklamaz.</p>
+
+<p>Dış havaya açık döşeme, toprağa temas eden döşeme ve ısıtılan komşu mahal üstündeki döşeme de ayrı durumlardır. Toprak temasında ısı geçişi yalnızca dış hava sıcaklığıyla aynı basit modelde temsil edilmeyebilir. Nem ve mekanik yük koşulları da farklıdır. <a href="makale-10.html" class="text-blue-700 underline">Isıtma ihtiyacı hesabında</a> bu sınır koşullarının açık tanımlanması gerekir.</p>
+
+<h2 id="yaz-performansi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">13. Yaz koşulları ve güneş etkisi</h2>
+
+<p>Yalıtım yalnızca kışın dışarıya ısı geçişini azaltmak için değerlendirilmemelidir. Yazın dış hava ve güneş, kabuk üzerinden içeriye ısı kazancı oluşturabilir. Dış yüzey rengi, güneşlenme yönü, yapı katmanlarının ısıl kapasitesi ve günlük sıcaklık değişimi bu kazancın büyüklüğünü ve zamanını etkiler.</p>
+
+<p>Duvarın U değeri, kararlı ısı geçişini açıklayan önemli bir büyüklüktür; fakat gecikmeli yaz yükünün bütün ayrıntılarını tek başına göstermez. Aynı U değerine sahip iki farklı kesit, farklı ısıl kütle ve sıcaklık dalgası davranışı gösterebilir. Çatı kazancında da güneş soğuruculuğu ve katman düzeni belirleyicidir.</p>
+
+<p>Camdan gelen güneş kazancı ise opak duvar yalıtımından farklı mekanizmaya sahiptir. Pencere alanı, cam özellikleri ve gölgeleme birlikte incelenir. Daha iyi duvar yalıtımı büyük, güneş alan camların yükünü kendiliğinden ortadan kaldırmaz. <a href="makale-8.html" class="text-blue-700 underline">Soğutma yükü değerlendirmesinde</a> opak kabuk, cam, iç yükler ve dış hava yükleri ayrı ele alınmalıdır.</p>
+
+<h2 id="kayip-ornegi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">14. Duvar iyileştirmesinin ısı kaybına etkisi</h2>
+
+<p>Önceki örnekte U değeri 1,540'tan yaklaşık 0,341 W/(m²·K)'a düşmüştü. Net duvar alanı 100 m² ve iç-dış sıcaklık farkı 30 K kabul edilsin. Başlangıç duvar kaybı yaklaşık 1,540 × 100 × 30 = 4.620 W, iyileştirme sonrası yaklaşık 0,341 × 100 × 30 = 1.023 W olur.</p>
+
+<p>Bu durumda yalnızca tanımlanan düz duvarın iletim kaybı yaklaşık yüzde 78 azalır. Bu oran bütün binanın faturası için kullanılmamalıdır. Pencereler, çatı, döşeme, ısı köprüleri, hava değişimi ve sistem verimi hesapta ayrıca yer alır. Örnekteki 100 m² net duvar alanı da binanın zemin alanı değildir; pencere boşlukları çıkarılmış belirli bir yüzey kabulüdür.</p>
+
+<p>Sıcaklık farkı değiştiğinde anlık kayıp değişir. Yıllık enerjiye geçmek için dış koşulların zaman içindeki dağılımı ve kullanım düzeni gerekir. Isı kazançları ile kontrol davranışı da önemlidir. Bu yüzden tek bir tasarım günündeki watt azaltımını bütün yılın saatleriyle çarpmak, gerçek yıllık tasarrufu temsil etmeyen yüksek bir tahmin üretebilir.</p>
+
+<h2 id="ekonomi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">15. Ekonomik kalınlık ve yaşam döngüsü</h2>
+
+<p>Mevzuat uygunluğu için gerekli minimum kalınlık ile ekonomik açıdan seçilecek kalınlık aynı kavram değildir. İlk yatırım, enerji fiyatı, kullanım süresi ve bakım koşulları ekonomik sonucu etkiler. Malzemenin ek kalınlığına ait maliyet, bütün cephe uygulamasının maliyetiyle de karıştırılmamalıdır. İskele ve işçilik gibi bazı kalemler kalınlıktan bağımsız olabilir.</p>
+
+<p>Basit geri ödeme süresi, ek yatırımın yıllık net parasal tasarrufa bölünmesiyle bulunabilir. Ancak bu yöntem faiz, enerji fiyatındaki değişim, bakım ve kullanım ömrünü tam olarak kapsamaz. Daha kapsamlı değerlendirmede zaman içinde oluşan nakit akışları ve uygun iskonto yaklaşımı kullanılır. Her bina için üç veya beş yıl gibi sabit bir geri ödeme süresi bilimsel bir sonuç değildir.</p>
+
+<p>Yalıtım kalınlığı arttıkça U değeri düşer, fakat aynı santimetrelik ek artışın sağladığı ek fayda genellikle azalır. Bu azalan marjinal etki ekonomik seçimde dikkate alınır. Buna rağmen sadece bugünkü enerji fiyatına göre çok ince çözüm seçmek de uzun ömürlü yapı kararını eksik değerlendirir. Konfor, yüzey sıcaklığı ve bakım etkileri açıkça tartışılmalıdır.</p>
+
+<h2 id="uygulama-kontrol" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">16. Uygulama kalitesi ve teslim kontrolü</h2>
+
+<p>Projede doğru hesaplanan bir yalıtım, uygulamada boşluk, kopukluk veya uygun olmayan bağlantılar nedeniyle beklenen sonucu veremeyebilir. Levhaların yüzeye yerleşimi, birleşimler, açıklık çevreleri ve çatı-duvar bağlantıları kontrol edilmelidir. Mevcut yüzeyin sağlamlığı ve uygun hazırlanması da sistemin uzun dönem davranışını etkiler.</p>
+
+<p>Kullanılan ürünler, hesapta kabul edilen teknik özelliklerle uyumlu olmalıdır. Kalınlık ve ürün değişikliği yapılırsa yalnızca ticari eşdeğerlik değil, ısıl ve diğer performanslar da yeniden değerlendirilir. Cephe sistemi içinde farklı üreticilerin bileşenlerinin gelişi güzel birleştirilmesi uygun sistem belgesinin kapsamını değiştirebilir. Tedarik ve uygulama kayıtları bu nedenle önemlidir.</p>
+
+<p>Teslim sırasında kalınlık, süreklilik, bağlantı ayrıntıları ve görünür kusurlar değerlendirilir. Termal görüntüleme uygun koşullarda yardımcı olabilir; tek görüntü kesin U değeri ölçümü değildir. Güneş, rüzgar ve yüzey yansımaları yorumlamayı etkiler. İzleme verileri ve saha bulguları birlikte okunmalı, ölçülebilir sonuçlar reklamdaki genel tasarruf yüzdelerinden ayrı tutulmalıdır.</p>
+
+<h2 id="karar-yontemi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">17. Tutarlı bir yalıtım kararı oluşturmak</h2>
+
+<p>İlk adım mevcut yapı kesitini ve kullanım koşullarını tanımlamaktır. Sonra güncel proje koşulları, hedef U değerleri ve nem gereksinimleri belirlenir. Aday ürünlerin tasarım ısı iletkenliğiyle kalınlık hesabı yapılır; yangın, mekanik dayanım ve su etkileri kontrol edilir. Son olarak bütün bağlantıların uygulanabilirliği ve maliyetler birlikte değerlendirilir.</p>
+
+<p>Bu sıranın korunması, önce bir ürün seçip daha sonra ona uygun gerekçe aramaktan daha denetlenebilir sonuç verir. Hesap dosyasında hangi verinin ölçüldüğü, hangisinin belgeden alındığı ve hangisinin varsayıldığı açıkça yazılmalıdır. Belirsiz mevcut katmanlar için farklı senaryolar kurulabilir. Böylece kalınlık önerisinin hassasiyeti kullanıcı tarafından anlaşılır.</p>
+
+<p>İyi yalıtım, tek başına kalın levha anlamına gelmez. Doğru malzemenin doğru yerde, sürekli ve belgelenmiş bir sistem içinde uygulanması gerekir. Isıtma ve soğutma ihtiyacının azalması, ancak tanımlı bina sınırları ve kullanım koşulları üzerinden değerlendirilir. Yalıtım kararı, enerji verimi, konfor ve yapı güvenliğini aynı proje içinde bir araya getirmelidir.</p>
+
+<section id="kaynakca" class="bg-slate-50 border border-slate-200 rounded-xl p-5 mt-8"><h2 class="text-lg font-bold text-slate-900">Kaynaklar ve yöntem</h2><p class="text-sm mt-2">Katmanlar, hedef U değeri ve sıcaklık farkı özgün hesap kabulleridir; resmi şehir sınır değeri veya onaylı proje olarak kullanılmamalıdır. Güncel standart, ürün belgeleri ve ilgili mevzuat proje bazında kontrol edilmelidir. Kaynak kontrol tarihi: 10 Ekim 2026.</p><ol class="list-decimal pl-5 mt-4 space-y-3 text-sm"><li id="kaynak-1" class="scroll-mt-24"> Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, <a href="https://meslekihizmetler.csb.gov.tr/isi-yalitim-standardi-tebligi-guncellendi-haber-290597" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Isı Yalıtım Standardı Tebliği Güncellendi</a>. 1 Nisan 2025 yürürlük tarihi ve altı iklim bölgesi.</li><li id="kaynak-2" class="scroll-mt-24"> Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, <a href="https://meslekihizmetler.csb.gov.tr/haberler/isi-yalitim-uygulamasi-altyapisi-tamamlanarak-kullanima-sunuldu-291191" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Isı Yalıtım Uygulaması Altyapısı Tamamlanarak Kullanıma Sunuldu</a>. Güncel hesap altyapısı.</li><li id="kaynak-3" class="scroll-mt-24"> U.S. Department of Energy, <a href="https://www.energy.gov/cmei/buildings/moisture-performance-high-r-wall-systems" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Moisture Performance of High-R Wall Systems</a>. Katmanlı duvarlarda nem performansı araştırması.</li><li id="kaynak-4" class="scroll-mt-24"> Mevzuat Bilgi Sistemi, <a href="https://www.mevzuat.gov.tr/MevzuatMetin/21.5.200712937.pdf" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Binaların Yangından Korunması Hakkında Yönetmelik</a>. Yangın koşulları için proje bazında kontrol edilmesi gereken mevzuat kaynağı; bu yazı ayrıntılı mevzuat uygunluk incelemesi değildir.</li></ol></section>
+        </div>
         </article>
     </main>
 
