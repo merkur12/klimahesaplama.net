@@ -80,154 +80,136 @@
         </header>
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
+<nav aria-label="Makale içindekiler" class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3"><h2 class="font-bold text-blue-950">İçindekiler</h2><ol style="list-style:none;margin:0;padding:0" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0"><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">1.</span><a class="text-blue-700 hover:underline" href="#hava-akislari">Dış hava, besleme, dönüş ve egzoz havası</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">2.</span><a class="text-blue-700 hover:underline" href="#ach-tanimi">ACH tanımı ve birim dönüşümleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">3.</span><a class="text-blue-700 hover:underline" href="#ach-turleri">Toplam, dış hava ve eşdeğer temiz hava ACH</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">4.</span><a class="text-blue-700 hover:underline" href="#kirletici-dengesi">Kirletici dengesi ve kararlı durum</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">5.</span><a class="text-blue-700 hover:underline" href="#zamana-bagli-seyrelme">Bir hava değişimi bütün havayı yeniler mi?</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">6.</span><a class="text-blue-700 hover:underline" href="#kisi-alan-yontemi">Kişi ve alan bileşenleriyle dış hava hesabı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">7.</span><a class="text-blue-700 hover:underline" href="#farkli-mahaller">Mahal türüne göre tasarım yaklaşımı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">8.</span><a class="text-blue-700 hover:underline" href="#isil-besleme">Duyulur yükten toplam besleme debisi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">9.</span><a class="text-blue-700 hover:underline" href="#dis-hava-enerjisi">Dış havanın ısıtma ve soğutma yükü</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">10.</span><a class="text-blue-700 hover:underline" href="#basinc-ve-transfer">Basınç dengesi ve transfer havası</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">11.</span><a class="text-blue-700 hover:underline" href="#kanal-kesiti">Kanal kesiti ve gerçek hava hızı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">12.</span><a class="text-blue-700 hover:underline" href="#basinc-kaybi">Basınç kaybı ve fan çalışma noktası</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">13.</span><a class="text-blue-700 hover:underline" href="#fan-enerjisi">Fan gücü ve kısmi yük işletmesi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">14.</span><a class="text-blue-700 hover:underline" href="#isi-geri-kazanim">Isı ve enerji geri kazanımı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">15.</span><a class="text-blue-700 hover:underline" href="#olcum-ve-devreye-alma">Ölçüm, dengeleme ve işletme kayıtları</a></li></ol></nav>
+<p>Havalandırma hesabının amacı, bir odanın hacmini belirli bir sayıyla çarpmaktan daha kapsamlıdır. İnsanlardan, malzemelerden ve faaliyetlerden kaynaklanan kirleticilerin kontrolü, gerekli dış hava miktarı, ısıl yükün taşınması ve hava akışının doğru dağıtılması birlikte değerlendirilir. Hava değişim oranı, yani ACH, bu işlemler arasında yararlı bir karşılaştırma büyüklüğüdür. Ancak hangi hava debisinin esas alındığı belirtilmeden verilen bir ACH değeri, sistemin ne kadar taze hava sağladığını veya hangi kirleticiyi kontrol ettiğini göstermez.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: İç Hava Kalitesi (IAQ) ve Mekanik Havalandırma</h2>
-            <p>Mekanik tesisat mühendisliğinde ısıtma ve soğutmanın yanı sıra iç ortam hava kalitesinin (Indoor Air Quality, IAQ) korunması, sağlık ve konfor açısından temel bir tasarım kriteridir. Kapalı mekânlarda insan metabolizması karbondioksit (CO<sub>2</sub>), su buharı ve koku kaynakları (biyoefluentler) üretir; yapı malzemeleri, mobilya ve ekipmanlar ise uçucu organik bileşikleri (VOC) yayar. CO<sub>2</sub> bu düzeylerde başlı başına toksik değil, havalandırmanın yeterliliğini gösteren bir <em>gösterge</em> büyüklüktür (açık hava yaklaşık 400-420 ppm).</p>
-            <p>Havalandırma sistemi, filtrelenmiş dış havayı mekâna besler ve kirlenmiş havayı egzoz eder. Bu işlemin nicel ifadesinde en temel büyüklük, hava değişim oranıdır (ACH, <em>Air Changes per Hour</em>). Doğru strateji; hacmi, kişi yoğunluğunu, ekipman ısı ve gaz yüklerini ve kirletici profilini birlikte dikkate alan bütüncül bir tasarım gerektirir.</p>
+<p>Bu rehberde dış hava, toplam besleme, egzoz ve eşdeğer temiz hava ayrı ele alınmaktadır. Hesap örnekleri birim dönüşümlerini ve tasarım sırasını açıklamak için hazırlanmıştır. Verilen varsayımsal debiler bütün binalara uygulanacak zorunlu değerler değildir. Projede seçilen standart, bina kullanım amacı ve ilgili yerel gereklilikler ayrıca belirlenir. Böylece bir ofis, konut, mutfak veya sağlık mahallinin farklı ihtiyaçları aynı genel katsayının içine gizlenmez.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">2. ACH Nedir ve Nasıl Hesaplanır?</h2>
-            <p>ACH, bir mekâna saatte verilen hava debisinin mekân hacmine oranıdır; birimi h<sup>-1</sup>'dir (bir saat başına değişim sayısı). Hacmi <math><msub><mi>V</mi><mi>o</mi></msub></math> (m³), hava debisini <math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math> (m³/h) ve ACH değerini <math><mi>n</mi></math> (h<sup>-1</sup>) ile gösterirsek:</p>
-            <div class="eq"><math display="block"><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>=</mo><mi>n</mi><mo>&#x22C5;</mo><msub><mi>V</mi><mi>o</mi></msub><mo>,</mo><mo>&#x2003;</mo><mi>n</mi><mo>=</mo><mfrac><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><msub><mi>V</mi><mi>o</mi></msub></mfrac></math><span class="eqn">(1)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>: Toplam hava debisi (m³/h)</li>
-                <li><math><mi>n</mi></math>: Hava değişim oranı / ACH (h<sup>-1</sup>)</li>
-                <li><math><msub><mi>V</mi><mi>o</mi></msub></math>: Mekân brüt iç hacmi (m³)</li>
-            </ul>
-            <p>Debiyi m³/dk cinsine çevirmek için sonuç 60'a, m³/s cinsine çevirmek için 3600'e bölünür. Örneğin hacmi 90 m³ olan bir odada <math><mi>n</mi></math> = 6 h<sup>-1</sup> için debi 540 m³/h = 0,15 m³/s olur.</p>
-            <p><strong>Toplam hava ve dış hava ayrımı.</strong> Yukarıdaki oran, besleme havasının tamamı (dış hava + devridaim havası) esas alınırsa <em>toplam ACH</em>, yalnızca taze dış hava esas alınırsa <em>dış hava ACH'si</em> olur. Isıl yük ve filtrasyon ihtiyacı toplam ACH'yi, hava kalitesi ise dış hava ACH'sini belirler; iki değer birbirine karıştırılmamalıdır.</p>
-            <p><strong>Tam karışım varsayımı.</strong> ACH = 1 olması, hacimdeki havanın bir saatte tamamen yenilendiği anlamına gelmez. Tam karışımlı bir hacimde, dış hava konsantrasyonu <math><msub><mi>C</mi><mi>d</mi></msub></math> ve başlangıç konsantrasyonu C<sub>0</sub> için kirletici seyrelmesi üstel azalma gösterir:</p>
-            <div class="eq"><math display="block"><mi>C</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>C</mi><mi>d</mi></msub><mo>+</mo><mrow><mo>(</mo><msub><mi>C</mi><mn>0</mn></msub><mo>&#x2212;</mo><msub><mi>C</mi><mi>d</mi></msub><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>n</mi><mo>&#x22C5;</mo><mi>t</mi></mrow></msup></math><span class="eqn">(2)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mi>C</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></math>: <math><mi>t</mi></math> anındaki kirletici konsantrasyonu (ppm veya %)</li>
-                <li><math><msub><mi>C</mi><mn>0</mn></msub></math>: Başlangıçtaki kirletici konsantrasyonu (ppm veya %)</li>
-                <li><math><msub><mi>C</mi><mi>d</mi></msub></math>: Dış ortam besleme havası konsantrasyonu (ppm veya %)</li>
-                <li><math><mi>n</mi></math>: Hava değişim oranı / ACH (h<sup>-1</sup>)</li>
-                <li><math><mi>t</mi></math>: Geçen süre (saat)</li>
-            </ul>
-            <p>Burada <em>t</em> = 1/<em>n</em> süresinde başlangıç farkının yaklaşık %63,2'si, <em>t</em> = 3/<em>n</em> süresinde yaklaşık %95'i giderilir. Örneğin ACH = 6 için %95 temizlenme yaklaşık 30 dakika sürer. Gerçek mekânlarda hava dağıtım etkinliği tam karışımdan saptığında bu süreler değişir.</p>
+<h2 id="hava-akislari" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">1. Dış hava, besleme, dönüş ve egzoz havası</h2>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Hava Kalitesine Dayalı Dış Hava Debisi</h2>
-            <p><strong>CO<sub>2</sub> (kütle dengesi) yaklaşımı.</strong> Kararlı rejimde, <math><mi>G</mi></math> kirletici üretim debisi, <math><msub><mi>C</mi><mi>i</mi></msub></math> izin verilen iç ve <math><msub><mi>C</mi><mi>d</mi></msub></math> dış konsantrasyon için gerekli dış hava debisi:</p>
-            <div class="eq"><math display="block"><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>=</mo><mfrac><mi>G</mi><mrow><msub><mi>C</mi><mi>i</mi></msub><mo>&#x2212;</mo><msub><mi>C</mi><mi>d</mi></msub></mrow></mfrac></math><span class="eqn">(3)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>: Gerekli dış hava debisi (m³/h veya L/s)</li>
-                <li><math><mi>G</mi></math>: Hacimdeki kirletici (CO<sub>2</sub>) üretim hızı (m³/h veya L/s)</li>
-                <li><math><msub><mi>C</mi><mi>i</mi></msub></math>: Mekân içinde izin verilen maksimum konsantrasyon oranı</li>
-                <li><math><msub><mi>C</mi><mi>d</mi></msub></math>: Dış ortam hava konsantrasyon oranı</li>
-            </ul>
-            <p>Dinlenik bir yetişkin yaklaşık 0,3 L/dk (≈ 0,005 L/s) CO<sub>2</sub> üretir; bu değer faaliyet düzeyiyle artar.</p>
-            <p><strong>ASHRAE 62.1 Havalandırma Oranı Yöntemi.</strong> Solunum bölgesi için gereken minimum dış hava debisi, kişi ve alan bileşenlerinin toplamıdır:</p>
-            <div class="eq"><math display="block"><msub><mi>V</mi><mi>bz</mi></msub><mo>=</mo><msub><mi>R</mi><mi>p</mi></msub><mo>&#x22C5;</mo><msub><mi>P</mi><mi>z</mi></msub><mo>+</mo><msub><mi>R</mi><mi>a</mi></msub><mo>&#x22C5;</mo><msub><mi>A</mi><mi>z</mi></msub></math><span class="eqn">(4)</span></div>
-            <div class="eq"><math display="block"><msub><mi>V</mi><mi>oz</mi></msub><mo>=</mo><mfrac><msub><mi>V</mi><mi>bz</mi></msub><msub><mi>E</mi><mi>z</mi></msub></mfrac></math><span class="eqn">(5)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><msub><mi>V</mi><mi>bz</mi></msub></math>: Solunum bölgesi dış hava debisi (L/s)</li>
-                <li><math><msub><mi>R</mi><mi>p</mi></msub></math>: Kişi başına düşen dış hava oranı (L/s·kişi)</li>
-                <li><math><msub><mi>P</mi><mi>z</mi></msub></math>: Bölgedeki kişi sayısı</li>
-                <li><math><msub><mi>R</mi><mi>a</mi></msub></math>: Birim zemin alanı başına dış hava oranı (L/s·m²)</li>
-                <li><math><msub><mi>A</mi><mi>z</mi></msub></math>: Mahâl zemin alanı (m²)</li>
-                <li><math><msub><mi>V</mi><mi>oz</mi></msub></math>: Bölge dış hava debisi (L/s)</li>
-                <li><math><msub><mi>E</mi><mi>z</mi></msub></math>: Bölge hava dağıtım etkinliği (boyutsuz)</li>
-            </ul>
-            <p>Ofis için ASHRAE 62.1 değerleri R<sub>p</sub> = 2,5 L/s·kişi ve R<sub>a</sub> = 0,3 L/s·m²'dir. 100 m² (hacim 300 m³), 20 kişilik bir ofiste V<sub>bz</sub> = 2,5·20 + 0,3·100 = 80 L/s = 288 m³/h elde edilir; bu, dış hava ACH'si olarak yalnızca yaklaşık 1 h<sup>-1</sup>'dir. Ofislerde sıkça anılan 4-6 h<sup>-1</sup> değeri ise çoğunlukla soğutma yükünden gelen <em>toplam</em> besleme debisidir.</p>
+<p>Dış hava, binanın dışından alınarak iç ortama verilen havadır. Besleme havası ise mahalle üflenen toplam akıştır; sistemin yapısına göre dış hava ile devridaim havasının karışımından oluşabilir. Dönüş havası mahalden sisteme geri alınır. Bunun bir bölümü yeniden kullanılabilir, bir bölümü dışarı atılabilir. Egzoz havası, sistemden veya doğrudan mahalden dış ortama uzaklaştırılan akıştır.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Mekân Türlerine Göre Tipik ACH Değerleri</h2>
-            <p>Aşağıdaki değerler ön boyutlandırma içindir; bağlayıcı olan ilgili standart, yönetmelik ve proje şartnamesidir (ör. ASHRAE 62.1, 62.2, 170; TS EN 16798-1).</p>
-            <table class="tbl">
-                <thead><tr><th>Mekân</th><th>Tipik toplam ACH (h<sup>-1</sup>)</th><th>Not</th></tr></thead>
-                <tbody>
-                <tr><td>Konut</td><td>0,35 - 1,0 (dış hava)</td><td>ASHRAE 62.2: 0,15 L/s·m² + 3,5 L/s·(yatak odası sayısı + 1)</td></tr>
-                <tr><td>Ofis</td><td>4 - 8 (toplam besleme)</td><td>Dış hava miktarı Bölüm 3'e göre; toplam debi çoğunlukla ısıl yükle belirlenir</td></tr>
-                <tr><td>Toplantı salonu</td><td>6 - 10 (toplam besleme)</td><td>Kişi yoğunluğu yüksek; dış hava ASHRAE 62.1'e göre</td></tr>
-                <tr><td>Ticari mutfak</td><td>15 - 30 (ampirik)</td><td>Asıl belirleyici davlumbaz egzoz debisidir (ASHRAE 154, TS EN 16282)</td></tr>
-                <tr><td>Kimya laboratuvarı</td><td>6 - 12 (kaynaklara göre 15'e kadar)</td><td>Çeker ocak yüz hızı ve debisi, risk değerlendirmesi belirleyicidir</td></tr>
-                <tr><td>Ameliyathane</td><td>≥ 20 toplam, ≥ 4 dış hava</td><td>ASHRAE 170; pozitif basınç</td></tr>
-                <tr><td>Havayla bulaşan enfeksiyon izolasyon odası</td><td>≥ 12 toplam, ≥ 2 dış hava</td><td>ASHRAE 170; negatif basınç</td></tr>
-                </tbody>
-            </table>
+<p>Bir cihazın yüksek miktarda hava üflemesi, aynı miktarda dış hava sağladığını göstermez. Örneğin standart bir split klima büyük ölçüde mahal havasını dolaştırır. Hava filtresi bulunması, dış hava bağlantısı bulunduğu anlamına gelmez. Buna karşılık yalnızca egzoz yapan bir sistem, dışarı attığı havanın yerine hangi yoldan hava geleceği tanımlanmadığında kontrolsüz sızıntı oluşturabilir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">5. Isıl Yüke Dayalı Besleme Debisi</h2>
-            <p>Konfor klimasında toplam besleme debisi çoğunlukla duyulur ısıl yükten bulunur. Duyulur yük <math><msub><mi>&#x3A6;</mi><mi>s</mi></msub></math>'nin bir fonksiyonu olarak, <math><mi>&#x3C1;</mi></math> hava yoğunluğu (≈ 1,2 kg/m³), <math><msub><mi>c</mi><mi>p</mi></msub></math> havanın sabit basınçtaki özgül ısısı (≈ 1,006 kJ/kg·K) ve <math><mi>&#x394;</mi><mi>t</mi></math> oda ile besleme havası sıcaklık farkı (K) için:</p>
-            <div class="eq"><math display="block"><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>=</mo><mfrac><msub><mi>&#x3A6;</mi><mi>s</mi></msub><mrow><mi>&#x3C1;</mi><mo>&#x22C5;</mo><msub><mi>c</mi><mi>p</mi></msub><mo>&#x22C5;</mo><mi>&#x394;</mi><mi>t</mi></mrow></mfrac><mo>&#x2003;</mo><mo>&#x21D2;</mo><mo>&#x2003;</mo><msub><mi>&#x3A6;</mi><mi>s</mi></msub><mo>&#x2248;</mo><mn>0,34</mn><mo>&#x22C5;</mo><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>&#x22C5;</mo><mi>&#x394;</mi><mi>t</mi></math><span class="eqn">(6)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><msub><mi>&#x3A6;</mi><mi>s</mi></msub></math>: Mekân duyulur ısıl yükü (W)</li>
-                <li><math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>: Gerekli toplam hava debisi (m³/h)</li>
-                <li><math><mi>&#x3C1;</mi></math>: Hava yoğunluğu (kg/m³)</li>
-                <li><math><msub><mi>c</mi><mi>p</mi></msub></math>: Havanın özgül ısı kapasitesi (kJ/kg·K)</li>
-                <li><math><mi>&#x394;</mi><mi>t</mi></math>: Oda sıcaklığı ile üfleme havası sıcaklığı arasındaki fark (K veya °C)</li>
-            </ul>
-            <p>Yaklaşık ifadede Φ<sub>s</sub> W, <math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math> m³/h ve <math><mi>&#x394;</mi><mi>t</mi></math> K cinsindendir (0,34 ≈ ρ·c<sub>p</sub>/3600). Ardından Eş. (1) ile ACH kontrol edilir.</p>
+<p>Bu ayrım kanal etiketlerinde ve hesap raporunda korunmalıdır. Aynı debi sembolünü hem toplam hem dış hava için açıklamasız kullanmak, özellikle ısıtma ve soğutma yükünde hata oluşturur. Dış havanın şartlandırma yükü, sadece dışarıdan gelen kısım için kurulmalıdır. Devridaim akışı ayrıca oda yükünü taşıyan besleme havasının bir parçasıdır.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">6. Hava Hızı, Kanal Kesiti ve Basınç Kaybı</h2>
-            <p>Debi, kesit alanı ve ortalama hız arasındaki ilişki süreklilik denklemiyle verilir. <math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math> m³/h, <math><mi>A</mi></math> kanal kesit alanı (m²) ve <math><mi>v</mi></math> ortalama hız (m/s) olmak üzere:</p>
-            <div class="eq"><math display="block"><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>=</mo><mn>3600</mn><mo>&#x22C5;</mo><mi>A</mi><mo>&#x22C5;</mo><mi>v</mi><mo>&#x2003;</mo><mo>,</mo><mo>&#x2003;</mo><mi>A</mi><mo>=</mo><mfrac><mrow><mi>&#x3C0;</mi><msup><mi>D</mi><mn>2</mn></msup></mrow><mn>4</mn></mfrac></math><span class="eqn">(7)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>: Kanal içerisinden geçen hava debisi (m³/h)</li>
-                <li><math><mi>A</mi></math>: Kanal kesit alanı (m²)</li>
-                <li><math><mi>v</mi></math>: Kanaldaki ortalama hava akış hızı (m/s)</li>
-                <li><math><mi>D</mi></math>: Dairesel kanal iç çapı (m)</li>
-            </ul>
-            <p>Tipik tasarım hızları konfor uygulamalarında ana kanalda yaklaşık 5-8 m/s, branşlarda 3-5 m/s'dir; gürültü kriteri sıkı mekânlarda daha düşük seçilir. Hız yükseldikçe basınç kaybı hızın karesiyle, fan gücü ise hızın yaklaşık üçüncü kuvvetiyle artar.</p>
-            <p><strong>Örnek.</strong> Bölüm 2'deki odada (0,15 m³/s) branş hızı 4 m/s seçilirse A = 0,15/4 = 0,0375 m²; dairesel kanalda D = √(4A/π) ≈ 0,218 m olur. En yakın standart çap Ø224 mm için gerçek hız yaklaşık 3,8 m/s'dir.</p>
-            <p>Dikdörtgen kanalda (<math><msub><mi>D</mi><mi>h</mi></msub></math>: hidrolik çap, <em>U</em>: ıslak çevre) aynı sürtünme kaybı için eşdeğer dairesel çap <math><msub><mi>D</mi><mi>e</mi></msub></math>, kenar uzunlukları <em>a</em> ve <em>b</em> ile şöyle hesaplanır:</p>
-            <div class="eq"><math display="block"><msub><mi>D</mi><mi>h</mi></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mi>A</mi></mrow><mi>U</mi></mfrac><mo>&#x2003;</mo><mo>,</mo><mo>&#x2003;</mo><msub><mi>D</mi><mi>e</mi></msub><mo>=</mo><mn>1,30</mn><mo>&#x22C5;</mo><mfrac><msup><mrow><mo>(</mo><mi>a</mi><mi>b</mi><mo>)</mo></mrow><mn>0,625</mn></msup><msup><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow><mn>0,25</mn></msup></mfrac></math><span class="eqn">(8)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><msub><mi>D</mi><mi>h</mi></msub></math>: Hidrolik çap (m)</li>
-                <li><math><mi>U</mi></math>: Kanal kesitinin ıslak çevresi (m)</li>
-                <li><math><msub><mi>D</mi><mi>e</mi></msub></math>: Eşdeğer dairesel çap (m)</li>
-                <li><math><mi>a</mi><mo>,</mo><mi>b</mi></math>: Dikdörtgen kanal kenar uzunlukları (m)</li>
-            </ul>
-            <p>Düz kanal ve elemanlardaki toplam basınç kaybı Darcy-Weisbach denklemiyle, <em>f</em> sürtünme faktörü, <em>L</em> kanal uzunluğu (m), ζ yerel kayıp katsayıları ve <math><mi>&#x3C1;</mi></math> hava yoğunluğu (kg/m³) için:</p>
-            <div class="eq"><math display="block"><mi>&#x394;</mi><mi>p</mi><mo>=</mo><mrow><mo>(</mo><mi>f</mi><mfrac><mi>L</mi><msub><mi>D</mi><mi>h</mi></msub></mfrac><mo>+</mo><mo>&#x2211;</mo><mi>&#x3B6;</mi><mo>)</mo></mrow><mfrac><mrow><mi>&#x3C1;</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></math><span class="eqn">(9)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mi>&#x394;</mi><mi>p</mi></math>: Toplam basınç kaybı (Pa)</li>
-                <li><math><mi>f</mi></math>: Sürtünme faktörü (boyutsuz)</li>
-                <li><math><mi>L</mi></math>: Kanal uzunluğu (m)</li>
-                <li><math><mo>&#x2211;</mo><mi>&#x3B6;</mi></math>: Yerel direnç (dirsek, vana, menfez vb.) kayıp katsayıları toplamı</li>
-                <li><math><mi>&#x3C1;</mi></math>: Hava yoğunluğu (kg/m³)</li>
-                <li><math><mi>v</mi></math>: Havanın ortalama hızı (m/s)</li>
-            </ul>
-            <p>Kanal sisteminin toplam kaybı Δp<sub>t</sub> ile fan seçilir; fan mil gücü, <math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math> m³/s ve Δp<sub>t</sub> Pa cinsinden alındığında W cinsinden:</p>
-            <div class="eq"><math display="block"><msub><mi>P</mi><mi>f</mi></msub><mo>=</mo><mfrac><mrow><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover><mo>&#x22C5;</mo><mi>&#x394;</mi><msub><mi>p</mi><mi>t</mi></msub></mrow><msub><mi>&#x3B7;</mi><mi>f</mi></msub></mfrac></math><span class="eqn">(10)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><msub><mi>P</mi><mi>f</mi></msub></math>: Fan elektrik mil gücü (W)</li>
-                <li><math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>: Toplam hava debisi (m³/s)</li>
-                <li><math><mi>&#x394;</mi><msub><mi>p</mi><mi>t</mi></msub></math>: Sistem toplam dış statik basınç kaybı (Pa)</li>
-                <li><math><msub><mi>&#x3B7;</mi><mi>f</mi></msub></math>: Fan-motor toplam verim katsayısı (0 ile 1 arasında)</li>
-            </ul>
-            <p>Burada η<sub>f</sub> fan toplam verimidir. Tasarımda sıkça eşit sürtünme yöntemi (yaklaşık 0,8-1,0 Pa/m) kullanılır.</p>
+<h2 id="ach-tanimi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">2. ACH tanımı ve birim dönüşümleri</h2>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">7. Isı Geri Kazanım Cihazları (HRV / ERV)</h2>
-            <p>Yüksek dış hava debisinde havanın iklimlendirilmesi büyük enerji maliyeti doğurur. Bunu azaltmak için egzoz havasının ısısını (HRV, <em>Heat Recovery Ventilator</em>) veya entalpisini (ERV, <em>Energy Recovery Ventilator</em>) taze havaya aktaran cihazlar kullanılır. Sıcaklık etkinliği <math><mi>&#x3B5;</mi></math>; dış hava (t<sub>dış</sub>), cihaz çıkışındaki besleme (t<sub>bes</sub>) ve egzoz (t<sub>eg</sub>) sıcaklıkları cinsinden:</p>
-            <div class="eq"><math display="block"><mi>&#x3B5;</mi><mo>=</mo><mfrac><mrow><msub><mi>t</mi><mi>bes</mi></msub><mo>&#x2212;</mo><msub><mi>t</mi><mi>dış</mi></msub></mrow><mrow><msub><mi>t</mi><mi>eg</mi></msub><mo>&#x2212;</mo><msub><mi>t</mi><mi>dış</mi></msub></mrow></mfrac></math><span class="eqn">(11)</span></div>
-            <p><strong>Formüldeki Değişkenlerin Tanımları:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li><math><mi>&#x3B5;</mi></math>: Cihaz sıcaklık verimi / etkinliği (boyutsuz veya %)</li>
-                <li><math><msub><mi>t</mi><mi>bes</mi></msub></math>: Cihaz çıkışı taze besleme havası sıcaklığı (°C)</li>
-                <li><math><msub><mi>t</mi><mi>dış</mi></msub></math>: Dış ortam hava sıcaklığı (°C)</li>
-                <li><math><msub><mi>t</mi><mi>eg</mi></msub></math>: Mahal egzoz havası sıcaklığı (°C)</li>
-            </ul>
-            <p>Levhalı ve döner tip cihazlarda sıcaklık etkinliği tipik olarak %50-85 aralığındadır. Bu değer yıllık enerji tasarrufuna eşit değildir; gerçek tasarruf iklime, çalışma saatine ve ek fan basınç kaybına bağlıdır. Geri kazanılan duyulur ısı Φ = <math><mi>&#x3B5;</mi></math>·ρ·c<sub>p</sub>·<math><mover accent="true"><mi>V</mi><mo>&#x2D9;</mo></mover></math>·(t<sub>eg</sub> − t<sub>dış</sub>) ile hesaplanır.</p>
+<p>Hava değişim oranı, ilgili hava debisinin mahal hacmine oranıdır. Debi m³/h, hacim m³ olarak kullanıldığında ACH birimi h⁻¹ olur. Temel bağıntı n = V̇ / V ve ters biçimi V̇ = n × V şeklindedir. Burada n hava değişim oranı, V̇ saatlik hava debisi, V ise hesabın esas aldığı iç hacimdir. Kullanılan hacim tanımı proje boyunca tutarlı tutulmalıdır.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">8. Sonuç</h2>
-            <p>Doğru boyutlandırılmış bir havalandırma sistemi için önce dış hava ihtiyacı (hava kalitesi), sonra toplam besleme debisi (ısıl yük) ve ACH kontrolü yapılmalı; ardından kanal hızları, basınç kaybı ve fan seçimi bu debiye göre yürütülmelidir. ACH tek başına bir tasarım hedefi değil, hesaplanan debinin kontrol büyüklüğüdür.</p>
+<p>Örneğin alanı 30 m² ve iç yüksekliği 3 m olan bir odanın hacmi 90 m³'tür. Örnek hesap için 6 h⁻¹ kabul edilirse gerekli akış 540 m³/h olur. Bu değer 150 L/s veya 0,15 m³/s karşılığıdır. Bir litre/saniye 3,6 m³/h, bir m³/saniye ise 3.600 m³/h eder.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">Kaynaklar</h2>
-            <ul class="list-disc pl-6 space-y-1 text-sm">
-                <li>ANSI/ASHRAE Standard 62.1: Ventilation and Acceptable Indoor Air Quality (2022).</li>
-                <li>ANSI/ASHRAE Standard 62.2: Ventilation and Acceptable Indoor Air Quality in Residential Buildings.</li>
-                <li>ANSI/ASHRAE/ASHE Standard 170: Ventilation of Health Care Facilities (2021).</li>
-                <li>ASHRAE Handbook - Fundamentals, Duct Design bölümü; ASHRAE Handbook - HVAC Systems and Equipment, Air-to-Air Energy Recovery bölümü.</li>
-                <li>TS EN 16798-1: Binaların enerji performansı - İç ortam girdi parametreleri.</li>
-            </ul>
+<p>Tavan yüksekliğinin değişmesi aynı alan için farklı hacim ve farklı ACH oluşturur. Bu nedenle yalnızca zemin alanını ACH formülüne koymak boyutsal olarak yanlıştır. Asma tavan boşluğunun hacme dahil edilip edilmemesi de gerçek hava sınırlarıyla ilişkilidir. Mahal havasıyla etkin biçimde bağlantılı olmayan bir boşluk, düşünmeden oda hacmine eklenmemelidir.</p>
+
+<h2 id="ach-turleri" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">3. Toplam, dış hava ve eşdeğer temiz hava ACH</h2>
+
+<p>Toplam besleme debisinin hacme oranı toplam ACH'yi, yalnızca dış hava debisinin oranı dış hava ACH'sini verir. İki değer aynı sistemde farklı olabilir. Örneğin hacmi 300 m³ olan bir ofiste toplam besleme 1.800 m³/h ve dış hava 300 m³/h ise toplam ACH 6, dış hava ACH 1 olur. Odaya saatte altı hacim hava üflenmesi, altı hacim dış hava sağlandığı anlamına gelmez.</p>
+
+<p>Filtrasyonla sağlanan parçacık uzaklaştırma etkisi eşdeğer temiz hava debisi olarak ifade edilebilir. Ancak bu değer belirli kirletici sınıfına aittir. Bir HEPA cihazının parçacık temizleme etkisi, aynı miktarda karbondioksit giderdiği anlamına gelmez. Gazlar için uygun olmayan bir filtre, CO₂ birikimini ortadan kaldırmaz.</p>
+
+<p>CDC'nin solunum yolu virüslerine yönelik rehberi, mümkün olduğunda saatte en az beş eşdeğer temiz hava değişimini hedefleyen bir yaklaşım açıklamaktadır. Bu hedef dış hava, uygun filtrasyon ve diğer temiz hava katkılarının birlikte değerlendirilmesiyle ilişkilidir. Türkiye'deki bütün mahaller için zorunlu dış hava ACH değeri veya enfeksiyonu kesin olarak önleyen eşik olarak aktarılmamalıdır. <sup><a class="text-blue-700 underline" href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
+
+<h2 id="kirletici-dengesi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">4. Kirletici dengesi ve kararlı durum</h2>
+
+<p>Havalandırma ile kirletici kontrolü bir kütle dengesi problemidir. İdeal tam karışımda, sabit üretim ve dış hava debisi için kararlı iç konsantrasyon dış konsantrasyonun üzerine çıkar. Üretim hızı G, dış hava debisi V̇ ve konsantrasyonlar aynı hacimsel oran birimleriyle tanımlandığında V̇ = G / (Ci − Cd) bağıntısı elde edilir.</p>
+
+<p>CO₂ için ppm sayıları doğrudan boyutsuz oran gibi kullanılmamalıdır. Örneğin toplam üretimi 0,036 m³/h ve izin verilen iç dış farkını yalnızca hesap örneği olarak 600 ppm kabul edelim. Fark 600 × 10⁻⁶ olduğundan gerekli dış hava 60 m³/h çıkar. Üretim aynı sıcaklık ve basınç referansında tanımlanmalıdır. Bu örnekteki konsantrasyon farkı bir sağlık sınırı veya standart gerekliliği değildir.</p>
+
+<p>Gerçek üretim kişi sayısı ve faaliyetle değişir. Malzemelerden kaynaklanan kirleticiler de insan sayısına bağlı olmayabilir. Dolayısıyla yalnızca CO₂ ölçümü bütün iç hava kalitesini tanımlamaz. Bir mahalde düşük CO₂ bulunurken parçacık veya kimyasal kirletici sorunu yaşanabilir. Kirletici kaynağını azaltmak ve kaynağa yakın egzoz uygulamak, yalnızca genel debiyi artırmaktan farklı tasarım seçenekleridir.</p>
+
+<h2 id="zamana-bagli-seyrelme" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">5. Bir hava değişimi bütün havayı yeniler mi?</h2>
+
+<p>Tam karışımlı modelde kaynak durduktan sonra kirletici farkı üstel olarak azalır. Dış konsantrasyon sabitse C(t) = Cd + (C0 − Cd) × exp(−n × t) yazılabilir. Burada t saat, n ise h⁻¹ birimindedir. Formül yeni üretimin durduğu, etkin debinin sabit kaldığı ve uygun karışımın bulunduğu koşulları temsil eder.</p>
+
+<p>Bir hava değişiminin sonunda başlangıç farkının yaklaşık yüzde 36,8'i kalır; yaklaşık yüzde 63,2'si giderilmiştir. Yüzde 95 azalma için gereken süre yaklaşık 3/n saattir. Örneğin 6 h⁻¹ etkin temizleme oranında teorik süre yaklaşık 30 dakikadır. Sonuç dış ortamın konsantrasyonuna doğru yaklaşmayı ifade eder; bütün kirleticinin mutlak sıfıra indiğini söylemez.</p>
+
+<p>Gerçek odalarda kısa devre akışı, durgun bölgeler ve yeniden yayılan kaynaklar bu davranışı değiştirir. Kapıların açılması ve komşu mahallerden geçiş de modeli etkiler. Bu nedenle teorik temizlenme süresi, hastane gibi hassas uygulamalarda tek başına işletme talimatı olarak kullanılmaz. Hava dağılımı, ölçüm ve ilgili uygulama gereklilikleri birlikte incelenir.</p>
+
+<h2 id="kisi-alan-yontemi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">6. Kişi ve alan bileşenleriyle dış hava hesabı</h2>
+
+<p>Havalandırma oranı yaklaşımında kişi kaynaklı ve alan kaynaklı ihtiyaçlar ayrı kurulabilir. Genel biçim Vbz = Rp × Pz + Ra × Az şeklindedir. Rp kişi başına debi, Pz kişi sayısı, Ra birim alan başına debi ve Az alanı ifade eder. Sonucun birimi, kullanılan katsayıların birimleriyle belirlenir.</p>
+
+<p>Yöntemi göstermek için 100 m² ve 20 kişilik bir ofiste Rp = 2,5 L/(s·kişi), Ra = 0,3 L/(s·m²) kabul edelim. Solunum bölgesi debisi 80 L/s, yani 288 m³/h olur. Hacim 300 m³ ise dış hava ACH yaklaşık 0,96'dır. Bu katsayılar örneğin hesap girdileridir; projede ilgili mahal kategorisi ve yürürlükteki standart baskısı doğrulanmalıdır.</p>
+
+<p>Hava dağıtım etkinliği de önemlidir. Bölge etkinliği Ez ile ifade edildiğinde Voz = Vbz / Ez biçiminde düzeltme yapılabilir. Çok bölgeli bir sistemde merkezi dış hava gereksinimi, her mahal değerinin düşünmeden toplanmasıyla her zaman tamamlanmaz. ASHRAE 62.1 bu tasarım çerçevesinde başvurulan standartlardan biridir; yayımlanan ekler ve kullanılan baskı birlikte takip edilir. <sup><a class="text-blue-700 underline" href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></p>
+
+<h2 id="farkli-mahaller" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">7. Mahal türüne göre tasarım yaklaşımı</h2>
+
+<p>Konutlarda bütün ev havalandırması ile banyo ve mutfak gibi yerel egzoz ihtiyaçları ayrı değerlendirilir. Ofiste kişi sayısı, alan ve kullanım programı ön plana çıkar. Toplantı salonunda kısa sürede yüksek doluluk oluşabilir. Aynı hacimdeki depo, sürekli kullanılan sınıf ve toplantı odasına aynı dış hava kabulünün uygulanması bu farkları kaybettirir.</p>
+
+<p>Ticari mutfakta davlumbazın kaynağı yakalama başarısı, ekipmanın ısı ve buhar üretimi ile telafi havası önemlidir. Kimya laboratuvarında çeker ocak ve risk değerlendirmesi belirleyicidir. Bu mahallerde yalnızca oda hacmine bağlı genel ACH, yerel kirleticinin güvenli kontrol edildiğini kanıtlamaz. Kaynağa yakın yakalama, genel seyreltmeden farklı bir işlevdir.</p>
+
+<p>Sağlık yapılarında temiz ve kirli alan ilişkisi, basınç yönü, filtrasyon ve özel mahal koşulları birlikte ele alınır. ASHRAE 170 gibi sağlık tesisi standartları bu nedenle genel ofis hesabından ayrı değerlendirilir. Bir tasarım tablosundaki değer kullanılırken toplam mı dış hava mı olduğu, yeni veya mevcut yapı kapsamı ve ilgili açıklamalar kontrol edilir. Kaynaksız tipik aralıklar bağlayıcı sağlık tesisi ölçütü yerine geçirilmez.</p>
+
+<h2 id="isil-besleme" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">8. Duyulur yükten toplam besleme debisi</h2>
+
+<p>Besleme havası odanın duyulur yükünü taşımak için de kullanılır. Basit dengede Qs = ρ × cp × V̇ × ΔT olur. Debi m³/s ve özgül ısı J/(kg·K) cinsinden kullanıldığında sonuç watt çıkar. Yaklaşık ρ = 1,2 kg/m³ ve cp = 1.006 J/(kg·K) kabulüyle, saatlik debi için katsayı yaklaşık 0,335 W/((m³/h)·K) olur.</p>
+
+<p>Örneğin duyulur yükü 5.000 W, oda ile üfleme sıcaklığı farkını 10 K kabul edersek toplam besleme yaklaşık 1.491 m³/h çıkar. Hacmi 300 m³ olan odada toplam ACH yaklaşık 4,97'dir. Bu sonuç dış hava ihtiyacından değil, duyulur yük taşıma hesabından elde edilmiştir. Önceki ofis örneğindeki 288 m³/h dış hava ile aynı büyüklük değildir.</p>
+
+<p>Üfleme sıcaklığı farkını büyütmek gerekli debiyi azaltabilir; fakat hava dağıtımı, yoğuşma ve konfor koşulları sınır oluşturur. Gizli yük ayrıca kontrol edilir. Toplam soğutma yükünü duyulur formüle yerleştirmek, nem yükünün nasıl taşındığını açıklamaz. <a href="makale-9.html" class="text-blue-700 underline">Klima kapasitesi rehberi</a>, duyulur ve gizli yük ayrımını detaylandırmaktadır.</p>
+
+<h2 id="dis-hava-enerjisi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">9. Dış havanın ısıtma ve soğutma yükü</h2>
+
+<p>Dış hava iç ortam koşullarına getirilirken enerji gerekir. Duyulur bölüm debi ve sıcaklık farkıyla, nemle ilişkili bölüm nem oranı farkıyla hesaplanır. Toplam şartlandırma yükü kuru hava kütlesel debisi ve entalpi farkı üzerinden kurulabilir. Psikrometrik verilerin aynı referansla ve uygun birimlerle kullanılması önemlidir.</p>
+
+<p>Örnek olarak dış hava debisi 300 m³/h, yoğunluk yaklaşık 1,2 kg/m³ ve iç dış entalpi farkı 20 kJ/kg kabul edilirse yaklaşık kütlesel debi 0,10 kg/s, toplam yük yaklaşık 2 kW olur. Bu, yöntemi gösteren yaklaşık bir örnektir. Hassas hesapta yoğunluk, kuru hava temeli ve gerçek durum noktaları birlikte ele alınır.</p>
+
+<p>Toplam debinin tamamını dış hava gibi şartlandırmak yükü fazla gösterebilir. Buna karşılık dış hava gizli yükünü ihmal etmek nem kontrolünde yetersiz sonuç oluşturabilir. Mekanik dış hava ve kapı sızıntısı aynı giriş akışını temsil ediyorsa iki kez eklenmez. Oda yükü, dış hava yükü ve serpantin yükü arasındaki hesap sınırı raporda açık belirtilmelidir.</p>
+
+<h2 id="basinc-ve-transfer" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">10. Basınç dengesi ve transfer havası</h2>
+
+<p>Besleme ile egzoz arasındaki denge, havanın mahaller arasında hangi yönde hareket edeceğini etkiler. Ancak debi farkından doğrudan kesin bir basınç değeri çıkarılamaz. Kapı aralıkları, kaçak alanları ve bina kabuğu özellikleri de belirleyicidir. Gerekli basınç ilişkisi hesap ve yerinde ölçümle doğrulanır.</p>
+
+<p>Banyodan veya kirletici kaynaklı alandan komşu temiz mahale hava taşınması istenmeyebilir. Transfer havasının kaynağı, kalitesi ve geçiş yolu bu nedenle tanımlanır. Kapı altı boşluğu veya transfer menfezi için serbest alan, hız ve ses birlikte kontrol edilir. Kapının kapalı olması halinde egzozun gereken telafi havasını alamaması sistemin çalışma noktasını değiştirebilir.</p>
+
+<p>Egzoz çıkışının dış hava girişine yakın olması, atılan havanın yeniden alınmasına neden olabilir. Çatı yerleşimi, hakim rüzgar, çıkış yönü ve çevre kaynaklar değerlendirilir. Otopark veya yanma kaynakları yakınındaki hava girişi de uygun hava kalitesini etkiler. Bir tasarımda debinin doğru bulunması, hava girişinin uygun seçildiğini kendiliğinden göstermez.</p>
+
+<h2 id="kanal-kesiti" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">11. Kanal kesiti ve gerçek hava hızı</h2>
+
+<p>Kanal kesiti süreklilik bağıntısıyla bulunur: A = V̇ / v. Burada debi m³/s, hız m/s ve alan m² olmalıdır. Örneğin 540 m³/h debi 0,15 m³/s eder. Örnek tasarım hızı 4 m/s seçilirse kesit 0,0375 m² olur. Dairesel kanalın hesap çapı yaklaşık 0,219 m'dir.</p>
+
+<p>Uygulamada seçilen kesit için hız yeniden hesaplanır. Örneğin 250 mm iç çap kabulünde alan yaklaşık 0,0491 m², hız yaklaşık 3,06 m/s olur. Bu çap bir zorunlu öneri değildir; hesap ile seçilmiş ürün geometrisi arasındaki ilişkiyi gösterir. Dikdörtgen kesitte kenar oranı ve montaj alanı da incelenir.</p>
+
+<p>Menfezin brüt yüzey alanı ile etkin serbest alanı aynı değildir. Kanal hızını menfez boyutuna doğrudan taşıyarak atış, gürültü ve basınç kaybı tamamlanmış sayılmaz. Terminal elemanın üretici verileri kullanılır. Dairesel eşdeğer çap ve hidrolik çap kavramları da farklı amaçlara hizmet eder; birinin kullanılması gereken bağıntıya diğeri düşünmeden yerleştirilmez.</p>
+
+<h2 id="basinc-kaybi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">12. Basınç kaybı ve fan çalışma noktası</h2>
+
+<p>Fan, yalnızca gereken debiye göre seçilmez. Kanallar, dirsekler, damperler, filtreler, eşanjörler ve terminal elemanlar basınç kaybı oluşturur. Kritik akış yolundaki kayıplar değerlendirilir. Paralel kollardaki bütün kayıpları seriymiş gibi toplamak doğru bir sistem hesabı vermez. Her kolun debisi ve yerel eleman koşulları dikkate alınır.</p>
+
+<p>Düz kanal için Darcy-Weisbach yaklaşımında sürtünme katsayısı, uzunluk, uygun karakteristik çap ve hızın karesi bulunur. Yerel kayıplar eleman katsayısı ile ilgili hız basıncına bağlanır. Farklı kesitlerdeki elemanlara aynı hızın uygulanması hatalı olabilir. Filtre için temiz ve tasarım kirlenme durumları ayrıca değerlendirilir.</p>
+
+<p>Fan eğrisi ile sistem eğrisinin kesişimi çalışma noktasını belirler. Katalogdaki serbest üfleme debisi, bağlı kanal sisteminde sağlanacak debi değildir. Statik ve toplam basınç tanımları tutarlı kullanılmalıdır. Montajdaki ani dirsekler veya yetersiz giriş mesafesi fan sistem etkisi oluşturabilir. Fazla pay eklemek yerine gerçek dirençler, seçilen kontrol yöntemi ve kabul edilen çalışma aralığı tanımlanır.</p>
+
+<h2 id="fan-enerjisi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">13. Fan gücü ve kısmi yük işletmesi</h2>
+
+<p>Hava gücü, debi m³/s ve basınç Pa olarak kullanıldığında V̇ × Δp ile watt cinsinden bulunur. Elektrik gücü için bu değer uygun fan, motor ve sürücü toplam verimine bölünür. Yalnızca fan verimi kullanılıyorsa sonuç elektrik giriş gücüyle aynı kapsamda değildir. Statik veya toplam verim seçimi, basınç tanımıyla uyumlu olmalıdır.</p>
+
+<p>Örneğin 0,5 m³/s debi, 500 Pa basınç artışı ve yüzde 60 toplam verim kabulünde elektrik gücü yaklaşık 417 W olur. Verimin sabit varsayıldığı bu örnek, gerçek cihaz seçiminde üretici eğrisinin yerini almaz. Filtre kirlendiğinde veya damper konumu değiştiğinde sistem çalışma noktası da değişir.</p>
+
+<p>Benzerlik koşullarında fan hızının azalması debiyi yaklaşık doğrusal, basıncı ikinci kuvvet ve gücü üçüncü kuvvet ilişkisiyle etkileyebilir. Ancak sabit basınç bileşenleri ve değişen verim nedeniyle gerçek tasarruf bu basit oranla her durumda aynı değildir. Talebe göre kontrol, gerekli minimum dış hava ve basınç ilişkisini koruyarak uygulanır. Enerji tasarrufu için havalandırmanın işlevi ortadan kaldırılmaz.</p>
+
+<h2 id="isi-geri-kazanim" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">14. Isı ve enerji geri kazanımı</h2>
+
+<p>HRV ve ERV sistemleri dış hava sağlarken egzoz akışından enerji geri kazanmayı amaçlar. HRV esas olarak duyulur ısı aktarımıyla, ERV ise uygun tasarımlarda nem aktarımıyla da ilişkilidir. İki akışın birbirine karışması amaçlanan çalışma şekli değildir; kaçak ve taşınma etkileri uygulamanın hava kalitesi gereklilikleriyle birlikte değerlendirilir. <sup><a class="text-blue-700 underline" href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup></p>
+
+<p>Basit sıcaklık etkinliği ε = (Tbes − Tdış) / (Tegzoz − Tdış) şeklinde yazılabilir. Örneğin dış hava 0 °C, egzoz 22 °C ve etkinlik 0,75 kabul edilirse idealize besleme sıcaklığı 16,5 °C olur. Fan ısısı, debi dengesizliği ve donma kontrolü gibi etkiler bu basit hesabın kapsamı dışındadır.</p>
+
+<p>Etkinlik yüzde 75 olduğunda yıllık enerji faturasının da yüzde 75 azalacağı söylenemez. Ek fan basıncı, kullanım saatleri, iklim ve bypass işletmesi değerlendirilir. Dış hava serbest soğutma için uygun olduğunda geri kazanımın işletme şekli değişebilir. Kirli egzozların hangi geri kazanım sistemiyle kullanılabileceği ayrıca incelenir; enerji yararı hava kalitesi gerekliliklerinden bağımsız değildir.</p>
+
+<h2 id="olcum-ve-devreye-alma" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">15. Ölçüm, dengeleme ve işletme kayıtları</h2>
+
+<p>Filtre seçiminde yalnızca parçacık tutma sınıfı değil, gerekli debideki basınç kaybı ve cihazla uyumluluk önemlidir. Daha yüksek verimli filtre takılması, fanın bu dirençte yeterli akışı sağlayacağı doğrulanmadan tamamlanmış bir iyileştirme sayılmaz. Filtre kirlendikçe direnç değişebilir; bakım aralığına ve izleme yöntemine buna göre karar verilir. Merkezi sistemde hava sızıntıları veya filtre çevresindeki boşluklar, beklenen temizleme etkisini azaltabilir. Filtrasyonun dış hava gereksiniminden ayrı tanımlanması bu nedenle korunur.</p>
+
+<p>Bir taşınabilir temizleyici için CADR, yani temiz hava sağlama debisi, ilgili deney koşullarında parçacık uzaklaştırma katkısını belirtir. Örnek olarak 90 m³ odada 360 m³/h etkin temiz hava debisi 4 h⁻¹ eşdeğer katkı oluşturur. Odaya ayrıca 90 m³/h temiz dış hava sağlandığını varsayarsak, idealize toplam parçacık temizleme oranı 5 h⁻¹ olur. Bu toplama aynı akışın iki kez sayılmadığı, kaynakların bağımsız olduğu ve uygun karışım bulunduğu koşullarda anlamlıdır. Cihazın hava dolaşımı debisi ile CADR değeri aynı olmak zorunda değildir. Düşük fan hızında veya kirli filtreyle sağlanan katkı da etiket koşulundan farklı olabilir. CO₂ hesabında temizleyicinin bu parçacık katkısı dış hava yerine kullanılmaz.</p>
+
+<p>Hesaplanan debinin sahada gerçekleşmesi için ölçüm ve dengeleme gerekir. Terminal akışları, ana kanal debileri, fan çalışma noktası ve dış hava oranı kontrol edilir. Ölçüm cihazının uygunluğu, kanal içindeki hız profili ve ölçüm konumu önemlidir. Tek bir noktada ölçülen hızın bütün kesitte eşit olduğunu kabul etmek özellikle dirsek yakınında hata oluşturabilir.</p>
+
+<p>Değişken debili sistemde yalnızca tam yük durumu değil, düşük doluluk veya kısmi yük koşulu da incelenir. CO₂ kontrollü işletmede sensör konumu, kalibrasyon ve kontrol gecikmesi önemlidir. İnsan sayısı azaldığında alan kaynaklı gereksinim otomatik olarak sıfıra inmez. Filtre, eşanjör ve damper bakımının kaydı tutulur.</p>
+
+<p>Hesap raporunda hacim, kişi sayısı, kullanım programı, dış hava ve toplam debi ayrı verilmelidir. Basınç hesabı, fan seçimi ve ölçülen değerler bu raporu tamamlar. <a href="makale-12.html" class="text-blue-700 underline">Doğru klima kullanımı</a> ile <a href="makale-9.html" class="text-blue-700 underline">soğutma kapasitesi seçimi</a> rehberleri, havalandırmanın konfor ve enerji boyutlarıyla bağlantısını açıklar. ACH bu bütünün yararlı kontrol büyüklüğü olarak kullanılır.</p>
+
+<section id="kaynakca" class="bg-slate-50 border border-slate-200 rounded-xl p-5 mt-8"><h2 class="text-lg font-bold text-slate-900">Kaynaklar ve hesap kapsamı</h2><p class="text-sm mt-2">Örnekler özgün mühendislik hesaplarıdır; kabul edilen değerler projeye ait zorunlu sınırlar değildir. Standart tabloları yeniden yayımlanmamış, genel yöntem ve kapsam ayrımı açıklanmıştır. Kaynak kontrol tarihi: 10 Ekim 2026.</p><ol class="list-decimal pl-5 mt-4 space-y-3 text-sm"><li id="kaynak-1" class="scroll-mt-24"> CDC/NIOSH, <a href="https://www.cdc.gov/niosh/ventilation/prevention/aim-for-5.html" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">How Much Ventilation Is Enough?</a>. Dış hava ve eşdeğer temiz hava katkılarının ayrımı; solunum yolu virüslerine yönelik rehberlik.</li><li id="kaynak-2" class="scroll-mt-24"> ASHRAE, <a href="https://www.ashrae.org/technical-resources/standards-and-guidelines/standards-addenda" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Standards Addenda</a>. 62.1 ve diğer standartlarda kullanılan baskı ile yayımlanan eklerin birlikte değerlendirilmesi için resmi başvuru kaynağı.</li><li id="kaynak-3" class="scroll-mt-24"> U.S. Department of Energy, Building Science Education, <a href="https://bsesc.energy.gov/energy-basics/hvac-energy-recovery-ventilation" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">HVAC Energy Recovery Ventilation</a>. HRV ve ERV işlevleri.</li><li>U.S. Department of Energy, <a href="https://bsesc.energy.gov/energy-basics/hvac-whole-house-ventilation-0" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">HVAC Whole-House Ventilation</a>. Besleme, egzoz ve dengeli havalandırma düzenleri.</li></ol></section>
         </div>
 
         <div class="border-t border-slate-100 pt-6 mt-8 flex justify-between items-center text-xs text-slate-500 font-medium">
