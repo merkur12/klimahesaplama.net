@@ -72,54 +72,134 @@
         </header>
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
-            
-            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: İklimlendirmede Doğru Kapasite Seçiminin Önemi</h2>
-            <p>
-                Yaşam ve çalışma alanlarında ideal termal konfor şartlarını (22°C - 24°C iç ortam sıcaklığı ve %40 - %60 bağıl nem) sağlamak, ancak mekânın ısı kazanç ve kayıp karakteristiğine tam uygun kapasitede bir klima seçimiyle mümkündür. Tüketiciler arasında yaygın olan "ne kadar büyük olursa o kadar iyi soğutur" yanılgısı, mekanik tesisat mühendisliğinde ciddi dezavantajlar doğurur. Kapasitesi gerekenden düşük bir klima, aşırı sıcak günlerde hedef sıcaklığa ulaşamayarak sürekli maksimum devirde çalışır; bu durum hem cihaz ömrünü kısaltır hem de elektrik faturasını kabartır. Buna karşın, hacme göre aşırı büyük seçilen bir klima (oversized), ortamı çok hızlı soğutarak istenen sete ulaştığı an aniden durur (kısa devre / short-cycling). Kompresörün sık durup kalkması, havadaki nemin yeterince yoğuşturulup atılamamasına (nemli ve bunaltıcı bir iç ortam hisse) ve mekanik aksamın erken arızalanmasına yol açar.
-            </p>
+<nav aria-label="Makale içindekiler" class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3"><h2 class="font-bold text-blue-950">İçindekiler</h2><ol style="list-style:none;margin:0;padding:0" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0"><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">1.</span><a class="text-blue-700 hover:underline" href="#btu-ve-guc">BTU ile BTU/h arasındaki fark</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">2.</span><a class="text-blue-700 hover:underline" href="#alan-yaklasimi">Metrekare hesabı neden yalnızca ön tahmindir?</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">3.</span><a class="text-blue-700 hover:underline" href="#duyulur-gizli">Duyulur ve gizli soğutma yükü</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">4.</span><a class="text-blue-700 hover:underline" href="#dis-duvarlar">Dış duvar ve komşu mahal yükleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">5.</span><a class="text-blue-700 hover:underline" href="#kat-ve-cati">Kat konumu, çatı ve dış havaya açık döşeme</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">6.</span><a class="text-blue-700 hover:underline" href="#pencere-yuku">Pencere yönü ve cam türünün etkisi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">7.</span><a class="text-blue-700 hover:underline" href="#insan-ve-cihaz">İnsanlar, aydınlatma ve cihaz yükleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">8.</span><a class="text-blue-700 hover:underline" href="#taze-hava">Taze hava ve kapı sızıntısı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">9.</span><a class="text-blue-700 hover:underline" href="#ornek-kapasite">Örnek yük ve emniyet katsayısı hesabı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">10.</span><a class="text-blue-700 hover:underline" href="#nominal-ve-gercek">Nominal kapasite gerçek sıcaklıkta yeterli mi?</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">11.</span><a class="text-blue-700 hover:underline" href="#fazla-kucuk-kapasite">Fazla ve yetersiz kapasitenin sonuçları</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">12.</span><a class="text-blue-700 hover:underline" href="#inverter-ve-nem">İnverter verimi ve nem kontrolü</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">13.</span><a class="text-blue-700 hover:underline" href="#cihaz-turu">Duvar, salon ve kaset tipi seçimi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">14.</span><a class="text-blue-700 hover:underline" href="#enerji-ses-akiskan">Enerji etiketi, ses ve soğutucu akışkan</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">15.</span><a class="text-blue-700 hover:underline" href="#montaj-ve-kontrol">Montaj, kullanım ve son kontrol</a></li></ol></nav>
+<p>Doğru klima seçimi, yalnızca odanın metrekaresine karşılık gelen bir kapasiteyi satın almak değildir. Cihazın soğutma yükünü karşılaması, nemi uygun düzeyde kontrol edebilmesi, havayı kullanılan bölgeye dağıtması ve yılın farklı saatlerinde verimli çalışması gerekir. Aynı büyüklükte iki odada pencere yönü, çatı durumu, kişi sayısı ve taze hava ihtiyacı farklıysa gerekli kapasite de değişebilir. Bu nedenle kapasite hesabı ile ürünün gerçek çalışma koşullarındaki performansı birlikte değerlendirilmelidir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">2. BTU (British Thermal Unit) Nedir ve Temel Formülasyon</h2>
-            <p>
-                BTU (British Thermal Unit), uluslararası alanda klimaların soğutma ve ısıtma kapasitesini ifade etmekte kullanılan temel enerji birimidir. Tanım olarak 1 libre (pound) suyun sıcaklığını 1 Fahrenheit derece artırmak için gereken ısı miktarıdır. Klima sektöründe ise bir saatte ortamdan çekilen ısı miktarını (BTU/h) belirtir. Pratik mühendislik hesaplamalarında oda alanından hareketle hızlı bir ön değerlendirme yapılırken, detaylı analizlerde şu parametreler hesaba katılır:
-            </p>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Oda Brüt Alanı (m²):</strong> Mekânın taban alanı.</li>
-                <li><strong>Bölgesel İklim Katsayısı:</strong> Türkiye'nin Akdeniz/Güneydoğu gibi sıcak kuşaklarında katsayı yüksek alınırken, Karadeniz veya Doğu Anadolu'nun ılıman/sergent yazlarında daha düşük katsayılar kullanılır.</li>
-                <li><strong>Kişi Sayısı ve İç Yükler:</strong> Odada sürekli bulunan insan sayısı (her insan ortalama 400-500 BTU ısı yayar) ile aydınlatma ve elektronik cihazların yaydığı ısılar.</li>
-                <li><strong>Pencere Yönelimi:</strong> Batı ve güney cepheli, güneş alan geniş cam yüzeyler kapasite ihtiyacını doğrudan artırır.</li>
-            </ul>
+<p>Bu rehber, BTU ifadesinin anlamından başlayarak duyulur ve gizli yükü, bina kabuğunu, iç yükleri ve cihaz seçim mantığını açıklar. Sayısal örneklerde kullanılan değerler yöntemi göstermek için hazırlanmıştır. Bir ürünün etiketteki nominal kapasitesi, her dış sıcaklıkta aynı kapasiteyi sağlayacağı anlamına gelmez. Ön hesap kararın başlangıcıdır; son seçimde üreticinin kapasite tabloları, montaj koşulları ve kullanım ihtiyaçları kontrol edilir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Pratik BTU Hesaplama Yöntemi ve Katsayılar</h2>
-            <p>
-                Türkiye şartlarında standart bir konut odası için en yaygın pratik yaklaşım, oda alanının metrekare cinsinden değeri ile bölgeye ait sabit katsayının çarpılmasıdır:
-            </p>
-            <p class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs md:text-sm">
-                Gerekli BTU = Oda Alanı (m²) \cdot 400 + (Kişi Sayısı \cdot 600) + Ek Yükler
-            </p>
-            <p>
-                Örneğin; 25 metrekarelik, güneş alan bir oturma odası için temel hesaplama $25 \times 400 = 10.000$ BTU verirken, kişi sayısı ve cephe faktörleri eklendiğinde bu değer 12.000 BTU (1 sınıfı üst cihaz) seviyesine güncellenmelidir.
-            </p>
+<h2 id="btu-ve-guc" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">1. BTU ile BTU/h arasındaki fark</h2>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Inverter Teknolojisi ve Akıllı Kapasite Kontrolü</h2>
-            <p>
-                Eski nesil "On-Off" klimalar, oda istenen sıcaklığa geldiğinde kompresörünü tamamen durdurur, sıcaklık sapması olduğunda tekrar tam güçte çalışmaya başlardı. Bu süreç hem yüksek kalkış akımları nedeniyle elektrik tüketimini artırır hem de sıcaklık dalgalanmalarına neden olurdu. Inverter teknolojisine sahip modern klimalar ise kompresör devrini elektronik olarak sürekli (frekans modülasyonu ile) ayarlar. Oda sıcaklığı yakalandığında durmak yerine minimum devirde sessizce çalışmaya devam ederek sıcaklığı 0.5°C hassasiyetle sabit tutar. Bu sayede %30 ila %50 oranında enerji tasarrufu sağlanır.
-            </p>
+<p>BTU bir enerji birimidir; klima kapasitesi teknik olarak BTU/h, yani birim zamandaki enerji aktarımıyla ifade edilir. Günlük kullanımda yalnızca BTU denilse de katalogda anlatılan büyüklük soğutma gücüdür. Uluslararası BTU tanımı esas alındığında 1 W yaklaşık 3,412 BTU/h, 1 kW yaklaşık 3.412 BTU/h karşılığıdır. Böylece watt cinsinden hesaplanan yük, ticari kapasite sınıfıyla karşılaştırılabilir. <sup><a class="text-blue-700 underline" href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">5. Doğru Klima Seçiminde Dikkat Edilmesi Gereken Diğer Kriterler</h2>
-            <p>
-                Kapasite (BTU) belirlemenin yanı sıra cihaz seçiminde şu teknik detaylar da göz önünde bulundurulmalıdır:
-            </p>
-            <ul class="list-disc pl-6 space-y-25">
-                <li><strong>Enerji Sınıfı (SEER / SCOP):</strong> SEER (soğutma mevsimsel verimlilik) ve SCOP (ısıtma mevsimsel verimlilik) değerleri yüksek (A++ veya A+++) cihazlar, uzun vadede elektrik faturalarında büyük avantaj sağlar.</li>
-                <li><strong>Soğutucu Akışkan Türü:</strong> Çevre dostu ve yüksek termodinamik performansa sahip R32 gazlı klimalar tercih edilmelidir.</li>
-                <li><strong>Ses Seviyesi (dB):</strong> Yatak odaları ve çalışma alanları için iç ünitenin ses seviyesinin düşük (20-25 dB aralığında) olması konfor açısından elzemdir.</li>
-            </ul>
+<p>Örneğin 12.000 BTU/h yaklaşık 3,52 kW, 18.000 BTU/h yaklaşık 5,28 kW ve 24.000 BTU/h yaklaşık 7,03 kW soğutma kapasitesine karşılık gelir. Bu değerler cihazın çektiği elektrik gücü değildir. Bir cihaz 3,5 kW soğutma sağlarken çalışma noktasına bağlı olarak bundan farklı bir elektrik gücü tüketir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">6. Sonuç</h2>
-            <p>
-                Doğru klima seçimi; rastgele yapılan metrekare tahminleriyle değil, coğrafi konum, cephe, yalıtım kalitesi ve iç yüklerin harmanlandığı mühendislik hesaplamalarıyla yapılmalıdır. Doğru BTU ve inverter teknolojisi kombinasyonu, hem bütçenizi korur hem de ömür boyu kesintisiz konfor sunar.
-            </p>
+<p>Enerji tüketimi ise zamanla ilişkilidir ve kWh cinsinden değerlendirilir. Nominal elektrik gücünü bütün kullanım süresiyle çarpmak, özellikle değişken kapasiteli cihazlarda gerçek yıllık tüketimi vermeyebilir. Yük gün boyunca değişir, kompresör farklı hızlarda çalışır ve bazı saatlerde durur. Kapasite, elektrik gücü ve yıllık enerji birbirinden ayrı tutulmalıdır.</p>
 
+<h2 id="alan-yaklasimi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">2. Metrekare hesabı neden yalnızca ön tahmindir?</h2>
+
+<p>Alan başına sabit bir katsayı kullanmak hızlı bir ilk fikir sağlayabilir. Ancak bu katsayı binanın bütün özelliklerini tek sayıda topladığı için sınırlıdır. Aynı 30 m² alan, arakat ve gölgeli bir konutta farklı; teras çatı altında geniş batı pencereli bir ofiste farklı yük oluşturur. Tavan yüksekliğinin ve dış cephe sayısının değişmesi de sonuç üzerinde etkilidir.</p>
+
+<p>Alan hesabındaki katsayıyı evrensel bir standart sınırı gibi sunmak doğru değildir. Belirli bir saha deneyimine veya kabul grubuna dayanan sayı, başka iklim ve bina türünde aynı doğruluğu korumayabilir. ABD enerji rehberlerinde de cihazın gerçek ısıtma ve soğutma yüklerine göre boyutlandırılması, basit kuralların yol açabileceği fazla kapasitenin önlenmesi açısından önemsenmektedir. <sup><a class="text-blue-700 underline" href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></p>
+
+<p>Pratik hesap, geometriyi tahmin ederek ayrıntılı yük bileşenlerine yaklaşabilir. Dış duvar ölçüsü, pencere oranı, kat konumu ve kullanım türü seçildiğinde tek katsayı yönteminden daha açıklayıcı olur. Buna rağmen tahmini pencere alanı veya komşu mahal sıcaklığı gibi kabuller modelin sınırlarıdır. Gerçek ölçü biliniyorsa <a href="index.html" class="text-blue-700 underline">hesaplama motorunda</a> bu verilerin kullanılması tercih edilir.</p>
+
+<h2 id="duyulur-gizli" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">3. Duyulur ve gizli soğutma yükü</h2>
+
+<p>Duyulur yük, ortam sıcaklığını yükselten ısı kazanımlarını ifade eder. Duvarlardan geçiş, güneş kazancı, aydınlatma ve cihazlar bu yükte rol oynar. Gizli yük ise özellikle su buharının uzaklaştırılmasıyla ilişkilidir. İnsanların nem üretimi, dışarıdan gelen hava ve bazı kullanım faaliyetleri gizli yüke katkı sağlar.</p>
+
+<p>Klima toplam kapasitesinin bir bölümü havanın sıcaklığını düşürmek, bir bölümü nemi yoğuşturmak için kullanılır. Bu nedenle toplam yükü karşılayan bir cihazın nem kontrolü açısından da uygun olduğu ayrıca değerlendirilmelidir. Duyulur ısı oranı, duyulur kapasitenin toplam kapasiteye oranını anlatır. Yükün oranı ile cihazın ilgili koşullardaki oranı uyumsuzsa sıcaklık hedefi sağlanırken nem sorunu devam edebilir.</p>
+
+<p>Bağıl nem, sıcaklığa bağlı bir oran olduğundan dış ve iç havanın yalnızca bağıl nem yüzdelerini çıkarmak doğru bir gizli yük hesabı vermez. Nem oranı, yani kuru hava kütlesi başına su buharı miktarı veya entalpi kullanılır. Sıcak ve nemli dış havanın odaya girmesi, düşük sıcaklık farkında bile önemli bir toplam soğutma ihtiyacı oluşturabilir.</p>
+
+<h2 id="dis-duvarlar" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">4. Dış duvar ve komşu mahal yükleri</h2>
+
+<p>Dış duvar için basit ısı geçişi hesabı U × A × sıcaklık farkına dayanır. Yazın güneşin opak yüzeyi ısıtması ve yapının enerji depolaması nedeniyle yalnızca dış hava ile iç hava sıcaklığı farkı her durumda yeterli temsil sağlamaz. Yöne ve yapı özelliklerine uygun eşdeğer sıcaklık farkı veya dinamik bir soğutma yükü yaklaşımı kullanılabilir.</p>
+
+<p>Duvar alanında pencere boşlukları çıkarılır; pencerenin iletim ve güneş yükleri ayrı hesaplanır. Aksi halde cam alanı hem duvarın hem pencerenin içinde sayılır. Duvarın U değeri, seçilen yalıtım düzeyine ve gerçek katmanlarına uygun olmalıdır. Cephe yönünü değiştirmek U değerini değiştirmez; güneş ve eşdeğer sıcaklık koşullarını değiştirir.</p>
+
+<p>Komşu mahal ısıtılıyor veya soğutuluyorsa aradaki sıcaklık farkı küçük olabilir. Klimatize edilmeyen bir koridor, boş daire veya servis alanı için farklı kabul gerekir. Komşu mahal farkı, doğrudan dış hava farkıyla eşit sayılmamalıdır. Ara kat döşemelerinin klimatize komşu katlarla sınırlandığı modelde bu bileşen sıfır alınabilir; bu durum bütün binalarda gerçekleşen fiziksel bir zorunluluk değildir.</p>
+
+<h2 id="kat-ve-cati" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">5. Kat konumu, çatı ve dış havaya açık döşeme</h2>
+
+<p>Teras çatı altındaki bir mahal, arakatla aynı sınır koşuluna sahip değildir. Çatı güneş ışınımını alır, dış havayla temas eder ve yapı katmanlarında ısı depolar. Uygun bir CLTD, yani soğutma yükü sıcaklık farkı yaklaşımı kullanılıyorsa çatı kesiti, yönelim, yüzey özellikleri ve düzeltmeler birlikte seçilmelidir. Tek bir katsayı bütün çatı türlerini aynı doğrulukta temsil etmez.</p>
+
+<p>Eğimli çatı altında havalandırılan çatı arası bulunduğunda, tavanın üst tarafı doğrudan dış hava veya dış çatı yüzeyiyle aynı değildir. Hava boşluğu, havalandırma ve tavan yalıtımı ısı geçişini değiştirir. Bu nedenle çatı arası varsayımının açık belirtilmesi gerekir. Tavan üzerindeki boşluğun gerçekte kapalı ve çok sıcak olması, farklı bir sınır koşulu yaratır.</p>
+
+<p>Birinci katın altında açık otopark veya boş alan varsa döşeme dış ortam etkisine açıktır. Altında klimatize edilmiş bir kat bulunmasıyla aynı kabul uygulanamaz. Zeminle temas eden döşeme de açık havaya bakan döşemeden farklıdır. Kat konumu seçimi, yalnızca genel bir çarpan yerine hangi yüzeylerin hangi ortamla sınırlandığını temsil ettiğinde daha tutarlı hale gelir.</p>
+
+<h2 id="pencere-yuku" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">6. Pencere yönü ve cam türünün etkisi</h2>
+
+<p>Pencere yükü, sıcaklık farkından kaynaklanan iletim ile güneş kazancı olarak ayrılır. Düşük U değeri iletim yükünü azaltır. Güneş kazancı için camın g veya SHGC değeri, pencere düzlemindeki ışınım ve gölgeleme kullanılır. Çift cam ifadesi tek başına bütün güneş kontrol özelliklerini anlatmaz; ürünün kaplaması ve bileşimi önemlidir.</p>
+
+<p>Geniş batı penceresi, özellikle öğleden sonra kullanımında önemli bir yük oluşturabilir. Ancak çevre gölgeleri ve kullanım saati değerlendirilmeden kesin sonuç verilmez. Kuzeyde doğrudan ışınım az olsa bile dağınık ışınım bulunabilir. İki farklı cephedeki pencere yükleri, toplam pik saatini bulmak için aynı zaman diliminde değerlendirilmelidir.</p>
+
+<p>Pencere alanı bilinmiyorsa dış cephe alanının belirli bir oranı üzerinden tahmin yapılabilir. Tahminin hangi cam büyüklüğü seçimine dayandığı çıktıda gösterilmelidir. Elle girilmiş ölçü ile otomatik tahmin aynı kesinlikte veri değildir. <a href="makale-8.html" class="text-blue-700 underline">Pencerelerin güneş kazancı rehberi</a>, U değeri, güneş katsayısı ve alan tanımlarının neden ayrı tutulması gerektiğini ayrıntılı olarak açıklar.</p>
+
+<h2 id="insan-ve-cihaz" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">7. İnsanlar, aydınlatma ve cihaz yükleri</h2>
+
+<p>İnsanların ürettiği ısı, faaliyet düzeyine ve ortam koşullarına göre değişir. Oturarak çalışan kişi ile hareketli iş yapan kişinin yükü aynı değildir. Toplam insan kazancı duyulur ve gizli bileşenlere ayrılır. Ön hesapta kişi başına ortalama kabul kullanılabilir; bu kabul faaliyet türüyle birlikte belirtilmelidir. Her kişi için tek bir evrensel değer kullanmak özellikle yoğun kullanımda belirsizlik oluşturur.</p>
+
+<p>Aydınlatmada kurulu güç, kullanım oranı ve çalışma saatleri önemlidir. Alan başına tahmini güç, aydınlatma sistemi bilinmediğinde yardımcı olur. LED aydınlatma da elektrik tükettiği için mahale ısı kazandırır; verimli olması sıfır soğutma yükü oluşturduğu anlamına gelmez. Cihazlar için de nominal etiket gücü ile gerçek kullanım gücü ayrılır.</p>
+
+<p>Ofiste bilgisayar ve ekranlar, dükkanda kasa, ekran ve diğer cihazlar farklı kullanım programlarına sahiptir. Mahalde bulunan endüstriyel buzdolabının kondenseri aynı ortama ısı atıyorsa çevrim enerji dengesi önem kazanır. Kondenserin attığı ısı, evaporatörün çektiği ısı ile elektrik girdisinin toplamıdır; mahallin net yükünde evaporatörün nereden ısı aldığı da değerlendirilir. Aynı enerji iki farklı kalemde düşünmeden tekrar eklenmez.</p>
+
+<h2 id="taze-hava" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">8. Taze hava ve kapı sızıntısı</h2>
+
+<p>Standart bir duvar tipi split klima çoğunlukla odadaki havayı dolaştırır. Ayrı bir dış hava bağlantısı bulunmadıkça ihtiyaç duyulan taze havayı kendiliğinden sağlamaz. Filtre veya iyonizer bulunması da dış hava gereksinimini ortadan kaldırmaz. Havalandırma, iç hava kalitesi için ayrı değerlendirilmesi gereken bir sistem işlevidir.</p>
+
+<p>Taze hava miktarı kullanım türüne, kişi sayısına ve alan koşullarına bağlı olarak belirlenir. Gelen havanın sıcaklık ve nem farkları duyulur ve gizli yük oluşturur. Basit duyulur hesapta hava debisi, yoğunluk, özgül ısı ve sıcaklık farkı birlikte kullanılır. Toplam yükte ise entalpi farkı daha kapsamlı bir büyüklük sağlar. Saatlik debi ile saniyelik debi dönüşümü doğru yapılmalıdır.</p>
+
+<p>Dükkan kapısının açılmasıyla gerçekleşen infiltrasyon, mekanik taze havadan farklı bir akıştır. Kapı boyutu, açılma sıklığı, rüzgar ve basınç farkı sonucu etkiler. Aynı dış hava girişi hem havalandırma hem infiltrasyon kaleminde iki kez sayılmamalıdır. Açık kapılı bir işyerinde yalnızca alanı büyüterek cihaz seçmek yerine dış hava girişinin kaynağı ve kontrol imkanı da incelenir.</p>
+
+<h2 id="ornek-kapasite" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">9. Örnek yük ve emniyet katsayısı hesabı</h2>
+
+<p>Bir mahalde hesaplanan duyulur yükü 3.200 W, gizli yükü 800 W kabul edelim. Toplam yük 4.000 W olur. Örnekte yüzde 5 emniyet katsayısı kullanıldığında tasarım yükü (3.200 + 800) × 1,05 = 4.200 W, yani yaklaşık 14.331 BTU/h çıkar. Buradaki yüzde 5, örneğe ait bir tasarım kabulüdür; bütün uygulamalarda zorunlu tek bir standart oran olarak sunulmamaktadır.</p>
+
+<p>12.000 BTU/h nominal sınıfı yaklaşık 3,52 kW olduğundan bu örnekteki 4,20 kW ihtiyacı nominal değer üzerinden karşılamaz. 18.000 BTU/h sınıfı yaklaşık 5,28 kW'tır; ancak seçim yalnızca bu etikete göre tamamlanmaz. Arada uygun bir kapasite varsa, üreticinin gerçek tasarım koşullarındaki performansı ve minimum kapasitesi birlikte değerlendirilir.</p>
+
+<p>Emniyet katsayısı eksik yük bileşenlerini gizlemek için kullanılmamalıdır. Pencere veya taze hava hesabı yoksa küçük bir yüzde eklemek bu eksikliği bilimsel olarak telafi etmez. Ayrıca aynı hesabın farklı aşamalarında tekrar tekrar pay eklemek gereksiz kapasite büyümesine yol açar. Yük bileşenleri önce açıkça toplanmalı, seçilen emniyet kabulü bir kez uygulanmalı ve kapasite yuvarlamasının ek etkisi fark edilmelidir.</p>
+
+<h2 id="nominal-ve-gercek" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">10. Nominal kapasite gerçek sıcaklıkta yeterli mi?</h2>
+
+<p>Üretici kapasitesi belirli deney koşullarında açıklanır. Dış hava sıcaklığı, iç hava kuru ve yaş termometre koşulları, fan debisi ve bağlantı düzeni değiştiğinde kullanılabilir kapasite değişebilir. Çok sıcak bir şehirde, nominal sınıfın tasarım dış sıcaklığında aynı gücü vereceği varsayılmamalıdır. İlgili performans tablosu veya üretici seçim çıktısı kullanılmalıdır.</p>
+
+<p>İnverter cihazlarda minimum, nominal ve maksimum kapasite farklı büyüklüklerdir. Katalogdaki en yüksek kapasiteyi sürekli kullanılabilir kapasite gibi değerlendirmek hatalı olabilir. Üreticinin sürekli çalışma sınırları ve belirtilen koşulları kontrol edilir. Boru uzunluğu, kot farkı ve çoklu iç ünitelerde kapasite paylaşımı da etkili olabilir.</p>
+
+<p>Toplam kapasite yanında duyulur kapasite ve nem alma davranışı incelenir. Örneğimizdeki 800 W gizli yükün karşılanması için cihazın ilgili çalışma koşullarında yeterli gizli kapasitesi bulunmalıdır. Yalnızca toplam gücü büyük bir cihaz seçmek bu koşulu garanti etmez. Seçim dosyasında yük ve ürün performansı aynı sıcaklık ve nem koşullarına göre karşılaştırıldığında sonuç izlenebilir hale gelir.</p>
+
+<p>Kapasite sınırına yakın sonuçlarda yük hesabındaki belirsizlikler ayrıca incelenebilir. Tahmini cam alanının biraz büyümesi, kişi sayısının artması veya kapı açılma süresinin değişmesi sonucu hangi ölçüde etkiliyor sorusu, model üzerinde ayrı ayrı denenir. Bu çalışma yeni bir emniyet yüzdesini otomatik olarak eklemek değildir; hangi verinin seçim kararını değiştirebileceğini gösterir. Örneğin cihazın gerçek sıcaklıktaki kapasitesi ile tasarım yükü birbirine çok yakınsa, önemli bir pencere ölçüsünü yerinde doğrulamak yararlı olabilir. Buna karşılık küçük ölçü yuvarlamaları nedeniyle bütün kapasite sınıfını büyütmek gerekli olmayabilir. Seçim raporunda kullanılan kabul ve üretici düzeltmesi açık olduğunda, başka bir model veya gerçek ölçüyle sonuç yeniden hesaplanabilir. Sonradan mahal kullanımının değişmesi de aynı rapor üzerinden değerlendirilir. Bir konut odasının yoğun kullanımlı ofise dönüştürülmesi, mevcut cihazın nominal etiketinden bağımsız olarak yeni yük hesabı gerektirebilir.</p>
+
+<h2 id="fazla-kucuk-kapasite" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">11. Fazla ve yetersiz kapasitenin sonuçları</h2>
+
+<p>Yetersiz kapasite, pik koşullarda hedef sıcaklığın sağlanamamasına neden olabilir. Ancak sıcak günlerde uzun süre çalışmak tek başına bir arıza veya yanlış seçim göstergesi değildir. Uygun boyutlandırılmış cihazın yüksek yükte sürekli çalışması beklenebilir. Sorunu anlamak için oda sıcaklığı, yük koşulları, filtre ve montaj durumu birlikte değerlendirilmelidir.</p>
+
+<p>Fazla kapasite de her durumda daha iyi konfor sağlamaz. Özellikle sabit kapasiteli cihaz hızlı sıcaklık düşüşü ardından durabilir; bu davranış nem uzaklaştırma süresini sınırlayabilir. ENERGY STAR rehberi, gereğinden büyük cihazın nem kontrolünü olumsuz etkileyebileceğini açıklamaktadır. Bu fiziksel uyarı önemlidir; ancak rehberdeki ABD oda tipi cihaz tabloları Türkiye'deki her split uygulamaya doğrudan standart olarak aktarılmaz. <sup><a class="text-blue-700 underline" href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup></p>
+
+<p>İnverter cihaz düşük yüke uyum sağlayabilir, fakat minimum kapasitesinin altındaki yüklerde o da durabilir. Bu yüzden yüksek nominal kapasiteyi yalnızca inverter olduğu için sorunsuz kabul etmek doğru değildir. Ilıman saatlerdeki çalışma davranışı, hava dağılımı ve nem kontrolü kapasite seçiminin parçasıdır. Aşırı büyük cihaz satın almak, hesap belirsizliğini ortadan kaldıran bir yöntem değildir.</p>
+
+<h2 id="inverter-ve-nem" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">12. İnverter verimi ve nem kontrolü</h2>
+
+<p>İnverter teknolojisi kompresör hızını değiştirerek kapasiteyi ayarlayabilir. Bu özellik kısmi yüklerde avantaj sağlayabilir; ancak bütün cihazlar ve kullanım düzenleri için sabit bir tasarruf yüzdesi verilemez. Kontrol algoritması, eşanjör boyutu, fan çalışması ve montaj koşulları sonucu etkiler. Mevsimsel etiket, belirli bir değerlendirme yönteminin sonucudur; kullanıcının gerçek faturası aynı şartlarda oluşmayabilir.</p>
+
+<p>Nem kontrolü, değişken kapasite bulunmasıyla kendiliğinden çözülmez. DOE'nin düşük yüklü, sıcak ve nemli konutlara ilişkin araştırması, çalışma süresi ve duyulur ısı oranının önemini göstermektedir. Araştırmadaki sonuçlar belirli sistem ve koşullara aittir; bütün klimalar için aynı ayarı uygulama talimatı olarak okunmamalıdır. <sup><a class="text-blue-700 underline" href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup></p>
+
+<p>Fan debisini gelişigüzel düşürmek veya servis ayarlarını değiştirmek yerine, cihazın izin verilen çalışma aralığı içinde değerlendirme yapılır. Sürekli nem üretimi yüksek olan mahallerde ayrı nem kontrolü gerekebilir. Oda sıcaklığı düşmüş olmasına rağmen bağıl nem yüksekse, yalnızca daha düşük sıcaklık ayarıyla sorunu çözmeye çalışmak aşırı soğutmaya yol açabilir. Yükün duyulur ve gizli ayrımı bu nedenle başlangıçta kurulmalıdır.</p>
+
+<h2 id="cihaz-turu" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">13. Duvar, salon ve kaset tipi seçimi</h2>
+
+<p>Duvar tipi, salon tipi veya kaset tipi iç ünite seçimi yalnızca kapasiteyle belirlenmez. Havanın dağılımı, tavan yüksekliği, oda şekli, montaj yüzeyi ve bakım erişimi önemlidir. Uzun veya bölümlenmiş bir mahalde tek noktadan hava üflenmesi, toplam kapasite yeterli olsa bile uzak bölgelerde konfor sorunu oluşturabilir.</p>
+
+<p>Kaset tipi iç ünite için tavan boşluğu, taşıyıcı düzen, yoğuşma drenajı ve bakım erişimi kontrol edilir. Salon tipi ünitede hava atışının kullanıcılar ve mobilyalarla ilişkisi değerlendirilir. Büyük kapasitelerde bu tipler seçenek olabilir; belirli bir BTU sınırının üzerinde tek bir tipin zorunlu olduğu söylenemez. Üreticinin aynı kapasite sınıfındaki modelleri farklı hava dağılımı sağlayabilir.</p>
+
+<p>Birden fazla kapalı odayı tek iç üniteyle soğutmak da ayrıca değerlendirilir. Kapalı kapılar ve yetersiz hava aktarımı, odalar arasında sıcaklık farkı oluşturabilir. Multi split veya ayrı cihaz seçimi düşünülüyorsa eşzamanlı kapasite paylaşımı ve kullanım bağımsızlığı incelenir. Toplam ev alanını tek oda gibi ele almak, mahal bazındaki ihtiyacı görünmez hale getirebilir.</p>
+
+<h2 id="enerji-ses-akiskan" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">14. Enerji etiketi, ses ve soğutucu akışkan</h2>
+
+<p>Enerji etiketi karşılaştırılırken aynı kapasite ve değerlendirme çerçevesindeki ürünler ele alınır. Daha yüksek mevsimsel performans yararlı olabilir; fakat satın alma kararında minimum kapasite, sıcak iklim performansı ve servis koşulları da bulunur. Cihaz ısıtma amacıyla kullanılacaksa kış kapasitesi, defrost davranışı ve tasarım sıcaklığındaki performans ayrı kontrol edilir. Soğutma kapasitesinden kış yeterliliği çıkarılmaz.</p>
+
+<p>Ses bilgisinde ses gücü ile belirli mesafedeki ses basıncı aynı büyüklük değildir. Fan hızları ve ölçüm koşulları farklıysa katalogdaki iki sayı doğrudan karşılaştırılmaz. En düşük fan hızındaki sessizlik değeri, yüksek yükteki kullanım sesini temsil etmeyebilir. Dış ünite yerleşimi ve titreşim aktarımı da duyulan sesi etkiler.</p>
+
+<p>Soğutucu akışkanda küresel ısınma potansiyeli, güvenlik sınıfı ve ürün tasarımı birlikte önemlidir. Düşük emisyon etkili bir akışkan seçimi, montaj ve servis gerekliliklerini ortadan kaldırmaz. Avrupa Komisyonunun açıklamaları farklı alternatifleri ve uygulama koşullarını ele alır; Türkiye'deki gereklilikler ilgili ulusal düzenlemelerle ayrıca doğrulanır. <sup><a class="text-blue-700 underline" href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup> Tek bir akışkan adı, bütün cihazların eşit verimli veya her ortamda uygun olduğu anlamına gelmez.</p>
+
+<h2 id="montaj-ve-kontrol" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">15. Montaj, kullanım ve son kontrol</h2>
+
+<p>Doğru kapasitenin etkisi kaliteli montajla tamamlanır. Boru bağlantıları, üreticinin belirttiği vakum ve sızdırmazlık işlemleri, elektrik beslemesi ve yoğuşma drenajı uygun olmalıdır. İç ünite sıcaklığı doğru algılayacak, havayı engellenmeden dağıtacak konumda yerleştirilir. Dış ünite atılan sıcak havayı tekrar emmeyecek ve bakım yapılabilecek şekilde konumlandırılır.</p>
+
+<p>Filtre kirlenmesi ve hava yolunun engellenmesi, cihazın çalışma koşullarını değiştirebilir. Düzenli bakım performans değerlendirmesinin parçasıdır. Kullanıcı, çok düşük sıcaklık ayarının her cihazda daha hızlı soğutma sağlamadığını bilmeli; hedef sıcaklık ve fan düzeni kullanım konforuna göre seçilmelidir. Kapılar ve pencereler sürekli açık olduğunda hesapta kabul edilenden farklı bir yük oluşur.</p>
+
+<p>Son seçimde hesaplanan toplam yük, duyulur ve gizli bileşenler, emniyet kabulü ve ürünün gerçek kapasitesi birlikte kaydedilir. Gerçek ölçülerin bilinmediği kısımlar açıkça işaretlenir. <a href="makale-7.html" class="text-blue-700 underline">Isı pompası değerlendirmesi</a> ve <a href="makale-8.html" class="text-blue-700 underline">cam güneş kazancı analizi</a>, bu kararın enerji ve bina kabuğu boyutlarını tamamlar. Böylece seçim, yalnızca nominal BTU sayısına değil, mahallin somut ihtiyacına dayanır.</p>
+
+<section id="kaynakca" class="bg-slate-50 border border-slate-200 rounded-xl p-5 mt-8"><h2 class="text-lg font-bold text-slate-900">Kaynaklar ve yöntem notu</h2><p class="text-sm mt-2">Sayısal yük örneği özgün bir yöntem gösterimidir. Kaynaklardaki ABD cihaz sınıfları ve boyutlandırma tabloları Türkiye için zorunlu sınır olarak aktarılmamıştır. Yüzde 5 emniyet kabulü bu örneğe aittir. Kaynak kontrol tarihi: 10 Ekim 2026.</p><ol class="list-decimal pl-5 space-y-3 mt-4 text-sm"><li id="kaynak-1" class="scroll-mt-24"> National Institute of Standards and Technology, <a href="https://pages.nist.gov/fipy/en/benchmark_patched_2054173bf/generated/fipy.tools.dimensions.physicalField.html" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">FiPy PhysicalField birim tanımları</a>. Uluslararası BTU enerji dönüşümü; saat başına güç dönüşümü bu tanımdan hesaplanmıştır.</li><li id="kaynak-2" class="scroll-mt-24"> U.S. Department of Energy, Building Science Education, <a href="https://bsesc.energy.gov/energy-basics/hvac-proper-sizing-hvac-systems" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">HVAC Proper Sizing of HVAC Systems</a>. Yüke uygun kapasite ve fazla boyutlandırma.</li><li id="kaynak-3" class="scroll-mt-24"> ENERGY STAR, <a href="https://www.energystar.gov/products/room_air_conditioners" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Room Air Conditioners</a>. Kapasite, değişken hız ve nem kontrolü ilişkisi.</li><li id="kaynak-4" class="scroll-mt-24"> U.S. Department of Energy, <a href="https://www.energy.gov/cmei/buildings/evaluating-moisture-control-variable-capacity-heat-pumps-mechanically-ventilated-low" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Evaluating Moisture Control of Variable-Capacity Heat Pumps in Mechanically Ventilated, Low-Load Homes</a>. Sıcak ve nemli koşullarda düşük yük araştırması.</li><li id="kaynak-5" class="scroll-mt-24"> European Commission, <a href="https://climate.ec.europa.eu/areas-action/fluorinated-greenhouse-gases/climate-friendly-alternatives-f-gases/air-conditioning_en" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Air Conditioning: Climate-Friendly Alternatives to F-gases</a>. Akışkan seçenekleri ve uygulama özellikleri.</li></ol></section>
         </div>
 
         <div class="border-t border-slate-100 pt-6 mt-8 flex justify-between items-center text-xs text-slate-500 font-medium">
