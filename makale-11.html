@@ -72,66 +72,142 @@
         </header>
 
         <div class="prose max-w-none text-slate-700 space-y-6 leading-relaxed text-sm md:text-base">
-            
-            <h2 class="text-xl font-bold text-slate-900 pt-4">1. Giriş: Doğalgaz Altyapısının Olmadığı Yerlerde Isıtma Seçimi</h2>
-            <p>
-                Türkiye genelinde şebeke doğalgazının yaygınlaşmasına rağmen, kırsal bölgelerde, yeni imara açılan noktalarda veya doğalgaz hattı çekilmemiş bazı apartman ve sitelerde ısınma ve sıcak su ihtiyacı tamamen elektriğe dayalı sistemlerle çözülmek zorundadır. Bu tür projelerde mühendislerin ve tüketicilerin karşısına çıkan en popüler iki elektrik tabanlı alternatif <strong>elektrikli kombi</strong> ve <strong>hava kaynaklı ısı pompası</strong> sistemleridir. Görünüşte her iki sistem de elektrik enerjisini kullanarak radyatörleri veya yerden ısıtma hatlarını besler; ancak termodinamik verimlilikleri, ilk kurulum maliyetleri ve uzun vadeli elektrik faturaları açısından aralarında büyük farklar bulunur. Bu rehberde, her iki sistemin çalışma prensipleri detaylıca incelenmekte ve Adana şartlarında bir apartman dairesi üzerinden maliyetler karşılaştırılmaktadır.
-            </p>
+<nav aria-label="Makale içindekiler" class="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3"><h2 class="font-bold text-blue-950">İçindekiler</h2><ol style="list-style:none;margin:0;padding:0" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0"><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">1.</span><a class="text-blue-700 hover:underline" href="#elektrikli-kombi">Elektrikli kombinin çalışma prensibi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">2.</span><a class="text-blue-700 hover:underline" href="#isi-pompasi">Isı pompasında elektrik ve çevre ısısı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">3.</span><a class="text-blue-700 hover:underline" href="#enerji-ve-kapasite">kW kapasite ile kWh tüketim ayrımı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">4.</span><a class="text-blue-700 hover:underline" href="#bina-kaybi">Isı kaybı ve kat konumu kabulleri</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">5.</span><a class="text-blue-700 hover:underline" href="#su-sicakligi">Radyatör ve yerden ısıtma sıcaklığı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">6.</span><a class="text-blue-700 hover:underline" href="#cop-scop-spf">COP, SCOP ve SPF nasıl kullanılmalı?</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">7.</span><a class="text-blue-700 hover:underline" href="#adana-ornegi">Adana örneğinin iklim ve bina kapsamı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">8.</span><a class="text-blue-700 hover:underline" href="#sicak-su-talebi">Sıcak su ve depolama ihtiyacı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">9.</span><a class="text-blue-700 hover:underline" href="#yillik-tuketim">Örnek yıllık elektrik tüketimi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">10.</span><a class="text-blue-700 hover:underline" href="#fiyat-ve-fatura">Örnek fiyatla enerji gideri hesabı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">11.</span><a class="text-blue-700 hover:underline" href="#sktt-etkisi">Mesken tarifesi ve toplam abonelik tüketimi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">12.</span><a class="text-blue-700 hover:underline" href="#elektrik-altyapisi">Elektrik bağlantı gücü ve altyapı</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">13.</span><a class="text-blue-700 hover:underline" href="#performans-duyarliligi">Performans değiştiğinde tasarruf</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">14.</span><a class="text-blue-700 hover:underline" href="#yatirim-geridonus">Yatırım ve geri dönüş değerlendirmesi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">15.</span><a class="text-blue-700 hover:underline" href="#sogutma-ve-kontrol">Soğutma, kontrol ve işletme stratejisi</a></li><li style="list-style:none;display:flex;gap:0.5rem"><span aria-hidden="true" style="flex:0 0 1.75rem;font-weight:700;color:#1d4ed8">16.</span><a class="text-blue-700 hover:underline" href="#secim-ve-izleme">Seçim dosyası ve performans izleme</a></li></ol></nav>
+<p>Doğal gaz bulunmayan bir konutta elektrikli kombi ve havadan suya ısı pompası, suyla çalışan ısıtma tesisatını besleyebilen iki farklı çözümdür. Aynı enerji kaynağını kullanmaları, aynı miktarda elektrik tüketecekleri anlamına gelmez. Rezistanslı cihaz elektriği doğrudan ısıya dönüştürür; ısı pompası ise elektrik yardımıyla dış ortamdan ısı taşır. Bununla birlikte doğru seçim, yalnızca bu termodinamik farkın bilinmesiyle tamamlanmaz. Bina kaybı, tesisat sıcaklığı, sıcak su talebi ve elektrik altyapısı birlikte incelenir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">2. Elektrikli Kombi Sistemleri ve Çalışma Esasları</h2>
-            <p>
-                Elektrikli kombiler, standart doğalgazlı kombilere benzer bir hidrolik yapıya sahip olmakla birlikte, yanma odası veya brülör barındırmazlar. Suyu ısıtmak için doğrudan elektrikli rezistanslar (tüp rezistanslar) kullanırlar. Termodinamiğin birinci yasası gereği, elektrik enerjisi rezistanslar üzerinden %100'e yakın bir oranla ısı enerjisine dönüşür (COP ≈ 1.0). İlk yatırım maliyetleri son derece düşüktür, kompakt boyutları sayesinde daire içinde minimum yer kaplar ve baca/gaz bağlantı zorunluluğu yoktur. Ancak elektrik enerjisinin birim fiyatı fosil yakıtlara kıyasla yüksek olduğu için, sürekli ısıtma gerektiren geniş alanlarda işletme maliyetleri oldukça yüksek yükler getirebilir.
-            </p>
+<p>Bu makalede Adana'da bulunduğu varsayılan bir apartman dairesi üzerinden şeffaf bir karşılaştırma kurulmaktadır. Sayısal enerji ve fiyat kabulleri örnek hesap içindir; güncel tarife veya her daire için geçerli tüketim tahmini olarak sunulmamaktadır. Amaç, kullanıcının kendi proje bilgilerini ve fatura verilerini yerleştirebileceği bir yöntem açıklamaktır. Yatırım gideri, değişken enerji gideri ve sağlanan hizmet kapsamı ayrı tutulduğunda iki sistem arasındaki fark daha doğru okunabilir.</p>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">3. Hava Kaynaklı Isı Pompası Sistemleri ve COP Verimliliği</h2>
-            <p>
-                Hava kaynaklı ısı pompaları ise elektrik enerjisini doğrudan ısıya dönüştürmez; aksine elektriği kompresörü çalıştırmak için kullanarak dış havadaki düşük sıcaklıktaki termal enerjiyi mekan içine transfer eder. Bu eşsiz mekanizma sayesinde harcanan her 1 birim elektrik karşılığında 3.5 ila 5 birim ısı elde edilebilir. Performans katsayısı (COP) formülüyle ifade edilir:
-            </p>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center font-mono text-sm font-bold text-slate-800">
-                COP = (Alınan Isı Enerjisi / Tüketilen Elektrik Gücü) = (Q_çıkış / W_giriş)
-            </div>
-            <p>
-                Adana gibi kışların ılıman geçtiği iklimlerde dış hava sıcaklığı nadiren sıfırın altına düştüğü için ısı pompaları yüksek COP değerleriyle (ortalama COP = 3.8 - 4.0 seviyelerinde) çalışarak elektrikli kombilere kıyasla üç dört kat daha az enerji tüketirler.
-            </p>
+<h2 id="elektrikli-kombi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">1. Elektrikli kombinin çalışma prensibi</h2>
 
-            <h2 class="text-xl font-bold text-slate-900 pt-4">4. Vaka Analizi: Adana'da Tipik Bir Apartman Dairesi İçin Karşılaştırma</h2>
-            <p>
-                Bu teorik altyapıyı somutlaştırmak amacıyla, Akdeniz iklim kuşağında yer alan <strong>Adana</strong> ilinde konumlanmış, brüt <strong>130 m²</strong> kullanım alanına sahip, doğalgaz altyapısı bulunmayan bir <strong>apartman dairesi</strong> senaryosunu ele alalım. Dairede yerden ısıtma veya düşük sıcaklık radyatörleri ile kullanım sıcak suyu (KSS) ihtiyacı bulunmaktadır.
-            </p>
+<p>Rezistanslı elektrikli kombide su, elektrik enerjisini ısıya dönüştüren elemanlarla ısıtılır. Brülör veya yanma bacası bulunmaz. Üretilen ısı su devresi üzerinden radyatör veya yerden ısıtma sistemine aktarılır. Cihazın yapısına bağlı olarak sıcak su için ayrı boyler gerekebilir; kombi adı kullanılması her modelin anlık kullanım sıcak suyu sağlayabildiğini göstermez.</p>
 
-            <h3 class="text-lg font-bold text-slate-800 pt-2">A. İlk Kurulum ve Yatırım Maliyeti Analizi</h3>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Senaryo 1 (Elektrikli Kombi + Boyler + Tesisat):</strong> 12 kW elektrikli kombi, kullanım sıcak suyu için boyler veya dahili entegrasyon, radyatör/yerden ısıtma kolektör bağlantıları dahil ilk yatırım maliyeti oldukça ekonomik ve erişilebilirdir.</li>
-                <li><strong>Senaryo 2 (Hava Kaynaklı Isı Pompası + Tesisat):</strong> Dairenin ısıtma, soğutma ve sıcak su ihtiyacını karşılayacak 6-8 kW split/monoblok inverter ısı pompası ve iç ünite/boyler ekipmanları dahil ilk yatırım maliyeti, elektrikli kombiye kıyasla yaklaşık 3 ila 4 kat daha yüksek bir başlangıç bütçesi gerektirir.</li>
-            </ul>
+<p>Elektriğin cihaz içinde ısıya dönüşümü yaklaşık bire birdir. Bu durum yüksek dönüşüm verimi anlamına gelir, fakat satın alınan her birim elektrikle birkaç birim yararlı ısı elde edildiği anlamına gelmez. Isı üretim sınırında COP yaklaşık 1 kabulü kullanılabilir. Pompa, bekleme ve dağıtım kayıpları dahil sistem sınırı kurulduğunda tüketim hesabı ayrıca değerlendirilir.</p>
 
-            <h3 class="text-lg font-bold text-slate-800 pt-2">B. Güncel Birim Fiyatlar</h3>
-            <p>
-                Doğalgazın olmadığı bu senaryoda enerji kaynağı tamamen elektriktir. EPDK mesken tarifeleri baz alındığında güncel tek tarifeli elektrik birim fiyatı dağıtım bedelleri dahil <strong>3,24 TL / kWh</strong> seviyesindedir.
-            </p>
+<p>Elektrikli kombinin yer ihtiyacı ve hidrolik bağlantısı bazı uygulamalarda basit olabilir. Ancak yatırım bedelinin her projede çok düşük olduğu söylenemez. Elektrik beslemesinin güçlendirilmesi, pano düzenlemesi veya boyler eklenmesi toplam maliyeti değiştirebilir. Özellikle yüksek güçlü cihazlarda yalnızca ürün bedelini karşılaştırmak, tesisin gerçek kurulum giderini eksik bırakır.</p>
 
-            <h3 class="text-lg font-bold text-slate-800 pt-2">C. Adana İklim Verileri ile 1 Yıllık Tahmini İşletme Maliyeti</h3>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Daire Isıtma ve Sıcak Su Yükü:</strong> 130 m²'lik iyi yalıtılmış bir apartman dairesinin yıllık ortalama ısıtma ve sıcak su enerji ihtiyacının yaklaşık <strong>12.000 kWh</strong> olduğu varsayılmalıdır.</li>
-                <li><strong>Elektrikli Kombi İşletme Maliyeti:</strong> Rezistanslı elektrikli kombi COP = 1.0 verimle çalışır. Yıllık tüketilecek elektrik enerjisi ve maliyet hesabı şu şekildedir:
-                    <div class="my-3 p-3 bg-slate-50 rounded-lg border border-slate-200 text-center font-mono text-xs font-bold text-slate-800">
-                        Tüketilen Elektrik (Kombi) = Yıllık Isı İhtiyacı / COP(kombi) = 12.000 kWh / 1.0 = 12.000 kWh
-                    </div>
-                    Güncel tek tarifeli elektrik fiyatı (3,24 TL / kWh) ile yıllık elektrikli kombi masrafı yaklaşık **38.880 TL**'dir.
-                </li>
-                <li><strong>Isı Pompası İşletme Maliyeti:</strong> Adana'nın ılıman kış şartlarında ortalama COP = 3.8 verimle çalışan ısı pompasının tüketeceği elektrik enerjisi hesabı:
-                    <div class="my-3 p-3 bg-slate-50 rounded-lg border border-slate-200 text-center font-mono text-xs font-bold text-slate-800">
-                        Tüketilen Elektrik (Isı Pompası) = Yıllık Isı İhtiyacı / COP(ısı_pompası) = 12.000 kWh / 3.8 ≈ 3.158 kWh
-                    </div>
-                    Güncel tek tarifeli elektrik fiyatı (3,24 TL / kWh) ile yıllık ısı pompası elektrik masrafı yaklaşık **10.232 TL**'dir.
-                </li>
-            </ul>
+<h2 id="isi-pompasi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">2. Isı pompasında elektrik ve çevre ısısı</h2>
 
-            <h3 class="text-lg font-bold text-slate-800 pt-2">D. Değerlendirme ve Sonuç</h3>
-            <p>
-                Doğalgaz altyapısının bulunmadığı Adana'daki bir apartman dairesi için yapılan bu analizde, elektrikli kombinin ilk yatırımda ucuz olmasına rağmen her yıl ısı pompasına kıyasla yaklaşık <strong>3 kat daha fazla elektrik faturası</strong> ürettiği net bir şekilde görülmektedir. Isı pompasının yüksek ilk yatırım maliyeti, Adana gibi kışların ılıman geçtiği bölgelerde sağlanan yıllık devasa elektrik tasarrufu sayesinde (yaklaşık 28.500 TL yıllık fark) çok kısa süre içerisinde kendini amorti eder. Ayrıca ısı pompasının yaz aylarında daireye sağlayacağı ekonomik soğutma konforu, sistemi kesin olarak öne geçirmektedir.
-            </p>
+<p>Isı pompası çevrimi dış ortamdan aldığı ısıyı daha yüksek sıcaklık düzeyindeki suya taşır. Kompresör, eşanjörler ve soğutucu akışkan bu işlevi sağlar. Cihazın verdiği ısı, elektrik girdisi ile çevreden alınan enerjinin birleşimidir. Bu nedenle belirli koşullarda elektrik tüketiminden daha büyük bir ısı çıktısı elde edilir; enerji korunumu ihlal edilmez.</p>
 
+<p>Havadan suya çözüm radyatör, yerden ısıtma veya boyler devresini besleyebilir. Havadan havaya split klima ise doğrudan oda havasını şartlandırır. Bu iki cihaz türü aynı kullanım kapsamına sahip değildir. Mevcut su tesisatının korunması düşünülüyorsa karşılaştırmanın havadan suya sistem üzerinden kurulması daha uygundur. Isı pompası türleri ve çalışma prensibi DOE'nin eğitim kaynaklarında da ayrı ele alınır. <sup><a class="text-blue-700 underline" href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
+
+<p>Monoblok düzende dış ünitede su bağlantısı, split düzende ise soğutucu akışkan bağlantısı bulunabilir. Donma koruması, montaj ve servis işlemleri buna göre değişir. Bir sistemin daha uygun olması, binanın yerleşimi, tesisat yapısı ve bakım olanaklarıyla ilişkilidir. Yalnızca monoblok veya split adı, bütün proje performansını açıklamaz.</p>
+
+<h2 id="enerji-ve-kapasite" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">3. kW kapasite ile kWh tüketim ayrımı</h2>
+
+<p>Cihaz kapasitesi anlık güçtür ve kW ile ifade edilir. Yıllık tüketim veya yıllık yararlı ısı ise enerji büyüklüğüdür ve kWh ile gösterilir. Yılda 12.000 kWh ısı gereken bir daireye 12 kW cihaz seçilmesi bu sayıların eşitliğinden çıkarılamaz. Kapasite, kış tasarım koşulundaki ısı kaybıyla; yıllık enerji, yıl boyunca değişen yükle ilişkilidir.</p>
+
+<p>Bir elektrikli kombinin 12 kW nominal gücü, çalıştığı her saatte bu gücü mutlaka çektiği anlamına gelmez. Kademeli veya uygun kontrolle daha düşük güçte çalışabilir, bazı saatlerde durabilir. Benzer biçimde ısı pompasının nominal ısıtma kapasitesi elektrik bağlantı gücü değildir. Kompresör, yardımcı ısıtıcı ve diğer bileşenlerin güçleri ayrı değerlendirilir.</p>
+
+<p>Alan bilgisi ön tahmine yardımcı olur, ancak dış yüzeyler ve kullanım koşulları bilinmeden kesin kapasite vermez. Aynı 130 m² daire arakatta, teras altında veya açık otopark üzerinde farklı ısı kaybına sahip olabilir. <a href="index.html" class="text-blue-700 underline">Isıtma hesaplama motoru</a> başlangıç değerlendirmesi sağlar; ürünün gerekli dış sıcaklıktaki kullanılabilir kapasitesi ayrıca kontrol edilir.</p>
+
+<h2 id="bina-kaybi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">4. Isı kaybı ve kat konumu kabulleri</h2>
+
+<p>Isı kaybında dış duvar, pencere, çatı ve döşeme gibi yüzeyler kendi sınır koşullarıyla değerlendirilir. Arakatın üst ve altındaki mahaller ısıtılmış kabul ediliyorsa bu döşemelerden kayıp küçük veya modelde sıfır olabilir. Bunun bir hesap kabulü olduğu belirtilmelidir. Gerçekte uzun süre boş veya soğuk kalan komşu katlar aynı koşulu sağlamayabilir.</p>
+
+<p>Birinci katın altında açık alan varsa döşeme dış ortam etkisine açıktır. Zeminle temas eden döşeme ise dış havaya açık döşemeden farklı davranır. Üst katta teras çatı ve ısıtılmayan çatı arası da ayrı sınır koşullarıdır. Bu farklar yalnızca bütün binaya uygulanan genel bir çarpanla temsil edildiğinde hangi yüzeyin etkili olduğu görünmez hale gelebilir.</p>
+
+<p>Yalıtım düzeyi, pencere sızdırmazlığı ve havalandırma kaybı birlikte ele alınmalıdır. İhtiyaç azaltıldığında her iki sistem de daha az enerji sağlamak zorunda kalır. Isı pompasında ayrıca daha düşük su sıcaklığıyla çalışma mümkün hale gelebilir. Bina iyileştirmesi ile cihaz değişiminin etkileri ayrı hesaplandığında yatırımın hangi bölümünün ne sağladığı anlaşılır.</p>
+
+<h2 id="su-sicakligi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">5. Radyatör ve yerden ısıtma sıcaklığı</h2>
+
+<p>Isı pompasının gerekli çıkış suyu sıcaklığı yükseldikçe çalışma koşulları değişir. Dış hava ile sıcak su arasındaki daha büyük sıcaklık farkı, kompresörün işini artırabilir. Bu nedenle aynı şehirde düşük sıcaklıklı yerden ısıtma ve yüksek sıcaklık isteyen radyatör sistemi aynı mevsimsel performansa sahip olmak zorunda değildir.</p>
+
+<p>Radyatör katalog gücü belirli sıcaklık koşulları için verilir. Su sıcaklığı düşürüldüğünde aynı radyatörün verdiği ısı azalır. Mevcut tesisatta ısı pompası kurulmadan önce gerekli oda yükü ve radyatörün yeni koşullardaki kapasitesi karşılaştırılır. Radyatör büyütme, fan destekli terminal veya bina kaybını azaltma seçenekleri bu değerlendirmede yer alabilir.</p>
+
+<p>Yerden ısıtma geniş yüzeyi sayesinde düşük sıcaklıkla çalışmaya uygun olabilir. Ancak zemin kaplaması, devre aralığı, debi ve izin verilen yüzey sıcaklığı önemlidir. Elektrikli kombi de aynı dağıtım sistemini besleyebilir; bunun tüketim avantajı, bina kaybının ve dağıtım kayıplarının değişmesiyle ilgilidir. Rezistansın düşük su sıcaklığında çalışması, tek başına COP değerini birkaç kat artırmaz.</p>
+
+<h2 id="cop-scop-spf" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">6. COP, SCOP ve SPF nasıl kullanılmalı?</h2>
+
+<p>COP, belirli bir çalışma anında verilen ısıtma gücünün elektrik gücüne oranıdır. Örneğin cihaz o anda 6 kW ısı sağlıyor ve 2 kW elektrik çekiyorsa COP 3 olur. Bu çalışma noktasındaki dış hava ve su sıcaklığı açıklanmalıdır. En iyi katalog noktasını bütün yıl için sabit almak gerçek tüketimi düşük gösterebilir.</p>
+
+<p>SCOP belirli bir iklim ve değerlendirme düzenine göre mevsimsel performansı anlatır. SPF ise tanımlanan sistem sınırında sağlanan toplam yararlı ısının toplam elektrik tüketimine oranı olarak kullanılabilir. Pompa, defrost ve yardımcı rezistans gibi tüketimler sınırın içinde veya dışında kalabilir; karşılaştırma aynı kapsamla yapılmalıdır.</p>
+
+<p>Kullanım sıcak suyu, mekan ısıtmasından daha yüksek sıcaklık isteyebilir. Bu yüzden ayrı performans kabulleriyle hesaplanması açıklayıcıdır. Yıllık ihtiyaçların her biri kendi SPF değerine bölünür ve elektrikler toplanır. Toplam enerjiyi tek bir iyi COP değerine bölmek, özellikle sıcak su payı yüksekse sonucu iyimserleştirebilir. Ölçülen sistem verisi mevcut olduğunda katalogdan bağımsız yerinde değerlendirme yapılabilir.</p>
+
+<h2 id="adana-ornegi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">7. Adana örneğinin iklim ve bina kapsamı</h2>
+
+<p>Adana'da bulunduğunu varsaydığımız 130 m² bir apartman dairesini ele alalım. Alan bu örneğin tanımlayıcı bilgisidir; yıllık enerji ihtiyacını tek başına belirlemez. Mekan ısıtması için 9.000 kWh, kullanım sıcak suyu için 3.000 kWh yararlı enerji kabul ediyoruz. Toplam 12.000 kWh, ölçülmüş yerel ortalama veya standart sonucu değil, hesap senaryosunun girdisidir.</p>
+
+<p>MGM'nin Adana uzun dönem verisinde ocak ortalama sıcaklığı 9,6 °C olarak yer almaktadır. Bu bilgi kışın genel iklim çerçevesini açıklamaya yardımcı olur. Ancak cihaz kapasitesi için gerekli tasarım dış sıcaklığının yerine geçmez. Aylık ortalama, en soğuk koşullardaki ısı kaybını ve cihazın o koşuldaki kapasitesini göstermez. <sup><a class="text-blue-700 underline" href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></p>
+
+<p>Örnekte düşük sıcaklıkla çalışan uygun bir tesisat bulunduğunu varsayıyoruz. Gerçek dairede yüksek su sıcaklığı gerekirse performans senaryosu değiştirilmelidir. Aynı şekilde kişi sayısı, sıcak su tüketimi ve kullanım saatleri farklıysa yıllık enerji girdileri yenilenir. Böylece Adana adının kullanılması, bütün şehir için tek tüketim veya tek COP iddiasına dönüşmez.</p>
+
+<h2 id="sicak-su-talebi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">8. Sıcak su ve depolama ihtiyacı</h2>
+
+<p>Kullanım sıcak suyu enerjisi, su miktarı ve sıcaklık artışıyla ilişkilidir. Yaklaşık yoğunluk 1 kg/litre ve özgül ısı 4,18 kJ/(kg·K) alınabilir. Örneğin günlük 240 litre suyu 30 K ısıtmak yaklaşık 8,36 kWh gerektirir. Yıl boyunca aynı talep yaklaşık 3.051 kWh eder. Gerçek kullanımda su miktarı ve şebeke sıcaklığı değişir.</p>
+
+<p>Anlık üretim ile depolu üretimin güç gereksinimi farklıdır. Dakikada 8 litre suyun 35 K ısıtılması yaklaşık 19,5 kW ısı gücü ister. Depolu sistem aynı enerjiyi daha uzun sürede hazırlayabilir. Dolayısıyla ısıtma yükü düşük bir dairede bile anlık sıcak su talebi cihaz veya depolama seçiminde belirleyici olabilir.</p>
+
+<p>Boyler hacmi, eşzamanlı kullanım, yeniden ısıtma süresi ve eşanjör kapasitesi birlikte seçilir. Boylerin bekleme ve dağıtım kayıpları hesap sınırında açık belirtilir. Hijyen programları üretici talimatları ve tesisat gereklilikleriyle uyumlu tutulur. Yardımcı rezistans bu programlarda çalışıyorsa tüketimi yıllık analize dahil edilir; sıcak suyu mekan ısıtmasıyla aynı performansta kabul etmekten kaçınılır.</p>
+
+<h2 id="yillik-tuketim" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">9. Örnek yıllık elektrik tüketimi</h2>
+
+<p>Elektrikli kombi için bu örnekte idealize ısı üretim dönüşümünü 1 kabul edelim. 9.000 kWh mekan ısıtması ve 3.000 kWh sıcak su için toplam elektrik 12.000 kWh olur. Dağıtım ve depolama kayıpları ortak enerji ihtiyacının içindeyse ayrıca tekrar eklenmez. Ayrı yardımcı tüketimler dahil edilmemişse gerçek sistem hesabında belirtilerek eklenir.</p>
+
+<p>Isı pompasında mekan ısıtması SPF değerini 3,5, sıcak su SPF değerini 2,5 varsayalım. Isıtma elektriği 9.000 / 3,5 = 2.571,4 kWh, sıcak su elektriği 3.000 / 2,5 = 1.200 kWh olur. Toplam yaklaşık 3.771,4 kWh elektrik gerekir. Birleşik performans 12.000 / 3.771,4, yani yaklaşık 3,18'dir.</p>
+
+<p>Enerji farkı yaklaşık 8.228,6 kWh, rezistanslı örneğe göre azalma yaklaşık yüzde 68,6 olur. Bu oran kullanılan performans varsayımlarından hesaplanmıştır; bütün ısı pompaları için garanti edilmiş tasarruf değildir. Aynı yararlı ısı ve aynı değerlendirme kapsamı korunmuştur. Isı pompasının sıcak suyu ayrı hesaplandığında, tek COP kullanımına göre daha tutarlı bir sonuç elde edilir.</p>
+
+<h2 id="fiyat-ve-fatura" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">10. Örnek fiyatla enerji gideri hesabı</h2>
+
+<p>Yöntemi göstermek için nihai elektrik bedelini 4 TL/kWh kabul edelim. Bu tutar güncel EPDK mesken tarifesi veya Adana faturası olarak sunulmamaktadır. Basit tek fiyat varsayımında elektrikli kombinin enerji gideri 48.000 TL, ısı pompasının gideri yaklaşık 15.086 TL olur. Yıllık değişken enerji gideri farkı yaklaşık 32.914 TL'dir.</p>
+
+<p>Aynı örnek bedel 6 TL/kWh olsaydı her iki gider de aynı oranda artardı. Ancak gerçek tarifede tüketim miktarına bağlı farklı kademeler veya sözleşme koşulları bulunduğunda tek fiyatla çarpma yeterli olmayabilir. Sistemlerin toplam tüketimleri farklı olduğu için etkili birim bedelleri de aynı olmak zorunda değildir.</p>
+
+<p>Sabit abonelik giderleri, bakım ve yatırım bu basit enerji tablosunda yer almamaktadır. Bunlar eklenmeden sonucu toplam yıllık sahip olma maliyeti olarak adlandırmak doğru olmaz. Geçmiş faturadan bedel çıkarırken dönem, vergi ve sabit kalemler açıklanır. <a href="makale-7.html" class="text-blue-700 underline">Isı pompası–kombi karşılaştırması</a>, farklı enerji kaynakları için aynı maliyet sınırının korunmasını da ele almaktadır.</p>
+
+<h2 id="sktt-etkisi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">11. Mesken tarifesi ve toplam abonelik tüketimi</h2>
+
+<p>Isıtma sistemi elektriği, evin diğer elektrik tüketimine eklenir. EPDK'nın açıklamasında 2026 için mesken son kaynak tedarik tarifesi sınırı yıllık 4.000 kWh olarak belirtilmektedir. Uygulama zamanı, istisnalar ve varsa ikili anlaşma koşulları resmi açıklamaya göre ayrıca kontrol edilir. Sınırın aşılmasıyla yeni bedelin aynı gün uygulanacağı varsayılmamalıdır. <sup><a class="text-blue-700 underline" href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup></p>
+
+<p>Örnekte ısıtma dışı ev tüketimini 2.500 kWh kabul edersek toplam elektrikli kombi senaryosu 14.500 kWh, ısı pompası senaryosu yaklaşık 6.271 kWh olur. Her iki toplam da örnekteki sınırın üzerindedir. Yalnızca ısı pompasının 3.771 kWh tüketimine bakarak aboneliğin sınır altında kalacağını söylemek hatalıdır.</p>
+
+<p>Bu nedenle gerçek yıllık maliyet, toplam abonelik tüketimi üzerinden ve dönemlere uygun bedellerle hesaplanır. Kullanıcının mevcut faturasındaki etkin fiyat, ilave yüksek tüketim sonrasında aynı kalmayabilir. Yatırım değerlendirmesinde en az birkaç fiyat senaryosu hazırlanması yararlıdır. Enerji tasarrufu fiziksel kWh farkıyla, parasal tasarruf ise doğru tarife hesabıyla ayrı gösterilir.</p>
+
+<h2 id="elektrik-altyapisi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">12. Elektrik bağlantı gücü ve altyapı</h2>
+
+<p>Yüksek güçlü rezistanslı cihaz, bina elektrik altyapısında önemli güç talebi oluşturabilir. Basit bir örnekte 12 kW rezistans gücü, 230 V tek faz ve güç faktörü yaklaşık 1 kabulünde yaklaşık 52 A akım karşılığıdır. Dengeli 400 V üç faz için yaklaşık 17,3 A faz akımı elde edilir. Bunlar yalnızca idealize güç ilişkisini gösterir.</p>
+
+<p>Bu sayıdan doğrudan kablo kesiti veya koruma elemanı seçilmez. Hat uzunluğu, döşeme şekli, eşzamanlı diğer yükler, gerilim düşümü ve koruma koşulları değerlendirilir. Bağlantı gücü ve dağıtım koşulları yetkili elektrik tasarımı kapsamında kontrol edilmelidir. Mevcut priz veya rastgele bir besleme hattı, cihaz nominal gücünü güvenle sağlayacağı varsayılarak kullanılmaz.</p>
+
+<p>Isı pompasında kompresör tüketimi daha düşük olabilir; fakat yardımcı rezistansın gücü ve eşzamanlı çalışması bağlantı hesabını etkiler. Yıllık enerji tasarrufu, elektrik altyapısının kontrolünü ortadan kaldırmaz. Elektrik kesintisinde her iki sistem de etkilenir. Monoblok su devresinde donma korumasının kesinti koşullarında nasıl sağlanacağı ayrıca üretici talimatlarıyla değerlendirilir.</p>
+
+<h2 id="performans-duyarliligi" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">13. Performans değiştiğinde tasarruf</h2>
+
+<p>İlk senaryodaki iyi performans her tesiste gerçekleşmeyebilir. Mekan ısıtması SPF değerini 2,5, sıcak su SPF değerini 2 kabul ettiğimiz ikinci örnekte tüketimler 3.600 ve 1.500 kWh, toplam 5.100 kWh olur. Aynı 4 TL/kWh bedelde gider 20.400 TL, elektrikli kombiye göre enerji gideri farkı 27.600 TL'dir.</p>
+
+<p>Bu fark, yüksek su sıcaklığının veya yardımcı tüketimlerin ekonomik sonucu nasıl değiştirebileceğini gösterir. Düşük bir performansın nedeni yalnızca dış hava olmayabilir. Debi sorunları, kontrol ayarı, yetersiz radyatörler veya sık duruşlar da inceleme konusudur. Sistem sınırı tutarlı tutulmadan farklı SPF sayıları karşılaştırılmaz.</p>
+
+<p>Kışın bazı saatlerde yardımcı rezistansın çalışması, bütün yıllık ısı pompası avantajının kaybolduğu anlamına gelmez. Önemli olan toplam enerji payıdır. Örneğin kısa süreli yüksek güç ile uzun süreli düşük güç farklı yıllık tüketim oluşturur. Tasarım değerlendirmesinde hem en soğuk koşulun karşılanması hem yılın büyük bölümündeki verim birlikte ele alınır; sadece tek çalışma noktasıyla karar verilmez.</p>
+
+<h2 id="yatirim-geridonus" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">14. Yatırım ve geri dönüş değerlendirmesi</h2>
+
+<p>İki teklif aynı hizmet kapsamıyla karşılaştırılır. Isı pompasında dış ünite, boyler, hidrolik bileşenler, elektrik işi ve olası radyatör iyileştirmesi bulunabilir. Elektrikli kombide de boyler ve besleme altyapısı gerekebilir. Bir teklifin yalnızca cihaz, diğerinin montaj dahil olması anlamlı bir yatırım farkı vermez.</p>
+
+<p>Tamamen varsayımsal olarak ısı pompasının ilave yatırımı 150.000 TL kabul edilirse, ilk enerji senaryosundaki yaklaşık 32.914 TL farkla basit geri dönüş yaklaşık 4,6 yıl olur. Bakım farkı veya başka giderler varsa net tasarruf değişir. Bu yatırım tutarı piyasa teklifi ve hesaplanan süre garanti değildir.</p>
+
+<p>Yıllık yararlı ısı yalnızca 3.000 kWh olsaydı, birleşik SPF 3 örneğinde elektrik farkı 2.000 kWh olurdu. 4 TL/kWh ile tasarruf 8.000 TL, aynı ilave yatırımın basit geri dönüşü yaklaşık 18,8 yıl çıkardı. Bu karşılaştırma kullanım yoğunluğunun önemini gösterir. Uzun dönem kararında fiyat değişimleri, bakım, ekipman ömrü ve paranın zaman değeri yaşam döngüsü hesabında ayrıca yer alır.</p>
+
+<h2 id="sogutma-ve-kontrol" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">15. Soğutma, kontrol ve işletme stratejisi</h2>
+
+<p>Isı pompası ters çevrimle soğutma yapabilse de mevcut radyatörlerin soğutmaya uygun olduğu varsayılmaz. Fan coil, drenaj ve boru yalıtımı gerekebilir. Yüzeyden soğutmada yoğuşma sınırı değerlendirilir. Elektrikli kombi seçeneğiyle adil karşılaştırmada, soğutmanın her iki senaryoda nasıl sağlanacağı ve ilave yatırımın ne olduğu açıklanır.</p>
+
+<p>Isıtma kontrolünde dış hava kompanzasyonu, uygun su sıcaklığı ve hidrolik dengeleme önemlidir. Gereksiz yüksek sıcaklıkla çalışma, ısı pompasının performansını düşürebilir. Çok sayıda kapalı devre veya yetersiz su hacmi cihazın üretici tarafından istenen akış koşullarını bozabilir. Kontrol sistemi, oda konforu ile ekipmanın çalışma gereksinimlerini birlikte sağlamalıdır.</p>
+
+<p>Uzun süre kullanılmayan bir binayı sürekli aynı sıcaklıkta tutmanın her durumda ekonomik olduğu söylenemez. Buna karşılık çok hızlı toparlanma talebi yardımcı ısıtıcıyı artırabilir. Yapının ısıl kütlesi ve kullanım programı dikkate alınır. <a href="makale-12.html" class="text-blue-700 underline">Klima kullanım rehberi</a>, sıcaklık ayarı ve gerçek kullanımın tüketim üzerindeki etkisini ayrı olarak açıklamaktadır.</p>
+
+<h2 id="secim-ve-izleme" class="text-xl font-bold text-slate-900 pt-6 scroll-mt-24">16. Seçim dosyası ve performans izleme</h2>
+
+<p>Karar öncesinde tasarım ısı kaybı, gerekli tesisat sıcaklığı, yıllık ısı ve sıcak su ihtiyacı belirlenir. Isı pompası için tasarım dış sıcaklığındaki kullanılabilir kapasite, elektrik tüketimi ve yardımcı ısıtıcı koşulları istenir. Minimum kapasite, ılıman günlerdeki çalışma davranışını anlamaya yardımcı olur. Elektrikli kombide güç kademeleri ve sıcak su çözümü açıklanır.</p>
+
+<p>Kurulum sonrasında enerji izleme, hesap kabullerinin doğrulanmasını sağlar. Ayrı elektrik ve uygun ısı ölçümü varsa sistem performansı aynı ölçüm sınırıyla bulunabilir. Kullanım saatleri ve iç sıcaklık değişmişse faturalar doğrudan karşılaştırılmaz. Önce enerji miktarı, sonra ilgili dönem fiyatıyla gider değerlendirilir.</p>
+
+<p>İzleme kayıtlarında dış hava, çıkış ve dönüş suyu sıcaklığı, sıcak su hazırlama süresi ve yardımcı ısıtıcı çalışması yer alabilir. Örneğin beklenenden yüksek tüketim görüldüğünde önce bu verilerle çalışma düzeni incelenir. Kompresörün verimi düşük olduğu için mi, daha yüksek iç sıcaklık istendiği için mi, yoksa sıcak su tüketimi arttığı için mi enerji kullanıldığı ayrılır. Birbirini izleyen iki yılın hava koşulları farklıysa yalnızca fatura toplamı cihaz performansını kanıtlamaz. Aynı binada daha fazla odanın ısıtılması da karşılaştırmanın hizmet kapsamını değiştirir. Ölçüm sırasında sıcak su ile mekan ısıtmasının ayrı kaydedilmesi, bu ayrımı görünür kılar. Böylece başlangıçtaki tasarruf tahmini gerçek işletme bilgisiyle güncellenebilir; değişen fiyatların etkisi fiziksel performans değişimiyle karıştırılmaz.</p>
+
+<p>Servis erişimi, yerleşim ve bakım kapsamı seçim dosyasının parçasıdır. Daha düşük elektrik tüketimi sağlayan bir çözümün uygunluğu, ancak binaya uygulanabilir olmasıyla tamamlanır. <a href="makale-10.html" class="text-blue-700 underline">Havalandırma hesabı</a> ve <a href="makale-7.html" class="text-blue-700 underline">gazlı sistem karşılaştırması</a>, binanın diğer enerji bileşenlerini tamamlar. Böylece seçim, tek bir alan veya COP sayısına değil, tanımlanmış kullanım ihtiyacına dayanır.</p>
+
+<section id="kaynakca" class="bg-slate-50 border border-slate-200 rounded-xl p-5 mt-8"><h2 class="text-lg font-bold text-slate-900">Kaynaklar ve hesap kapsamı</h2><p class="text-sm mt-2">Adana daire senaryosu, fiyatlar ve performans değerleri açıkça belirtilmiş özgün hesap kabulleridir. Güncel ürün teklifi veya garanti edilmiş geri dönüş değildir. Kaynak kontrol tarihi: 10 Ekim 2026.</p><ol class="list-decimal pl-5 mt-4 space-y-3 text-sm"><li id="kaynak-1" class="scroll-mt-24"> U.S. Department of Energy, <a href="https://bsesc.energy.gov/training-modules/hvac-introduction-heat-pumps" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">HVAC: Introduction to Heat Pumps</a>. Isı pompasının çalışma prensibi, sistem türleri ve tasarım değerlendirmesi.</li><li id="kaynak-2" class="scroll-mt-24"> Meteoroloji Genel Müdürlüğü, <a href="https://www.mgm.gov.tr/veridegerlendirme/il-ve-ilceler-istatistik.aspx?m=ADANA" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Adana uzun dönem iklim istatistikleri</a>. Ortalama iklim ile kapasite tasarım koşulunun ayrımı.</li><li id="kaynak-3" class="scroll-mt-24"> EPDK, <a href="https://epdk.gov.tr/Detay/Icerik/16-38/son-kaynak-tedarik-tarifesi-sktt-ile-ilgili-bil" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Son Kaynak Tedarik Tarifesi hakkında açıklamalar</a>. 2026 mesken sınırı ve uygulama koşulları.</li></ol></section>
         </div>
 
         <div class="border-t border-slate-100 pt-6 mt-8 flex justify-between items-center text-xs text-slate-500 font-medium">
