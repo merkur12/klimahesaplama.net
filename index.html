@@ -122,7 +122,10 @@
             #tekSayfaRapor .raporSonuc { border:2px solid #2461a4; padding:7px; margin-top:7px; font-size:12px; }
             #tekSayfaRapor .raporNot { font-size:9px; }
         }
-    </style>
+    [hidden] { display:none !important; }
+        #hesapAraclari { scroll-margin-top:110px; }
+        #lblOnerilenSegment, #printKlimaOneri, #tekSayfaRapor .raporSonuc p { white-space:pre-line; }
+        </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
@@ -148,8 +151,56 @@
         </p>
     </div> 
 
+<section id="hosgeldiniz" class="max-w-6xl mx-auto w-full px-4 pt-8 pb-6 no-print">
+<div class="bg-white border border-blue-100 rounded-3xl shadow-sm p-6 md:p-10">
+<span class="inline-flex rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-bold mb-4">Klima • Kombi • Isı pompası</span>
+<h1 class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-5">Merhaba, klimahesaplama.net’e hoş geldiniz.</h1>
+<div class="text-base md:text-lg text-slate-600 leading-relaxed space-y-4 max-w-4xl">
+<p>Klima, kombi ve ısı pompası seçiminde ilk adım, kullanılacak mekanın ısıtma ve soğutma ihtiyacını belirlemektir. klimahesaplama.net olarak tüketicilere, mühendislere, mimarlara ve teknikerlere bu ihtiyaca uygun cihaz kapasitesini belirleme konusunda yardımcı olmayı amaçlıyoruz.</p>
+<p>Sitemizdeki hesaplama araçları, ısı kazancı ve ısı kaybı hesaplarına dayanan karar destek araçlarıdır. Mekanın özelliklerine göre yaklaşık kapasite ihtiyacını hesaplayarak cihazları daha bilinçli karşılaştırmanıza; konfor, enerji verimliliği ve fiyat/performans dengesini birlikte değerlendirmenize yardımcı olur.</p>
+</div>
+<nav aria-label="Hesaplama rehberi" class="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm text-blue-700"><a class="underline" href="#ornek-klima-hesabi">Açıklamalı hesap örneği</a><a class="underline" href="#hesap-yontemi">Hesap yöntemi ve sınırları</a><a class="underline" href="#teknik-kaynaklar">Teknik kaynaklar</a></nav>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+<button type="button" onclick="hesapAracinaGit('pratik')" class="text-left bg-amber-50 border border-amber-200 rounded-2xl p-5 hover:bg-amber-100 transition focus-visible:outline-2 focus-visible:outline-amber-500"><span class="block text-amber-900 font-extrabold text-lg">Pratik Klima Hesabı →</span><span class="block mt-2 text-sm text-slate-600">Mahal ölçüleri ve temel yapı bilgileriyle yaklaşık soğutma kapasitesini belirleyin.</span></button>
+<button type="button" onclick="hesapAracinaGit('klima')" class="text-left bg-blue-50 border border-blue-200 rounded-2xl p-5 hover:bg-blue-100 transition focus-visible:outline-2 focus-visible:outline-blue-500"><span class="block text-blue-900 font-extrabold text-lg">Detaylı Klima Hesabı →</span><span class="block mt-2 text-sm text-slate-600">Duvar, pencere ve kullanım bilgileriyle yük bileşenlerini inceleyin, PDF raporu alın.</span></button>
+<button type="button" onclick="hesapAracinaGit('isitma')" class="text-left bg-orange-50 border border-orange-200 rounded-2xl p-5 hover:bg-orange-100 transition focus-visible:outline-2 focus-visible:outline-orange-500"><span class="block text-orange-900 font-extrabold text-lg">Kombi / Isı Pompası Hesabı →</span><span class="block mt-2 text-sm text-slate-600">Yapının yaklaşık ısıtma ihtiyacını ve cihaz kapasite önerilerini değerlendirin.</span></button>
+</div>
+</div>
+</section>
+
+<section id="hesap-rehberi" class="max-w-6xl mx-auto w-full px-4 py-6 no-print" aria-labelledby="rehber-baslik">
+<div class="bg-white border border-slate-200 rounded-3xl p-6 md:p-10 shadow-sm space-y-8">
+<div><p class="text-xs font-bold text-blue-700 uppercase tracking-wide mb-2">Hesaptan cihaz seçimine</p><h2 id="rehber-baslik" class="text-2xl font-extrabold text-slate-900 mb-4">Klima kapasitesi nasıl belirlenir?</h2>
+<p class="text-slate-600 leading-relaxed">Aynı büyüklükteki iki odanın klima ihtiyacı aynı olmayabilir. Güneye veya batıya bakan geniş camlar, çatıya temas eden tavan ve odadaki kişi sayısı soğutma yükünü değiştirir. Bu nedenle yalnızca metrekareye bakarak ürün seçmek yerine, ısının odaya nereden geldiğini birlikte değerlendiriyoruz.</p></div>
+<div class="grid md:grid-cols-3 gap-4 text-sm leading-relaxed">
+<div class="bg-amber-50 border border-amber-200 rounded-2xl p-5"><h3 class="font-bold text-amber-950 mb-2">Pratik hesabı ne zaman kullanmalıyım?</h3><p>Oda alanını, en geniş dış duvarı ve yaklaşık pencere büyüklüğünü biliyorsanız yaklaşık kapasite hesabını yapabilirsiniz. Pencere alanı ve diğer duvar ölçüleri hesap algoritması tarafından otomatik tahmin edilir. Dış duvarların, pencerelerin ölçüleri biliniyorsa bu parametrelerin girilmesi ısı kazanç hesabının daha doğru ve hassas yapılmasını sağlar.</p></div>
+<div class="bg-blue-50 border border-blue-200 rounded-2xl p-5"><h3 class="font-bold text-blue-950 mb-2">Detaylı hesabın farkı nedir?</h3><p>Pencereleri ve dış duvarları yönleriyle ayrı ayrı girmenizi sağlar. İşyeri türü, kişi sayısı, ek cihazlar ve havalandırma seçimi yük bileşenlerini değiştirir. Ölçüleri doğru bilinen bir mahalde, pratik hesabın tahmini geometrisi yerine bu aracı tercih edebilirsiniz. Detaylı hesap motorunda hesap çıktı desteği de sunulmaktadır.</p></div>
+<div class="bg-orange-50 border border-orange-200 rounded-2xl p-5"><h3 class="font-bold text-orange-950 mb-2">Isıtma hesabı neyi gösterir?</h3><p>Kombi ve ısı pompası hesap motoru; hacim, yalıtım sınıfı, iklim bölgesi ve açık cephe sayısından yaklaşık ısıtma yükünü hesaplar. Döşeme ve çatı kayıpları seçime göre eklenir. Bu yöntem oda oda yapılan ayrıntılı ısı kaybı projesinin yerine geçmez.</p></div></div>
+<article id="ornek-klima-hesabi" class="border border-blue-200 rounded-2xl overflow-hidden">
+<div class="bg-blue-50 p-5 md:p-6"><h2 class="text-xl font-extrabold text-slate-900 mb-3">Hesap örneği: Adana’da 30 m² bir salon</h2><p class="text-sm text-slate-700 leading-relaxed">Bu örnek, sitedeki pratik hesap motoruyla 24 Ekim 2026 tarihinde hesaplanmıştır. Konut, ara kat, standart yalıtım, 2,80 m yükseklik, 3 kişi ve tek dış cephe seçilmiştir. Dış duvar 7,30 m uzunluğunda ve güneye bakmaktadır. Pencere yönü güney, büyüklüğü çok geniş (%60), doğraması PVC çift camdır. İsteğe bağlı ölçüler girilmemiştir; ek cihaz seçilmemiştir.</p></div>
+<div class="p-5 md:p-6 space-y-4 text-sm leading-relaxed text-slate-700">
+<p><strong>Geometri:</strong> Brüt dış cephe 7,30 × 2,80 = 20,44 m² olur. Çok geniş pencere seçimiyle cam alanı 20,44 × 0,60 = 12,26 m²; net dış duvar alanı yaklaşık 8,18 m² hesaplanır. Diğer kenar ve iç/komşu duvar uzunlukları dikdörtgen oda varsayımından tahmin edilir.</p>
+<div class="overflow-x-auto"><table class="w-full text-left border-collapse"><caption class="text-left font-bold mb-3">Emniyet katsayısından önce yük bileşenleri</caption><thead><tr class="bg-slate-100"><th scope="col" class="p-3">Bileşen</th><th scope="col" class="p-3 text-right">Yaklaşık yük</th></tr></thead><tbody class="divide-y divide-slate-100">
+<tr><th scope="row" class="p-3 font-medium">Dış duvar</th><td class="p-3 text-right">69 W</td></tr><tr><th scope="row" class="p-3 font-medium">İç/komşu duvar</th><td class="p-3 text-right">278 W</td></tr><tr><th scope="row" class="p-3 font-medium">Camdan sıcaklık farkıyla ısı geçişi</th><td class="p-3 text-right">446 W</td></tr><tr><th scope="row" class="p-3 font-medium">Camdan güneş kazancı</th><td class="p-3 text-right">2.826 W</td></tr><tr><th scope="row" class="p-3 font-medium">Aydınlatma ve konut cihazları</th><td class="p-3 text-right">360 W</td></tr><tr><th scope="row" class="p-3 font-medium">Kişilerden duyulur / gizli yük</th><td class="p-3 text-right">225 / 165 W</td></tr></tbody></table></div>
+<p class="rounded-xl bg-emerald-50 border border-emerald-200 p-4"><strong>Sonuç:</strong> Duyulur yük 4.205 W, gizli yük 165 W’tır. Yuvarlanmamış değerlerle (duyulur + gizli) × 1,05 işlemi yaklaşık <strong>4.588 W = 4,59 kW = 15.655 BTU/h</strong> verir. Motorun ilk kapasite önerisi <strong>18.000 BTU/h duvar tipi klima</strong> olur. Tablodaki bileşenler yuvarlandığından toplamda küçük fark görülebilir.</p>
+<p><strong>Bu sonuç nasıl yorumlanmalı?</strong> Bu odada en büyük bileşen camdan gelen güneş kazancıdır. Gerçek cam alanının tahminden farklı olması sonucu belirgin biçimde değiştirebilir. Hesaplanan yük 12.000 BTU/h kapasitesini aştığı için bir üst standart sınıf olan 18.000 BTU/h önerilir. Ürünün Adana yaz koşullarındaki gerçek soğutma kapasitesi ayrıca kontrol edilmelidir. Sadece etiket kapasitesine bakarak yeterlilik kararı verilmemelidir. Ara katın alt ve üst mahalleri aynı sıcaklıkta klimatize edildiği için bu örnekte döşeme/tavan geçişi eklenmez; konut seçiminde taze hava yükü de model kapsamı dışındadır.</p>
+<p><a href="makale-8.html" class="text-blue-700 underline">Cephe ve güneş kazancının etkisini okuyun</a> · <a href="makale-9.html" class="text-blue-700 underline">Klima seçimi rehberine geçin</a></p>
+</div></article>
+<div id="hesap-yontemi" class="space-y-4"><h2 class="text-2xl font-extrabold text-slate-900">Hesap yöntemimiz, kabuller ve sınırlar</h2>
+<p class="text-slate-600 leading-relaxed">Araçlar, farklı yapı koşullarını karşılaştırmak ve kapasite ön seçimi yapmak için geliştirilmiştir. Basitleştirilmiş kabuller içerir; herhangi bir standarda uygunluk belgesi veya eksiksiz proje hesabı sunmaz. Aşağıdaki açıklamalar mevcut hesap motorunun kullandığı yaklaşımı özetler.</p>
+<div class="grid md:grid-cols-2 gap-5 text-sm text-slate-700 leading-relaxed">
+<div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-bold text-slate-900 mb-2">Duvar, cam ve çatı</h3><p>Dış duvar yükünde U × net alan × yön ve şehre bağlı eşdeğer sıcaklık farkı kullanılır. Camda sıcaklık farkıyla geçiş ve güneş kazancı ayrı hesaplanır. Camlı balkon kapıları ve sürgülü kapıların camlı alanları toplam cam alanına eklenebilir; opak kapılar cam gibi değerlendirilmemelidir. Çatıda güneş ve günlük sıcaklık değişimini temsil eden sadeleştirilmiş soğutma faktörleri kullanılır; bu, saatlik dinamik bina simülasyonu değildir. Eğimli çatıda havalandırılan çatı arası varsayılır.</p></div>
+<div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-bold text-slate-900 mb-2">Katlar ve bitişik mahaller</h3><p>Soğutmada ara katın üst ve alt mahalleri klimatize kabul edilir. İç/komşu duvarlarda ise klimatize edilmemiş mahal için eşdeğer sıcaklık yaklaşımı sürer. Isıtmada dubleksin alt komşusu ısıtılmış kabul edilir; villada zemin kat alanına toprak temaslı taban kaybı eklenir. Dubleks ve iki katlı villada çatı kaybı üst kat alanıyla hesaplanır. Genel döşeme/tavan U kabulü 2,40 W/m²K’dir; gerçek kesitin yerini tutmaz.</p></div>
+<div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-bold text-slate-900 mb-2">Havalandırma ve nem</h3><p>Konut soğutma hesabına taze hava yükü eklenmez. İşyerinde mekanik havalandırma yoksa kişi ve alan esaslı; varsa girilen gerçek taze hava debisi veya saatlik hava değişim sayısı esaslı debi kullanılır. Spor salonunda otomatik hesap, hava değişimi ile kişi/alan ihtiyacının büyüğünü alır. Toplam sirkülasyon havası taze hava değildir. Isı geri kazanımında duyulur verim %80, selülozik eşanjör seçeneğinde ek gizli verim %50 ön kabulüdür; gerçek cihaz verisi farklı olabilir.</p><p class="mt-2">Detaylı işyeri hesabında şehirlerin yaz ortalaması nemi, diğer hesaplarda bölgesel nem kabulleri kullanılır. Ortalama nem ile pik sıcaklığın birlikte kullanılması eşzamanlı tasarım havasını temsil etmeyebilir; özellikle gizli yük ayrıca doğrulanmalıdır.</p></div>
+<div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-bold text-slate-900 mb-2">Isıtma gücü ve ürün önerisi</h3><p>Isıtmanın temel yükü hacim × yalıtım katsayısı × iklim çarpanı × cephe çarpanıyla bulunur; seçime bağlı döşeme ve çatı yükleri ayrıca eklenir. Bu katsayılar modelin ön kabulleridir. Isı pompası, seçilen şehrin kış koşullarında ve gerekli su sıcaklığında kontrol edilmelidir. Kullanım sıcak suyu, radyatör kapasitesi, tesisat ve elektrik altyapısı ayrıca değerlendirilmelidir. Klima hesabındaki %5 emniyet katsayısı tüm belirsizlikleri gidermez.</p></div></div></div>
+<div id="teknik-kaynaklar" class="rounded-2xl bg-slate-50 border border-slate-200 p-5 text-sm text-slate-700 leading-relaxed"><h2 class="text-xl font-extrabold text-slate-900 mb-3">Teknik kaynaklar ve okuma önerileri</h2><p class="mb-3">Aşağıdaki kaynaklar yöntemlerin fiziksel dayanaklarını açıklar. Kaynakların bütün tablolarının veya hesap adımlarının yazılımda eksiksiz uygulandığı anlamına gelmez; otomatik geometri, cihaz yükleri ve verim kabulleri bu siteye ait ön hesap tercihleridir.</p>
+<ul class="list-disc pl-5 space-y-2"><li><a href="https://handbook.ashrae.org/Handbooks/F17/SI/F17_Ch17/f17_ch17_si.aspx" target="_blank" rel="noopener" class="underline text-blue-700">ASHRAE Handbook — Residential Cooling and Heating Load Calculations</a>: yük bileşenleri ve sadeleştirilmiş konut hesabı yaklaşımı.</li><li><a href="https://handbook.ashrae.org/Handbooks/F17/SI/F17_Ch14/F17_ch14_si.aspx" target="_blank" rel="noopener" class="underline text-blue-700">ASHRAE Handbook — Climatic Design Information</a>: tasarım sıcaklıkları, günlük sıcaklık aralığı ve eşzamanlı nem koşulları.</li><li><a href="https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/62_1_2022_ab_20231031.pdf" target="_blank" rel="noopener" class="underline text-blue-700">ASHRAE 62.1-2022, Addendum ab</a>: kullanım türüne göre kişi ve alan esaslı havalandırma yaklaşımı.</li><li><a href="https://cdn.hitit.edu.tr/fbe/files/8011_1608311728751.pdf" target="_blank" rel="noopener" class="underline text-blue-700">Hitit Üniversitesi açık erişimli teknik dokümanı</a>: TS 2164 sıcaklık kabullerini aktaran toprak ve ısıtılmayan çatı arası tabloları. Araç tam TS 2164 hesabı değildir.</li></ul>
+<p class="mt-4">İlgili rehberler: <a href="makale-17.html" class="underline text-blue-700">Cam ve pencere seçimi</a> · <a href="makale-18.html" class="underline text-blue-700">Havalandırma ve hava kalitesi</a> · <a href="makale-7.html" class="underline text-blue-700">Isı pompası ve kombi karşılaştırması</a>.</p><p class="mt-3 text-xs text-slate-500">Bu yöntem açıklaması ve hesap örneği: 24 Ekim 2026.</p></div>
+<div class="border-t border-slate-200 pt-5 text-sm text-slate-600 leading-relaxed"><h2 class="font-bold text-slate-900 mb-2">Önerileri değerlendirirken</h2><p>Kapasite önerileri belirli bir markanın stok veya performans garantisi değildir. Satın alma bağlantıları ilgili ürün sınıfını aramanıza yardımcı olur; fiyat ve teknik özellikler satıcı sayfasından doğrulanmalıdır. Gelir ortaklığı bağlantılarından komisyon kazanılabilir. Bu durum hesap formüllerini veya kapasite eşiklerini değiştirmez. Sorularınız için <button type="button" onclick="modalAc('modalHakkimizda')" class="text-blue-700 underline">iletişim bölümüne</button> ulaşabilirsiniz.</p></div>
+</div></section>
+
     <!-- SEKME / MOD SEÇİM ALANI -->
-    <div class="no-print max-w-7xl mx-auto w-full pt-6 px-4">
+    <div id="hesapAraclariSekmeler" hidden class="no-print max-w-7xl mx-auto w-full pt-6 px-4">
         <div class="bg-slate-200/60 p-1.5 rounded-2xl flex flex-wrap gap-2 max-w-3xl mx-auto border border-slate-200">
             <button id="btnTabPratik" onclick="sekmeDegistir('pratik')" class="flex-1 min-w-[200px] py-3 px-4 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 cursor-pointer">
                 <i class="fa-solid fa-bolt text-amber-500"></i> Pratik Soğutma Yükü Hesap Motoru
@@ -164,7 +215,7 @@
     </div>
 
     <!-- ANA İÇERİK -->
-    <main class="max-w-7xl mx-auto my-6 px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow w-full items-start">
+    <main id="hesapAraclari" hidden class="max-w-7xl mx-auto my-6 px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow w-full items-start">
         
         <!-- SOL PANEL: GİRDİ FORMLARI VEYA CANVAS (9 Kolon) -->
         <div class="lg:col-span-9 space-y-6">
@@ -242,7 +293,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2">En Geniş Dış Duvar Yönü</label>
-                            <select id="pratikYon" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500 font-bold">
+                            <select id="pratikYon" onchange="pratikIkinciYonleriGuncelle()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500 font-bold">
                                 <option value="Kuzey">Kuzey (Gölge)</option>
                                 <option value="Kuzeydogu">Kuzeydoğu</option>
                                 <option value="Dogu">Doğu (Sabah Güneşi)</option>
@@ -284,7 +335,7 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Mahal Fonksiyonu</label>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2" for="mahalFonksiyon">Mahal fonksiyonu</label>
                             <select id="pratikFonksiyon" onchange="pratikFonksiyonDegisti()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500">
                                 <option value="Konut">Konut (Oda / Salon)</option>
                                 <option value="Ofis">İşyeri - Ofis</option>
@@ -321,17 +372,19 @@
                     <details id="pratikParametrePaneli" class="parametre-paneli parametre-amber text-xs text-slate-600">
                         <summary class="font-bold cursor-pointer">Detaylı parametre girişi (Zorunlu değil)</summary><p class="mt-2 font-bold">Biliniyorsa:</p>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3">
-                            <label>Toplam pencere alanı (m²)<input id="pratikCamAlani" onchange="pratikCamAlaniDuzelt()" type="number" min="0.1" step="0.1" class="w-full border rounded p-2"></label>
+                            <label>Toplam pencere/sürgülü kapı/balkon kapısı alanı (m²)<input id="pratikCamAlani" onchange="pratikCamAlaniDuzelt()" type="number" min="0.1" step="0.1" class="w-full border rounded p-2"></label>
                             <label>2. Dış duvar genişliği (m)<input id="pratikIkinciDuvar" onchange="pratikIkinciDuvarDuzelt()" disabled type="number" min="0.1" step="0.1" class="w-full border rounded p-2"></label>
-                            <label>2. Dış duvar yönü<select id="pratikIkinciYon" disabled class="w-full border rounded p-2"><option value="Yok" selected disabled>Yok</option><option value="Bati">Batı</option><option value="Dogu">Doğu</option><option value="Guney">Güney</option><option value="Kuzey">Kuzey</option><option value="Guneybati">Güneybatı</option><option value="Guneydogu">Güneydoğu</option><option value="Kuzeybati">Kuzeybatı</option><option value="Kuzeydogu">Kuzeydoğu</option></select></label>
+                            <label>2. Dış duvar yönü<select id="pratikIkinciYon" disabled class="w-full border rounded p-2"><option value="Yok" selected>Yok</option><option value="Bati">Batı</option><option value="Dogu">Doğu</option><option value="Guney">Güney</option><option value="Kuzey">Kuzey</option><option value="Guneybati">Güneybatı</option><option value="Guneydogu">Güneydoğu</option><option value="Kuzeybati">Kuzeybatı</option><option value="Kuzeydogu">Kuzeydoğu</option></select></label>
                             <label>İç/Komşu Duvar Genişlikleri Toplamı (m)<input id="pratikIcDuvar" type="number" min="0" step="0.1" class="w-full border rounded p-2"></label>
                             <label>Tavan yüksekliği (m)<input id="pratikYukseklik" type="number" min="1" value="2.8" step="0.1" class="w-full border rounded p-2"></label>
                             <label id="pratikDolapKutusu" hidden>Dükkan endüstriyel buzdolabı<select id="pratikDolap" class="w-full border rounded p-2"><option value="ic">Otomatik, kondenser içeride</option><option value="yok">Yok / kondenser dışarıda</option></select></label>
                         </div>
+                        <p class="mt-3 text-xs text-slate-600">Dış cephe sayısının iki cephe olarak seçilmesi durumunda 2.dış duvar yönü seçimi yapılmazsa en geniş dış duvar ve en geniş dış duvara ait pencere alanı hesaba katılır. 2.dış duvarın soğutma yükünü dahil etmek için yönünü seçiniz. Dış duvarlardaki toplam pencere alanına (varsa) sürgülü kapı ve balkon kapısı alanlarını da dahil ederek giriniz</p>
+                        <div class="flex justify-end mt-4"><button type="button" onclick="sifirlaPratikParametreler()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-2.5 px-4 rounded-xl transition cursor-pointer">Bu paneli sıfırla</button></div>
                     </details>
                     <p id="pratikYukOzeti" class="text-xs text-slate-600 leading-relaxed" aria-live="polite"></p>
                     <ol class="list-decimal list-inside text-xs text-slate-600 space-y-2 leading-relaxed">
-                        <li>Mahalin dış cephe sayısı iki cephe seçildiğinde 2. Dış duvar genişliği girilen mahal alanından otomatik hesaplanır (mahal dikdörtgen varsayılır). Biliniyorsa elle girilen genişlik kullanılır.</li>
+                        <li>İki cephe seçilip 2. dış duvar yönü belirtilirse, genişlik mahal alanından otomatik hesaplanır (mahal dikdörtgen varsayılır); biliniyorsa elle girilen genişlik kullanılır. Yön seçilmezse ikinci cephe yükü eklenmez.</li>
                         <li>Tahmini pencere büyüklüğü, seçilen parametreye göre (küçük/normal/geniş/çok geniş) dış duvarlar toplam alanına oranlanarak hesaplanır. Mahal tek cepheli (tek dış duvarlı) ise pencere alanı en geniş dış duvar alanına oranlanarak hesaplanır. İki dış cephe seçimi yapıldığında pencere alanları en geniş pencere yönü ağırlıklandırılarak 2/3–1/3 oranında dış cephelere dağıtılır.</li>
                         <li>Detaylı parametre giriş penceresindeki parametrelerin (biliniyorsa — zorunlu değil) girilmesi hesaplamanın daha hassas yapılmasını sağlayacaktır.</li>
                     </ol>
@@ -442,13 +495,25 @@
                             <div>
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Mahal Fonksiyonu</label>
                                 <select id="mahalFonksiyon" onchange="mahalDegisti()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500">
-                                    <option value="Konut">Konut (Oda / Salon)</option>
-                                    <option value="İşyeri - Ofis">İşyeri - Ofis</option>
-                                    <option value="İşyeri - Dükkan">İşyeri - Dükkan (Yoğun Sirkülasyon)</option>
+                                    <option value="Konut" selected>Konut (oda/salon)</option>
+                                    <option value="İşyeri - Ofis">Ofis</option>
+                                    <option value="İşyeri - Dükkan">Dükkan</option>
+                                    <option value="Mağaza">Mağaza</option>
+                                    <option value="Toplantı Salonu">Toplantı salonu</option>
+                                    <option value="Spor Salonu">Spor salonu</option>
+                                    <option value="Derslik">Derslik</option>
                                 </select>
                             </div>
                         </div>
 
+<div id="isyeriHavalandirmaPaneli" hidden class="rounded-xl border border-blue-200 bg-blue-50/60 p-4 space-y-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div><label for="mekanikHavalandirma" class="block text-xs font-bold text-blue-900 mb-2">Mekanik havalandırma</label><select id="mekanikHavalandirma" onchange="isyeriHavalandirmaDegisti()" class="w-full bg-white border border-blue-200 rounded-lg p-3"><option value="yok" selected>Yok</option><option value="var">Var — ısı geri kazanımı yok</option><option value="var_duyulur">Var — Isı geri kazanım cihazı var</option><option value="var_entalpik">Var — Selülozik eşanjörlü ısı geri kazanım cihazı var</option></select><p id="selulozikAciklama" hidden class="mt-2 text-xs font-semibold text-blue-900">(Duyulur ve gizli ısı geri kazanımlı)</p></div>
+<div id="havalandirmaDebisiKutusu" hidden><label for="bilinenHavalandirmaDebisi" class="block text-xs font-bold text-blue-900 mb-2">Havalandırma debisi biliniyorsa (m³/h)</label><input id="bilinenHavalandirmaDebisi" type="number" min="0.1" step="0.1" placeholder="Taze dış hava debisi; zorunlu değil" oninput="guncelleSihirbazVeMotor()" class="w-full bg-white border border-blue-200 rounded-lg p-3"/><p class="mt-1 text-xs text-slate-600">Boşsa otomatik debi kullanılır; spor salonunda saatlik hava değişimi ile kişi ve alan ihtiyacının büyük olanı seçilir. Dolaşım havası dahil toplam üfleme debisini girmeyin.</p></div>
+</div>
+<p id="isyeriHavalandirmaBilgi" aria-live="polite" class="text-xs text-slate-700 leading-relaxed"></p>
+<details class="text-xs text-slate-600"><summary class="font-bold cursor-pointer">Havalandırma hesabındaki kabuller</summary><p class="mt-2">Saatlik hava değişim sayısı katsayıları ön hesap içindir; bu modelde yenilenen havanın tamamı dış hava kabul edilir. Mekanik havalandırma yokken mevcut kişi ve alan esaslı taze hava hesabı korunur. Mekanik havalandırma varsa Saatlik hava değişim sayısı veya bilinen debi bunun yerine kullanılır; iki debi toplanmaz. Taze havada aktif soğutma bataryası bulunmadığı kabul edilir. Geri kazanımsız seçimde yükün tamamı; duyulur geri kazanımda duyulur yükün %20’si ve gizli yükün tamamı; entalpik geri kazanımda duyulur yükün %20’si ve gizli yükün %50’si mahal klimasına eklenir. Duyulur verim %80, entalpik cihazın gizli verimi %50 model kabulüdür; aynı verim kabulü otomatik ve bilinen debiye uygulanır. Fan ve kanal ilave yükleri modellenmez. Kapı sızıntısı ve kişi yükleri geri kazanımla azaltılmaz.</p><p class="mt-2">Dış nem, dosyada bulunan şehir bazlı Haziran–Temmuz–Ağustos bağıl nem değerlerinin ortalamasıdır; pik dış sıcaklıkla birlikte kullanımı yaklaşık bir yaz kabulüdür, eşzamanlı tasarım nemi değildir. İç nem için önceki kabul korunmuştur.</p><p class="mt-2">Saatlik hava değişim sayısı kaynağı: <a href="https://www.vent-axia.com/sites/default/files/2023-11/97ee4be4-7c33-4f0d-a775-5b8c83ab1f5e.pdf" target="_blank" rel="noopener" class="underline">Vent-Axia tasarım rehberi</a>. Üretici önerisi olup mevzuatın zorunlu taze hava debisi yerine geçmez.</p><p class="mt-2">Spor salonunda mekanik havalandırma var ve debi bilinmiyorsa: Q₁ = saatlik hava değişim sayısı × alan × yükseklik; Q₂ = (10 × kişi sayısı + 0,3 × alan) × 3,6 m³/h. Büyük olan kullanılır. Q₂, fitness/aerobik ve ağırlık salonları için <a href="https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/62_1_2022_ab_20231031.pdf" target="_blank" rel="noopener" class="underline">ASHRAE 62.1-2022 Tablo 6-1</a> referansıyla ön hesaptır; hava dağıtım etkinliği 1 kabul edilir. Havuz, seyirci alanı ve müsabaka sahası için ayrı değerlendirme gerekir. Bilinen debi girilirse bu karşılaştırmanın yerine doğrudan o debi kullanılır.</p></details>
+</div>
                         <div id="ekCihazlarAlani" class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-amber-50/50 p-4 rounded-xl border border-amber-200 hidden">
                             <div>
                                 <label class="block text-xs font-bold uppercase text-amber-900 mb-2">Ek Cihaz 1</label>
@@ -690,13 +755,14 @@
                             <select id="yapiTipi" onchange="yapiTipiDegisti()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500">
                                 <option value="daire">Apartman Dairesi</option>
                                 <option value="mustakil">Müstakil Ev</option>
-                                <option value="villa">Villa</option>
+                                <option value="villa_teras">Villa (düz teras çatılı)</option>
+                                <option value="villa_egimli">Villa (eğimli çatılı)</option>
                                 <option value="dubleks">Dubleks Daire</option>
                                 <option value="ofis">Ofis / Çalışma Alanı</option>
                             </select>
                         </div>
                         <div id="boxKatKonumIsitma">
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Daire / Ofis Kat Konumu</label>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Kat konumu / çatı tipi</label>
                             <select id="katKonumIsitma" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500">
                                 <option value="ara">Ara Kat</option>
                                 <option value="zemin">Zemin Kat (Döşeme Temaslı)</option>
@@ -722,11 +788,12 @@
                             <input type="number" id="alanZeminKat" value="0.0" step="0.1" min="0.0" oninput="villaKatAlaniGuncelle()" class="w-full bg-white border border-orange-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase text-orange-900 mb-2">1. Kat Mahal Alanı (m²)</label>
+                            <label class="block text-xs font-bold uppercase text-orange-900 mb-2">Üst Kat Mahal Alanı (m²)</label>
                             <input type="number" id="alanBirinciKat" value="0.0" step="0.1" min="0.0" oninput="villaKatAlaniGuncelle()" class="w-full bg-white border border-orange-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold">
                         </div>
                     </div>
 
+                    <p id="cokKatliCatiBilgi" hidden class="text-xs text-slate-600">Dubleks çatı kaybı yalnızca 1. kat (üst kat) alanına uygulanır. Villada da üst kat alanı kullanılır; tek katlı villada üst kat alanı sıfırsa zemin kat alanı esas alınır. Villanın toprak temaslı taban kaybı zemin kat alanı üzerinden ayrıca eklenir. Dubleksin alt komşu katı ve yapı içindeki katlar ısıtılmış kabul edilir. Alt katta ayrıca açık teras oluşturan farklı plan geometrileri bu ön hesapta modellenmez.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Bina Yalıtım Sınıfı</label>
@@ -1247,7 +1314,7 @@
             </a>
 
             <a href="makale-10.html" class="p-4 border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-sm transition bg-white block group">
-                <h3 class="font-semibold text-slate-800 group-hover:text-blue-600 text-sm">10. Havalandırma Sistemlerinde Hava Değişim Oranı (ACH) ve Debisi Hesaplama</h3>
+                <h3 class="font-semibold text-slate-800 group-hover:text-blue-600 text-sm">10. Havalandırma Sistemlerinde Hava Değişim Oranı (Saatlik hava değişim sayısı) ve Debisi Hesaplama</h3>
                 <p class="text-xs text-slate-500 mt-1 line-clamp-2">Modülasyon oranları, eşanjör malzeme kalitesi ve doğalgaz tasarrufu sağlayan seçim esasları.</p>
             </a>
 
@@ -1426,16 +1493,16 @@
             const rows = arr => arr.map(([a,b])=>`<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join('');
             const w = x => Math.round(x || 0).toLocaleString('tr-TR')+' W';
             if (!r || Number(v('mahalAlani'))<=0) {document.getElementById('tekSayfaRapor').innerHTML='<h1>Soğutma Yükü Raporu</h1><p>Geçerli mahal alanıyla hesaplama yapınız.</p>';return;}
-            const params = [['Mahal',v('raporMahalNo')+' / '+v('raporMahalAdi')],['Şehir / kullanım',v('sehir')+' / '+v('mahalFonksiyon')],['Alan / yükseklik',v('mahalAlani')+' m² / '+v('katYuksekligi')+' m'],['Kat / yalıtım',v('katKonum')+' / '+v('yalitim')],['Pencere / kişi',v('camTipi')+' / '+v('insanSayisi')],['İç duvar genişliği toplamı',v('en_Ic')+' m'],['Dış tasarım / komşu Δtₑş',r.tDisPik+' °C / '+r.deltaTKomsu.toFixed(2)+' K'],['İç / dış nem',r.icRH.toFixed(2)+'% / '+r.disRH.toFixed(2)+'%'],...(r.qCati>0 ? [['Çatı U / etkin sıcaklık farkı',r.uCati+' W/m²K / '+r.cltdEtkin.toFixed(2)+' K']] : [])];
+            const params = [['Mahal',v('raporMahalNo')+' / '+v('raporMahalAdi')],['Şehir / kullanım',v('sehir')+' / '+(ISYERI_PROFILLERI[v('mahalFonksiyon')]?.ad??'Konut')],['Alan / yükseklik',v('mahalAlani')+' m² / '+v('katYuksekligi')+' m'],['Kat / yalıtım',v('katKonum')+' / '+v('yalitim')],['Pencere / kişi',v('camTipi')+' / '+v('insanSayisi')],['İç duvar genişliği toplamı',v('en_Ic')+' m'],['Dış tasarım / komşu Δtₑş',r.tDisPik+' °C / '+r.deltaTKomsu.toFixed(2)+' K'],['İç / dış nem',r.icRH.toFixed(2)+'% / '+r.disRH.toFixed(2)+'%'],...(r.qCati>0 ? [['Çatı U / etkin sıcaklık farkı',r.uCati+' W/m²K / '+r.cltdEtkin.toFixed(2)+' K']] : [])];
             const windows=['p1','p2','p3','p4','dk'].map((id,i)=>[(id==='dk'?'Camlı kapı':'Pencere '+(i+1)),yon(v(id+'_yon'))+' — '+v(id+'_en')+' × '+v(id+'_boy')+' m']);
             const walls=[1,2,3,4].map(i=>{
                 const direction=v('dd_'+i+'_yon');
                 const dt=direction==='Yok'?'':(' / Δtₑş '+duvarEsdegerSicaklik(r.tDisPik,direction).toFixed(2)+' K');
                 return ['Dış duvar '+i,yon(direction)+' — '+v('dd_'+i+'_en')+' m'+dt];
             });
-            const loads=[['Dış duvar / iç duvar',w(r.qDuvarIle)+' / '+w(r.qKomsuIle)],['Cam iletimi / güneş',w(r.qCamIle)+' / '+w(r.qSolarCam)],...pozitifYatayYukler(r).map(([label,value])=>[label,w(value)]),['İnsan duyulur / gizli',w(r.qInsanDuyulur)+' / '+w(r.qInsanGizli)],['Aydınlatma / cihaz',w(r.qAydinlatma)+' / '+w(r.qCihazToplam)],['Dolap (cihaz toplamına dahil)',w(r.qDolap)],['Taze hava debisi',r.tazeHavaDebisi.toFixed(1)+' m³/h'],['Taze hava duyulur / gizli',w(r.qTazeHava)+' / '+w(r.qGizliHava)],['İnfiltrasyon debisi',r.infiltrasyonDebisi.toFixed(1)+' m³/h'],['İnfiltrasyon duyulur / gizli',w(r.qInfiltrasyonDuyulur)+' / '+w(r.qInfiltrasyonGizli)],['Toplam duyulur / gizli',w(r.qDuyulur)+' / '+w(r.qGizli)]];
+            const loads=[['Havalandırma yöntemi',r.debiYontemi+(r.mekanik&&r.debiYontemi.startsWith('Saatlik hava değişim sayısı')?' / '+r.ach+' h⁻¹':'')],...(r.spor&&r.mekanik&&!r.bilinenDebiVar?[['Hava değişimi / spor kişi-alan debisi',r.saatlikHavaDegisimDebisi.toFixed(1)+' / '+r.sporKisiAlanDebisi.toFixed(1)+' m³/h']]:[]),['Geri kazanım',r.geriKazanimAciklamasi],['Dış nem yöntemi',r.nemYontemi],['Dış duvar / iç duvar',w(r.qDuvarIle)+' / '+w(r.qKomsuIle)],['Cam iletimi / güneş',w(r.qCamIle)+' / '+w(r.qSolarCam)],...pozitifYatayYukler(r).map(([label,value])=>[label,w(value)]),['İnsan duyulur / gizli',w(r.qInsanDuyulur)+' / '+w(r.qInsanGizli)],['Aydınlatma / cihaz',w(r.qAydinlatma)+' / '+w(r.qCihazToplam)],['Dolap (cihaz toplamına dahil)',w(r.qDolap)],['Taze hava debisi',r.tazeHavaDebisi.toFixed(1)+' m³/h'],['Taze hava kalan duyulur / gizli',w(r.qTazeHava)+' / '+w(r.qGizliHava)],...(r.qGeriKazanilan>0?[['Geri kazanılan (bilgi, tekrar düşülmez)',w(r.qGeriKazanilan)]]:[]),['İnfiltrasyon debisi',r.infiltrasyonDebisi.toFixed(1)+' m³/h'],['İnfiltrasyon duyulur / gizli',w(r.qInfiltrasyonDuyulur)+' / '+w(r.qInfiltrasyonGizli)],['Toplam duyulur / gizli',w(r.qDuyulur)+' / '+w(r.qGizli)]];
             const btu=r.toplamWatt*3.412;
-            document.getElementById('tekSayfaRapor').innerHTML=`<h1>KLİMAHESAPLAMA — Detaylı Soğutma Yükü Raporu</h1><div class="raporKolon"><div><h2>Mahal ve hesap bilgileri</h2><table>${rows(params)}</table><h2>Pencere ve kapı ölçüleri</h2><table>${rows(windows)}</table><h2>Dış duvar ölçüleri</h2><table>${rows(walls)}</table></div><div><h2>Yük bileşenleri — emniyet payı öncesi</h2><table>${rows(loads)}</table><p class="raporNot">Dış duvar: yönlere göre U × Aₙₑₜ × Δtₑş. Çatı: sadeleştirilmiş ASHRAE RLF. Eğimli çatı havalandırılan çatı arası; bitişik mahaller klimatize edilmemiş; ara katta alt/üst mahaller aynı sıcaklıkta klimatize edilmiş kabul edilir. ara sıcaklıklarda doğrusal enterpolasyon. 1. kat zemin var: alt/üst klimatize; zemin yok: altı gölgeli dış hava, ΔT=dış−24 °C, üst klimatize. Döşeme U=2,40 W/m²K model kabulü; zemin altı toprağa temaslı. İç/dış nem ve otomatik cihaz yükleri model kabulleridir.</p><p class="raporNot">Hesaplanan cam: ${r.toplamCamAlani.toFixed(2)} m²; net dış duvar: ${r.toplamNetDisDuvar.toFixed(2)} m². Dolap ve kapı sızıntısı dükkân seçimine bağlıdır.</p><div class="raporSonuc"><strong>Tasarım: ${w(r.toplamWatt)} / ${Math.round(btu).toLocaleString('tr-TR')} BTU/h</strong><p>(Duyulur + gizli) × 1,05 — %5 emniyet katsayısı uygulanmıştır</p><p>${esc(klimaKapasiteOnerisi(btu,v('mahalFonksiyon')))}</p></div><p class="raporNot">Ön seçim hesabıdır. Cihazın tasarım koşullarındaki gerçek kapasitesi ve montaj uygunluğu kontrol edilmelidir.${btu>24000&&btu<=28000&&v('mahalFonksiyon')==='Konut'?' 24.000 BTU/h önerisi hesap yükünün altındadır.':''}</p></div></div>`;
+            document.getElementById('tekSayfaRapor').innerHTML=`<h1>KLİMAHESAPLAMA — Detaylı Soğutma Yükü Raporu</h1><div class="raporKolon"><div><h2>Mahal ve hesap bilgileri</h2><table>${rows(params)}</table><h2>Pencere ve kapı ölçüleri</h2><table>${rows(windows)}</table><h2>Dış duvar ölçüleri</h2><table>${rows(walls)}</table></div><div><h2>Yük bileşenleri — emniyet payı öncesi</h2><table>${rows(loads)}</table><p class="raporNot">Dış duvar: yönlere göre U × Aₙₑₜ × Δtₑş. Çatı: sadeleştirilmiş ASHRAE RLF. Eğimli çatı havalandırılan çatı arası; bitişik mahaller klimatize edilmemiş; ara katta alt/üst mahaller aynı sıcaklıkta klimatize edilmiş kabul edilir. ara sıcaklıklarda doğrusal enterpolasyon. 1. kat zemin var: alt/üst klimatize; zemin yok: altı gölgeli dış hava, ΔT=dış−24 °C, üst klimatize. Döşeme U=2,40 W/m²K model kabulü; zemin altı toprağa temaslı. İç/dış nem ve otomatik cihaz yükleri model kabulleridir.</p><p class="raporNot">Hesaplanan cam: ${r.toplamCamAlani.toFixed(2)} m²; net dış duvar: ${r.toplamNetDisDuvar.toFixed(2)} m². Dolap ve kapı sızıntısı dükkân seçimine bağlıdır.</p><div class="raporSonuc"><strong>Tasarım: ${w(r.toplamWatt)} / ${Math.round(btu).toLocaleString('tr-TR')} BTU/h</strong><p>(Duyulur + gizli) × 1,05 — %5 emniyet katsayısı uygulanmıştır</p><p>${esc(klimaKapasiteOnerisi(btu,v('mahalFonksiyon')))}</p></div><p class="raporNot">Ön seçim hesabıdır. Cihazın tasarım koşullarındaki gerçek kapasitesi ve montaj uygunluğu kontrol edilmelidir.</p></div></div>`;
         }
         window.addEventListener('beforeprint',tekSayfaRaporHazirla);
 
@@ -1544,7 +1611,7 @@
                     <ol class="list-decimal list-inside space-y-1.5 text-xs md:text-sm font-medium">
                         <li><strong>Şehir / İklim Bölgesi:</strong> Şehir seçildiğinde pik dış hava sıcaklığı otomatik yüklenir.</li>
                         <li><strong>Yalıtım Durumu:</strong> Yapının yalıtım durumunu seçin.</li>
-                        <li><strong>Mahal Fonksiyonu & Kat Konumu:</strong> İklimlendirilecek alanın türünü ve kat konumunu belirleyin.</li>
+                        <li><strong>İşyeri & Kat Konumu:</strong> Konut için “Konut (oda/salon)”; işyeri için kullanım türünü seçin. Mekanik havalandırma varsa bilinen taze hava debisini girin veya otomatik Saatlik hava değişim sayısı hesabını kullanın. Kat konumunu belirleyin.</li>
                         <li><strong>Mahal Alanı:</strong> Mahal alanını girin.</li>
                         <li><strong>Kat Tavan Yüksekliği:</strong> Kat tavan yüksekliğini girin.</li>
                         <li><strong>Pencere:</strong> Pencere cam kombinasyon seçimini yapın.</li>
@@ -1622,6 +1689,9 @@
             document.getElementById("sehir").value = "Adana";
             document.getElementById("yalitim").value = "standart";
             document.getElementById("mahalFonksiyon").value = "Konut";
+            document.getElementById("mekanikHavalandirma").value="yok";
+            document.getElementById("bilinenHavalandirmaDebisi").value="";
+            document.getElementById("isyeriHavalandirmaPaneli").hidden=true;
             document.getElementById("katKonum").value = "Ara Kat";
             document.getElementById("camTipi").value = "PVC - Çift Cam";
             document.getElementById("detayYukOzeti").innerText = "";
@@ -1677,28 +1747,39 @@
             if (!veri) throw new Error("Şehir için sıcaklık salınımı verisi yok.");
             return veri.dr;
         }
+        function sifirlaPratikParametreler() {
+            for(const id of ['pratikCamAlani','pratikIkinciDuvar','pratikIcDuvar'])document.getElementById(id).value='';
+            document.getElementById('pratikIkinciYon').value='Yok';
+            document.getElementById('pratikYukseklik').value='2.8';
+            document.getElementById('pratikDolap').value='ic';
+            pratikCepheDegisti();
+            hesaplaPratik();
+        }
         function pratikCepheDegisti() {
-            const tek = document.getElementById("pratikCephe").value === "1";
-            const yon = document.getElementById("pratikIkinciYon");
-            if (tek) {
-                if (yon.value !== "Yok") yon.oncekiYon = yon.value;
-                yon.value = "Yok";
-            } else if (yon.value === "Yok") {
-                const ilkYon = document.getElementById("pratikYon").value;
-                yon.value = yon.oncekiYon && yon.oncekiYon !== ilkYon ? yon.oncekiYon : (ilkYon === "Bati" ? "Guney" : "Bati");
+            const tek=document.getElementById('pratikCephe').value==='1';
+            const yon=document.getElementById('pratikIkinciYon');
+            if(tek)yon.value='Yok';
+            yon.options[0].textContent=tek?'Yok':'Seçiniz';
+            delete yon.oncekiYon;
+            pratikIkinciYonleriGuncelle();
+            for(const id of ['pratikIkinciDuvar','pratikIkinciYon']) {
+                const el=document.getElementById(id);el.disabled=tek;
+                el.classList.toggle('bg-slate-200',tek);el.classList.toggle('cursor-not-allowed',tek);
+                el.setAttribute('aria-disabled',String(tek));
             }
-            ["pratikIkinciDuvar", "pratikIkinciYon"].forEach(id => {
-                const el = document.getElementById(id);
-                el.disabled = tek;
-                el.classList.toggle("bg-slate-200", tek);
-                el.classList.toggle("cursor-not-allowed", tek);
-                el.setAttribute("aria-disabled", String(tek));
-            });
+        }
+        function pratikIkinciYonleriGuncelle() {
+            const ana=document.getElementById('pratikYon').value,ikinci=document.getElementById('pratikIkinciYon');
+            if(ikinci.value===ana)ikinci.value='Yok';
+            for(const o of ikinci.options)o.disabled=o.value!=='Yok'&&o.value===ana;
         }
         function pratikGeometriOlustur({alan, en, yukseklik, cephe, yon1, yon2, pencereYon, camOrani, camAlani, en2, icDuvar}) {
             if (![alan,en,yukseklik].every(Number.isFinite) || alan <= 0 || en <= 0 || yukseklik < 1) throw new Error("Geçerli alan ve duvar ölçüsü giriniz.");
             if (en2 !== null && en2 !== undefined && en2 <= 0) throw new Error("İkinci duvar uzunluğu pozitif olmalıdır.");
             if (icDuvar !== null && icDuvar !== undefined && icDuvar < 0) throw new Error("İç duvar uzunluğu negatif olamaz.");
+            const ikinciYonSecilmedi=cephe===2&&(!yon2||yon2==='Yok');
+            const istenenCephe=cephe;
+            if(ikinciYonSecilmedi){cephe=1;en2=null;}
             const derinlik = alan / en;
             const ikinci = cephe === 2 ? (en2 ?? derinlik) : 0;
             if (cephe === 2 && yon1 === yon2) throw new Error("İkinci dış duvar yönü ilk cepheden farklı olmalıdır.");
@@ -1717,7 +1798,7 @@
                 pAlanlari[pencereYon] = ilkPay; pAlanlari[diger] = cam - ilkPay;
             }
             Object.keys(brut).forEach(k=>dNetAlanlari[k]=brut[k]-(pAlanlari[k]||0));
-            return {pAlanlari,dNetAlanlari,enIc:icDuvar ?? (cephe === 2 ? en + derinlik : en + 2 * derinlik),cam,toplamBrut,ikinci};
+            return {pAlanlari,dNetAlanlari,enIc:icDuvar ?? (cephe === 2 ? en + derinlik : en + 2 * derinlik),cam,toplamBrut,ikinci,ikinciYonSecilmedi,istenenCephe,hesaplananCephe:cephe};
         }
         function pratikIkinciDuvarDuzelt() {
             const input=document.getElementById('pratikIkinciDuvar');
@@ -1744,7 +1825,7 @@
             const alan = num("pratikAlan"), en = num("pratikDuvarOlcusu"), yukseklik = num("pratikYukseklik");
             try {
                 if (alan <= 0 || en <= 0 || yukseklik < 1) throw new Error("Pozitif mahal alanı, dış duvar uzunluğu ve geçerli tavan yüksekliği giriniz.");
-                const g = pratikGeometriOlustur({alan,en,yukseklik,cephe:Number(val("pratikCephe")),yon1:val("pratikYon"),yon2:val("pratikIkinciYon"),pencereYon:val("pratikPencereYon"),camOrani:Number(val("pratikCamOrani")),camAlani:optional("pratikCamAlani"),en2:Number(val("pratikCephe")) === 2 ? optional("pratikIkinciDuvar") : null,icDuvar:optional("pratikIcDuvar")});
+                const g = pratikGeometriOlustur({alan,en,yukseklik,cephe:Number(val("pratikCephe")),yon1:val("pratikYon"),yon2:val("pratikIkinciYon"),pencereYon:val("pratikPencereYon"),camOrani:Number(val("pratikCamOrani")),camAlani:optional("pratikCamAlani"),en2:Number(val("pratikCephe")) === 2&&val("pratikIkinciYon")!=="Yok" ? optional("pratikIkinciDuvar") : null,icDuvar:optional("pratikIcDuvar")});
                 const mahalFonks = ({Konut:"Konut",Ofis:"İşyeri - Ofis",Dükkan:"İşyeri - Dükkan"})[val("pratikFonksiyon")];
                 const ek = val("pratikEkCihaz");
                 const ayarlar = {dr:sehirGunlukSalinim(val("pratikSehir")),alpha:0.8,dukkanDolap:val("pratikDolap"),ekCihaz1:"yok",ekCihaz2:"yok"};
@@ -1757,8 +1838,9 @@
                 document.getElementById("lblWatt").innerText = Math.round(sonuc.toplamWatt).toLocaleString('tr-TR');
                 document.getElementById("lblBTU").innerText = Math.round(btu).toLocaleString('tr-TR');
                 document.getElementById("lblOnerilenSegment").innerText = baslik;
-                document.getElementById("pratikYukOzeti").innerText = `${val("pratikCamAlani").trim() === "" ? "Hesaplanan tahmini cam alanı" : "Cam alanı"}: ${g.cam.toFixed(2)} m² / brüt dış cephe: ${g.toplamBrut.toFixed(2)} m² • Dış duvar yükü: ${Math.round(sonuc.qDuvarIle)} W • İç duvar: ${g.enIc.toFixed(2)} m • Aydınlatma: ${Math.round(sonuc.qAydinlatma)} W • Cihazlar: ${Math.round(sonuc.qCihazToplam)} W • Taze hava: ${sonuc.tazeHavaDebisi.toFixed(1)} m³/h${yatayYukMetni(sonuc)} • Dış sıcaklık: ${sonuc.tDisPik} °C • Komşu Δtₑş: ${sonuc.deltaTKomsu.toFixed(2)} K • Duyulur: ${Math.round(sonuc.qDuyulur)} W • Gizli: ${Math.round(sonuc.qGizli)} W • %5 emniyet katsayısı uygulanmıştır` + (mahalFonks === "İşyeri - Dükkan" ? ` • Kapı sızıntısı: ${sonuc.infiltrasyonDebisi.toFixed(1)} m³/h • Endüstriyel buzdolabı: ${Math.round(sonuc.qDolap)} W` : "") + (mahalFonks === "Konut" && btu > 24000 && btu <= 28000 ? " • 24.000 BTU/h önerisi hesap yükünün altındadır; gerçek cihaz kapasitesi kontrol edilmelidir." : "");
-                renderPazaryerleri(baslik,'klima');
+                document.getElementById("pratikYukOzeti").innerText = `${val("pratikCamAlani").trim() === "" ? "Hesaplanan tahmini cam alanı" : "Cam alanı"}: ${g.cam.toFixed(2)} m² / brüt dış cephe: ${g.toplamBrut.toFixed(2)} m² • Dış duvar yükü: ${Math.round(sonuc.qDuvarIle)} W • İç duvar: ${g.enIc.toFixed(2)} m • Aydınlatma: ${Math.round(sonuc.qAydinlatma)} W • Cihazlar: ${Math.round(sonuc.qCihazToplam)} W • Taze hava: ${sonuc.tazeHavaDebisi.toFixed(1)} m³/h${yatayYukMetni(sonuc)} • Dış sıcaklık: ${sonuc.tDisPik} °C • Komşu Δtₑş: ${sonuc.deltaTKomsu.toFixed(2)} K • Duyulur: ${Math.round(sonuc.qDuyulur)} W • Gizli: ${Math.round(sonuc.qGizli)} W • %5 emniyet katsayısı uygulanmıştır` + (mahalFonks === "İşyeri - Dükkan" ? ` • Kapı sızıntısı: ${sonuc.infiltrasyonDebisi.toFixed(1)} m³/h • Endüstriyel buzdolabı: ${Math.round(sonuc.qDolap)} W` : "");
+                if(g.ikinciYonSecilmedi)document.getElementById('pratikYukOzeti').innerText+=' • 2. dış duvar yönü seçilmedi; yalnızca ana cephe hesaplandı.';
+                renderPazaryerleri(baslik,'klima',klimaOneriModeli(btu,mahalFonks));
             } catch(e) {
                 window.sonPratikSogutma = null;
                 document.getElementById("lblWatt").innerText = "0";
@@ -1782,6 +1864,8 @@ function yapiTipiDegisti() {
     const opt4 = document.getElementById("cepheOpt4");
 
     boxKatAlanlari.classList.add("hidden");
+    tavanInput.readOnly=false;
+    tavanInput.className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
     netAlanInput.readOnly = false;
     netAlanInput.value = "0.0";
     netAlanInput.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-orange-500 font-bold";
@@ -1796,6 +1880,8 @@ function yapiTipiDegisti() {
 
     const katSelect=document.getElementById('katKonumIsitma');
     const eskiKat=katSelect.value;
+    const villa=['villa_teras','villa_egimli'].includes(yapiTipi);
+    document.getElementById('cokKatliCatiBilgi').hidden=!(villa||yapiTipi==='dubleks');
     const normalKatlar=`<option value="Ara Kat">Ara Kat</option>
                                 <option value="1. Kat - Zemin Var">1. kat (zemin kat var)</option>
                                 <option value="1. Kat - Zemin Yok">1. kat (zemin kat yok)</option>
@@ -1803,8 +1889,11 @@ function yapiTipiDegisti() {
                                     <option value="En Üst Kat - Eğimli">En Üst Kat - Eğimli Çatı (Havalandırılan Çatı Arası)</option>
                                     <option value="Zemin Kat">Zemin Kat (Döşeme Temaslı)</option>`;
     const dubleksKatlar='<option value="ara">Ara Kat</option><option value="zemin">Zemin Kat</option><option value="teras">En Üst Kat - Teras Çatı (Düz)</option><option value="egimli">En Üst Kat - Eğimli Çatı (Havalandırılan Çatı Arası)</option>';
-    katSelect.innerHTML=(yapiTipi==='daire'||yapiTipi==='ofis')?normalKatlar:dubleksKatlar;
-    if(Array.from(katSelect.options).some(o=>o.value===eskiKat)) katSelect.value=eskiKat;
+    katSelect.innerHTML=normalKatlar;
+    if(yapiTipi==='dubleks'||villa) {
+        for(const opt of katSelect.options)opt.disabled=!['En Üst Kat - Teras','En Üst Kat - Eğimli'].includes(opt.value);
+        katSelect.value=villa?(yapiTipi==='villa_teras'?'En Üst Kat - Teras':'En Üst Kat - Eğimli'):['En Üst Kat - Teras','En Üst Kat - Eğimli'].includes(eskiKat)?eskiKat:'En Üst Kat - Teras';
+    } else if(Array.from(katSelect.options).some(o=>o.value===eskiKat))katSelect.value=eskiKat;
     katSelect.disabled=!(yapiTipi==='daire'||yapiTipi==='ofis'||yapiTipi==='dubleks');
     if (yapiTipi === "daire" || yapiTipi === "ofis") {
         boxKatKonum.classList.remove("opacity-40", "pointer-events-none");
@@ -1833,7 +1922,7 @@ function yapiTipiDegisti() {
         opt1.disabled = true;
         opt1.hidden = true;
         if (cepheSelect.value === "1") cepheSelect.value = "3";
-    } else if (yapiTipi === "villa") {
+    } else if (villa) {
         boxKatKonum.classList.add("opacity-40", "pointer-events-none");
         boxKatAlanlari.classList.remove("hidden");
         netAlanInput.readOnly = true;
@@ -1844,6 +1933,7 @@ function yapiTipiDegisti() {
         cepheSelect.disabled = true;
         cepheSelect.className = "w-full bg-slate-200 cursor-not-allowed border border-slate-200 rounded-lg p-3 focus:outline-none font-bold text-slate-500";
     }
+    if(villa||yapiTipi==='dubleks')villaKatAlaniGuncelle();
 }
 
         function villaKatAlaniGuncelle() {
@@ -1862,12 +1952,19 @@ function yapiTipiDegisti() {
             `;
         }
 
-        function renderPazaryerleri(baslikMetni, tur) {
+        function renderPazaryerleri(baslikMetni, tur, klimaModeli=null) {
             const container = document.getElementById("pazaryeriListesi");
             let anaTag = "klimatikcom-21";
             let html = "";
 
-            if (baslikMetni === "20 kW - 24 kW Tam Yoğuşmalı Kombi") {
+            if(tur==='klima'&&klimaModeli?.urunler?.length) {
+                const adlar={salon:'Salon Tipi Klima',kaset:'Kaset Tipi Split Klima',duvar:'Duvar Tipi İnverter Klima'};
+                html+=klimaModeli.urunler.map(u=>{
+                    const ad=(u.tip==='salon'&&u.kapasite===36000?'34.000–36.000':u.kapasite.toLocaleString('tr-TR'))+' BTU/h '+adlar[u.tip];
+                    const sorgu=u.kapasite+' btu '+adlar[u.tip].toLocaleLowerCase('tr-TR');
+                    return `<div class="p-3 rounded-xl border border-blue-100 bg-blue-50/50 flex items-center justify-between gap-3"><div><span class="text-xs font-bold">Amazon TR</span><h4 class="font-bold text-slate-800 text-xs">${ad}</h4></div><a href="https://www.amazon.com.tr/s?k=${encodeURIComponent(sorgu)}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-blue-600 text-white font-bold text-xs py-2 px-3 rounded-lg shrink-0">Fırsatları Gör</a></div>`;
+                }).join('');
+            } else if (baslikMetni === "20 kW - 24 kW Tam Yoğuşmalı Kombi") {
                 let encodedQuery20 = encodeURIComponent("20 kw tam yoğuşmalı kombi");
                 let encodedQuery24 = encodeURIComponent("24 kw tam yoğuşmalı kombi");
 
@@ -1879,7 +1976,7 @@ function yapiTipiDegisti() {
                             </span>
                             <h4 class="font-bold text-slate-800 text-xs">20 kW Tam Yoğuşmalı Kombi</h4>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery20}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery20}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             Fırsatları Gör <i class="fa-solid fa-cart-shopping text-xs"></i>
                         </a>
                     </div>
@@ -1891,7 +1988,7 @@ function yapiTipiDegisti() {
                             </span>
                             <h4 class="font-bold text-slate-800 text-xs">24 kW Tam Yoğuşmalı Kombi</h4>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery24}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery24}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             Fırsatları Gör <i class="fa-solid fa-cart-shopping text-xs"></i>
                         </a>
                     </div>
@@ -1901,7 +1998,7 @@ function yapiTipiDegisti() {
                 secenekler.forEach(baslik => {
                     const kaset = baslik.includes("Kaset Tipi");
                     const sorgu = kaset ? "kaset tipi split klima" : "salon tipi klima";
-                    html += `<div class="p-3 rounded-xl border border-blue-100 bg-blue-50/50 flex items-center justify-between gap-3"><div><span class="text-xs font-bold">Amazon TR</span><h4 class="font-bold text-slate-800 text-xs">${baslik}</h4></div><a href="https://www.amazon.com.tr/s?k=${encodeURIComponent(sorgu)}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-blue-600 text-white font-bold text-xs py-2 px-3 rounded-lg">Fırsatları Gör</a></div>`;
+                    html += `<div class="p-3 rounded-xl border border-blue-100 bg-blue-50/50 flex items-center justify-between gap-3"><div><span class="text-xs font-bold">Amazon TR</span><h4 class="font-bold text-slate-800 text-xs">${baslik}</h4></div><a href="https://www.amazon.com.tr/s?k=${encodeURIComponent(sorgu)}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-blue-600 text-white font-bold text-xs py-2 px-3 rounded-lg">Fırsatları Gör</a></div>`;
                 });
             } else {
                 let encodedQuery = encodeURIComponent(baslikMetni);
@@ -1913,7 +2010,7 @@ function yapiTipiDegisti() {
                             </span>
                             <h4 class="font-bold text-slate-800 text-xs">${baslikMetni}</h4>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedQuery}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-3 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             Fırsatları Gör <i class="fa-solid fa-cart-shopping text-xs"></i>
                         </a>
                     </div>
@@ -1930,7 +2027,7 @@ function yapiTipiDegisti() {
                             <i class="fa-solid fa-gears text-slate-600 text-xs"></i>
                             <span class="font-bold text-slate-700 text-xs">Klima Aksesuarları</span>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedAksesuar}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-slate-700 hover:bg-slate-800 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedAksesuar}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-slate-700 hover:bg-slate-800 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             İncele <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                     </div>
@@ -1940,7 +2037,7 @@ function yapiTipiDegisti() {
                             <i class="fa-solid fa-spray-can-sparkles text-emerald-600 text-xs"></i>
                             <span class="font-bold text-slate-700 text-xs">Klima Temizlik Setleri</span>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedTemizlik}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedTemizlik}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             İncele <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                     </div>
@@ -1954,13 +2051,14 @@ function yapiTipiDegisti() {
                             <i class="fa-solid fa-temperature-half text-orange-600 text-xs"></i>
                             <span class="font-bold text-slate-800 text-xs">Oda Termostatları</span>
                         </div>
-                        <a href="https://www.amazon.com.tr/s?k=${encodedTermostat}&tag=${anaTag}" target="_blank" rel="noopener" class="bg-orange-600 hover:bg-orange-700 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
+                        <a href="https://www.amazon.com.tr/s?k=${encodedTermostat}&tag=${anaTag}" target="_blank" rel="noopener sponsored" class="bg-orange-600 hover:bg-orange-700 text-white font-bold text-[11px] py-1.5 px-2.5 rounded-lg transition shrink-0 flex items-center gap-1 cursor-pointer">
                             İncele <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                     </div>
                 `;
             }
 
+            if(tur==='klima'&&klimaModeli?.urunler?.some(u=>u.tip==='salon'&&u.kapasite===36000))html+='<p class="text-xs text-slate-500">34–36 bin BTU/h salon tipi kapasite sınıfıdır; seçimde cihazın gerçek kapasitesi hesaplanan ihtiyacı karşılamalıdır. Arama 36 bin BTU/h sınıfıyla yapılır.</p>';
             container.innerHTML = html;
         }
 
@@ -2006,7 +2104,7 @@ function yapiTipiDegisti() {
         function isitmaKatKaybi(alan,kat,disT,yapi) {
             const r={qAcikDoseme:0,qZeminDoseme:0,qTerasCati:0,qEgimliTavan:0,
                 toplam:0,u:2.40,icT:20,disT:null,toprakT:null,catiArasiT:null,deltaT:0};
-            if(!['daire','ofis'].includes(yapi)) return r;
+            if(!['daire','ofis','dubleks','villa_teras','villa_egimli'].includes(yapi)) return r;
             if(!['1. Kat - Zemin Yok','Zemin Kat','En Üst Kat - Teras','En Üst Kat - Eğimli'].includes(kat)) return r;
             if(!Number.isFinite(disT)||disT< -27||disT>3) return null;
             r.disT=disT;
@@ -2052,6 +2150,9 @@ function yapiTipiDegisti() {
             const acikCepheSayisi = parseInt(document.getElementById("cepheSayisi").value) || 2;
 
             if (netAlan <= 0) {
+                window.sonIsitma=null;
+                document.getElementById('isitmaHesapOzeti').innerText='';
+                renderVarsayilanPazaryeri('isitma');
                 document.getElementById("lblWatt").innerText = "0";
                 document.getElementById("lblBTU").innerText = "0";
                 document.getElementById("lblOnerilenSegment").innerText = "Lütfen geçerli bir mahal alanı giriniz.";
@@ -2073,9 +2174,23 @@ function yapiTipiDegisti() {
 
             let toplamWatt = hacim * katsayi * iklimCarpan * cepheFaktoru;
             const tabanYuk=toplamWatt;
-            const kat=document.getElementById('katKonumIsitma').value;
+            const cokKatli=['dubleks','villa_teras','villa_egimli'].includes(yapiTuru);
+            let kat=document.getElementById('katKonumIsitma').value;
+            if(yapiTuru==='villa_teras')kat='En Üst Kat - Teras';
+            if(yapiTuru==='villa_egimli')kat='En Üst Kat - Eğimli';
+            const ustAlan=parseFloat(document.getElementById('alanBirinciKat').value)||0;
+            const zeminAlan=parseFloat(document.getElementById('alanZeminKat').value)||0;
+            if(yapiTuru==='dubleks'&&ustAlan<=0) {
+                window.sonIsitma=null;
+                document.getElementById('lblWatt').innerText='—';
+                document.getElementById('lblBTU').innerText='—';
+                document.getElementById('isitmaHesapOzeti').innerText='Dubleks çatı kaybı için 1. kat (üst kat) alanını giriniz.';
+                document.getElementById('lblOnerilenSegment').innerText='1. kat alanı girilmelidir.';
+                renderVarsayilanPazaryeri('isitma');return;
+            }
+            const catiAlani=yapiTuru==='dubleks'?ustAlan:cokKatli?(ustAlan>0?ustAlan:zeminAlan):netAlan;
             const hamDisT=sehirOption.dataset.kisDis;
-            const katKaybi=isitmaKatKaybi(netAlan,kat,hamDisT===undefined?NaN:Number(hamDisT),yapiTuru);
+            const katKaybi=isitmaKatKaybi(catiAlani,kat,hamDisT===undefined?NaN:Number(hamDisT),yapiTuru);
             if(!katKaybi) {
                 window.sonIsitma=null;
                 document.getElementById('lblWatt').innerText='—';
@@ -2083,6 +2198,17 @@ function yapiTipiDegisti() {
                 document.getElementById('isitmaHesapOzeti').innerText='';
                 document.getElementById('lblOnerilenSegment').innerText='Döşeme / çatı ısı kaybı hesabı için bir şehir seçiniz.';
                 return;
+            }
+            // Villada toprak temaslı taban, çatıdan bağımsız olarak zemin kat alanıyla hesaplanır.
+            // Dubleksin alt komşusu ısıtılıyor kabul edilir; ek taban kaybı yoktur.
+            const villaZeminKaybi=['villa_teras','villa_egimli'].includes(yapiTuru)
+                ? isitmaKatKaybi(zeminAlan,'Zemin Kat',Number(hamDisT),yapiTuru) : null;
+            if(villaZeminKaybi) {
+                katKaybi.qZeminDoseme=villaZeminKaybi.qZeminDoseme;
+                katKaybi.toprakT=villaZeminKaybi.toprakT;
+                katKaybi.zeminDeltaT=villaZeminKaybi.deltaT;
+                katKaybi.zeminAlani=zeminAlan;
+                katKaybi.toplam+=villaZeminKaybi.toplam;
             }
             const {qAcikDoseme,qZeminDoseme,qTerasCati,qEgimliTavan}=katKaybi;
             toplamWatt+=katKaybi.toplam;
@@ -2093,12 +2219,12 @@ function yapiTipiDegisti() {
                 kwGucu += sicakSuEkKw;
             }
 
-            window.sonIsitma={tabanYuk,qAcikDoseme,qZeminDoseme,qTerasCati,qEgimliTavan,katKaybi,mahalIsitmaW:toplamWatt,sicakSuEkW:kwGucu*1000-toplamWatt,toplamKw:kwGucu};
+            window.sonIsitma={catiAlani,zeminAlan,villaZeminKaybi,kat,cokKatli,tabanYuk,qAcikDoseme,qZeminDoseme,qTerasCati,qEgimliTavan,katKaybi,mahalIsitmaW:toplamWatt,sicakSuEkW:kwGucu*1000-toplamWatt,toplamKw:kwGucu};
             document.getElementById('isitmaHesapOzeti').innerText=`Hacim esaslı ön hesap: ${Math.round(tabanYuk)} W`+(qAcikDoseme>0?` • Altı açık döşeme: ${Math.round(qAcikDoseme)} W`:'')
-                +(qZeminDoseme>0?` • Toprak temaslı döşeme: ${Math.round(qZeminDoseme)} W (toprak ${katKaybi.toprakT.toFixed(1)} °C)`:'')
+                +(qZeminDoseme>0?` • Toprak temaslı döşeme: ${Math.round(qZeminDoseme)} W (toprak ${katKaybi.toprakT.toFixed(1)} °C${villaZeminKaybi?`, alan ${zeminAlan.toFixed(1)} m², ΔT ${villaZeminKaybi.deltaT.toFixed(1)} K`:""})`:'')
                 +(qTerasCati>0?` • Teras çatı: ${Math.round(qTerasCati)} W`:'')
                 +(qEgimliTavan>0?` • Isıtılmayan çatı arasına tavan kaybı: ${Math.round(qEgimliTavan)} W (çatı arası ${katKaybi.catiArasiT.toFixed(1)} °C)`:'')
-                +(katKaybi.toplam>0?` • U: 2,40 W/m²K • ΔT: ${katKaybi.deltaT.toFixed(1)} K`:'')+` • Mahal ısıtma yükü: ${Math.round(toplamWatt)} W`+(kwGucu*1000>toplamWatt?` • Sıcak su güç kabulü: ${(kwGucu-toplamWatt/1000).toFixed(1)} kW`:'');
+                +(cokKatli&&katKaybi.toplam>0?` • Çatıya temas eden alan: ${catiAlani.toFixed(1)} m²`:'')+(katKaybi.toplam>0?` • U: 2,40 W/m²K • ${villaZeminKaybi?"Çatı ΔT":"ΔT"}: ${katKaybi.deltaT.toFixed(1)} K`:'')+` • Mahal ısıtma yükü: ${Math.round(toplamWatt)} W`+(kwGucu*1000>toplamWatt?` • Sıcak su güç kabulü: ${(kwGucu-toplamWatt/1000).toFixed(1)} kW`:'');
             const kcalGucu = kwGucu * 1000 * 0.8598;
 
             document.getElementById("lblWatt").innerText = kwGucu.toFixed(1);
@@ -2133,10 +2259,48 @@ function yapiTipiDegisti() {
             renderPazaryerleri(sistemEtiket, 'isitma');
         }
 
+        function hesapAracinaGit(mod) {
+            document.getElementById('hesapAraclariSekmeler').hidden=false;
+            document.getElementById('hesapAraclari').hidden=false;
+            sekmeDegistir(mod);
+            document.getElementById('hesapAraclariSekmeler').scrollIntoView({behavior:'smooth',block:'start'});
+        }
+        const ISYERI_PROFILLERI={
+            'İşyeri - Ofis':{ad:'Ofis',ach:6,duyulur:75,gizli:55,dukkan:false,cihaz:true},
+            'İşyeri - Dükkan':{ad:'Dükkan',ach:8,duyulur:75,gizli:55,dukkan:true,cihaz:true},
+            'Mağaza':{ad:'Mağaza',ach:8,duyulur:75,gizli:55,dukkan:true,cihaz:true},
+            'Toplantı Salonu':{ad:'Toplantı salonu',ach:8,duyulur:65,gizli:35,dukkan:false,cihaz:false},
+            'Spor Salonu':{ad:'Spor salonu',ach:6,duyulur:210,gizli:315,dukkan:false,cihaz:false},
+            'Derslik':{ad:'Derslik',ach:6,duyulur:65,gizli:35,dukkan:false,cihaz:false}
+        };
+        function isyeriHavalandirmaDegisti() {
+            const f=document.getElementById('mahalFonksiyon').value,aktif=f!=='Konut';
+            const mekanik=aktif&&['var','var_duyulur','var_entalpik'].includes(document.getElementById('mekanikHavalandirma').value);
+            document.getElementById('isyeriHavalandirmaPaneli').hidden=!aktif;
+            document.getElementById('mekanikHavalandirma').disabled=!aktif;
+            document.getElementById('havalandirmaDebisiKutusu').hidden=!mekanik;
+            document.getElementById('bilinenHavalandirmaDebisi').disabled=!mekanik;
+            const profil=ISYERI_PROFILLERI[f];
+            const geri=document.getElementById('mekanikHavalandirma').value;
+            document.getElementById('selulozikAciklama').hidden=!(aktif&&geri==='var_entalpik');
+            const geriMetni=!mekanik?'':geri==='var_duyulur'?' Duyulur geri kazanım verimi %80; nem geri kazanımı yok.':geri==='var_entalpik'?' Duyulur verim %80, gizli ısı/nem verimi %50 ön kabulü.':' Isı ve nem geri kazanımı yok.';
+            document.getElementById('isyeriHavalandirmaBilgi').innerText=!profil?'':`${profil.ad}: otomatik taze hava Saatlik hava değişim sayısı kabulü ${profil.ach} h⁻¹. `+(mekanik?'Bilinen taze hava debisi girilirse Saatlik hava değişim sayısı yerine kullanılır.':'Mevcut kişi ve alan esaslı taze hava hesabı kullanılır.')+` İnsan yükü: ${profil.duyulur} W duyulur + ${profil.gizli} W gizli / kişi.`+geriMetni+(f==='Spor Salonu'&&mekanik?' Otomatik debide saatlik hava değişimi ile kişi ve alan esaslı spor ihtiyacı karşılaştırılır; büyük olan kullanılır.':'');
+            guncelleSihirbazVeMotor();
+        }
+        function detayIsyeriAyarlari() {
+            const f=document.getElementById('mahalFonksiyon').value;
+            if(f==='Konut')return {};
+            const mekanik=['var','var_duyulur','var_entalpik'].includes(document.getElementById('mekanikHavalandirma').value);
+            const raw=document.getElementById('bilinenHavalandirmaDebisi').value.trim();
+            const debi=mekanik&&raw!==''?Number(raw.replace(',','.')):null;
+            if(debi!==null&&(!Number.isFinite(debi)||debi<=0))throw new Error('Bilinen taze hava debisi sıfırdan büyük olmalı; otomatik hesap için alanı boş bırakın.');
+            return {detayIsyeri:true,mekanikHavalandirma:mekanik,bilinenDebi:debi,sehirYazNemi:true,geriKazanimTipi:mekanik?(document.getElementById('mekanikHavalandirma').value==='var_duyulur'?'duyulur':document.getElementById('mekanikHavalandirma').value==='var_entalpik'?'entalpik':'yok'):'yok'};
+        }
         function mahalDegisti() {
             const mahalFonks = document.getElementById("mahalFonksiyon").value;
-            document.getElementById("detayDolapKutusu").hidden = mahalFonks !== "İşyeri - Dükkan";
-            document.getElementById("ekCihazlarAlani").classList.toggle("uc-cihaz", mahalFonks === "İşyeri - Dükkan");
+            const dukkan=!!ISYERI_PROFILLERI[mahalFonks]?.dukkan;
+            document.getElementById("detayDolapKutusu").hidden = !dukkan;
+            document.getElementById("ekCihazlarAlani").classList.toggle("uc-cihaz", dukkan);
             const yukseklikInput = document.getElementById("katYuksekligi");
             const ekCihazlarAlani = document.getElementById("ekCihazlarAlani");
 
@@ -2149,7 +2313,7 @@ function yapiTipiDegisti() {
                 yukseklikInput.className = "w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 font-bold";
                 ekCihazlarAlani.classList.remove("hidden");
             }
-            guncelleSihirbazVeMotor();
+            isyeriHavalandirmaDegisti();
         }
 
         function parseTrFloat(val) {
@@ -2210,17 +2374,16 @@ function yapiTipiDegisti() {
                 }
             });
 
-            ['1', '2', '3', '4'].forEach(id => {
-                let yon = document.getElementById(`dd_${id}_yon`).value;
-                let en = parseTrFloat(document.getElementById(`dd_${id}_en`).value);
-                let netAlan = 0;
-                
-                if (yon !== "Yok" && en > 0) {
-                    let brutAlan = en * katY;
-                    let oYoneAitPencere = pAlanlari[yon] || 0;
-                    netAlan = Math.max(0, brutAlan - oYoneAitPencere);
+            const kalanCam={...pAlanlari};
+            ['1','2','3','4'].forEach(id=>{
+                const yon=document.getElementById(`dd_${id}_yon`).value;
+                const en=parseTrFloat(document.getElementById(`dd_${id}_en`).value);
+                let net=0;
+                if(yon!=='Yok'&&en>0) {
+                    const brut=en*katY,dusulen=Math.min(brut,kalanCam[yon]||0);
+                    net=brut-dusulen;kalanCam[yon]=Math.max(0,(kalanCam[yon]||0)-dusulen);
                 }
-                document.getElementById(`dd_${id}_net`).innerText = netAlan.toFixed(2);
+                document.getElementById(`dd_${id}_net`).innerText=net.toFixed(2);
             });
 
             let icEn = parseTrFloat(document.getElementById('id_en').value);
@@ -2283,7 +2446,64 @@ function yapiTipiDegisti() {
             // 1. bölge %80 kullanıcı varsayımıdır; konfor hedefi veya TS 825 kuralı değildir.
             return {bolge, disRH: rh, icRH: rh};
         }
-        function klimaKapasiteOnerisi(btu, fonksiyon) {
+        const KLIMA_DUVAR_BASAMAKLARI=[9000,12000,18000,24000];
+        const KLIMA_KOMBINASYON_BASAMAKLARI=[24000,36000,42000,48000];
+        function klimaOneriModeli(btu,fonksiyon) {
+            const nf=n=>n.toLocaleString('tr-TR');
+            const urun=(tip,kapasite)=>({tip,kapasite});
+            if(!Number.isFinite(btu)||btu<=0)return {metin:'Lütfen geçerli bir soğutma yükü hesaplayınız.',planlar:[],urunler:[]};
+            if(btu<=48000) {
+                const tekliMetin=tekliKlimaKapasiteOnerisi(btu,fonksiyon).replaceAll('36.000 BTU/h Salon Tipi Klima','34.000–36.000 BTU/h Salon Tipi Klima');
+                let metin=tekliMetin,duvarUrunleri=[],planlar=[];
+                if(fonksiyon==='Konut'&&btu>24000) {
+                    const adaylar=[];
+                    for(const a of KLIMA_DUVAR_BASAMAKLARI)for(const b of KLIMA_DUVAR_BASAMAKLARI)if(a>=b&&a+b>=btu)adaylar.push({a,b,toplam:a+b});
+                    adaylar.sort((a,b)=>a.toplam-b.toplam||Math.abs(a.a-a.b)-Math.abs(b.a-b.b));
+                    const sec=adaylar[0];
+                    const cihazlar=sec.a===sec.b?[{tip:'duvar',kapasite:sec.a,adet:2}]:[{tip:'duvar',kapasite:sec.a,adet:1},{tip:'duvar',kapasite:sec.b,adet:1}];
+                    const duvarMetni=cihazlar.map(x=>`${x.adet} adet ${nf(x.kapasite)} BTU/h Duvar Tipi Klima`).join(' + ');
+                    metin=`I) ${duvarMetni} (Toplam ${nf(sec.toplam)} BTU/h)\nII) ${tekliMetin.replaceAll(' | ',' veya ')}`;
+                    duvarUrunleri=cihazlar.map(x=>urun('duvar',x.kapasite));
+                    planlar=[{ad:'I',cihazlar,toplam:sec.toplam}];
+                }
+                const buyukUrunler=tekliMetin.split(' | ').map(t=>{
+                    const m=t.match(/([\d.]+) BTU\/h/);
+                    return m?urun(t.includes('Kaset Tipi')?'kaset':t.includes('Salon Tipi')?'salon':'duvar',Number(m[1].replaceAll('.',''))):null;
+                }).filter(Boolean);
+                const urunler=[...new Map([...duvarUrunleri,...buyukUrunler].map(u=>[u.tip+':'+u.kapasite,u])).values()];
+                return {metin,planlar,urunler};
+            }
+            const yuk=Math.ceil(btu);
+            const ekle=(liste,tip,kapasite,adet=1)=>{
+                if(adet<=0)return;
+                const eski=liste.find(x=>x.tip===tip&&x.kapasite===kapasite);
+                if(eski)eski.adet+=adet;else liste.push({tip,kapasite,adet});
+            };
+            // I: 48 binlik cihazlar ve kalan yükü yukarı yuvarlayan salon/kaset.
+            const salon=[],tam=Math.floor((yuk-1)/48000);
+            ekle(salon,'salon_kaset',48000,tam);
+            const kalan=yuk-tam*48000;
+            ekle(salon,'salon_kaset',KLIMA_KOMBINASYON_BASAMAKLARI.find(k=>k>=kalan));
+            // II: en az bir 48 bin salon/kaset; 24 bini aşan kalana ek salon/kaset,
+            // son en fazla 24 binlik bölüm için duvar tipi.
+            const karma=[];ekle(karma,'salon_kaset',48000,tam);
+            let son=kalan;
+            if(son>24000){const ek=KLIMA_KOMBINASYON_BASAMAKLARI.find(k=>k>=son-24000);ekle(karma,'salon_kaset',ek);son-=ek;}
+            if(son>0)ekle(karma,'duvar',KLIMA_DUVAR_BASAMAKLARI.find(k=>k>=son));
+            // III: sadece duvar tipi; kalan bölüm de yukarı yuvarlanır.
+            const duvar=[];ekle(duvar,'duvar',24000,Math.floor(yuk/24000));
+            const sonDuvar=yuk%24000;if(sonDuvar)ekle(duvar,'duvar',KLIMA_DUVAR_BASAMAKLARI.find(k=>k>=sonDuvar));
+            const planlar=[salon,karma,duvar].map((cihazlar,i)=>({ad:['I','II','III'][i],cihazlar,toplam:cihazlar.reduce((a,x)=>a+x.adet*x.kapasite,0)}));
+            const tipAdi=t=>t==='salon_kaset'?'Salon/Kaset Tipi Klima':'Duvar Tipi Klima';
+            const bilesen=x=>x.tip==='salon_kaset'&&x.kapasite===36000?`${x.adet} adet (34.000–36.000 BTU/h Salon Tipi veya 36.000 BTU/h Kaset Tipi Klima)`:`${x.adet} adet ${nf(x.kapasite)} BTU/h ${tipAdi(x.tip)}`;
+            const metin=planlar.map(p=>`${p.ad}) ${p.cihazlar.map(bilesen).join(' + ')} (Toplam ${nf(p.toplam)} BTU/h)`).join('\n');
+            const urunHaritasi=new Map();
+            for(const p of planlar)for(const x of p.cihazlar)for(const t of (x.tip==='salon_kaset'?['salon','kaset']:['duvar']))urunHaritasi.set(t+':'+x.kapasite,urun(t,x.kapasite));
+            const urunler=[...urunHaritasi.values()].sort((a,b)=>b.kapasite-a.kapasite||['salon','kaset','duvar'].indexOf(a.tip)-['salon','kaset','duvar'].indexOf(b.tip));
+            return {metin,planlar,urunler};
+        }
+        function klimaKapasiteOnerisi(btu,fonksiyon) {return klimaOneriModeli(btu,fonksiyon).metin;}
+        function tekliKlimaKapasiteOnerisi(btu, fonksiyon) {
             if (!Number.isFinite(btu) || btu <= 0) return "Lütfen geçerli bir soğutma yükü hesaplayınız.";
             const konut = fonksiyon === "Konut";
             if (btu > 28000) {
@@ -2293,6 +2513,8 @@ function yapiTipiDegisti() {
                 if (!salon || !kaset) return `${Math.ceil(btu).toLocaleString('tr-TR')} BTU/h ve üzeri toplam kapasiteli Salon Tipi çoklu sistem | ${Math.ceil(btu).toLocaleString('tr-TR')} BTU/h ve üzeri toplam kapasiteli Kaset Tipi Split çoklu sistem`;
                 return `${salon.toLocaleString('tr-TR')} BTU/h Salon Tipi Klima | ${kaset.toLocaleString('tr-TR')} BTU/h Kaset Tipi Split Klima`;
             }
+            // Tek duvar tipi üst basamağı 24 bin: hesap yükü bunun üstündeyse alt kapasite önerilmez.
+            if(konut&&btu>24000&&btu<=28000)return '36.000 BTU/h Salon Tipi Klima | 36.000 BTU/h Kaset Tipi Split Klima';
             if (konut && btu <= 28000) {
                 const kapasite = btu <= 9000 ? 9000 : btu <= 12000 ? 12000 : btu <= 18000 ? 18000 : 24000;
                 return `${kapasite.toLocaleString('tr-TR')} BTU/h Duvar Tipi Inverter Klima`;
@@ -2308,17 +2530,28 @@ function yapiTipiDegisti() {
         }
 
         function otomatikMahalYukleri(alan, yukseklik, insan, fonksiyon, ayarlar = {}) {
-            const konut = fonksiyon === "Konut", dukkan = fonksiyon === "İşyeri - Dükkan";
+            const profil=ISYERI_PROFILLERI[fonksiyon];
+            const konut = fonksiyon === "Konut", dukkan = !!profil?.dukkan;
             const qAydinlatma = alan * (dukkan ? 12 : 8);
             const qKonutCihaz = konut ? alan * 4 : 0;
             // Ofis/dükkân: bilgisayar ve televizyon için toplam cihaz ön kabulü; ayrı ilave TV yükü değildir.
-            const qBilgisayar = konut ? 0 : 300;
+            const qBilgisayar = konut ? 0 : ayarlar.detayIsyeri&&!profil?.cihaz ? 0 : 300;
             const cihazW = id => {const v = ayarlar[id] ?? document.getElementById(id).value; return v === "printer" ? 120 : v === "minibuzdolabi" ? 150 : 0;};
             const qEkCihaz = konut ? 0 : cihazW("ekCihaz1") + cihazW("ekCihaz2");
-            const tazeHavaDebisi = konut ? alan * yukseklik * 0.5 : 3.6 * ((dukkan ? 3.8 : 2.5) * insan + (dukkan ? 0.6 : 0.3) * alan);
+            const mekanik=!!ayarlar.detayIsyeri&&!konut&&!!ayarlar.mekanikHavalandirma;
+            const ach=mekanik?profil.ach:0;
+            const spor=fonksiyon==='Spor Salonu';
+            const saatlikHavaDegisimDebisi=mekanik?alan*yukseklik*ach:0;
+            // Fitness/aerobik: ASHRAE 62.1-2022 Tablo 6-1, Rp=10 L/s-kişi, Ra=0,3 L/s-m².
+            // Bu alan/kişi ön hesabı için hava dağıtım etkinliği 1 kabul edilir.
+            const sporKisiAlanDebisi=mekanik&&spor?3.6*(10*Math.max(0,insan)+0.3*alan):0;
+            const otomatikHavalandirmaDebisi=spor?Math.max(saatlikHavaDegisimDebisi,sporKisiAlanDebisi):saatlikHavaDegisimDebisi;
+            const bilinenDebiVar=mekanik&&ayarlar.bilinenDebi!==null&&ayarlar.bilinenDebi!==undefined;
+            const debiYontemi=mekanik?(bilinenDebiVar?'Bilinen taze hava debisi':spor?'Saatlik hava değişimi / spor kullanım ihtiyacının büyüğü':'Saatlik hava değişim sayısı × alan × yükseklik'):(konut?'Konut: taze hava yükü dahil değil':'Mevcut kişi + alan esaslı taze hava');
+            const tazeHavaDebisi = mekanik ? (ayarlar.bilinenDebi??otomatikHavalandirmaDebisi) : konut ? 0 : 3.6 * ((dukkan ? 3.8 : 2.5) * insan + (dukkan ? 0.6 : 0.3) * alan);
             const infiltrasyonDebisi = dukkan ? alan * yukseklik * 0.5 : 0;
             const qDolap = dukkan && (ayarlar.dukkanDolap ?? document.getElementById("dukkanDolap").value) === "ic" ? alan * 30 * 0.5 : 0;
-            return {qAydinlatma, qKonutCihaz, qBilgisayar, qEkCihaz, qDolap, tazeHavaDebisi, infiltrasyonDebisi};
+            return {qAydinlatma, qKonutCihaz, qBilgisayar, qEkCihaz, qDolap, tazeHavaDebisi, infiltrasyonDebisi, mekanik, ach, debiYontemi, saatlikHavaDegisimDebisi, sporKisiAlanDebisi, otomatikHavalandirmaDebisi, spor, bilinenDebiVar};
         }
         function catiSogutmaYuku(alan, yalitim, konum, deltaT, ayarlar = {}) {
             const uCati = ({cok_iyi:0.25, standart:0.40, zayif:1.80})[yalitim] ?? 0.40;
@@ -2385,12 +2618,18 @@ function yapiTipiDegisti() {
             });
 
             // Oturan / hafif aktivite varsayımı; eski 95 W toplamı ayrıca eklenmez.
-            const qInsanDuyulur = insan * 75;
-            const qInsanGizli = insan * 55;
+            const profil=ayarlar.detayIsyeri?ISYERI_PROFILLERI[mahalFonks]:null;
+            const qInsanDuyulur = insan * (profil?.duyulur??75);
+            const qInsanGizli = insan * (profil?.gizli??55);
             const yukler = otomatikMahalYukleri(alan, yukseklik, insan, mahalFonks, ayarlar);
             const {qAydinlatma, qKonutCihaz, qBilgisayar, qEkCihaz, qDolap, tazeHavaDebisi, infiltrasyonDebisi} = yukler;
 
-            const {bolge: nemBolgesi, disRH, icRH} = bolgeselNemKabulu(sehir);
+            const nemKabulu=bolgeselNemKabulu(sehir);
+            const nemBolgesi=nemKabulu.bolge,icRH=nemKabulu.icRH;
+            const yazNemleri=NEM_YAZ_AYLARI[sehir];
+            if(ayarlar.sehirYazNemi&&(!yazNemleri||yazNemleri.length!==3))throw new Error('Şehir için yaz nem verisi bulunamadı.');
+            const disRH=ayarlar.sehirYazNemi?yazNemleri.reduce((a,b)=>a+b,0)/3:nemKabulu.disRH;
+            const nemYontemi=ayarlar.sehirYazNemi?'Şehir H/T/A ortalama dış bağıl nemi':'Önceki bölgesel nem kabulü';
             const basinc = 101.325; // kPa, deniz seviyesi ön hesap varsayımı
             // Magnus doygunluk basıncı (kPa); nem oranı kg su / kg kuru hava.
             const nemOrani = (t, rh) => {
@@ -2401,8 +2640,15 @@ function yapiTipiDegisti() {
             const wIc = nemOrani(24, icRH);
             const kuruHavaYogunlugu = (basinc * 1000) / (287.055 * (tDisPik + 273.15) * (1 + 1.6078 * wDis));
             const kuruHavaKutleDebisi = tazeHavaDebisi / 3600 * kuruHavaYogunlugu;
-            const qTazeHava = kuruHavaKutleDebisi * (1006 + 1860 * wDis) * deltaT;
-            const qGizliHava = kuruHavaKutleDebisi * (2501000 + 1860 * 24) * Math.max(0, wDis - wIc);
+            const qTazeHavaBrut = kuruHavaKutleDebisi * (1006 + 1860 * wDis) * deltaT;
+            const qGizliHavaBrut = kuruHavaKutleDebisi * (2501000 + 1860 * 24) * Math.max(0, wDis - wIc);
+            const geriKazanimTipi=yukler.mekanik?(ayarlar.geriKazanimTipi??'yok'):'yok';
+            const duyulurGeriKazanimVerimi=['duyulur','entalpik'].includes(geriKazanimTipi)?0.80:0;
+            const gizliGeriKazanimVerimi=geriKazanimTipi==='entalpik'?0.50:0;
+            const qTazeHava=qTazeHavaBrut*(1-duyulurGeriKazanimVerimi);
+            const qGizliHava=qGizliHavaBrut*(1-gizliGeriKazanimVerimi);
+            const qGeriKazanilan=qTazeHavaBrut+qGizliHavaBrut-qTazeHava-qGizliHava;
+            const geriKazanimAciklamasi=geriKazanimTipi==='duyulur'?'Duyulur geri kazanım: %80; gizli: %0':geriKazanimTipi==='entalpik'?'Entalpik geri kazanım: duyulur %80, gizli %50 (ön kabul)':'Geri kazanım yok';
             const infKutleDebisi = infiltrasyonDebisi / 3600 * kuruHavaYogunlugu;
             const qInfiltrasyonDuyulur = infKutleDebisi * (1006 + 1860 * wDis) * deltaT;
             const qInfiltrasyonGizli = infKutleDebisi * (2501000 + 1860 * 24) * Math.max(0, wDis - wIc);
@@ -2410,13 +2656,15 @@ function yapiTipiDegisti() {
             const qDuyulur = qDuvarIle + qKomsuIle + qCamIle + qTavanDoseme + qSolarCam + qInsanDuyulur + qAydinlatma + qCihazToplam + qTazeHava + qInfiltrasyonDuyulur;
             const qGizli = qGizliHava + qInsanGizli + qInfiltrasyonGizli;
             const toplamWatt = (qDuyulur + qGizli) * 1.05;
-            return {...yukler, duvarCepheYukleri, uDuvar, tDisPik, sicaklikKaynagi, deltaTKomsu, uDoseme, qCati, qUstDoseme, qAltDoseme, uCati, cltdEtkin, qTavanDoseme, qCihazToplam, qInfiltrasyonDuyulur, qInfiltrasyonGizli, nemBolgesi, disRH, icRH, tazeHavaDebisi, qTazeHava, qGizliHava, qInsanDuyulur, qInsanGizli, qDuyulur, qGizli, toplamWatt, uCam, golgelemeFaktoru, wDis, wIc, qDuvarIle, qKomsuIle, qCamIle, qSolarCam, toplamCamAlani, toplamNetDisDuvar};
+            return {...yukler, nemYontemi, geriKazanimTipi, duyulurGeriKazanimVerimi, gizliGeriKazanimVerimi, qTazeHavaBrut, qGizliHavaBrut, qGeriKazanilan, geriKazanimAciklamasi, duvarCepheYukleri, uDuvar, tDisPik, sicaklikKaynagi, deltaTKomsu, uDoseme, qCati, qUstDoseme, qAltDoseme, uCati, cltdEtkin, qTavanDoseme, qCihazToplam, qInfiltrasyonDuyulur, qInfiltrasyonGizli, nemBolgesi, disRH, icRH, tazeHavaDebisi, qTazeHava, qGizliHava, qInsanDuyulur, qInsanGizli, qDuyulur, qGizli, toplamWatt, uCam, golgelemeFaktoru, wDis, wIc, qDuvarIle, qKomsuIle, qCamIle, qSolarCam, toplamCamAlani, toplamNetDisDuvar};
         }
 
         function hesaplaTS825() {
+            try {
             let alan = parseTrFloat(document.getElementById("mahalAlani").value);
 
             if (alan <= 0) {
+                window.sonDetaySogutma=null;
                 document.getElementById("otomatikYukSatiri").innerText = "Alan girildiğinde otomatik yükler burada gösterilir.";
                 document.getElementById("detayYukOzeti").innerText = "";
                 document.getElementById("lblWatt").innerText = "0";
@@ -2447,16 +2695,16 @@ function yapiTipiDegisti() {
                 if (yon !== "Yok") pAlanlari[yon] = (pAlanlari[yon] || 0) + (en * boy);
             });
 
-            let dNetAlanlari = { Kuzey: 0, Kuzeydogu: 0, Dogu: 0, Guneydogu: 0, Guney: 0, Guneybati: 0, Bati: 0, Kuzeybati: 0 };
-            ['1', '2', '3', '4'].forEach(id => {
-                let yon = document.getElementById(`dd_${id}_yon`).value;
-                let en = parseTrFloat(document.getElementById(`dd_${id}_en`).value);
-                if (yon !== "Yok" && en > 0) {
-                    let brut = en * yukseklik;
-                    let pencere = pAlanlari[yon] || 0;
-                    dNetAlanlari[yon] = (dNetAlanlari[yon] || 0) + Math.max(0, brut - pencere);
-                }
-            });
+            let dNetAlanlari = { Kuzey:0,Kuzeydogu:0,Dogu:0,Guneydogu:0,Guney:0,Guneybati:0,Bati:0,Kuzeybati:0 };
+            for(const id of ['1','2','3','4']) {
+                const yon=document.getElementById(`dd_${id}_yon`).value;
+                const en=parseTrFloat(document.getElementById(`dd_${id}_en`).value);
+                if(yon!=='Yok'&&en>0)dNetAlanlari[yon]+=en*yukseklik;
+            }
+            for(const yon of Object.keys(dNetAlanlari)) {
+                if(pAlanlari[yon]>dNetAlanlari[yon]+1e-7)throw new Error('Cam alanı '+yon+' yönündeki brüt dış duvar alanını aşıyor; pencere ve duvar ölçülerini kontrol edin.');
+                dNetAlanlari[yon]=Math.max(0,dNetAlanlari[yon]-pAlanlari[yon]);
+            }
 
             let toplamNetDisDuvar = 0;
             Object.keys(dNetAlanlari).forEach(k => toplamNetDisDuvar += dNetAlanlari[k]);
@@ -2468,12 +2716,14 @@ function yapiTipiDegisti() {
             const drSehir = sehirGunlukSalinim(sehir);
             document.getElementById("gunlukSicaklikSalinimi").value = String(drSehir);
             document.getElementById("catiSoguruculuk").value = "0.8";
-            const sonuc = ortakSogutmaMotoru({alan, sehir, yalitim, mahalFonks, katKonum, camTipi, yukseklik, insan, enIc, pAlanlari, dNetAlanlari, ayarlar:{dr:drSehir,alpha:0.8}});
+            const sonuc = ortakSogutmaMotoru({alan, sehir, yalitim, mahalFonks, katKonum, camTipi, yukseklik, insan, enIc, pAlanlari, dNetAlanlari, ayarlar:{dr:drSehir,alpha:0.8,...detayIsyeriAyarlari()}});
             window.sonDetaySogutma = sonuc;
             const {qAydinlatma, qCihazToplam, qDolap, tazeHavaDebisi, infiltrasyonDebisi, qTazeHava, qGizliHava, qInfiltrasyonDuyulur, qInfiltrasyonGizli, qTavanDoseme, qDuyulur, qGizli, toplamWatt} = sonuc;
-            document.getElementById("otomatikYukSatiri").innerText = `Hesaba dahil (emniyet payı öncesi): Aydınlatma ${Math.round(qAydinlatma)} W • Taze hava ${tazeHavaDebisi.toFixed(1)} m³/h / ${Math.round(qTazeHava + qGizliHava)} W • Cihazlar ${Math.round(qCihazToplam)} W` + (mahalFonks === "İşyeri - Dükkan" ? ` (endüstriyel buzdolabı ${Math.round(qDolap)} W) • Kapı sızıntısı ${infiltrasyonDebisi.toFixed(1)} m³/h / ${Math.round(qInfiltrasyonDuyulur + qInfiltrasyonGizli)} W` : "") + `${yatayYukMetni(sonuc)} • Dış duvar ${Math.round(sonuc.qDuvarIle)} W • Dış sıcaklık ${sonuc.tDisPik} °C • Komşu Δtₑş ${sonuc.deltaTKomsu.toFixed(2)} K`;
+            document.getElementById("otomatikYukSatiri").innerText = `Hesaba dahil (emniyet payı öncesi): Aydınlatma ${Math.round(qAydinlatma)} W • Taze hava ${tazeHavaDebisi.toFixed(1)} m³/h / ${Math.round(qTazeHava + qGizliHava)} W • Cihazlar ${Math.round(qCihazToplam)} W` + (ISYERI_PROFILLERI[mahalFonks]?.dukkan ? ` (endüstriyel buzdolabı ${Math.round(qDolap)} W) • Kapı sızıntısı ${infiltrasyonDebisi.toFixed(1)} m³/h / ${Math.round(qInfiltrasyonDuyulur + qInfiltrasyonGizli)} W` : "") + `${yatayYukMetni(sonuc)} • Dış duvar ${Math.round(sonuc.qDuvarIle)} W • Dış sıcaklık ${sonuc.tDisPik} °C • Komşu Δtₑş ${sonuc.deltaTKomsu.toFixed(2)} K`;
             document.getElementById("detayYukOzeti").innerText = `Taze hava: ${tazeHavaDebisi.toFixed(1)} m³/h | Duyulur: ${Math.round(qDuyulur)} W | Gizli: ${Math.round(qGizli)} W (hava: ${Math.round(qGizliHava)} W) | Tasarım: ${Math.round(toplamWatt)} W %5 emniyet katsayısı uygulanmıştır`;
 
+            if(mahalFonks!=='Konut')document.getElementById('otomatikYukSatiri').innerText+=` • Havalandırma: ${sonuc.debiYontemi}${sonuc.mekanik&&sonuc.debiYontemi.startsWith('Saatlik hava değişim sayısı')?' ('+sonuc.ach+' h⁻¹)':''} • ${sonuc.geriKazanimAciklamasi} • Dış yaz nemi: %${sonuc.disRH.toFixed(1)} (H/T/A ortalaması) • Taze hava kalan yükü: ${Math.round(sonuc.qTazeHava)} W duyulur + ${Math.round(sonuc.qGizliHava)} W gizli • Geri kazanılan: ${Math.round(sonuc.qGeriKazanilan)} W`;
+            if(sonuc.spor&&sonuc.mekanik&&!sonuc.bilinenDebiVar)document.getElementById('otomatikYukSatiri').innerText+=` • Saatlik hava değişimi debisi: ${sonuc.saatlikHavaDegisimDebisi.toFixed(1)} m³/h • Spor kişi/alan debisi: ${sonuc.sporKisiAlanDebisi.toFixed(1)} m³/h • Seçilen büyük debi: ${sonuc.tazeHavaDebisi.toFixed(1)} m³/h`;
             const toplamBTU = Math.round(toplamWatt * 3.412);
 
             document.getElementById("lblWatt").innerText = Math.round(toplamWatt).toLocaleString('tr-TR');
@@ -2482,16 +2732,25 @@ function yapiTipiDegisti() {
             const baslik = klimaKapasiteOnerisi(toplamWatt * 3.412, mahalFonks);
 
             document.getElementById("lblOnerilenSegment").innerText = baslik;
-            if (mahalFonks === "Konut" && toplamWatt * 3.412 > 24000 && toplamWatt * 3.412 <= 28000) {
-                document.getElementById("detayYukOzeti").innerText += " | 24.000 BTU/h önerisi hesap yükünün altındadır; cihazın gerçek tasarım koşulu kapasitesini kontrol ediniz.";
-            }
-            renderPazaryerleri(baslik, 'klima');
+
+            renderPazaryerleri(baslik, 'klima',klimaOneriModeli(toplamWatt*3.412,mahalFonks));
 
             const mahalNo = document.getElementById("raporMahalNo") ? document.getElementById("raporMahalNo").value : "M-101";
             const mahalAdi = document.getElementById("raporMahalAdi") ? document.getElementById("raporMahalAdi").value : "Yönetici Odası";
             if (document.getElementById("printMahalBilgi")) document.getElementById("printMahalBilgi").innerText = `Mahal: ${mahalNo} - ${mahalAdi}`;
             if (document.getElementById("printBTUDeger")) document.getElementById("printBTUDeger").innerText = `${toplamBTU.toLocaleString('tr-TR')} BTU/h`;
             if (document.getElementById("printKlimaOneri")) document.getElementById("printKlimaOneri").innerText = baslik;
+            } catch(e) {
+                window.sonDetaySogutma=null;
+                document.getElementById('otomatikYukSatiri').innerText=e.message;
+                document.getElementById('detayYukOzeti').innerText='';
+                document.getElementById('lblWatt').innerText='—';
+                document.getElementById('lblBTU').innerText='—';
+                document.getElementById('lblOnerilenSegment').innerText=e.message;
+                document.getElementById('printBTUDeger').innerText='—';
+                document.getElementById('printKlimaOneri').innerText=e.message;
+                renderVarsayilanPazaryeri('klima');
+            }
         }
 
       
@@ -2501,6 +2760,7 @@ function yapiTipiDegisti() {
             sekmeDegistir('pratik'); // Pratik mod etiketlerini ve görünümünü tetikler
             yapiTipiDegisti();
             isiticiCihazDegisti();
+            isyeriHavalandirmaDegisti();
         };
 
     </script>
