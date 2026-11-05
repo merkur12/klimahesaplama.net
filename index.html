@@ -21,8 +21,13 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // İzin verilene kadar analitik ve reklam depolaması kapalıdır.
+  gtag('consent', 'default', {
+    analytics_storage: 'denied', ad_storage: 'denied',
+    ad_user_data: 'denied', ad_personalization: 'denied',
+    wait_for_update: 500
+  });
   gtag('js', new Date());
-
   gtag('config', 'G-S7939TH81V');
 </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6907551704910400" crossorigin="anonymous"></script>
@@ -126,8 +131,99 @@
         #hesapAraclari { scroll-margin-top:110px; }
         #lblOnerilenSegment, #printKlimaOneri, #tekSayfaRapor .raporSonuc p { white-space:pre-line; }
         </style>
+
+    <!-- Türkiye ve diğer GDPR dışı bölgeler için çerez tercih paneli -->
+    <style>
+      #kh-cookie-panel { position:fixed; bottom:18px; left:18px; right:18px; max-width:650px; margin:auto; z-index:2147483000; background:#fff; color:#1e293b; border:1px solid #cbd5e1; border-radius:16px; box-shadow:0 10px 45px #0f172a40; padding:20px; font:14px/1.55 Arial,sans-serif; }
+      #kh-cookie-panel[hidden] {display:none!important}
+      #kh-cookie-panel h2 {font-size:18px;font-weight:700;margin:0 0 8px}
+      #kh-cookie-panel p {margin:0 0 12px}
+      #kh-cookie-panel .kh-actions {display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+      #kh-cookie-panel button {padding:10px 13px;border-radius:9px;border:1px solid #2563eb;cursor:pointer;font-weight:600;background:#fff;color:#1d4ed8}
+      #kh-cookie-panel button.kh-primary {background:#2563eb;color:white}
+      #kh-cookie-panel label {display:block;margin:10px 0}
+      #kh-cookie-panel a {color:#1d4ed8;text-decoration:underline}
+      #kh-cookie-manage {position:fixed;bottom:10px;left:10px;z-index:45;background:white;border:1px solid #cbd5e1;border-radius:9px;padding:6px 9px;font:12px Arial,sans-serif;color:#1d4ed8;cursor:pointer}
+      @media print {#kh-cookie-panel,#kh-cookie-manage{display:none!important}}
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+
+    <aside id="kh-cookie-panel" role="dialog" aria-modal="false" aria-labelledby="kh-cookie-title" hidden class="no-print">
+      <h2 id="kh-cookie-title">Çerez ve gizlilik tercihleriniz</h2>
+      <p>Sitemizin çalışması için gerekli teknolojiler kullanılır. İzin verirseniz ziyaret istatistiklerini ölçmek ve reklamları desteklemek için ek çerezler kullanılabilir. Tercihinizi istediğiniz zaman değiştirebilirsiniz.</p>
+      <p><a href="gizlilik-cerez.html" target="_blank" rel="noopener">Gizlilik ve Çerez Politikası</a></p>
+      <div id="kh-cookie-options" hidden>
+        <label><input type="checkbox" checked disabled> Zorunlu (her zaman açık)</label>
+        <label><input type="checkbox" id="kh-analytics-opt"> Analitik çerezleri</label>
+        <label><input type="checkbox" id="kh-ads-opt"> Reklam çerezleri</label>
+      </div>
+      <div class="kh-actions">
+        <button type="button" id="kh-cookie-reject">Tümünü Reddet</button>
+        <button type="button" id="kh-cookie-settings">Tercihleri Yönet</button>
+        <button type="button" id="kh-cookie-save" hidden>Seçimleri Kaydet</button>
+        <button type="button" id="kh-cookie-accept" class="kh-primary">Tümünü Kabul Et</button>
+      </div>
+    </aside>
+    <button type="button" id="kh-cookie-manage" hidden class="no-print">Çerez tercihleri</button>
+    <script>
+    (function () {
+      'use strict';
+      const KEY = 'kh_cookie_choice_v1';
+      const panel = document.getElementById('kh-cookie-panel');
+      const manage = document.getElementById('kh-cookie-manage');
+      const options = document.getElementById('kh-cookie-options');
+      const analytics = document.getElementById('kh-analytics-opt');
+      const ads = document.getElementById('kh-ads-opt');
+      const save = document.getElementById('kh-cookie-save');
+      const settings = document.getElementById('kh-cookie-settings');
+      function apply(a, d) {
+        if (typeof gtag === 'function') gtag('consent', 'update', {
+          analytics_storage: a ? 'granted' : 'denied',
+          ad_storage: d ? 'granted' : 'denied',
+          ad_user_data: d ? 'granted' : 'denied',
+          ad_personalization: d ? 'granted' : 'denied'
+        });
+      }
+      function choose(a, d) {
+        try { localStorage.setItem(KEY, JSON.stringify({analytics: a, ads: d, date: Date.now()})); } catch(e) {}
+        apply(a, d); panel.hidden = true; manage.hidden = false;
+      }
+      function showSettings() {
+        options.hidden = false; save.hidden = false; settings.hidden = true;
+      }
+      document.getElementById('kh-cookie-accept').addEventListener('click', () => choose(true,true));
+      document.getElementById('kh-cookie-reject').addEventListener('click', () => choose(false,false));
+      settings.addEventListener('click', showSettings);
+      save.addEventListener('click', () => choose(analytics.checked,ads.checked));
+      manage.addEventListener('click', () => {
+        try { const c=JSON.parse(localStorage.getItem(KEY)); analytics.checked=!!c.analytics;ads.checked=!!c.ads; } catch(e) {}
+        showSettings();panel.hidden=false;
+      });
+      // AB/AEA/Birleşik Krallık/İsviçre: Google'ın mevcut CMP mesajına bırakılır.
+      const gdprCountries = new Set(('AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE IS LI NO GB CH').split(' '));
+      async function country() {
+        try {
+          const r=await fetch('/__visitor-country',{cache:'no-store'});
+          if(!r.ok) throw new Error('country endpoint');
+          const t=(await r.text()).trim();
+          let code=t;
+          try { const j=JSON.parse(t);code=typeof j==='string'?j:(j.country||j.countryCode||j.country_code||j.code||''); } catch(e) {}
+          const m=String(code).toUpperCase().match(/\b[A-Z]{2}\b/);
+          return m?m[0]:'';
+        } catch(e) {return '';}
+      }
+      country().then(code => {
+        if(gdprCountries.has(code)) return;
+        let choice=null;
+        try {choice=JSON.parse(localStorage.getItem(KEY));} catch(e) {}
+        if(choice && typeof choice.analytics==='boolean' && typeof choice.ads==='boolean') {
+          apply(choice.analytics,choice.ads);manage.hidden=false;
+        } else {panel.hidden=false;}
+      });
+    })();
+    </script>
 
     <!-- NAVBAR -->
     <nav class="no-print bg-white border-b border-slate-100 py-4 px-6 shadow-xs sticky top-0 z-40">
