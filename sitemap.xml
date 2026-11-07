@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Ana Sayfa -->
+    
     <url>
         <loc>https://klimahesaplama.net/</loc>
         <lastmod>2026-09-20</lastmod>
@@ -8,7 +8,7 @@
         <priority>1.0</priority>
     </url>
 
-    <!-- Blog ve Teknik Makaleler (1 - 20) -->
+    
     <url>
         <loc>https://klimahesaplama.net/makale-1.html</loc>
         <lastmod>2026-09-20</lastmod>
@@ -129,4 +129,4 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-</urlset>
+<url><loc>https://klimahesaplama.net/klima-kapasitesi-hesaplama.html</loc></url><url><loc>https://klimahesaplama.net/30-m2-oda-klima-secimi.html</loc></url><url><loc>https://klimahesaplama.net/100-m2-ev-kombi-isi-pompasi.html</loc></url></urlset>
