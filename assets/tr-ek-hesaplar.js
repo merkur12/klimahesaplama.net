@@ -401,24 +401,160 @@
     const frame = document.querySelector('#hesaplama iframe');
     const status = document.getElementById('kh-klima-durum');
     const showAll = document.getElementById('kh-klima-tumu');
-    const data = [
-        ['MSZ-HR25VF', 9000, 2.5, 6.2, 4.3, 21],
-        ['Arçelik 09325', 9000, 2.638, 7.0, 4.0, 19],
-        ['MSZ-HR35VF', 12000, 3.4, 6.2, 4.3, 22],
-        ['Arçelik 12325', 12000, 3.517, 6.6, 4.0, 19],
-        ['MSZ-HR50VF', 18000, 5.0, 6.5, 4.3, 28],
-        ['Arçelik 18325', 18000, 5.275, 7.0, 4.3, 31],
-        ['MSZ-HR71VF', 24000, 7.1, 7.1, 4.3, 33],
-        ['Arçelik 24325', 24000, 7.034, 6.9, 4.3, 31],
+    const series = [
+        {
+            name: 'Arçelik',
+            source: capacity => 'https://www.arcelik.com.tr/split-klima/' + ({ 9000: '09325', 12000: '12325', 18000: '18325', 24000: '24325' })[capacity] + '-klima',
+            models: [
+                ['09325', 9000, 2.638, 7, 4, 19, 59],
+                ['12325', 12000, 3.517, 6.6, 4, 19, 59],
+                ['18325', 18000, 5.275, 7, 4.3, 31, 60],
+                ['24325', 24000, 7.034, 6.9, 4.3, 31, 65],
+            ],
+        },
+        {
+            name: 'Mitsubishi Electric',
+            source: 'https://klima.mitsubishielectric.com.tr/Compare/MSZ-HR.pdf',
+            models: [
+                ['MSZ-HR25VF', 9000, 2.5, 6.2, 4.3, 21, null],
+                ['MSZ-HR35VF', 12000, 3.4, 6.2, 4.3, 22, null],
+                ['MSZ-HR50VF', 18000, 5, 6.5, 4.3, 28, null],
+                ['MSZ-HR71VF', 24000, 7.1, 7.1, 4.3, 33, null],
+            ],
+        },
+        {
+            name: 'Gree Pular',
+            source: 'https://tlcklima.com/wp-content/uploads/2024/03/Pular-Urun-Bilgi-Formu.pdf',
+            models: [
+                ['GWH09AGAXB-K6DNA1B', 9000, 2.5, 6.6, 4.1, 21, 55],
+                ['GWH12AGBXB-K6DNA1A', 12000, 3.2, 6.1, 4, 24, 56],
+                ['GWH18AGD-K6DNA1D', 18000, 4.6, 6.4, 4, 29, 57],
+                ['GWH24AGD-K6DNA1C', 24000, 6.2, 6.8, 4, 30, 63],
+            ],
+        },
+        {
+            name: 'Midea Xtreme Save',
+            source: 'https://ecmx.com.tr/midea-xtreme-save.html',
+            models: [
+                ['AG2Eco-09NXD0-I', 9000, 2.64, 7.4, 4.1, 20, null],
+                ['AG2Eco-12NXD0-I', 12000, 3.52, 7, 4.2, 21, null],
+                ['AG2Eco-18NXD0-I', 18000, 5.28, 7, 4, 20, null],
+                ['AG2Eco-24NXD0-I', 24000, 7.03, 6.4, 4, 21, null],
+            ],
+        },
+        {
+            name: 'Vestel Flora Doğa Inverter Wi-Fi',
+            source: 'https://statik.vestel.com.tr/webfiles/20234513_k.pdf',
+            models: [
+                ['092', 9000, 2.5, 6.6, 4, null, 52],
+                ['122', 12000, 3.4, 6.6, 4, null, 52],
+                ['182', 18000, 5.28, 6.5, 4, null, 55],
+                ['242', 24000, 6.74, 6.1, 4, null, 59],
+            ],
+        },
+        {
+            name: 'Toshiba Seiya',
+            source: 'https://www.alarko-carrier.com.tr/Data/Files/Dokumanlar/brosur/toshiba-seiya-2025.pdf',
+            models: [
+                ['RAS-B10B2KV2G-TR', 9000, 2.5, 6.1, 4, 19, 55],
+                ['RAS-B13B2KV2G-TR', 12000, 3.3, 6.1, 4, 19, 56],
+                ['RAS-B18B2KV2G-TR', 18000, 5, 6.1, 4, 26, 60],
+                ['RAS-B24B2KV2G-TR', 24000, 6.5, 6.1, 4, 29, 61],
+            ],
+        },
+        {
+            name: 'Bosch Climate 2000',
+            source: 'https://www.bosch-homecomfort.com/ocsmedia/optimized/full/o547408v272_Bosch_Climate2000_LeafletBrosur.pdf',
+            models: [
+                ['26 WE', 9000, 2.64, 6.3, 4, 25, 54],
+                ['35 WE', 12000, 3.52, 6.1, 4, 25, 55],
+                ['53 WE', 18000, 5.28, 7.4, 4, 26, 56],
+                ['70 WE', 24000, 7.03, 6.1, 4, 36, 59],
+            ],
+        },
+        {
+            name: 'E.C.A. Spylos Plus',
+            source: 'https://eca.com.tr/uploads/documents/bdd/eef/a8dad3b7-9eba-4734-a891-5f63b3a1724d.pdf',
+            models: [
+                ['ESA1609A100', 9000, 2.7, 6.5, 4, 19, 57],
+                ['ESA1612A100', 12000, 3.5, 6.1, 4, 20, 59],
+                ['ESA1618A100', 18000, 5.3, 6.1, 4, 28, 60],
+                ['ESA1624A100', 24000, 6.8, 6.1, 4, 29, 65],
+            ],
+        },
+        {
+            name: 'Mitsubishi Heavy Industries Trend',
+            source: (_, code) => 'https://form-mhiklima.com/tr/urun/' + code.toLowerCase() + '-set',
+            models: [
+                ['SRK25ZSP-W1', 9000, 2.5, 6.08, 4.1, 23, null],
+                ['SRK35ZSP-W1', 12000, 3.2, 7.3, 4.5, 22, null],
+                ['SRK50ZSP-W1', 18000, 5, 6.2, 4.2, 22, null],
+            ],
+        },
+        {
+            name: 'Airfel',
+            source: 'https://airfel.com/uploads/files/AIRFEL_KLIMA_BROSUR_202313.pdf',
+            models: [
+                ['LTXM25N', 9000, 2.64, 6.3, 4, 25, 54],
+                ['LTXM35N', 12000, 3.52, 6.1, 4, 25, 55],
+                ['LTXM50N', 18000, 5.28, 7.4, 4, 26, 56],
+                ['LTXM71N', 24000, 7.03, 6.1, 4, 36, 59],
+            ],
+        },
+        {
+            name: 'Daikin Sensira',
+            source: 'https://catalogues.daikin.eu/flipbooks/EN/Air_conditioning/Split/44/',
+            models: [
+                ['FTXF25F', 9000, 2.5, 6.5, 4.2, 20, 54],
+                ['FTXF35F', 12000, 3.3, 6.5, 4.2, 20, 54],
+                ['FTXF50F', 18000, 5, 6.5, 4.1, 31, 59],
+                ['FTXF71F', 24000, 7.1, 5.15, 3.81, 34, 62],
+            ],
+        },
+        {
+            name: 'Baymak Elegant Plus',
+            source: 'https://www.baymak.com.tr/media/7416/elegant-plus-klima-brosur-baski-130426.pdf',
+            models: [
+                ['09', 9000, 2.65, 6.5, 4, null, null],
+                ['12', 12000, 3.5, 6.2, 4, null, null],
+                ['18', 18000, 5.1, 6.8, 4, null, null],
+                ['24', 24000, 7.2, 6.3, 4, null, null],
+            ],
+        },
+        {
+            name: 'Carrier AMBI',
+            source: 'https://www.alarko-carrier.com.tr/Data/Files/Dokumanlar/brosur/Carrier_AMBI_klima_TR_Brosur.pdf#page=7',
+            models: [
+                ['42QCE009D8SP', 9000, 2.6, 7, 4.1, 18, 54],
+                ['42QCE012D8SP', 12000, 3.5, 6.5, 4.1, 18, 56],
+                ['42QCE018D8SP', 18000, 5.2, 7.4, 4.1, 20, 58],
+                ['42QCE024D8SP', 24000, 7, 6.5, 4.1, 20, 59],
+            ],
+        },
     ];
-    fillRows(models, data.map(([name, capacity, power, seer, scop, sound]) => {
+    const data = series.flatMap(({ name, source, models }) => models.map(
+        ([code, capacity, power, seer, scop, pressure, soundPower]) => ({
+            name: name + ' ' + code, capacity, power, seer, scop, pressure, soundPower,
+            source: typeof source === 'function' ? source(capacity, code) : source,
+        })
+    )).sort((a, b) => a.capacity - b.capacity || a.name.localeCompare(b.name, 'tr'));
+
+    function externalLink(url, label) {
         const link = document.createElement('a');
-        link.href = 'https://www.akakce.com/arama/?q=' + encodeURIComponent(name.startsWith('MSZ') ? 'Mitsubishi Electric ' + name : name);
+        link.href = url;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = 'Akakçe’de ara';
-        return [name, `${n(capacity)} BTU/h`, `${n(power)} kW`, `${n(seer)} / ${n(scop)}`, `${sound} dB(A)`, link];
-    }));
+        link.textContent = label;
+        return link;
+    }
+
+    const dba = value => value === null ? '—' : n(value) + ' dB(A)';
+    fillRows(models, data.map(({ name, capacity, power, seer, scop, pressure, soundPower, source }) => [
+        name, n(capacity) + ' BTU/h', n(power) + ' kW', n(seer) + ' / ' + n(scop),
+        dba(pressure), dba(soundPower),
+        externalLink(source, 'Teknik veriye bak'),
+        externalLink('https://www.akakce.com/arama/?q=' + encodeURIComponent(name), 'Akakçe’de ara'),
+    ]));
     const rows = [...models.rows];
     function reset() {
         rows.forEach(row => { row.hidden = false; });
@@ -430,15 +566,15 @@
         if (event.origin !== location.origin || event.source !== frame.contentWindow || event.data?.type !== 'kh-klima-kapasite') return;
         const { watts, capacity } = event.data;
         if (!Number.isFinite(watts) || watts <= 0) { reset(); return; }
-        const matching = data.filter(model => model[1] === capacity);
+        const matching = data.filter(model => model.capacity === capacity);
         if (!matching.length) {
             reset();
             status.textContent = `Hesaplanan ${n(watts / 1000)} kW için önerilen cihaz düzeni bu tablonun kapsamı dışında.`;
             return;
         }
-        rows.forEach((row, i) => { row.hidden = data[i][1] !== capacity; });
+        rows.forEach((row, i) => { row.hidden = data[i].capacity !== capacity; });
         showAll.hidden = false;
         status.textContent = `Yük ${n(watts / 1000)} kW. Önerilen sınıf ${n(capacity)} BTU/h.` +
-            (matching.some(model => model[2] * 1000 < watts) ? ' Bu sınıftaki en az bir modelin nominal gücü hesaplanan yükün altında kalıyor.' : '');
+            (matching.some(model => model.power * 1000 < watts) ? ' Bu sınıftaki en az bir modelin nominal gücü hesaplanan yükün altında kalıyor.' : '');
     });
 })();
