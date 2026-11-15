@@ -33,6 +33,89 @@
         html[data-rehber-motor="klima"] :is(#btnTabIsitma, #motorIsitma),
         html[data-rehber-motor="isitma"] :is(#hesapAraclariSekmeler, #motorPratik, #motorKlima) { display: none !important; }
         html[data-rehber-motor] #hesapAraclariSekmeler { position: static !important; }
+
+        /* Klima rehberindeki hesap motoru, iframe'in kullanılabilir genişliğine uyar. */
+        html[data-rehber-motor="klima"] #hesapAraclari {
+            min-width: 0;
+            gap: clamp(0.875rem, 2vw, 1.5rem);
+        }
+        html[data-rehber-motor="klima"] #hesapAraclari > div,
+        html[data-rehber-motor="klima"] :is(#motorPratik, #motorKlima) .grid > * {
+            min-width: 0;
+        }
+        html[data-rehber-motor="klima"] :is(#motorPratik, #motorKlima) {
+            container: kh-klima-form / inline-size;
+            padding: clamp(0.75rem, 2vw, 1.5rem);
+        }
+        html[data-rehber-motor="klima"] :is(#motorPratik, #motorKlima) :is(select, input:not([type="hidden"], [type="checkbox"], [type="radio"])) {
+            min-width: 0;
+            max-width: 100%;
+        }
+        html[data-rehber-motor="klima"] :is(#motorPratik, #motorKlima) select {
+            text-overflow: ellipsis;
+        }
+        html[data-rehber-motor="klima"] .kh-klima-alanlar {
+            gap: 0.75rem;
+        }
+        html[data-rehber-motor="klima"] .kh-klima-alanlar > div:not(.hidden) {
+            display: flex;
+            flex-direction: column;
+        }
+        html[data-rehber-motor="klima"] .kh-klima-alanlar :is(label + select, label + input) {
+            margin-top: auto;
+            min-height: 2.75rem;
+            padding: 0.5rem 0.625rem;
+        }
+        html[data-rehber-motor="klima"] #hesapAraclari > div:last-child > div {
+            padding: clamp(0.875rem, 1.5vw, 1.25rem);
+            overflow-wrap: anywhere;
+        }
+        html[data-rehber-motor="klima"] :is(#lblWatt, #lblBTU) {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+        }
+        html[data-rehber-motor="klima"] :is(#lblWatt, #lblBTU) + span {
+            flex-shrink: 0;
+        }
+        html[data-rehber-motor="klima"] #pazaryeriListesi > .flex {
+            flex-wrap: wrap;
+        }
+        html[data-rehber-motor="klima"] #hesapAraclariSekmeler button {
+            min-width: min(100%, 12.5rem);
+        }
+
+        @media (min-width: 64rem) {
+            html[data-rehber-motor="klima"] #hesapAraclari {
+                grid-template-columns: minmax(0, 1fr) minmax(14.5rem, 25%);
+            }
+            html[data-rehber-motor="klima"] #hesapAraclari > div {
+                grid-column: auto;
+            }
+        }
+        @container kh-klima-form (max-width: 35.99rem) {
+            html[data-rehber-motor="klima"] :is(.kh-klima-alanlar, .print-grid-pencere, .print-grid-duvar) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @container kh-klima-form (max-width: 23.99rem) {
+            html[data-rehber-motor="klima"] :is(.kh-klima-alanlar, .print-grid-pencere, .print-grid-duvar) {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+        @container kh-klima-form (min-width: 36rem) and (max-width: 43.99rem) {
+            html[data-rehber-motor="klima"] #printParametreSatiri {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        @container kh-klima-form (min-width: 36rem) {
+            html[data-rehber-motor="klima"] .kh-klima-cephe {
+                grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1fr);
+            }
+        }
+        @container kh-klima-form (min-width: 44rem) {
+            html[data-rehber-motor="klima"] #printParametreSatiri {
+                grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.15fr) minmax(0, 0.8fr) minmax(0, 1.65fr) minmax(0, 0.8fr);
+            }
+        }
     }
     </style>
 
@@ -351,7 +434,7 @@
                 </h2>
 
                 <form id="pratikForm" autocomplete="off" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 kh-klima-alanlar">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Şehir / İklim Bölgesi</label>
                             <select id="pratikSehir" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500 font-bold">
@@ -414,7 +497,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 kh-klima-alanlar kh-klima-cephe">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2">En Geniş Dış Duvar Yönü</label>
                             <select id="pratikYon" onchange="pratikIkinciYonleriGuncelle()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500 font-bold">
@@ -457,7 +540,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 kh-klima-alanlar">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-2" for="mahalFonksiyon">Mahal fonksiyonu</label>
                             <select id="pratikFonksiyon" onchange="pratikFonksiyonDegisti()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-amber-500">
@@ -481,7 +564,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 kh-klima-alanlar">
                         <label class="text-xs font-bold">Dış cephe sayısı<select id="pratikCephe" onchange="pratikCepheDegisti()" class="w-full border rounded-lg p-3"><option value="1">Tek cephe</option><option value="2">Köşe mahal — iki cephe</option></select></label>
                         <label class="text-xs font-bold">Pencere büyüklüğü<select id="pratikCamOrani" class="w-full border rounded-lg p-3"><option value="0.15">Küçük — %15</option><option value="0.25" selected>Normal — %25</option><option value="0.40">Geniş — %40</option><option value="0.60">Çok geniş — %60</option></select><span id="pratikCamAlaniBilgi" class="block mt-1 text-xs font-normal text-slate-600" aria-live="polite"></span></label>
                         <label class="text-xs font-bold">Pencere türü<select id="pratikCamTipi" class="w-full border rounded-lg p-3">
@@ -546,7 +629,7 @@
                         </button>
                     </div>
 
-                    <div class="bg-blue-50/70 p-4 rounded-xl border border-blue-200 grid grid-cols-1 md:grid-cols-2 gap-4 print-grid-2">
+                    <div class="bg-blue-50/70 p-4 rounded-xl border border-blue-200 grid grid-cols-1 md:grid-cols-2 gap-4 print-grid-2 kh-klima-alanlar">
                         <div>
                             <label class="block text-xs font-bold uppercase text-blue-900 mb-1.5"><i class="fa-solid fa-tag mr-1"></i> Mahal / Oda Numarası</label>
                             <input type="text" id="raporMahalNo" value="M-101" placeholder="Örn: 201, Salon, Ofis-B" class="w-full bg-white border border-blue-300 rounded-lg p-2.5 text-sm font-bold text-blue-950 focus:outline-none focus:border-blue-500">
@@ -559,7 +642,7 @@
 
                     <form id="ts825Form" autocomplete="off" class="space-y-4">
                         
-                        <div class="print-grid-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="print-grid-3 grid grid-cols-1 md:grid-cols-3 gap-4 kh-klima-alanlar">
                             <div>
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Şehir / Derece Gün Bölgesi</label>
                                 <select onchange="guncelleSihirbazVeMotor()" id="sehir" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500">
@@ -661,7 +744,7 @@
                             </div>
                         </div>
 
-                        <div id="printParametreSatiri" class="print-grid-5 grid grid-cols-1 md:grid-cols-5 gap-4">
+                        <div id="printParametreSatiri" class="print-grid-5 grid grid-cols-1 md:grid-cols-5 gap-4 kh-klima-alanlar">
                             <div id="divMahalAlaniKutusu" class="flex flex-col justify-end">
                                 <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Mahal Alanı (m²)</label>
                                 <input type="number" step="0.1" id="mahalAlani" value="0.0" oninput="guncelleSihirbazVeMotor()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 font-bold text-center">
