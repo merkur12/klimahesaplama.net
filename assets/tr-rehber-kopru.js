@@ -1,20 +1,12 @@
 (() => {
-    window.addEventListener('load', () => {
+    const startup = document.documentElement.dataset.rehberMotor ? 'DOMContentLoaded' : 'load';
+    window.addEventListener(startup, () => {
         const query = new URLSearchParams(location.search);
         const legacyEmbed = { isitma: 'isitma', clima: 'pratik' };
         const mode = query.get('hesap') || legacyEmbed[query.get('embed')];
         if (!['pratik', 'klima', 'isitma'].includes(mode) || typeof hesapAracinaGit !== 'function') return;
 
-        const embedded = query.get('rehber') === '1' || query.has('embed');
-        if (embedded) {
-            const style = document.createElement('style');
-            style.textContent = '@media screen{body>:not(script):not(style):not(#hesapAraclari):not(#hesapAraclariSekmeler):not(#kh-cookie-panel):not(#kh-cookie-manage){display:none!important}html,body{min-height:0!important}body{padding:0!important}#hesapAraclariSekmeler{position:static!important}}';
-            style.textContent += mode === 'isitma'
-                ? '#hesapAraclariSekmeler{display:none!important}'
-                : '#btnTabIsitma{display:none!important}';
-            document.head.appendChild(style);
-        }
-
+        const embedded = Boolean(document.documentElement.dataset.rehberMotor);
         hesapAracinaGit(mode);
         if (query.get('alan') === '30' && mode === 'pratik') {
             const sample = {
@@ -26,7 +18,8 @@
                 pratikKisi: '3',
                 pratikYon: 'Guney',
                 pratikPencereYon: 'Guney',
-                pratikCephe: '1',
+                pratikCephe: '2',
+                pratikIkinciYon: 'Yok',
                 pratikCamOrani: '0.60',
                 pratikCamTipi: 'PVC - Çift Cam',
                 pratikKatKonum: 'Ara Kat',

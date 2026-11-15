@@ -1,1 +1,31 @@
-(()=>{const panel=document.getElementById('hesaplama'),frame=panel.querySelector('iframe'),triggers=[...document.querySelectorAll('[data-calc]')];let last;const reduce=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;triggers.forEach(b=>b.addEventListener('click',e=>{e.preventDefault();last=b;panel.hidden=false;const mode=b.dataset.calc;const url='index.html?rehber=1&hesap='+encodeURIComponent(mode)+(frame.hasAttribute('data-alan-30')?'&alan=30':'');if(frame.getAttribute('src')!==url)frame.setAttribute('src',url);triggers.forEach(x=>x.setAttribute('aria-expanded','true'));panel.scrollIntoView({behavior:reduce()?'auto':'smooth',block:'start'});}));document.getElementById('hesabi-kapat').addEventListener('click',()=>{panel.hidden=true;triggers.forEach(x=>x.setAttribute('aria-expanded','false'));if(last)last.focus();});window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow||!e.data||e.data.type!=='kh-guide-height')return;const h=Number(e.data.height);if(Number.isFinite(h)&&h>=300&&h<=25000)frame.style.height=Math.ceil(h)+'px';});})();
+(() => {
+    const panel = document.getElementById('hesaplama');
+    const frame = panel.querySelector('iframe');
+    const triggers = [...document.querySelectorAll('[data-calc]')];
+    let last;
+
+    for (const trigger of triggers) {
+        trigger.addEventListener('click', event => {
+            event.preventDefault();
+            last = trigger;
+            panel.hidden = false;
+            const url = trigger.getAttribute('href');
+            if (frame.getAttribute('src') !== url) frame.setAttribute('src', url);
+            for (const link of triggers) link.setAttribute('aria-expanded', 'true');
+            const motion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            panel.scrollIntoView({ behavior: motion ? 'auto' : 'smooth', block: 'start' });
+        });
+    }
+
+    document.getElementById('hesabi-kapat').addEventListener('click', () => {
+        panel.hidden = true;
+        for (const link of triggers) link.setAttribute('aria-expanded', 'false');
+        last?.focus();
+    });
+
+    window.addEventListener('message', event => {
+        if (event.origin !== location.origin || event.source !== frame.contentWindow || event.data?.type !== 'kh-guide-height') return;
+        const height = Number(event.data.height);
+        if (Number.isFinite(height) && height >= 300 && height <= 25000) frame.style.height = Math.ceil(height) + 'px';
+    });
+})();

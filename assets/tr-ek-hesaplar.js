@@ -444,12 +444,14 @@
         },
         {
             name: 'Vestel Flora Doğa Inverter Wi-Fi',
-            source: 'https://statik.vestel.com.tr/webfiles/20234513_k.pdf',
+            source: capacity => 'https://statik.vestel.com.tr/webfiles/' + ({
+                9000: '20235265', 12000: '20235131', 18000: '20235138', 24000: '20235141',
+            })[capacity] + '_u.pdf',
             models: [
-                ['092', 9000, 2.5, 6.6, 4, null, 52],
-                ['122', 12000, 3.4, 6.6, 4, null, 52],
-                ['182', 18000, 5.28, 6.5, 4, null, 55],
-                ['242', 24000, 6.74, 6.1, 4, null, 59],
+                ['098', 9000, 2.5, 6.6, 4, null, 52],
+                ['126', 12000, 3.4, 6.6, 4, null, 52],
+                ['186', 18000, 5.28, 6.5, 4, null, 55],
+                ['246', 24000, 6.74, 6.1, 4, null, 59],
             ],
         },
         {
@@ -562,6 +564,8 @@
         status.textContent = 'Tüm kapasite grupları gösteriliyor. Hesap yaptığınızda tablo sonuçla eşleşir.';
     }
     showAll.addEventListener('click', reset);
+    const requestResult = () => frame.contentWindow?.postMessage({ type: 'kh-klima-kapasite-iste' }, location.origin);
+    frame.addEventListener('load', requestResult);
     window.addEventListener('message', event => {
         if (event.origin !== location.origin || event.source !== frame.contentWindow || event.data?.type !== 'kh-klima-kapasite') return;
         const { watts, capacity } = event.data;
@@ -577,4 +581,5 @@
         status.textContent = `Yük ${n(watts / 1000)} kW. Önerilen sınıf ${n(capacity)} BTU/h.` +
             (matching.some(model => model.power * 1000 < watts) ? ' Bu sınıftaki en az bir modelin nominal gücü hesaplanan yükün altında kalıyor.' : '');
     });
+    requestResult();
 })();
