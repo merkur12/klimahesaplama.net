@@ -15,6 +15,27 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
+    <script data-kh-rehber-modu>
+    (() => {
+        const query = new URLSearchParams(location.search);
+        if (query.get('rehber') !== '1' && !query.has('embed')) return;
+        const mode = query.get('hesap') || ({ isitma: 'isitma', clima: 'pratik' })[query.get('embed')];
+        if (['pratik', 'klima', 'isitma'].includes(mode)) {
+            document.documentElement.dataset.rehberMotor = mode === 'isitma' ? 'isitma' : 'klima';
+        }
+    })();
+    </script>
+    <style>
+    @media screen {
+        html[data-rehber-motor], html[data-rehber-motor] body { min-height: 0 !important; }
+        html[data-rehber-motor] body { padding: 0 !important; }
+        html[data-rehber-motor] body > :not(script, style, #hesapAraclari, #hesapAraclariSekmeler, #kh-cookie-panel, #kh-cookie-manage),
+        html[data-rehber-motor="klima"] :is(#btnTabIsitma, #motorIsitma),
+        html[data-rehber-motor="isitma"] :is(#hesapAraclariSekmeler, #motorPratik, #motorKlima) { display: none !important; }
+        html[data-rehber-motor] #hesapAraclariSekmeler { position: static !important; }
+    }
+    </style>
+
     <!-- Harici Kütüphaneler ve Tailwind -->
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7939TH81V"></script>
@@ -280,7 +301,7 @@
 <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5"><h3 class="font-bold text-blue-950 mb-2">Detaylı hesabın farkı nedir?</h3><p>Pencereleri ve dış duvarları yönleriyle ayrı ayrı girmenizi sağlar. İşyeri türü, kişi sayısı, ek cihazlar ve havalandırma seçimi yük bileşenlerini değiştirir. Ölçüleri doğru bilinen bir mahalde, pratik hesabın tahmini geometrisi yerine bu aracı tercih edebilirsiniz. Detaylı hesap motorunda hesap çıktı desteği de sunulmaktadır.</p></div>
 <div class="bg-orange-50 border border-orange-200 rounded-2xl p-5"><h3 class="font-bold text-orange-950 mb-2">Isıtma hesabı neyi gösterir?</h3><p>Kombi ve ısı pompası hesap motoru; hacim, yalıtım sınıfı, iklim bölgesi ve açık cephe sayısından yaklaşık ısıtma yükünü hesaplar. Döşeme ve çatı kayıpları seçime göre eklenir. Bu yöntem oda oda yapılan ayrıntılı ısı kaybı projesinin yerine geçmez.</p></div></div>
 <article id="ornek-klima-hesabi" class="border border-blue-200 rounded-2xl overflow-hidden">
-<div class="bg-blue-50 p-5 md:p-6"><h2 class="text-xl font-extrabold text-slate-900 mb-3">Hesap örneği: Adana’da 30 m² bir salon</h2><p class="text-sm text-slate-700 leading-relaxed">Bu örnek, sitedeki pratik hesap motoruyla 15 Kasım 2026 tarihinde hesaplanmıştır. Konut, ara kat, standart yalıtım, 2,80 m yükseklik, 3 kişi ve tek dış cephe seçilmiştir. Dış duvar 6,00 m uzunluğunda ve güneye bakmaktadır. Pencere yönü güney, büyüklüğü çok geniş (%60), doğraması PVC çift camdır. İsteğe bağlı ölçüler girilmemiştir; ek cihaz seçilmemiştir.</p></div>
+<div class="bg-blue-50 p-5 md:p-6"><h2 class="text-xl font-extrabold text-slate-900 mb-3">Hesap örneği: Adana’da 30 m² bir salon</h2><p class="text-sm text-slate-700 leading-relaxed">Bu örnek, sitedeki pratik hesap motoruyla 15 Kasım 2026 tarihinde hesaplanmıştır. Konut, ara kat, standart yalıtım, 2,80 m yükseklik ve 3 kişi seçilmiştir. Formda iki cephe seçilidir. İkinci cephe yönü boş bırakıldığı için motor yalnızca ana cepheyi hesaba katar. Dış duvar 6,00 m uzunluğunda ve güneye bakmaktadır. Pencere yönü güney, büyüklüğü çok geniş (%60), doğraması PVC çift camdır. İsteğe bağlı ölçüler girilmemiştir; ek cihaz seçilmemiştir.</p></div>
 <div class="p-5 md:p-6 space-y-4 text-sm leading-relaxed text-slate-700">
 <p><strong>Geometri:</strong> Brüt dış cephe 6,00 × 2,80 = 16,80 m² olur. Çok geniş pencere seçimiyle cam alanı 16,80 × 0,60 = 10,08 m²; net dış duvar alanı yaklaşık 6,72 m² hesaplanır. Diğer kenar ve iç/komşu duvar uzunlukları dikdörtgen oda varsayımından tahmin edilir.</p>
 <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><caption class="text-left font-bold mb-3">Emniyet katsayısından önce yük bileşenleri</caption><thead><tr class="bg-slate-100"><th scope="col" class="p-3">Bileşen</th><th scope="col" class="p-3 text-right">Yaklaşık yük</th></tr></thead><tbody class="divide-y divide-slate-100">
@@ -1569,6 +1590,8 @@
         }
 
         function sekmeDegistir(mod) {
+            const rehberMotor = document.documentElement.dataset.rehberMotor;
+            if (rehberMotor && (rehberMotor === 'isitma') !== (mod === 'isitma')) return;
             mevcutMod = mod;
             const btnPratik = document.getElementById('btnTabPratik');
             const btnKlima = document.getElementById('btnTabKlima');
@@ -2001,11 +2024,20 @@ function yapiTipiDegisti() {
             document.getElementById("netAlanIsitma").value = (zemin + birinci).toFixed(1);
         }
 
+        let rehberKlimaSonucu = { type: 'kh-klima-kapasite', watts: null, capacity: null };
+
         function rehbereKlimaSonucuGonder(watts, model) {
-            if (window.parent === window || new URLSearchParams(location.search).get('alan') !== '30') return;
+            if (window.parent === window || document.documentElement.dataset.rehberMotor !== 'klima') return;
             const item = model?.urunler.length === 1 ? model.urunler[0] : null;
-            window.parent.postMessage({type:'kh-klima-kapasite', watts, capacity:item?.tip === 'duvar' ? item.kapasite : null}, location.origin);
+            rehberKlimaSonucu = { type: 'kh-klima-kapasite', watts, capacity: item?.tip === 'duvar' ? item.kapasite : null };
+            window.parent.postMessage(rehberKlimaSonucu, location.origin);
         }
+
+        window.addEventListener('message', event => {
+            if (window.parent === window || event.source !== window.parent || event.origin !== location.origin) return;
+            if (event.data?.type !== 'kh-klima-kapasite-iste' || document.documentElement.dataset.rehberMotor !== 'klima') return;
+            window.parent.postMessage(rehberKlimaSonucu, location.origin);
+        });
 
         function renderVarsayilanPazaryeri(mod) {
             if (mod === 'klima') rehbereKlimaSonucuGonder(null);
@@ -2824,17 +2856,23 @@ function yapiTipiDegisti() {
         }
 
       
-        window.onload = function() {
+        function hesapAraclariniBaslat() {
             initYonSelects();
-            sifirlaPratik(); 
-            sekmeDegistir('pratik'); // Pratik mod etiketlerini ve görünümünü tetikler
+            sifirlaPratik();
+            sekmeDegistir(document.documentElement.dataset.rehberMotor === 'isitma' ? 'isitma' : 'pratik');
             yapiTipiDegisti();
             isiticiCihazDegisti();
             isyeriHavalandirmaDegisti();
-        };
+        }
+
+        if (document.documentElement.dataset.rehberMotor) {
+            window.addEventListener('DOMContentLoaded', hesapAraclariniBaslat, { once: true });
+        } else {
+            window.onload = hesapAraclariniBaslat;
+        }
 
     </script>
-<script src="assets/tr-rehber-kopru.js?v=20261115-2" defer></script>
+<script src="assets/tr-rehber-kopru.js?v=20261115-3" defer></script>
 <dialog id="kh-video-dialog" aria-labelledby="kh-video-title"><div class="kh-video-dialog-inner"><h2 id="kh-video-title">Video rehber</h2><video id="kh-video-player" controls playsinline preload="none" aria-labelledby="kh-video-title"></video><p id="kh-video-status" role="status" hidden></p><div class="kh-video-close-row"><button id="kh-video-close" type="button">Kapat</button></div></div></dialog>
 
 <script id="kh-video-script-v2">
