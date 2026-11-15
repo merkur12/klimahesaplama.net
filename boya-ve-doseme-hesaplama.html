@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boya ve zemin döşeme hesaplayıcısı | Klima Hesaplama</title><meta name="description" content="Oda ölçüsüne göre boya, parke ve seramik miktarını, yardımcı malzemeleri ve tahmini maliyeti hesaplayın."><link rel="canonical" href="https://klimahesaplama.net/boya-ve-doseme-hesaplama.html">
+<link rel="stylesheet" href="assets/tr-rehberler.css"><link rel="stylesheet" href="assets/tr-ek-rehberler.css"></head>
+<body><header class="site-header"><div class="wrap header-row"><a class="logo" href="index.html">klimahesaplama<span>.net</span></a><nav aria-label="Ana gezinme"><a href="index.html">Ana sayfa</a><a href="index.html#pratik-rehberler">Pratik rehberler</a><a href="index.html#blogBolumu">Mühendislik rehberleri</a><a href="index.html?hesap=pratik">Hesap motoru</a></nav></div></header><main class="wrap">
+<div class="crumb"><a href="/">Ana sayfa</a> › <a href="/#pratik-rehberler">Pratik rehberler</a></div>
+<section class="intro"><h1>Boya ve zemin döşeme hesaplayıcısı</h1><p class="lead">Oda ölçüsüne göre boya, parke ve seramik miktarını, yardımcı malzemeleri ve tahmini maliyeti hesaplayın.</p></section>
+<figure class="hero"><img src="assets/boya-doseme-tr.webp" width="1200" height="1200" alt=""></figure>
+<article class="article"><nav aria-label="Hesaplayıcılar"><a href="#boya">Boya hesabı</a><a href="#doseme">Zemin döşeme hesabı</a></nav>
+<section id="boya" class="kh-section"><h2>Boya miktarı ve maliyeti</h2>
+<p>Odanızı ölçün. Boyanmayacak kapı ve pencereler düşülür. Balkon kapısı dahil her kapı 80 × 200 cm kabul edilir. Kullanılmayan pencerenin iki ölçüsünü de boş bırakın.</p>
+<form class="kh-local-form" id="paint-form">
+<fieldset><legend>Oda ve açıklık ölçüleri</legend><div class="kh-input-grid">
+<label>Oda boyu (m)<input name="length" inputmode="decimal" value="5"></label>
+<label>Oda eni (m)<input name="width" inputmode="decimal" value="4"></label>
+<label>Bitmiş döşemeden tavana yükseklik (m)<input name="height" inputmode="decimal" value="2,6"></label>
+<label>Kapı sayısı<select name="doors"><option>0</option><option selected>1</option><option>2</option></select></label>
+<label>1. pencere eni (m)<input name="windowWidth1" inputmode="decimal" value="1,50"></label>
+<label>1. pencere yüksekliği (m)<input name="windowHeight1" inputmode="decimal" value="1,60"></label>
+<label>2. pencere eni (m)<input name="windowWidth2" inputmode="decimal"></label>
+<label>2. pencere yüksekliği (m)<input name="windowHeight2" inputmode="decimal"></label>
+<label><input name="irregularRoom" type="checkbox"> Oda girintili veya çıkıntılı (+%9 brüt duvar alanı)</label>
+</div></fieldset>
+<fieldset><legend>Boyama</legend><div class="kh-input-grid">
+<label>Boya katı sayısı<input name="coats" inputmode="numeric" value="2"></label>
+<label>Boya fire payı (%)<input name="reserve" inputmode="decimal" value="10"><small>Kayıp ve rötuş için ek pay. 8 L için %10, 0,8 L ekler.</small></label>
+</div></fieldset>
+<fieldset class="kh-choice"><legend>Tavan boyası</legend>
+<label><input type="radio" name="ceilingMode" value="none" checked> Tavan boyasını hesaplama</label>
+<label><input type="radio" name="ceilingMode" value="combined"> Tavanı duvar boyasına dahil et</label>
+<label><input type="radio" name="ceilingMode" value="separate"> Tavan boyasını ayrıca hesapla</label>
+</fieldset>
+<details><summary>Astar, macun, koruyucu malzeme ve el aletleri</summary><div class="kh-input-grid"><label><input name="usePrimer" type="checkbox"> Boyanacak alanın tamamına astar uygula</label><label>Astar katı sayısı<input name="primerCoats" inputmode="numeric" value="1"></label></div><p class="muted">Diğer kalemler oda ölçülerinden otomatik tahmin edilir.</p></details>
+<div class="actions"><button class="button">Boya miktarı ve maliyetini hesapla</button><button class="button secondary" type="reset">Örnek değerlere dön</button></div>
+</form>
+<p class="kh-result" id="paint-summary" role="status"></p>
+<div class="kh-tables kh-results" id="paint-results" tabindex="0" role="region" aria-label="Duvar boyası seçenekleri" hidden><table><caption>Duvar boyası seçenekleri</caption><thead><tr><th scope="col">Alışveriş listesi</th><th scope="col">Alınacak miktar</th><th scope="col">Artan miktar</th><th scope="col">Duvar boyası</th><th scope="col">Proje toplamı</th></tr></thead><tbody id="paint-rows"></tbody></table></div><div class="kh-tables kh-results" id="paint-ceiling" tabindex="0" role="region" aria-label="Ayrı tavan boyası bütçesi" hidden><table><caption>Ayrı tavan boyası bütçesi</caption><thead><tr><th scope="col">Tavan boyası</th><th scope="col">Gereken miktar</th><th scope="col">Alınacak miktar</th><th scope="col">Tutar</th></tr></thead><tbody id="paint-ceiling-rows"></tbody></table></div><div class="kh-tables kh-results" id="paint-aux" tabindex="0" role="region" aria-label="Boya yardımcı malzemeleri" hidden><table><caption>Boya yardımcı malzemeleri</caption><thead><tr><th scope="col">Malzeme</th><th scope="col">Gereken miktar</th><th scope="col">Alınacak paket</th><th scope="col">Birim fiyat</th><th scope="col">Tutar</th></tr></thead><tbody id="paint-aux-rows"></tbody></table></div>
+<h3>Malzemeyi seçin, yüzeyi hazırlayın</h3>
+<p>İç cephe su bazlı boyada kuru odalar için mat, sık silinen yüzeyler için silinme dayanımı belirtilmiş ürünleri değerlendirin. Astar emiciliği dengeler veya ürün sistemine göre tutunmayı artırır. Macun küçük kusurları düzeltir. Fırça kenarlar, rulo geniş yüzeyler, örtü ve bant koruma içindir.</p>
+<ol><li>Mobilyayı ve zemini koruyun. Yüzeyi temizleyin, gevşek boyayı kazıyın.</li><li>Gereken yerlere macun uygulayın. Kuruyunca zımparalayın ve tozu alın.</li><li>Yüzey ve ürün gerektiriyorsa astarlayın. Kuruma süresini bekleyin.</li><li>Kenarları fırçayla, geniş yüzeyi ruloyla boyayın. Katlar arasında teknik föydeki süreye uyun.</li></ol>
+<details><summary>Hesap kabulleri ve fiyatlar</summary><p>İç cephe boyası için kat başına 10 m²/L ve 1,50 kg/L alınır. Duvar boyası için 2, 3 ve 5 kg örnek ambalajlar, tavan boyası için 3,5 ve 10 L örnek ambalajlar karşılaştırılır. Astar için 12 m²/L, macun için net duvarın %2’sinde 1 mm onarım ve 1,1 kg/m²/mm kabul edilir. Bant, oda çevresi ve açıklık kenarlarından, örtü taban alanından bulunur. Ortak aletler bir kez bütçelenir. Boya ve yardımcı malzeme fiyatları yaklaşık bütçe girdileridir.</p></details>
+<div class="related"><a href="https://www.koctas.com.tr/boya/ic-cephe-boyalar/c/100003004" target="_blank" rel="noopener noreferrer">Koçtaş iç cephe boyaları</a><a href="https://www.koctas.com.tr/koctas-basic/boya-ve-boya-malzemeleri/bc/100003" target="_blank" rel="noopener noreferrer">Boya aletleri ve koruyucular</a></div>
+</section>
+<section id="doseme" class="kh-section"><h2>Parke ve seramik miktarı ve maliyeti</h2>
+<p>Odanın ana bölümünün enini ve boyunu girin. Girinti seçildiğinde taban alanına %5, ardından malzeme alımında kesim için %10 eklenir. Paket ölçüsü seçilen üründen alınır.</p>
+<form class="kh-local-form" id="floor-form"><div class="kh-input-grid">
+<label>Oda boyu (m)<input name="length" inputmode="decimal" value="5"></label>
+<label>Oda eni (m)<input name="width" inputmode="decimal" value="4"></label>
+<label><input name="irregularRoom" type="checkbox"> Oda girintili veya çıkıntılı</label>
+<label>Karşılaştırılacak seramik<select name="tileModel"><option value="vesta" selected>Yeni Premium Gri 30 × 60 cm · Koçtaş</option><option value="marmi">Urban Cenere 60 × 60 cm · Koçtaş</option></select></label>
+</div><div class="actions"><button class="button">Paketleri ve maliyeti karşılaştır</button><button class="button secondary" type="reset">Örnek değerlere dön</button></div></form>
+<p class="kh-result" id="floor-summary" role="status"></p>
+<div class="kh-tables kh-results" id="floor-results" tabindex="0" role="region" aria-label="Döşeme seçenekleri" hidden><table><caption>Döşeme seçenekleri</caption><thead><tr><th scope="col">Döşeme</th><th scope="col">Kutu adedi</th><th scope="col">Alınacak m²</th><th scope="col">Kutu fiyatı</th><th scope="col">Döşeme malzemesi</th><th scope="col">Yardımcılar</th><th scope="col">Toplam</th><th scope="col">TL/m² net</th></tr></thead><tbody id="floor-rows"></tbody></table></div><div class="kh-tables kh-results" id="floor-aux" tabindex="0" role="region" aria-label="Döşeme yardımcı malzemeleri" hidden><table><caption>Döşeme yardımcı malzemeleri</caption><thead><tr><th scope="col">Malzeme</th><th scope="col">Gereken miktar</th><th scope="col">Alınacak paket</th><th scope="col">Birim fiyat</th><th scope="col">Tutar</th></tr></thead><tbody id="floor-aux-rows"></tbody></table></div>
+<p class="muted">İşçilik, nakliye, alt zemin düzeltme ve alet kiralama hariçtir. Yardımcı malzeme fiyatları örnek bütçe değerleridir. Mağaza fiyatı, paket ve uygulama koşullarını satın almadan önce kontrol edin.</p>
+<h3>Laminat, lamine, vinil ve seramik nasıl uygulanır?</h3>
+<p>Laminat dekoratif yüzeyli, lamine parke gerçek ahşap üst yüzeyli, SPC vinil ise rijit vinil esaslıdır. Yüzer döşeme için zeminin kuru ve düz olduğundan emin olun. Şilte uyumunu ve gerekiyorsa buhar bariyerini ürün talimatından kontrol edin. Kenarlarda genleşme boşluğu bırakın ve süpürgeliği duvara sabitleyin.</p>
+<p>Seramikte yüzeyi hazırlayın, kesim planı çıkarın, zemine uygun yapıştırıcıyı taraklı mala ile sürün ve karo aralıklarını koruyun. Üreticinin kuruma süresinden sonra derz dolgusunu uygulayın. Hesapta yapıştırıcı 4 kg/m², derz genişliği 3 mm ve derinliği 8 mm alınmıştır.</p>
+<details><summary>Girintili oda paylarının dayanağı</summary><p>Beş örnek plandan ortalama duvar ilavesi %8,27, taban alanı ilavesi %4,43 çıktı. Yukarı yuvarlayarak %9 ve %5 kullanıldı. İçeri doğru bir kesikte taban alanı artışı sıfır kabul edildi. Çok düzensiz odalarda duvarları ayrı ayrı ölçün ve tabanı parçalara ayırarak hesaplayın.</p>
+<div class="kh-tables"><table><thead><tr><th>Örnek plan</th><th>Brüt duvar ilavesi</th><th>Taban alanı ilavesi</th></tr></thead><tbody>
+<tr><th>4 × 3 m, 1,20 × 0,60 m dış girinti</th><td>%8,57</td><td>%6</td></tr>
+<tr><th>5 × 4 m, 1,50 × 1 m dış girinti</th><td>%11,11</td><td>%7,50</td></tr>
+<tr><th>6 × 4 m, iki dış girinti (1,20 × 0,60 ve 1,50 × 0,90 m)</th><td>%15</td><td>%8,63</td></tr>
+<tr><th>5 × 4 m, 0,80 × 0,60 m içe kesik</th><td>%6,67</td><td>%0</td></tr>
+<tr><th>6 × 4 m, 2 × 1,50 m L köşe kesiği</th><td>%0</td><td>%0</td></tr>
+</tbody></table></div></details>
+<div class="related"><a href="https://www.bauhaus.com.tr/bauhaus-parke-ve-kapilar-parkeler-ve-aksesuarlari-parkeler" target="_blank" rel="noopener noreferrer">Bauhaus parke seçenekleri</a><a href="https://www.koctas.com.tr/yeni-premium-gri-30x60-cm-1-44-m2/p/1000338146" target="_blank" rel="noopener noreferrer">Koçtaş 30 × 60 cm seramik</a><a href="https://www.koctas.com.tr/akgun-seramik-urban-cenere-rekt-60x60-cm-1-44-m2/p/1000481355" target="_blank" rel="noopener noreferrer">Koçtaş 60 × 60 cm seramik</a><a href="https://www.bauhaus.com.tr/barlinek-piccolo-baliksirti-lamine-parke-725x130x14-mm-61623626" target="_blank" rel="noopener noreferrer">Bauhaus lamine parke örneği</a></div>
+<p class="muted">Mağaza bağlantıları doğrudandır. Satış ortaklığı kodu içermez.</p>
+</section>
+</article></main><footer class="site-footer"><div class="wrap"><strong>klimahesaplama.net</strong><p>Klima, kombi ve ısı pompası seçiminde açıklamalı ön hesap rehberleri.</p><nav aria-label="Site bilgileri"><a href="iletisim.html" target="_blank" rel="noopener">İletişim<span class="sr-only"> (yeni sekmede açılır)</span></a><a href="hakkimizda.html" target="_blank" rel="noopener">Hakkımızda<span class="sr-only"> (yeni sekmede açılır)</span></a><a href="gizlilik-cerez.html" target="_blank" rel="noopener">Gizlilik Politikası<span class="sr-only"> (yeni sekmede açılır)</span></a><a href="sorumluluk-reddi.html" target="_blank" rel="noopener">Sorumluluk Reddi Beyanı<span class="sr-only"> (yeni sekmede açılır)</span></a></nav><p class="muted">Hesaplar ön seçim içindir; cihaz performansı ve montaj koşulları ayrıca değerlendirilir. Bilgi bağlantıları ayrı sayfada, yeni sekmede açılır.</p><a href="index.html">Ana sayfaya dön →</a></div></footer><script src="assets/tr-ek-hesaplar.js" defer></script></body></html>
